@@ -1,0 +1,65 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <title>ItemPrinting</title>
+        <link type="text/css" rel="stylesheet" href="appbase.css">
+    </head>
+    <body>
+<span class="parent-nodes">parent nodes: <span class="parent-node"><a href="HelpWiki.html">HelpWiki</a></span> | <span class="parent-node"><a href="Intro7Searching.html">Intro7Searching</a></span> | <span class="parent-node"><a href="Intro8Output.html">Intro8Output</a></span> | <span class="parent-node"><a href="PageListDialog.html">PageListDialog</a></span> | <span class="parent-node"><a href="RegEx.html">RegEx</a></span></span><br /><br />
+<a name=".h0"></a><h2>Item Printing</h2>
+Contents:	<div class="page-toc">
+<div class="page-toc-level2"><a href="#.h0">Item Printing</a></div>
+<div class="page-toc-level3"><a href="#.h52">General</a></div>
+<div class="page-toc-level3"><a href="#.h323">The print dialog</a></div>
+</div>
+<br />
+<a href="javascript:history.go(-1)">Back</a><hr size="1" />
+<a name=".h52"></a><h3>General</h3>
+Printing is controlled by the "Print" dialog in the "Wiki" main menu <a href="#.f1">[1]</a>. Momentarily you can only print the wiki pages as plain text.<br />
+<br />
+<a href="#">Top</a><br />
+<a name=".f1"></a>[1] <i>Definition: "print page" = physical sheet of paper or preview of it; all other pages are wiki pages.</i><hr size="1" />
+<a name=".h323"></a><h3>The print dialog</h3>
+The dialog has the following fields and buttons:<br />
+<br />
+&bull; <b>What to print</b><br />
+Specifies what you want to print; the possible choices are:<ul><li />All pages in the wiki.<li />All pages in the current subtree (the current page and it's children).<li />Current page only.<li />Custom subset of wiki pages.</ul>
+Choosing "Custom" will bring up the <span class="wiki-link"><a href="PageListDialog.html">page list dialog</a></span>, where the subset can be defined.<br />
+<br />
+&bull; <b>Print as</b><br />
+Choose as what the pages should be printed. Currently only "Plain text" is supported, which means the wiki pages are printed without any html or other formatting.<br />
+<br />
+<i>Remark: _If a formatted print of pages is really needed, you can always publish them to html and print them from your browser.</i><br />
+<br />
+&bull; <b>Page separator</b><br />
+Separate wiki pages are not by default printed on separate print pages, but simply as one contiguous text, separated by four (4) new lines. If you want something different to separate the wiki pages, you can specify that here. Any text can be specified here wíth or without escape sequences like:<br />
+<ul>\n  New line<br />
+\f  New print page<br />
+\\  A single backslash<br />
+</ul>
+In principle this means, that if you use the "\f" sequence, you cán have every wiki page print on it's own print page.<br />
+<br />
+&bull; <b>Preview</b><br />
+Opens a preview window for the printed pages <a href="#.f4">[4]</a>.<br />
+<br />
+<i>Remark:</i> The number of print pages shown in the preview dialog does not necessarily match that of the actually printed pages.<br />
+<br />
+&bull; <b>Page Setup</b><br />
+Opens a page setup dialog where you can set margins for the print page, print page size, orientation and the printer to use. Only the margin settings are stored between application sessions.<br />
+<br />
+<i>Remark:</i> Depending on printer and printer driver the real margins may be a bit larger as set in the page setup dialog.<br />
+<br />
+&bull; <b>Choose plain text font</b><br />
+Opens a font selection dialog, to choose the font to use for plain text printing.<br />
+<br />
+&bull; <b>Print</b><br />
+Opens the usual print dialog to choose printer and which print pages to print. After pressing "OK" the printing starts <a href="#.f4">[4]</a>.<br />
+<br />
+<a href="#">Top</a><br />
+<a name=".f4"></a>[4] <i>Preparing print or preview needs some time so please be patient.</i><hr size="1" />
+previous: <a href="javascript:history.go(-1)">Back</a><br />
+parents:&nbsp; <span class="wiki-link"><a href="HelpWiki.html">HelpWiki</a></span>, <span class="wiki-link"><a href="Intro7Searching.html">Intro7Searching</a></span>, <span class="wiki-link"><a href="Intro8Output.html">Intro8Output</a></span>, <span class="wiki-link"><a href="PageListDialog.html">PageListDialog</a></span>, <span class="wiki-link"><a href="RegEx.html">RegEx</a></span><br />
+attributes: <span class="property">[tree_position: 11]</span><br />
+<span class="property">[help.status: done]</span>    </body>
+</html>

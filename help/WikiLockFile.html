@@ -1,0 +1,42 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <title>WikiLockFile</title>
+        <link type="text/css" rel="stylesheet" href="appbase.css">
+    </head>
+    <body>
+<span class="parent-nodes">parent nodes: <span class="parent-node"><a href="WikidPadFiles.html">WikidPadFiles</a></span></span><br /><br />
+<a name=".h0"></a><h2>Wiki Lock File</h2>
+Contents:   <div class="page-toc">
+<div class="page-toc-level2"><a href="#.h0">Wiki Lock File</a></div>
+<div class="page-toc-level3"><a href="#.h55">General</a></div>
+<div class="page-toc-level3"><a href="#.h695">Settings</a></div>
+<div class="page-toc-level4"><a href="#.h708">Options</a></div>
+</div>
+<br />
+<a href="javascript:history.go(-1)">Back</a><hr size="1" />
+<a name=".h55"></a><h3>General</h3>
+If the same wiki is opened by different WikidPad processes at the same time, this can lead to data corruption. To avoid this, WikidPad creates a lock file when opening a wiki.<br />
+<br />
+If another process now tries to open the same wiki, you get a warning that you should not open the wiki again, but you can ignore this warning, especially, if WikidPad terminated abnormally before and left the lock file behind.<br />
+<br />
+The lock file is placed in the <span class="wiki-link"><a href="WikiFiles.html">wiki directory</a></span>. It has the name of the wiki's .config file plus a ".lock" suffix and is empty. If the wiki is detected to be read-only, no lock file is created.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h695"></a><h3>Settings</h3>
+<a name=".h708"></a><h4>Options</h4>
+<ul><b>Application settings: Advanced</b><br />
+<b>Warning:</b> These settings should only be changed when it is absolutely necessary!<hr size="1" />
+</ul>
+&bull; <b>Ignore wiki lock file</b><br />
+(Default: off) When checked, a wiki is opened without warning even if a lock file is already present.<br />
+<br />
+&bull; <b>Create wiki lock file</b><br />
+(Default: on) When not checked, no lock file is created when opening a wiki (and it isn't deleted when closing it). This setting does not affect the behavior of the wikis already opened.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+previous: <a href="javascript:history.go(-1)">Back</a><br />
+parents:&nbsp; <span class="wiki-link"><a href="WikidPadFiles.html">WikidPadFiles</a></span><br />
+<span class="property">[help.status: busy]</span>    </body>
+</html>

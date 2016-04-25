@@ -1,0 +1,42 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <title>ApplicationConfigurationFiles</title>
+        <link type="text/css" rel="stylesheet" href="wikistyle.css">
+    </head>
+    <body>
+<span class="parent-nodes">parent nodes: <span class="parent-node"><a href="WikidPadAdvanced.html">WikidPadAdvanced</a></span> | <span class="parent-node"><a href="WikidPadOnUSB.html">WikidPadOnUSB</a></span></span><br /><br />
+<a name=".h0"></a><h2>Application Configuration Files</h2>
+Contents:   <div class="page-toc">
+<div class="page-toc-level2"><a href="#.h0">Application Configuration Files</a></div>
+<div class="page-toc-level3"><a href="#.h72">General</a></div>
+</div>
+<br />
+<a href="javascript:history.go(-1)">Back</a><hr size="1" />
+<a name=".h72"></a><h3>General</h3>
+Application configuration files mean here the application-wide configuration files "WikidPad.config" and the directory ".WikidPadGlobals" with all contained files.<br />
+<br />
+This page describes where WikidPad searches for these files on startup:<br />
+<br />
+If the installation directory (where the "WikidPad.exe" file is on Windows binary installations) contains already a file "WikidPad.config", the installation directory becomes the configuration directory.<br />
+<br />
+This is helpful for WikidPad on an USB stick, so you can move it between multiple computers without any need to store a file on the host computer.<br />
+<br />
+If WikidPad could not find a "WikidPad.config" file, it uses so-called environment variables to locate the config. directory<br />
+<ol><li />If there is a "HOME" variable, its value (normally a<br />
+directory) is used.<li />If not, it asks the operating system for the appropriate user<br />
+configuration directory (this is done through the wxPython<br />
+library) and puts its data in a subdirectory "WikidPad" similar<br />
+to other applications (this is mainly intended for Windows).<br />
+</ol>
+If WikidPad is running, you can find out where the files are stored by opening the "About" dialog (menu "Help") and scrolling the shown text down to the end. The configuration directory is mentioned there.<br />
+<br />
+On Windows, you can open a console (=Dos-Box) and type the command "set" which shows all environment variables.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+previous: <a href="javascript:history.go(-1)">Back</a><br />
+parents:&nbsp; <span class="wiki-link"><a href="WikidPadAdvanced.html">WikidPadAdvanced</a></span>, <span class="wiki-link"><a href="WikidPadOnUSB.html">WikidPadOnUSB</a></span><br />
+attributes: <span class="property">[tree_position: 1]</span><br />
+<span class="property">[help.status: busy]</span>    </body>
+</html>

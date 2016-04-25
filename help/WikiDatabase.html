@@ -1,0 +1,89 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <title>WikiDatabase</title>
+        <link type="text/css" rel="stylesheet" href="appbase.css">
+    </head>
+    <body>
+<span class="parent-nodes">parent nodes: <span class="parent-node"><a href="ConfigurationFiles.html">ConfigurationFiles</a></span> | <span class="parent-node"><a href="Intro1StartingAWiki.html">Intro1StartingAWiki</a></span> | <span class="parent-node"><a href="Intro8Output.html">Intro8Output</a></span> | <span class="parent-node"><a href="TextBlocks.html">TextBlocks</a></span> | <span class="parent-node"><a href="WikiControl.html">WikiControl</a></span> | <span class="parent-node"><a href="WikiFiles.html">WikiFiles</a></span></span><br /><br />
+<a name=".h0"></a><h2>Wiki Database</h2>
+Contents:	<div class="page-toc">
+<div class="page-toc-level2"><a href="#.h0">Wiki Database</a></div>
+<div class="page-toc-level3"><a href="#.h52">Database types</a></div>
+<div class="page-toc-level4"><a href="#.h637">Original Gadfly</a></div>
+<div class="page-toc-level4"><a href="#.h1062">Compact Sqlite</a></div>
+<div class="page-toc-level4"><a href="#.h2387">Original Sqlite</a></div>
+<div class="page-toc-level3"><a href="#.h2780">The database question</a></div>
+<div class="page-toc-level3"><a href="#.h3859">Determining the database type of the currently open wiki</a></div>
+<div class="page-toc-level3"><a href="#.h4027">Migration Between Db Types</a></div>
+</div>
+<br />
+<a href="javascript:history.go(-1)">Back</a><hr size="1" />
+<a name=".h52"></a><h3>Database types</h3>
+WikidPad supports three different types of database backends:<ul><li />Original Gadfly<li />Compact Sqlite<li />Original Sqlite</ul>
+This situation has historically grown. Gadfly was the database backend for the original WikidPad as designed by Jason Horman. Compact Sqlite was the backend for WikidPadCompact, as designed by Michael Butscher. When both implementations of WikidPad were integrated into the current WikidPad implementation, Original Sqlite was added to the supported backends. The older types are still actively supported for backward compatibility purposes.<ul><hr size="1" />
+</ul>
+<a name=".h637"></a><h4>Original Gadfly</h4>
+This is the backend of the original WikidPad. It stores each wiki page in a plain text file with a .wiki extention in <span class="wiki-link"><a href="WikiFiles.html">wiki / data</a></span>. The .grl and .gdf files are the database files used to index wiki pages and other subjects efficiently.<br />
+Gadfly is the slowest type, but it has as an advantage, that it is portable across different platforms because it doesn't need any external binaries.<ul><hr size="1" />
+</ul>
+<a name=".h1062"></a><h4>Compact Sqlite</h4>
+This is the backend of WikidPadCompact. It stores the data in óne single database file named "wiki.sli" in <span class="wiki-link"><a href="WikiFiles.html">wiki / data</a></span>. This database file is created by the Sqlite database engine and contains the content of all the wiki's pages as well as cache information for fast handling of the wiki.<br />
+<br />
+Advantages of this type are its speed and efficient use of disk space. Disadvantages are that single pages can't be edited with a text editor or searched by a desktop search engine and that there is a higher risc of data loss. If something crashes and you loose this one database file, you loose your entire wiki. With the other types you might loose one or more page files, but the majority of youw wiki pages would still be intact and you could rebuild the database files, using the wiki / rebuild function in the main menu.<br />
+<br />
+There is óne additional advantage Compact has over the other two; it allows page names (the links) to be case sensitive on Windows platforms. The other two rely on the file system used and Window's file system is not case sensitive. It will remember the case, but it will still consider ThisLink.wiki to be the same file as ThislinK.wiki or THISLINK.wiki. Therefore on Windows platforms you can only use case sensitive page names, when you use Compact as the backend.<ul><hr size="1" />
+</ul>
+<a name=".h2387"></a><h4>Original Sqlite</h4>
+This is the latest backend for WikidPad. Like Gadfly, this also stores each wiki page in a plain text file with a .wiki extention in <span class="wiki-link"><a href="WikiFiles.html">wiki / data</a></span>. The database to index the wiki is stored in the file "wikiovw.sli".<br />
+This type is nearly as fast as Compact Sqlite, but it doesn't have it's disadvantages. It dóes however need an external binary.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h2780"></a><h3>The database question</h3>
+In some places you are asked which backend to use:<br />
+<br />
+&bull; <b>The Windows binary installer</b><br />
+When using the Windows binary installer you are asked if you want to install the Gadfly and/or Sqlite database support. You should choose at least one option, otherwise you wont be able to open any wiki database!<br />
+<br />
+&bull; <b>Creating a new wiki</b><br />
+After choosing name and position of the new wiki you are asked to choose the database type.<br />
+<br />
+&bull; <b>Opening an older wiki</b><br />
+If you open the first time a wiki created by an older version of WikidPad(Compact) you are asked to choose the database type it has.<br />
+<br />
+If it was created by original WikidPad the right choice is "Original Gadfly", for WikidPadCompact it is "Compact Sqlite". Your choice will be stored in the wiki configuration file so the application will choose the right type automatically next time.<br />
+<br />
+&bull; <b>Overriding type on open</b><br />
+If you open a wiki with "Open as Type", you are always asked for the database type to use. This is helpful when migrating from one database backend to another.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h3859"></a><h3>Determining the database type of the currently open wiki</h3>
+Open the "Wiki Info" dialog in "Wiki" menu and look at the "Wiki database backend" entry.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h4027"></a><h3>Migration Between Db Types</h3>
+The following procedure describes how to migrate a wiki from one database type to another. It is highly recommended to make a backup of the wiki first.<br />
+<ol><li />Open dialog from menu "Wiki" -&gt; "Export" -&gt; "Other Export..."<li />Set in dialog:<br />
+<br />
+What to export: Whole wiki<br />
+Export to: Multipage text<br />
+Compatible filenames: (Doesn't matter)<br />
+Format version: 1<br />
+Write wiki func. page: Check<br />
+Write saved searches: Check<br />
+Destination file: (Choose a non existing filename in an existing directory)<br />
+<li />Hit OK<li />Create a new wiki with same name and the desired new database type<li />Delete "WikiSettings" page in the new wiki<li />Open dialog from menu "Wiki" -&gt; "Import..."<li />Set in dialog:<br />
+<br />
+Import format: Multipage text<br />
+Source file: (Same path you gave as destination file above)<br />
+<li />Hit OK<li />Use menu "Wiki" -&gt; "Rebuild Wiki"<br />
+</ol>
+Now you can close the new wiki, delete or move away the old one and move the new one in its place.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+previous: <a href="javascript:history.go(-1)">Back</a><br />
+parents:&nbsp; <span class="wiki-link"><a href="ConfigurationFiles.html">ConfigurationFiles</a></span>, <span class="wiki-link"><a href="Intro1StartingAWiki.html">Intro1StartingAWiki</a></span>, <span class="wiki-link"><a href="Intro8Output.html">Intro8Output</a></span>, <span class="wiki-link"><a href="TextBlocks.html">TextBlocks</a></span>, <span class="wiki-link"><a href="WikiControl.html">WikiControl</a></span>, <span class="wiki-link"><a href="WikiFiles.html">WikiFiles</a></span><br />
+attributes: <span class="property">[camelCaseWordsEnabled: false]</span><br />
+<span class="property">[help.status: done]</span>    </body>
+</html>

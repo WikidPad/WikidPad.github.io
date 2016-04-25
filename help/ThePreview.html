@@ -1,0 +1,102 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <title>ThePreview</title>
+        <link type="text/css" rel="stylesheet" href="appbase.css">
+    </head>
+    <body>
+<span class="parent-nodes">parent nodes: <span class="parent-node"><a href="HtmlCss.html">HtmlCss</a></span> | <span class="parent-node"><a href="Intro2ViewingAndEditing.html">Intro2ViewingAndEditing</a></span> | <span class="parent-node"><a href="ThisWiki.html">ThisWiki</a></span> | <span class="parent-node"><a href="WorkSpace.html">WorkSpace</a></span> | <span class="parent-node"><a href="WorkSpaceGeneral.html">WorkSpaceGeneral</a></span> | <span class="parent-node"><a href="WpOptionsHtmlPreview.html">WpOptionsHtmlPreview</a></span></span><br /><br />
+<a name=".h0"></a><h2>The Preview</h2>
+Contents:   <div class="page-toc">
+<div class="page-toc-level2"><a href="#.h0">The Preview</a></div>
+<div class="page-toc-level3"><a href="#.h52">General</a></div>
+<div class="page-toc-level3"><a href="#.h355">Excluding page attibutes</a></div>
+<div class="page-toc-level3"><a href="#.h1567">Preview renderer</a></div>
+<div class="page-toc-level3"><a href="#.h2981">Settings</a></div>
+<div class="page-toc-level4"><a href="#.h2994">Options</a></div>
+</div>
+<br />
+<a href="javascript:history.go(-1)">Back</a><hr size="1" />
+<a name=".h52"></a><h3>General</h3>
+Wikidpad translates texts and other Wikidpad elements on a page into html and uses that to show the page in preview. The previewer in fact is a small web browser. It shows the page as it will approximately look in the (real) browser after publishing (exporting) it to html.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h355"></a><h3>Excluding page attibutes</h3>
+Normally not only the page text is shown in preview, but also all the attributes that are on it. Some attributes can be usefull in preview, some however - like "tree_position" - really aren't. The option: "Props. to yes/no include in preview" (See: "Settings" below) allows to control which attributes should or shouldn't be shown in preview.<br />
+<br />
+In the option input field enter a regular expression of the properties that are to be shown in preview. The RE is tested against a "normalized" property where the brackets are removed and key and value are separated by ": ". So even if the property is in the page written as "[camelCaseWordsEnabled=false]", the RE is tested against "camelCaseWordsEnabled: false".<br />
+<br />
+If you e.g. want to show the "alias" properties only, enter "alias: .* ". Other properties will then be hidden in the preview. The empty text field matches everything.<br />
+<br />
+If you want to show all properties <b>except</b> those matching the RE, tick the checkbox to the left of the "not".<br />
+<br />
+If you press the "Ok" button of the options dialog, but the dialog doesn't vanish, instead this text field is red, then the RE contains an error and must be corrected first.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h1567"></a><h3>Preview renderer</h3>
+Under Windows you can choose the renderer for the HTML preview:<br />
+<ul><li />Internal: Internal standard renderer. Not very capable, but it<br />
+doesn't need external components<li />IE: Uses Internet Explorer.<li />Mozilla: Uses Mozilla/Gecko rendering component if installed.<br />
+You can download it here:<br />
+<span class="url-link"><a href="http://www.iol.ie/~locka/mozilla/control.htm">http://www.iol.ie/~locka/mozilla/control.htm</a></span>. <b>There seems to be<br />
+      a severe bug that crashes WikidPad when pressing any key while<br />
+      the Mozilla preview is shown!</b><br />
+</ul>
+Changes of this setting only have an effect for newly opened WikidPad windows. After changing this setting, Wikidpad will have to be restarted.<br />
+<br />
+Mozilla and IE renderer use a CSS-file located in the configuration directory (see "Help" menu -&gt; "About" and scroll to the end to find out where it is), subfolder ".WikidPadGlobals", file "wikipreview.css".<br />
+<ul><b>Important remarks</b></ul>
+<ul><li />Using IE or Mozilla as renderers means that any weaknesses of<br />
+these browsers (esp. regarding security) become part of<br />
+WikidPad. If e.g. a wiki page contains dangerous scripts in<br />
+JavaScript they might be executed when showing the page.<li />If you chose Mozilla and the component is not installed,<br />
+WikidPad will crash when opening a new window (or when<br />
+restarting WikidPad). If this happens, try to start WikidPad<br />
+again. It should then use the internal renderer instead.<br />
+</ul>
+<a href="#">Top</a><hr size="1" />
+<a name=".h2981"></a><h3>Settings</h3>
+<a name=".h2994"></a><h4>Options</h4>
+<ul><b>Application settings: Html preview</b><hr size="1" />
+</ul>
+&bull; <b>Font name for html preview</b><br />
+Enter the desired font name for the HTML preview. Clicking on the "..." button shows a list of available fonts.<br />
+<br />
+&bull; <b>Show pics as links in preview</b><br />
+If this option is checked, links to image URLs (those ending with .png, .gif or .jpg) are shown like other links in the preview. If it is unchecked, the images (if available) are shown.<br />
+<br />
+&bull; <b>Props. to yes/no include in preview</b><br />
+A regular expression for the properties to be shown in HTML preview or not. See <span class="wiki-link"><a href="ThePreview.html">ThePreview</a></span>.<br />
+<br />
+&bull; <b>Preview renderer</b><br />
+Under Windows you can choose the renderer for the HTML preview. See <span class="wiki-link"><a href="ThePreview.html">ThePreview</a></span> and <span class="wiki-link"><a href="HtmlFormatting.html">HtmlFormatting</a></span>.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<ul><b>Application settings: HTML header</b><br />
+<br />
+These options have the same meaning and values as the global and local <span class="wiki-link"><a href="PageViewAttributes.html">html attributes</a></span>; see there for details.<br />
+The options set the application defaults and are overridden by the global and local attributes.<br />
+These settings will be inserted in the html pages as attributes of "&lt;body&gt;"-tag.<hr size="1" />
+</ul>
+&bull; <b>Link color</b><br />
+<br />
+&bull; <b>Active link color</b><br />
+<br />
+&bull; <b>Visited link color</b><br />
+<br />
+&bull; <b>Text color</b><br />
+<br />
+&bull; <b>Background color</b><br />
+<br />
+&bull; <b>Background image</b><br />
+<br />
+&bull; <b>Doctype</b><br />
+Sets the DOCTYPE to use in the header of an HTML file. You should only modify it if you understand what it is doing.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+previous: <a href="javascript:history.go(-1)">Back</a><br />
+parents:&nbsp; <span class="wiki-link"><a href="HtmlCss.html">HtmlCss</a></span>, <span class="wiki-link"><a href="Intro2ViewingAndEditing.html">Intro2ViewingAndEditing</a></span>, <span class="wiki-link"><a href="ThisWiki.html">ThisWiki</a></span>, <span class="wiki-link"><a href="WorkSpace.html">WorkSpace</a></span>, <span class="wiki-link"><a href="WorkSpaceGeneral.html">WorkSpaceGeneral</a></span>, <span class="wiki-link"><a href="WpOptionsHtmlPreview.html">WpOptionsHtmlPreview</a></span><br />
+attributes: <span class="property">[tree_position: 5]</span><br />
+<span class="property">[help.status: done]</span>    </body>
+</html>

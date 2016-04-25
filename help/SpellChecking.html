@@ -1,0 +1,126 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <title>SpellChecking</title>
+        <link type="text/css" rel="stylesheet" href="appbase.css">
+    </head>
+    <body>
+<span class="parent-nodes">parent nodes: <span class="parent-node"><a href="GlobalAttributesSpellChecking.html">GlobalAttributesSpellChecking</a></span> | <span class="parent-node"><a href="ProgramFiles.html">ProgramFiles</a></span> | <span class="parent-node"><a href="TheEditor.html">TheEditor</a></span> | <span class="parent-node"><a href="UserFiles.html">UserFiles</a></span> | <span class="parent-node"><a href="WikiFiles.html">WikiFiles</a></span></span><br /><br />
+<a name=".h0"></a><h2>Spell Checking</h2>
+Contents:	<div class="page-toc">
+<div class="page-toc-level2"><a href="#.h0">Spell Checking</a></div>
+<div class="page-toc-level3"><a href="#.h53">General</a></div>
+<div class="page-toc-level4"><a href="#.h928">Language dictionaries</a></div>
+<div class="page-toc-level4"><a href="#.h1862">Language specification</a></div>
+<div class="page-toc-level4"><a href="#.h2357">Word definition</a></div>
+<div class="page-toc-level3"><a href="#.h3170">The spell check dialog</a></div>
+<div class="page-toc-level4"><a href="#.h3197">General</a></div>
+<div class="page-toc-level4"><a href="#.h3984">The dialog</a></div>
+<div class="page-toc-level4"><a href="#.h5399">The word lists</a></div>
+<div class="page-toc-level3"><a href="#.h6099">Settings</a></div>
+<div class="page-toc-level4"><a href="#.h6112">Page attributes</a></div>
+<div class="page-toc-level4"><a href="#.h6263">Global attributes</a></div>
+<div class="page-toc-level4"><a href="#.h6341">Func.pages</a></div>
+</div>
+<br />
+<a href="javascript:history.go(-1)">Back</a><hr size="1" />
+<a name=".h53"></a><h3>General</h3>
+Wikidpad is prepared to support spell checking on a page or wiki basis. To do so however you need to have installed either:<ul><li />the spell check add-on; for Windows binary distribution<li />the pyEnchant library; for source distribution</ul>
+You should be able to retrieve the add-on from the same place where you downloaded WikidPad. If not you can download it from the <span class="url-link"><a href="http://groups.google.com/group/wikidpad/web/home">Wikidpad: Home page</a></span>. The add-on should be installed áfter WikidPad is installed and in the same program directory as WikidPad. When WikidPad is uninstalled, the add-on must be uninstalled separately.<br />
+<br />
+The enchant library allows to use several of the available spell checker programs and the dictionaries created for them. The standard pyEnchant library (and therefore the add-on package) default provides ISpell and MySpell as spell checkers.<ul><hr size="1" />
+</ul>
+<a name=".h928"></a><h4>Language dictionaries</h4>
+The add-on already contains MySpell dictionaries for the languages:<br />
+<pre>en_US : English (US)
+en_GB : English (UK)
+de_DE : German (Germany)
+fr_FR : French (France)</pre>
+If you use a different language, you will have to download the appropriate dictionary first. Since MySpell is also used by OpenOffice, you might find the dictionaries of your choice at:<ul><li /><span class="url-link"><a href="http://lingucomponent.openoffice.org/spell_dic.html">OpenOffice</a></span></ul>
+They should work just as well for WikidPad as they do for OpenOffice.<br />
+<br />
+A dictionary consists of a .dic and an .aff file, both with the same name, like "en_US.dic" and "en_US.aff". To install a new dictionary, go to the sub-subdirectory "share / enchant" of the WikidPad program directory. There you will see the directories "ispell" and "myspell". Copy the new .dic and .aff files into the directory for the appropriate spell checker and WikidPad should be ready to use them.<ul><hr size="1" />
+</ul>
+<a name=".h1862"></a><h4>Language specification</h4>
+Before you can use spell checking in your wiki, you first have to specify the language that should be used. You can set the language for a whole wiki by adding the global language attribute to the settings page; like:<ul><li />[global.language: en_US]</ul>
+You can then override this setting on a page basis by adding the local language attribute to a page, like:<ul><li />[language: de_DE]</ul>
+In these attributes the name of the language is always equal to that of the library.<ul><hr size="1" />
+</ul>
+<a name=".h2357"></a><h4>Word definition</h4>
+Spell checking requires the ability to find the words in the content. The regular expression used to find words is located in the "WikiSyntax.py" file (in the directory "extensions" or "user_extensions") and lhas about this format:<br />
+<pre>TextWordRE = re.compile(ur"(?P&lt;negative&gt;[0-9]+|"+ UrlRE.pattern + u"|" +
+        WikiWordRE.pattern + ur")|\b[\w']+",
+        re.DOTALL | re.UNICODE | re.MULTILINE)</pre>
+If you have some experience with regular expressions, you can change it; see <span class="wiki-link"><a href="WikiSyntax.html">WikiSyntax</a></span> for details.<br />
+<br />
+The expression contains a named group "negative". If something matches one of the entries in this group (joined with '|'), this is <b>not</b> interpreted as word (by default these are numbers, URLs and camel-case wiki words). This allows to ignore unwanted patterns.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h3170"></a><h3>The spell check dialog</h3>
+<a name=".h3197"></a><h4>General</h4>
+If you want to perform a spell check, select the option Editor / "Spell check" from the main menu. This option is only shown, when the addon is installed. So if the option isn't in the Editor menu, then either:<ul><li />you haven't installed the addon<li />or the installtaion went wrong.</ul>
+After the dialog is opened, it starts searching for spelling errors from the beginning of the page and down. If it finds an error, it is shown in red with some context before and after it in the "To check" area of the dialog. You now have the possibility to manually correct the error in the "Replace with" field or to choose an of the suggested correct spellings from the list beneath the field and then click on "Replace". Or you can skip it by pressing Enter to go to the next error.<ul><hr size="1" />
+</ul>
+<a name=".h3984"></a><h4>The dialog</h4>
+The dialog is non-modal, this means you can edit the wiki page while the dialog is open. When pressing "Ignore", the spell checker always starts searching where you left the cursor, so you can go to another page and place the cursor where you want spell checking to continue.<br />
+The dialog can't be used to check functional pages like the text blocks pages (see <span class="wiki-link"><a href="TextBlocks.html">TextBlocks</a></span>). The available buttons in the dialog have the following meanings:<br />
+<br />
+&bull; <b>Ignore</b><br />
+Ignore this error and find the next one.<br />
+<br />
+&bull; <b>Ignore All</b><br />
+Ignore this error and if a word with exactly the same spelling (including case) is found again later, ignore that too.<br />
+<br />
+&bull; <b>Replace</b><br />
+Replace the error with the text entered in "Replace with".<br />
+<br />
+&bull; <b>Replace All</b><br />
+Replace the error and if a word with exactly the same spelling (including case) is found again later, correct it in the same way.<br />
+<br />
+&bull; <b>Add Globally</b><br />
+Add the found word to the permanent application-wide list of words to ignore.<br />
+<br />
+&bull; <b>Add Locally</b><br />
+Add the found word to the permanent wiki-wide list of words to ignore.<br />
+<br />
+&bull; <b>Done</b><br />
+Close dialog.<br />
+<br />
+&bull; <b>Checkbox 'Go to next page'</b><br />
+If the spell checker reaches the end of the current page and this check box is checked, it goes on to the "next" page. "Next" means here the following page in alphabetical order of page name (case sensitive), so the spell checking might jump around in the page tree.<ul><hr size="1" />
+</ul>
+<a name=".h5399"></a><h4>The word lists</h4>
+With "Ignore All" and "Replace all" you can add words to temporary word-ignore or -replace lists; these lists however are cleared when the dialog is closed.<br />
+<br />
+With the buttons "Add Globally" and "Add Locally" you can add words to more permanent ignore lists. These words are part of the "func. pages" in the <span class="wiki-link"><a href="TheTreeView.html">views tree</a></span> and can be modied in the editor as if they were a wiki page. The lists are:<ul><li />Global spell list: an application wide list<li />Wiki spell list: a wiki specific list</ul>
+Each line contains a word to ignore during spell checking. You can add, modify or delete words or the whole list arbitrarily and cut &amp; paste words between the lists.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h6099"></a><h3>Settings</h3>
+<a name=".h6112"></a><h4>Page attributes</h4>
+<ul><hr size="1" />
+</ul>
+&bull; <b>[language:</b> <i>language code</i><b>]</b><br />
+Sets the default language code for spell checking; default = <i>none</i><br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h6263"></a><h4>Global attributes</h4>
+<ul><b>Spell checking: see <span class="wiki-link"><a href="SpellChecking.html">SpellChecking</a></span></b><hr size="1" />
+</ul>
+&bull; <b>[global.language:</b> <i>language code</i><b>]</b><br />
+Sets the default language code for spell checking; default = <i>none</i><br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h6341"></a><h4>Func.pages</h4>
+<ul><hr size="1" />
+</ul>
+&bull; <b>Wiki spell list</b><br />
+<br />
+&bull; <b>Global spell list</b><br />
+<br />
+<a href="#">Top</a><hr size="1" />
+previous: <a href="javascript:history.go(-1)">Back</a><br />
+parents:&nbsp; <span class="wiki-link"><a href="GlobalAttributesSpellChecking.html">GlobalAttributesSpellChecking</a></span>, <span class="wiki-link"><a href="ProgramFiles.html">ProgramFiles</a></span>, <span class="wiki-link"><a href="TheEditor.html">TheEditor</a></span>, <span class="wiki-link"><a href="UserFiles.html">UserFiles</a></span>, <span class="wiki-link"><a href="WikiFiles.html">WikiFiles</a></span><br />
+<span class="property">[help.status: done]</span>    </body>
+</html>

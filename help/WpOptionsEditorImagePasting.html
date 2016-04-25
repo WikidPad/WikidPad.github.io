@@ -1,0 +1,22 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <title>WpOptionsEditorImagePasting</title>
+        <link type="text/css" rel="stylesheet" href="appbase.css">
+    </head>
+    <body>
+<span class="parent-nodes">parent nodes: <span class="parent-node"><a href="WpOptions.html">WpOptions</a></span></span><br /><br />
+<ul><b>Application settings: Editor, image pasting</b><hr size="1" />
+</ul>
+&bull; <b>Filename prefix</b><br />
+A prefix to use for the filename. If this filename plus suffix exists already in "files" dir, an underscore and a sequence of 20 random letters or numbers is appended to create a unique filename. E.g. you want to store a PNG-file with prefix "foo" then WikidPad checks if "foo.png" is already in the "files" directory (if prefix is empty, this is not tried). If "foo.png" exists it tries something like "foo_2NIUXQ0OGVRDT1O3JNUN.png". If this exists already it tries again (up to 20 times) before giving up.<br />
+<br />
+&bull; <b>File type</b><ul><li />None: Don't store images at all<li />PNG: Store in PNG format (losless compression)<li />JPEG: Store in JPEG format (lossy compression)<br />
+</ul>
+&bull; <b>Quality</b><br />
+Number to define quality of JPEG compression (0:worst, 75:default, 100:best)<br />
+<br />
+&bull; <b>Ask settings on each paste</b><br />
+If checked, each time you paste an image, a dialog box asks for the above settings to set them individually.    </body>
+</html>

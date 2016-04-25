@@ -1,0 +1,87 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <title>Using brackets</title>
+        <link type="text/css" rel="stylesheet" href="appbase.css">
+    </head>
+    <body>
+<span class="parent-nodes">parent nodes: <span class="parent-node"><a href="GlobalAttributesBracketedLinks.html">GlobalAttributesBracketedLinks</a></span> | <span class="parent-node"><a href="Intro1StartingAWiki.html">Intro1StartingAWiki</a></span> | <span class="parent-node"><a href="Intro3Formatting.html">Intro3Formatting</a></span> | <span class="parent-node"><a href="PageLinking.html">PageLinking</a></span> | <span class="parent-node"><a href="Using WikiWords.html">Using WikiWords</a></span></span><br /><br />
+<a name=".h0"></a><h2>Using brackets</h2>
+Contents:   <div class="page-toc">
+<div class="page-toc-level2"><a href="#.h0">Using brackets</a></div>
+<div class="page-toc-level3"><a href="#.h55">General</a></div>
+<div class="page-toc-level3"><a href="#.h887">Link titles</a></div>
+<div class="page-toc-level3"><a href="#.h1432">Syntax</a></div>
+<div class="page-toc-level4"><a href="#.h1443">Naming rules</a></div>
+<div class="page-toc-level4"><a href="#.h1627">Case sensitivity</a></div>
+<div class="page-toc-level4"><a href="#.h1774">Titles</a></div>
+<div class="page-toc-level3"><a href="#.h1990">Auto link recognition</a></div>
+<div class="page-toc-level3"><a href="#.h2514">Preventing link generation</a></div>
+<div class="page-toc-level4"><a href="#.h2545">Occasionally</a></div>
+<div class="page-toc-level4"><a href="#.h2772">Overruling the blacklist</a></div>
+<div class="page-toc-level3"><a href="#.h3368">Settings</a></div>
+<div class="page-toc-level4"><a href="#.h3381">Global attributes</a></div>
+</div>
+<br />
+<a href="javascript:history.go(-1)">Back</a><hr size="1" />
+<a name=".h55"></a><h3>General</h3>
+Instead of using camelcased wikiwords you can create links, by enclosing one or more regular words in square brackets ("[" and "]"), like [Wikiwords] or [Wiki words] or [What is a wikiword] giving <span class="wiki-link"><a href="WikiWords.html">Wikiwords</a></span>, <span class="wiki-link"><a href="WikiWords.html">Wiki words</a></span> or <span class="wiki-link"><a href="WikiWords.html">What is a wikiword</a></span> respectively.<br />
+<br />
+When you type the closing bracket, the phrase is automatically turned into a link and becomes underlined. Links that already have content, like <span class="wiki-link"><a href="WikiWords.html">Wiki word</a></span> turn blue, links that do not, like [Undefined page], stay black but are underlined. If this does not happen, then the link contains an illegal character.<br />
+<br />
+For eacht new link, a new (empty) page is automatically created. To go there and add your text, type Ctrl+L when the cursor is at the start, in the middle or at the end of the link or double click on the link with the mouse.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h887"></a><h3>Link titles</h3>
+Links can have titles attached to them. In preview mode, exported HTML, etc. it is then the title that is displayed and functions as the link and not the page link itself. The title text must be separated from the page link by a vertical bar "|", like in [Case link|A link to the case item] that results in <span class="wiki-link"><a href="Case%20link.html">A link to the case item</a></span>, but still links to <span class="wiki-link"><a href="Case%20link.html">Case link</a></span>.<br />
+This way you can also create "links" with otherwise illegal characters, like e.g. filenames:  <span class="wiki-link"><a href="UserProfile.html">C:\Application\User.ini</a></span>.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h1432"></a><h3>Syntax</h3>
+<a name=".h1443"></a><h4>Naming rules</h4>
+The characters allowed in a link are A-Z, a-z, 0-9, space, hyphen "-" and underscore "_". All other characters exclude a phrase from being accepted as a link.<ul><hr size="1" />
+</ul>
+<a name=".h1627"></a><h4>Case sensitivity</h4>
+Links are case sensitive; <span class="wiki-link"><a href="Case%20link.html">Case link</a></span> is a different link from [Case Link] and therefore links to a different item.<a href="#.f3">[3]</a><ul><hr size="1" />
+</ul>
+<a name=".h1774"></a><h4>Titles</h4>
+Link titles can contain any character but for those that have a special meaning to Wikidpad, like "|", "*" and "\", unless the <span class="wiki-link"><a href="SyntaxEscape.html#EscapeCharacter">escape character</a></span> is used.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h1990"></a><h3>Auto link recognition</h3>
+The editor can be set to allow recognition of non-camelcase page links in normal text without having to use the brackets, using the [global.auto_link: <i>value</i>] attribute. The supported values are:<br />
+<ul><li />off: Switch off recognition<li />relax: Recognition is case-insensitive and maps arbitrary<br />
+non alpha-numeric characters in text to white spaces in the<br />
+wiki word.<br />
+</ul>
+When active, a text like "Using: the treeview" is recognized as the page link <span class="wiki-link"><a href="Using%20the%20treeview.html">Using the treeview</a></span>.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h2514"></a><h3>Preventing link generation</h3>
+<a name=".h2545"></a><h4>Occasionally</h4>
+To show a phrase in brackets as regular text and prevent it from being interpreted as a link, you can precede it with the <span class="wiki-link"><a href="SyntaxEscape.html#EscapeCharacter">escape character</a></span> ("\"), like in: \[Wiki Word].<ul><hr size="1" />
+</ul>
+<a name=".h2772"></a><h4>Overruling the blacklist</h4>
+Camelcased words in the blacklist can still be used as links, by putting them in brackets. An example is the word WikidPad, that is in the Wiki blacklist, but with brackets [WikidPad] still functions as the link: <span class="wiki-link"><a href="WikidPad.html">WikidPad</a></span>. This also works with titles like [WikidPad|this] giving <span class="wiki-link"><a href="WikidPad.html">this</a></span>.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".f1"></a>[1] <i>A list of all empty items can found in the "Views" node as "undefined-nodes".</i><br />
+<a name=".f2"></a>[2] <i>Outside the editor, links to empty items are shown as regular text.</i><br />
+<a name=".f3"></a>[3] <i>In Windows this only works with wiki's using the SQLlight database</i>.<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h3368"></a><h3>Settings</h3>
+<a name=".h3381"></a><h4>Global attributes</h4>
+<ul><b>Bracketed links: see <span class="wiki-link"><a href="Using%20brackets.html">Using brackets</a></span></b><hr size="1" />
+</ul>
+&bull; <b>[global.auto_link:</b> <i>off / relax</i><b>]</b><br />
+Sets the default recognition mode of non-camelcase wiki words in normal text; default = <i>Off</i>.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+previous: <a href="javascript:history.go(-1)">Back</a><br />
+parents:&nbsp; <span class="wiki-link"><a href="GlobalAttributesBracketedLinks.html">GlobalAttributesBracketedLinks</a></span>, <span class="wiki-link"><a href="Intro1StartingAWiki.html">Intro1StartingAWiki</a></span>, <span class="wiki-link"><a href="Intro3Formatting.html">Intro3Formatting</a></span>, <span class="wiki-link"><a href="PageLinking.html">PageLinking</a></span>, <span class="wiki-link"><a href="Using%20WikiWords.html">Using WikiWords</a></span><br />
+attributes: <span class="property">[tree_position: 2]</span><br />
+<span class="property">[help.status: done]</span><br />
+<br />
+    </body>
+</html>

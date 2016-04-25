@@ -1,0 +1,94 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <title>TextTables</title>
+        <link type="text/css" rel="stylesheet" href="appbase.css">
+    </head>
+    <body>
+<span class="parent-nodes">parent nodes: <span class="parent-node"><a href="TextFormatting.html">TextFormatting</a></span> | <span class="parent-node"><a href="TextTables.html">TextTables</a></span></span><br /><br />
+<a name=".h0"></a><h2>Text Tables</h2>
+<a href="javascript:history.go(-1)">Back</a><hr size="1" />
+<a name=".h32"></a><h3>General</h3>
+In Wikidpad tables can be used. For the time being however, this remains limited to the default html table style. No formatting facilities are available for tables.<br />
+<br />
+A table is defined inside a table block; a construct analogous to the escape blocks (see <span class="wiki-link"><a href="DemoTextEscape.html">Textformatting: Escape</a></span>). A table block is defined by the "&lt;&lt;|" and "&gt;&gt;" start and ending tags. These tags must be alone on an otherwise empty line; you cán however put a tab in front of the opening tag, to indent the table. Each line of text in the block forms a table row, individual cells in the row are separated by a vertical bar (" | ").<br />
+<br />
+<b>Example:</b><ul>&lt;&lt;|<br />
+row 1 | cell | cell | cell<br />
+row 2 | cell | cell | cell<br />
+&gt;&gt;</ul>
+results in<ul><table border="2">
+<tr><td>row 1 </td><td> cell </td><td> cell </td><td> cell</td></tr>
+<tr><td>row 2 </td><td> cell </td><td> cell </td><td> cell</td></tr>
+</table>
+<br />
+</ul>
+<a href="#">Top</a><hr size="1" />
+<a name=".h834"></a><h3>Formatting cell content</h3>
+In a table cell the following formatting elements can be used:<ul><table border="2">
+<tr><td>Bold text </td><td> <b>bold</b></td></tr>
+<tr><td>Italic text </td><td>  <i>italics</i></td></tr>
+<tr><td>Images </td><td> <img src="files/library64.png" alt="" border="0" /></td></tr>
+<tr><td>Page links </td><td> <span class="wiki-link"><a href="#Top">Top</a></span></td></tr>
+<tr><td>Web links </td><td> <span class="url-link"><a href="http://www.w3schools.com/">http://www.w3schools.com/</a></span></td></tr>
+<tr><td>File links </td><td> <span class="url-link"><a href="files/license.txt">files/license.txt</a></span></td></tr>
+<tr><td>Wiki links </td><td> <span class="url-link"><a href="wiki:///C|/Documents%20and%20Settings/foowiki/foowiki.wiki"> <img src="files/wordpad.png" alt="" border="0" align="middle" /></a></span>    Foowiki with an image title</td></tr>
+<tr><td>Footnotes </td><td> This is text with a footnote <a href="#.f1">[1]</a>.</td></tr>
+<tr><td>Page insertions </td><td> See <span class="wiki-link"><a href="TextInsertionsTextFormatting.html">Textformatting: insertions</a></span></td></tr>
+<tr><td><span class="wiki-link"><a href="HtmlFormatting.html">Html elements</a></span> </td><td> <small>HTML small tekst, </small><br />HTML standard tekst, <br /><big>HTML big tekst</big></td></tr>
+</table>
+<br />
+<br />
+<table border="2">
+<tr><td>Wikidpad elements that can nót be used inside tables are:</td></tr>
+<tr><td><ul><br />
+<li>Lists</li><br />
+<li>Headings</li><br />
+<li>Horizontal lines&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li><br />
+<li>Escape blocks</li><br />
+<li>Link insertions</li><br />
+<li>Attributes</li></ul><small>*Done with html.</small></td></tr>
+</table>
+<br />
+</ul>
+<a href="#">Top</a><br />
+<a name=".f1"></a>[1] <i>This is footnote 1.</i><hr size="1" />
+<a name=".h1822"></a><h3>Multi line cell content</h3>
+The content of a cell can be split over two or more lines, by breaking it up over as many page lines and separating the line parts by a backslash. An example in this case, tells more then text can:<br />
+<ul><table border="2">
+<tr><td>row 1 </td><td> cell 1, line 1<br />
+cell 1, line 2<br />
+cell 1, line 3 </td><td> cell2 </td><td> cell 3, line 1<br />
+cell 3, line 2</td></tr>
+<tr><td>row 2</td><td> cell 1 </td><td> cell 2, line 1<br />
+cell 2, line 2 </td><td> cell 3</td></tr>
+</table>
+<br />
+</ul>
+In the above example the definition for row 1 effectively has been split over 4 consecutive page lines, resulting in a not all together easy-reference structure. An easier way would be to simply add a few html "&lt;br /&gt;" tags in the cell content, to break it up over multiple lines; like this:<br />
+<ul><table border="2">
+<tr><td>row 1 </td><td> cell 1, line 1<br />cell 1, line 2<br />cell 1, line 3 </td><td> cell2 </td><td> cell 3, line 1<br />cell 3, line 2</td></tr>
+<tr><td>row 2</td><td> cell 1 </td><td> cell 2, line 1<br />cell 2, line 2 </td><td> cell 3</td></tr>
+</table>
+<br />
+</ul>
+View this section in the editor, to see the difference in structure and reference.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h2782"></a><h3>Tab as cell delimiter</h3>
+As an alternative, also the Tab can be used as cell delimiter. To use this, start the table block with the "&lt;&lt;|t" tag instead of the "&lt;&lt;|" tag. Example:<br />
+<ul><table border="2">
+<tr><td>row 1</td><td>cell</td><td>cell</td><td>cell</td></tr>
+<tr><td>row 2</td><td>cell</td><td>cell</td><td>cell</td></tr>
+</table>
+<br />
+</ul>
+<b>Important!</b><br />
+This facility can only be used, when the option: "menu / Editor / Settings / Tabs to spaces" is not switch on.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+previous: <a href="javascript:history.go(-1)">Back</a><br />
+parents:&nbsp; <span class="wiki-link"><a href="TextFormatting.html">TextFormatting</a></span>, <span class="wiki-link"><a href="TextTables.html">TextTables</a></span><br />
+<span class="property">[help.status: done]</span>    </body>
+</html>

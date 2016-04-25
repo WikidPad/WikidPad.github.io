@@ -1,0 +1,37 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <title>WpOptionsTree</title>
+        <link type="text/css" rel="stylesheet" href="appbase.css">
+    </head>
+    <body>
+<span class="parent-nodes">parent nodes: <span class="parent-node"><a href="WpOptions.html">WpOptions</a></span></span><br /><br />
+<ul><b>Application settings: Main tree</b><hr size="1" />
+</ul>
+&bull; <b>Tree auto-follow</b><br />
+The tree tries to always select the wiki word currently shown in the editor or HTML-view.<br />
+<br />
+&bull; <b>Tree update after save</b><br />
+After each (automatic or manual) save, the tree icons and shown children are updated. This may need some time and may create some flicker going from top to bottom through the tree.<br />
+<br />
+&bull; <b>Hide Undefined WikiWords in Tree</b><br />
+If a page contains wiki word links to non-existing pages, these are not shown as children in the tree.<br />
+<br />
+&bull; <b>No cycles in tree</b><br />
+If two or more pages reference each other (e.g. NodeA -&gt; NodeB -&gt; NodeA) these cycles are not shown. Precisely: if a child of a word is already an ancestor (parent, grandparent, ...) of this word, it is not shown.<br />
+<br />
+&bull; <b>Tree auto-hide</b><br />
+After selecting an item in tree, the tree is hidden automatically. It can be brought back, by pressing Ctrl-T<br />
+<br />
+&bull; <b>Background color</b><br />
+Specify background color of tree.<br />
+<br />
+&bull; <b>Position main tree</b><br />
+Controls where to place the main tree (to the left, right, top or bottom)<br />
+<br />
+&bull; <b>Position view tree</b><br />
+You can also have a second tree which has the "Views" node as root. You can place it relative to the main tree (above, below, left or right) or choose "hidden" if you don't want it. <br />
+<ul><b>KNOWN BUG</b>: After changing the position of main or view tree, the trees do not react on clicks properly any longer. Restart WikidPad. See <span class="wiki-link"><a href="WorkSpaceGeneral.html#RestartWikidPad">WorkSpaceGeneral</a></span> for details.</ul>
+    </body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <title>WikiControl</title>
+        <link type="text/css" rel="stylesheet" href="appbase.css">
+    </head>
+    <body>
+<span class="parent-nodes">parent nodes: <span class="parent-node"><a href="CommandLineSupport.html">CommandLineSupport</a></span> | <span class="parent-node"><a href="UserFiles.html">UserFiles</a></span> | <span class="parent-node"><a href="WorkSpace.html">WorkSpace</a></span></span><br /><br />
+<a name=".h0"></a><h2>Wiki Control</h2>
+Contents:   <div class="page-toc">
+<div class="page-toc-level2"><a href="#.h0">Wiki Control</a></div>
+<div class="page-toc-level3"><a href="#.h53">General</a></div>
+<div class="page-toc-level3"><a href="#.h775">Wiki management</a></div>
+<div class="page-toc-level3"><a href="#.h2003">Favorites</a></div>
+<div class="page-toc-level3"><a href="#.h4199">Wiki maintenance</a></div>
+<div class="page-toc-level3"><a href="#.h6020">Deprecated</a></div>
+<div class="page-toc-level3"><a href="#.h6403">Settings</a></div>
+<div class="page-toc-level4"><a href="#.h6416">Options</a></div>
+</div>
+<br />
+<a href="javascript:history.go(-1)">Back</a><hr size="1" />
+<a name=".h53"></a><h3>General</h3>
+The functions below can - unless mentioned otherwise - be found in the Wiki menu.<br />
+<br />
+&bull; <b>Opening read only</b><br />
+The Wikidpad "Open wiki" dialog has an option that can be set, if a wiki is supposed to be opened "read only".<br />
+<br />
+&bull; <b>Opening older wiki's</b><br />
+If a wiki to be opened was created with an older version of WikidPad or WikidPadCompact, Wikidpad can't determine the <span class="wiki-link"><a href="WikiDatabase.html">database type</a></span> and will ask the user to specify it manually. If the wiki was created with the original WikidPad the right choice is "Original Gadfly", for WikidPadCompact it is "Compact Sqlite". The type will be stored in the wiki configuration file and Wikidpad will not have to ask for it again next time.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h775"></a><h3>Wiki management</h3>
+&bull; <b>New</b><br />
+Creates a new wiki and opens it in the current workspace (Wikidpad window).<br />
+<br />
+The name for the new wiki has to be a valid <span class="wiki-link"><a href="Using%20WikiWords.html">WikiWord</a></span>. Wikidpad will offer to create it in the default wiki folder (see Settings: Default open/new dir.) but any folder can be chosen. Wikidpad will then ask to specify the <span class="wiki-link"><a href="WikiDatabase.html">database type</a></span> to be used for the new Wiki. In the destination folder, Wikidpad will create a <span class="wiki-link"><a href="WikiFiles.html">new folder</a></span> with the name of the wiki and in it the newname.wiki file and a "Data" folder, that contains the wiki database. The .wiki file is actually the configuration file for the wiki and could be edited by hand.<br />
+<br />
+<img src="files/NewWikiExample1.png" alt="" border="0" /> <img src="files/NewWikiExample2.png" alt="" border="0" /><br />
+<br />
+&bull; <b>Open</b><br />
+Opens an existing wiki in the current workspace.<br />
+<br />
+&bull; <b>Open in new window</b><br />
+Opens an existing wiki in a new workspace (window).<br />
+<br />
+&bull; <b>Recent</b><br />
+Opens an existing wiki from the list "recently opened wiki's" in the current workspace.<br />
+<br />
+&bull; <b>Clone</b> (<i>View menu!</i>)<br />
+Opens the currently opened wiki in separate workspace, but nót in a separate proces. The function will do this despite the setting of "Single process per user" for the workspace.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h2003"></a><h3>Favorites</h3>
+The "Favorites" menu gives access to wiki's that are often needed and allows them to be opened by selecting a menu entry and optionally by an icon in the toolbar and/or by a shortcut.<br />
+<br />
+&bull; <b>Add</b><br />
+To add a wiki to the favorites, choose "Add wiki" in the "Favorites" menu. This shows a dialog, that allows to specify:<br />
+<ul><li />the title for the wiki (it's name)<li />a keyboard shortcut (e.g. "Alt-1") if desired<li />the path or wiki URL of the wiki (by default, this field contains the path of the current wiki),<li />if it should be opened in a new window<li />if it should have an icon in toolbar. If so, you can also enter<br />
+<ul><li />the position in toolbar relative to other favorite icons (up to 9 icons can be there)<li />the name of the icon to show<br />
+<br />
+</ul>
+</ul>
+<i>Remarks:</i><ul><li />If multiple entries refer to the same toolbar position, only one of the icons is shown (chosen arbitrarily).<br />
+</ul>
+&bull; <b>Managing favorites</b><br />
+Currently advanced management can only be done by editing their textual specifications in the so-called functional page of the favorite wikis. To open it, either go in tree to "Views"-&gt;"Func. pages"-&gt;"Favorite wikis" or use in "Favorites" menu the entry "Manage favorites".<br />
+<br />
+A line in the page follows the syntax:<ul><li />Title\tShortcut;Flags;Iconname=Path</ul>
+The meaning of the individual parameters is:<ul><li />Title is the wiki title shown in "Favorites" menu<li />After \t you can enter the shortcut. If you don't want a shortcut, you can omit the \t as well<li />Flags can contain an 'n' to show the wiki in a new window and/or a digit to determine icon position in toolbar. Flags can also be empty.<li />Iconname is name of the icon<li />Path can be a path or a wiki URL of the wiki to open<br />
+</ul>
+&bull; <b>Examples</b> <a href="#.f1">[1]</a><br />
+Only the necessary things:<ul><li />CoolWiki=C:\Data\Wikis\CoolWiki\CoolWiki.wiki</ul>
+With shortcut:<ul><li />CoolWiki\tAlt-1=C:\Data\Wikis\CoolWiki\CoolWiki.wiki</ul>
+With shortcut and new window:<ul><li />CoolWiki\tAlt-1;n=C:\Data\Wikis\CoolWiki\CoolWiki.wiki</ul>
+Full blown with shortcut and icon "flash" at position 2 in toolbar:<ul><li />CoolWiki\tAlt-1;2n;flash=C:\Data\Wikis\CoolWiki\CoolWiki.wiki<br />
+</ul>
+<a href="#">Top</a><br />
+<a name=".f1"></a>[1] <i>Double backslashes used for visibility in preview!</i><hr size="1" />
+<a name=".h4199"></a><h3>Wiki maintenance</h3>
+&bull; <b>Rebuild</b><br />
+This will completely rebuild the internal database for the wiki. This is sometimes necessary if the program previously terminated abnormally or if datafiles were deleted or added from outside of WikidPad.<br />
+The function can also be used to add large numbers of additional pages to the wiki.  Copy ".wiki" wikiword files into the "data" directory, then choose "Rebuild Wiki" to rebuild the database to include these files.<br />
+<br />
+<i>Remark:</i> This does not work for the "Compact Sqlite" <span class="wiki-link"><a href="WikiDatabase.html">database type</a></span>.<br />
+<br />
+&bull; <b>Reconnect</b><br />
+If during a WikidPad session the access to the wiki database files is lost (e.g. network connection drops), this might result in an error. The connection to the database then has to be reestablished, before it can be updated and work can progress.<br />
+In principal, WikidPad will automatically try to reconnect will ask if it should do so, each time an attempt is made to open or save a page. WikidPad can however also manually be told to try to reconnect, by using the "reconnect" function.<br />
+<br />
+<i>Remark:</i> Autosave is automatically disabled until the connection is successfully reestablished.<br />
+<br />
+&bull; <b>Vacuum</b><br />
+This function is only available if currently loaded wiki is of type "Original Sqlite" or "Compact Sqlite".<br />
+If information is deleted from an Sqlite database, the occupied hard disk space is not freed but later reused for new information to add. "Vacuum" makes this space available for the system again. After deleting large parts of a wiki, you can use "Vacuum" to free space, especially recommended for a "Compact Sqlite" wiki (where the page content is also stored in the database).<br />
+<br />
+&bull; <b>Wiki info</b><br />
+This function displays information about the <span class="wiki-link"><a href="WikiDatabase.html">database type</a></span> of the current wiki and the number of pages it contains.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h6020"></a><h3>Deprecated</h3>
+The use of functions in this section is deprecated for new and current Wiki's. The functions are outdated and only there for backwards compatibility and the support of quite old wiki's.<br />
+<br />
+&bull; <b>Open as type</b><br />
+This function opens a wiki and álways asks for the database type to use. This is helpful when migrating from one database backend to another.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h6403"></a><h3>Settings</h3>
+<a name=".h6416"></a><h4>Options</h4>
+<ul><b>Wiki settings: General, wiki control</b><hr size="1" />
+</ul>
+&bull; <b>First word at startup</b><br />
+Wiki word which should be shown as first one each time the wiki is opened. If the field is empty, the last words when the wiki was closed is shown on opening.<br />
+<br />
+&bull; <b>Read only wiki</b><br />
+This option controls if a wiki can be changed or only can be opened as "read only".<br />
+<br />
+&bull; <b>Wiki icon</b><br />
+Set here the name of icon to use in the system tray instead of the default icon. If the field is empty the default icon is used. The icon of the main window is not influenced by this setting (because it does not work).<br />
+<br />
+&bull; <b>Wiki-bound hotkey</b><br />
+Wiki-bound hotkey to show/hide wiki. See OptionsDialog#<b>App-bound# hotkey</b><br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<ul><b>Application settings: General, wiki control</b><hr size="1" />
+</ul>
+&bull; <b>New window on wiki URL</b><br />
+When double clicking on a wiki: URL, a new instance of the application is started, otherwise, the current instance loads the new wiki.<br />
+<br />
+&bull; <b>Store relative pathes to wikis</b><br />
+Pathes to the recently opened wikis are stored as relative pathes if this is checked. Useful e.g. if you have WikidPad and your wikis on an USB-stick.<br />
+<br />
+&bull; <b>Default open/new dir.</b><br />
+Directory to start when using "Wiki"-&gt;"New" or "Wiki"-&gt;"Open" in the menu. If empty, WikidPad chooses a default.<br />
+<ul><b>Application settings: User interface, wiki control</b><hr size="1" />
+</ul>
+&bull; <b>Recent wikis list length</b><br />
+Set the number of wikis to show in menu "Wiki"-&gt;"Recent"<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+previous: <a href="javascript:history.go(-1)">Back</a><br />
+parents:&nbsp; <span class="wiki-link"><a href="CommandLineSupport.html">CommandLineSupport</a></span>, <span class="wiki-link"><a href="UserFiles.html">UserFiles</a></span>, <span class="wiki-link"><a href="WorkSpace.html">WorkSpace</a></span><br />
+attributes: <span class="property">[tree_position: 2]</span><br />
+<span class="property">[help.status: done]</span>    </body>
+</html>

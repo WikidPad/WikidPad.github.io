@@ -1,0 +1,116 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <title>ItemPublishing</title>
+        <link type="text/css" rel="stylesheet" href="appbase.css">
+    </head>
+    <body>
+<span class="parent-nodes">parent nodes: <span class="parent-node"><a href="CommandLineSupport.html">CommandLineSupport</a></span> | <span class="parent-node"><a href="HelpWiki.html">HelpWiki</a></span> | <span class="parent-node"><a href="Intro7Searching.html">Intro7Searching</a></span> | <span class="parent-node"><a href="Intro8Output.html">Intro8Output</a></span> | <span class="parent-node"><a href="PageListDialog.html">PageListDialog</a></span> | <span class="parent-node"><a href="WikiFiles.html">WikiFiles</a></span></span><br /><br />
+<a name=".h0"></a><h2>Item Publishing</h2>
+Contents:	<div class="page-toc">
+<div class="page-toc-level2"><a href="#.h0">Item Publishing</a></div>
+<div class="page-toc-level3"><a href="#.h54">General</a></div>
+<div class="page-toc-level3"><a href="#.h901">The dialog window</a></div>
+<div class="page-toc-level3"><a href="#.h2702">Settings</a></div>
+<div class="page-toc-level4"><a href="#.h2715">Attributes</a></div>
+<div class="page-toc-level4"><a href="#.h2899">Options</a></div>
+</div>
+<br />
+<a href="javascript:history.go(-1)">Back</a><hr size="1" />
+<a name=".h54"></a><h3>General</h3>
+WikidPad can publish wiki pages to html pages that can be viewed with standard browsers like Firefox, Opera and Internet Explorer. Publishing can be done to a single html page or a set of html pages or one wiki page at a time.<br />
+<br />
+To publish all or part of a wiki you can select predefined "Wiki / Export" functions from the main menu:<ul><li />Export Wiki As Single Html Page<li />Export Wiki As Set of Html Pages<li />Export Current Wiki Word As Html Page<li />Export Sub-tree As Single Html Page<li />Export Sub-tree As Set of Html Pages</ul>
+These functions use the default settings as described below in "Settings". To override these settings or specify a different page collection, select "Other export ..." from the menu. This will bring up the export dialog window. The functions wíll however ask you for the destination directory.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h901"></a><h3>The dialog window</h3>
+Publishing pages to html is at this moment combined with "<span class="wiki-link"><a href="DataExchange.html">DataExchange</a></span>" into one integral export function. Both functions use the same dialog window. The options relevant to html publishing are:<br />
+<br />
+&bull; <b>What to export</b><br />
+Specifies what you want to publish; the possible choices are:<ul><li />All pages in the wiki.<li />All pages in the current subtree (the current page and it's children).<li />Current page only.<li />Custom subset of wiki pages.</ul>
+Choosing "Custom" will bring up the <span class="wiki-link"><a href="PageListDialog.html">page list dialog</a></span>, where the subset can be defined.<br />
+<br />
+&bull; <b>Export to</b><br />
+Specifies to whát the pages should be published; the possible choices are:<ul><li />one single html page for the whole wiki<li />one html page per wiki page<br />
+</ul>
+&bull; <b>Compatible filenames</b><br />
+Specifies whether to use ASCII-only filenames for the html files, so that they can be transferred to other filesystems without compatibility issues <a href="#.f1">[1]</a>.<br />
+<br />
+&bull; <b>Shows pics as links in export</b><br />
+Overrides the default application setting; see "Settings" below.<br />
+<br />
+&bull; <b>Table of contents</b><br />
+Overrides the default application setting; see "Settings" below.<br />
+<br />
+&bull; <b>Destination file/directory</b><br />
+Specify the folder where the generated html files should be stored. Overrides the default wiki setting; see "Settings" below.<br />
+<br />
+<b>Remark:</b><br />
+All files in the <span class="wiki-link"><a href="FilesWikiFileStore.html">File Store</a></span> that are referenced by the exportes pages using the relative Url "rel://" are copied to a "files" directory in the destination directory. This also applies to files in subdirectories of the file store directory. If these directories don't exist, WikidPad will create them.<br />
+<br />
+<a href="#">Top</a><br />
+<a name=".f1"></a>[1] <i>On Windows XP and Server 2003 platforms the AppLocale utility might also be of help with export problems; see:</i> <span class="url-link"><a href="http://www.microsoft.com/globaldev/tools/apploc.mspx">http://www.microsoft.com/globaldev/tools/apploc.mspx</a></span>.<hr size="1" />
+<a name=".h2702"></a><h3>Settings</h3>
+<a name=".h2715"></a><h4>Attributes</h4>
+<ul><b>Page attributes</b><hr size="1" />
+</ul>
+&bull; <b>[export: false]</b><br />
+Excludes a page from being exported to html. "false" is the only possible value for this attribute.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h2899"></a><h4>Options</h4>
+<ul><b>Wiki settings: General, export</b><hr size="1" />
+</ul>
+&bull; <b>Default export dir.</b><br />
+Set the default export directory into which exports should go.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<ul><b>Application settings: Html export</b><hr size="1" />
+</ul>
+&bull; <b>Start browser after export</b><br />
+Starts the current web browser after exporting to XML.<br />
+<br />
+&bull; <b>Shows pics as links in export</b><br />
+If this option is checked, links to image URLs (those ending with .png, .gif or .jpg) are shown like other links in the export. If it is unchecked, the images (if available) are shown.<br />
+<br />
+&bull; <b>Table of contents</b><br />
+Choose if you want a table of contents in tree form, list form or not at all.<br />
+For a single HTML page, the TOC is at the beginning of the page, for a set of HTML pages, it is a separate "index.html" file. Using "As tree" is recommended when exporting the whole or nearly the whole wiki, "As list" is better for small subsets of a wiki as the tree option gives unexpected results here.<br />
+<br />
+&bull; <b>Title of toc</b><br />
+Set the title of the table of contents according to your language. The default is "Table of Contents". For German it could be e.g. "Inhaltsverzeichnis".<br />
+<br />
+&bull; <b>Single page separator lines</b><br />
+Set the number of separator lines to separate wiki pages in a single HTML page on export.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<ul><b>Application settings: HTML header</b><br />
+<br />
+These options have the same meaning and values as the global and local <span class="wiki-link"><a href="PageViewAttributes.html">html attributes</a></span>; see there for details.<br />
+The options set the application defaults and are overridden by the global and local attributes.<br />
+These settings will be inserted in the html pages as attributes of "&lt;body&gt;"-tag.<hr size="1" />
+</ul>
+&bull; <b>Link color</b><br />
+<br />
+&bull; <b>Active link color</b><br />
+<br />
+&bull; <b>Visited link color</b><br />
+<br />
+&bull; <b>Text color</b><br />
+<br />
+&bull; <b>Background color</b><br />
+<br />
+&bull; <b>Background image</b><br />
+<br />
+&bull; <b>Doctype</b><br />
+Sets the DOCTYPE to use in the header of an HTML file. You should only modify it if you understand what it is doing.<br />
+<br />
+<a href="#">Top</a><br />
+<hr size="1" />
+previous: <a href="javascript:history.go(-1)">Back</a><br />
+parents:&nbsp; <span class="wiki-link"><a href="CommandLineSupport.html">CommandLineSupport</a></span>, <span class="wiki-link"><a href="HelpWiki.html">HelpWiki</a></span>, <span class="wiki-link"><a href="Intro7Searching.html">Intro7Searching</a></span>, <span class="wiki-link"><a href="Intro8Output.html">Intro8Output</a></span>, <span class="wiki-link"><a href="PageListDialog.html">PageListDialog</a></span>, <span class="wiki-link"><a href="WikiFiles.html">WikiFiles</a></span><br />
+attributes: <span class="property">[tree_position: 12]</span><br />
+<span class="property">[help.status: done]</span>    </body>
+</html>

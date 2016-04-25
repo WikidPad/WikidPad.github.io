@@ -1,0 +1,172 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <title>StructureGraphs</title>
+        <link type="text/css" rel="stylesheet" href="appbase.css">
+    </head>
+    <body>
+<span class="parent-nodes">parent nodes: <span class="parent-node"><a href="GlobalAttributesStructureGraphs.html">GlobalAttributesStructureGraphs</a></span> | <span class="parent-node"><a href="ThisWiki.html">ThisWiki</a></span> | <span class="parent-node"><a href="WikidPadSpecials.html">WikidPadSpecials</a></span> | <span class="parent-node"><a href="WpInsertions.html">WpInsertions</a></span> | <span class="parent-node"><a href="WpOptionsStructureGraphs.html">WpOptionsStructureGraphs</a></span></span><br /><br />
+<a name=".h0"></a><h2>Structure Graphs</h2>
+Content:	<div class="page-toc">
+<div class="page-toc-level2"><a href="#.h0">Structure Graphs</a></div>
+<div class="page-toc-level3"><a href="#.h54">General</a></div>
+<div class="page-toc-level4"><a href="#.h767">The menu options</a></div>
+<div class="page-toc-level4"><a href="#.h1624">The insertions</a></div>
+<div class="page-toc-level4"><a href="#.h2092">Remarks</a></div>
+<div class="page-toc-level3"><a href="#.h3633">Child graph</a></div>
+<div class="page-toc-level3"><a href="#.h3902">Relation graph</a></div>
+<div class="page-toc-level4"><a href="#.h3921">General</a></div>
+<div class="page-toc-level4"><a href="#.h4732">Global Attributes</a></div>
+<div class="page-toc-level4"><a href="#.h6454">Remarks</a></div>
+<div class="page-toc-level3"><a href="#.h6930">Graph presentation</a></div>
+<div class="page-toc-level4"><a href="#.h6953">General</a></div>
+<div class="page-toc-level4"><a href="#.h7318">Example</a></div>
+<div class="page-toc-level4"><a href="#.h7742">Colors</a></div>
+<div class="page-toc-level3"><a href="#.h8316">Settings</a></div>
+<div class="page-toc-level4"><a href="#.h8329">Global attributes</a></div>
+<div class="page-toc-level4"><a href="#.h8409">Options</a></div>
+</div>
+<br />
+<a href="javascript:history.go(-1)">Back</a><hr size="1" />
+<a name=".h54"></a><h3>General</h3>
+As a pilot activity, WikidPad offers the possibility, to create graphs of relationships between wiki pages and/or their attributes. It is "work in progress" and meant as an example of what cóuld be done in this area and therefore is not a fully worked out implementation. They are waiting for somebody with a good idea for their use.<br />
+<br />
+Currently - 1.9 beta 20 - there are two (2) graphs available:<ol><li />child graph<li />relation graph</ol>
+They are available as both a menu option ánd a graph insertion and need the <span class="wiki-link"><a href="ExternalGraphicalApplications.html">GraphViz</a></span> application suite to be properly installed. Both at the moment create graphs for the entyre wiki; there is no possibility yet, to limit it to a specific set or subtree of pages.<ul><hr size="1" />
+</ul>
+<a name=".h767"></a><h4>The menu options</h4>
+In the "plugins" menu you can find four (4) options related to graphs:<ul><li />Show child graph<li />Show child graph source<li />Show relation graph<li />Show rel. graph source</ul>
+These options all show their output in the current tab, that temporarily becomes a "graph window". To close it and return to editor or preview, select the regular option, you would normally use to activate it, like:<ul><li />menu View: "Switch Ed./Prev." or Ctrl-Shift-Space<li />menu View: "Show editor" or Ctrl-Shift-A<li />menu View: "Show preview" or Ctrl-Shift-S</ul>
+The "show ... graph" options show the actual graph in the window; the "show ... source" options show the "graphviz.dot script" that was generated to create the graph specification for <span class="wiki-link"><a href="ExternalGraphicalApplications.html">GraphViz</a></span>. You could copy that and use it as the basis for your own <span class="wiki-link"><a href="ExternalGraphicalApplications.html">graphics insertion</a></span>.<ul><hr size="1" />
+</ul>
+<a name=".h1624"></a><h4>The insertions</h4>
+Instead of using the menu options, you can also make them part of a wiki page, by using a "graph" insertion. This will show the graph, as if it were an image you inserted in the page. The graph will of course only be visible in preview and in the html export of the page. The formats for both insertions are:<ul><li />[:graph.child:]<li />[:graph.relation:]</ul>
+The insertions do not have a "show .... source" variant; they only show the actual graph.<ul><hr size="1" />
+</ul>
+<a name=".h2092"></a><h4>Remarks</h4>
+&bull; <b>Undefined pages</b><br />
+The graphs do not take undefined pages into account; those are ignored and will not be part of the graph.<br />
+<br />
+&bull; <b>Color attributes</b><br />
+If a page to be included in a graph has a valid [color: <i>color name</i>] attribute, then it's node color in the graph will be colored accordingly.<br />
+<br />
+&bull; <b>Graph size</b><br />
+The resulting graphs are quite large, partly due to the (default) font size used for the nodes, but even with a smaller font size the graphs easily run "of the screen". The child graph for thís help.wiki is horrendously large and actually quite unuseable. Also due to their nature these graphs have a limited use; if the number of relationships becomes too large, their lines become difficult to follow. It is adviseable to only use these graphs for a limited number of nodes.<br />
+<br />
+As an example see the image below; it shows a child graph for an 81 page simple wiki and is resized to 6% of it's actual size as shown in the page window.<br />
+<img src="files/StructureGraphExample4.png" alt="" border="0" /><br />
+<br />
+&bull; <b>Processing time</b><br />
+The graphs take some time to create and specifically to display, mainly due to their size. On an x86 2GHz, 1Mb computer running Win XP SP3 it takes close to 5 minutes, for a child graph for thís help.wiki to be created and shown. So be prepared to go for a coffee brake, if you plan to try it.<br />
+<br />
+&bull; <b>Result is an image</b><br />
+What is shown in WikidPad is an image. The graph is created as a .png image in the "Temp" directory. It is this image that is then shown in the WikidPad page window.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h3633"></a><h3>Child graph</h3>
+This graph shows the parent-&gt;child relationships for all the pages in a wiki. Below is an image of a graph for a small wiki.<br />
+<ul><img src="files/StructureGraphExample1.png" alt="" border="0" /><br />
+</ul>
+<b>Remarks:</b><ul><li />The above image is downsized to 60% of it's real size.<br />
+</ul>
+<a href="#">Top</a><hr size="1" />
+<a name=".h3902"></a><h3>Relation graph</h3>
+<a name=".h3921"></a><h4>General</h4>
+This graph shows relationships between wiki pages. It does this based on attributes on the pages, but these must be a specific type of attributes: their value must be the name of an existing page, like for instance is the case for the "template" attribute.<br />
+<br />
+Suppose for example you have a page describing the "Sea Gull", you could then put the attributes:<ul>[isA: Bird]<br />
+[eats: Fish]</ul>
+on the page and íf "Bird" and "Fish" were other existing wiki pages, then this would result in the structure graph beneath:<br />
+<ul><img src="files/StructureGraphExample3.png" alt="" border="0" /><br />
+</ul>
+You could add the same attributes to wiki pages about other animals, resulting for instance in a structure graph like this: <br />
+<ul><img src="files/StructureGraphExample2.png" alt="" border="0" /><br />
+</ul>
+<b>Remark:</b><ul><li />The above images are downsized to 75% of their real size.<hr size="1" />
+</ul>
+<a name=".h4732"></a><h4>Global Attributes</h4>
+Two global attribute are available that you can use to limit the attributes that are to be included in the graph. These are an "include" and an "exclude" attribute. As is the case for all global attributes, also these attributes apply to the whole wiki, regardless of the page they are placed on.<br />
+<br />
+&bull; <b>The include attribute</b><br />
+The include attribute has the format: [global.graph.relation.include: <i>att.key1</i>; <i>att.key2</i>; ....]. When used any relation graph wil only show relationships for the specified attributes. All other attributes are excluded.<br />
+<i>Example:</i> [global.graph.relation.include: isA; eats] only includes pages with "isA" and "eats" attributes.<br />
+<br />
+&bull; <b>The exclude attribute</b><br />
+The exclude attribute has the format: [global.graph.relation.exclude: <i>att.key1</i>; <i>att.key2</i>; ....]. When used any relation graph wil exclude the specified attributes and not show relationships for them.<br />
+<i>Example:</i> [global.graph.relation.exclude: alias; template] excludes "alias" en "template" attributes from the graph.<br />
+<br />
+<b>Remarks:</b><br />
+&bull; If a specified attribute key concerns a structured key, then a specified partial key name includes all of it's subkeys. So [global.graph.relation.include: contact] would include both all [contact.private: <i>value</i>] ánd  all [contact.office: <i>value</i>] attributes and [global.graph.relation.exclude: html] would exclude "html.textcolor" "html.bgcolor", "html.linkcolor", etc.<br />
+<br />
+&bull; If bóth a global.include ánd a global.exclude attribute are specified, then only the global.exclude attribute is taken into account and the global.include attribute is ignored entirely. This will be changed to a more logical behaviour in an upcomming version of WikidPad.<ul><hr size="1" />
+</ul>
+<a name=".h6454"></a><h4>Remarks</h4>
+&bull; <b>Current page</b><br />
+The function defaults to including the current page in the graph, even if that page does not have a valid  reason to be in that graph <a href="#.f4">[4]</a>.<br />
+<br />
+&bull; <b>Color attributes</b><br />
+The function defaults to including all pages in the graph that have a valid [color: <i>color name</i>] attribute, even if those pages do not have a valid reason to be in that graph <a href="#.f4">[4]</a>.<br />
+<br />
+<a href="#">Top</a><br />
+<a name=".f4"></a>[4] <i>This behaviour will be corrected in an upcomming version of WikidPad.</i><hr size="1" />
+<a name=".h6930"></a><h3>Graph presentation</h3>
+<a name=".h6953"></a><h4>General</h4>
+The presentation of the graphs can be influenced using the "Wiki / Options / GraphVizStructure" options. These options allow to set the following presentation properties for the graphs:<br />
+<ul><li />node: font name and size<li />node: background and border color<li />edge: color<br />
+</ul>
+Reducing the font size also reduces the overall size of the resulting graph.<ul><hr size="1" />
+</ul>
+<a name=".h7318"></a><h4>Example</h4>
+Below is an example of the same child graph, with the following presentation settings:<ul><li />node: font = Arial 8<li />node: background = #E1E1E1<li />node: border = #808080 (grey)<li />edge: color = #696969 (dimgrey)<br />
+<br />
+<img src="files/StructureGraphExample5.png" alt="" border="0" /><br />
+</ul>
+<b>Remark:</b><ul><li />Because of the font size 8 (and different layout), the screenshot did not have to be reduced in size and is shown at 100% of it's real size.<hr size="1" />
+</ul>
+<a name=".h7742"></a><h4>Colors</h4>
+GraphViz accepts the standard HTML hex values and cross browser names for the specification of colors. The ""Wiki / Options / GraphVizStructure" options however only accept the 6 digit color values, nót the color names. For complete lists of color values and names see:<br />
+<ul><li /><span class="url-link"><a href="http://www.w3schools.com/Html/html_colors.asp"> W3schools: Colors</a></span><br />
+</ul>
+The options page supports you in specifying the colors by means of a color selector dialog. This however is a standard dialog, that is not much use, if it are specific HTML colors that you are after.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h8316"></a><h3>Settings</h3>
+<a name=".h8329"></a><h4>Global attributes</h4>
+<ul><b>Structure graphs: see <span class="wiki-link"><a href="StructureGraphs.html">StructureGraphs</a></span></b><hr size="1" />
+</ul>
+&bull; <b>[global.graph.relation.exclude:</b> <i>attribute keys to exclude</i><b>]</b><br />
+Sets the default for attribute keys that should be excluded from relation graphs; default = <i>None</i>.<br />
+<i>Example:</i> [global.graph.relation.exclude: alias; template] excludes "alias" and "template" from the graph.<br />
+<br />
+&bull; <b>[global.graph.relation.include:</b> <i>attribute keys to include</i><b>]</b><br />
+Sets the default for attribute keys that should be included in relation graphs; default = <i>All</i>.<br />
+If global.graph.relation.exclude is also set, then global.graph.relation.include is ignored.<br />
+<i>Example:</i> [global.graph.relation.include: intro; help] includes only "intro" and "help" in the graph.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h8409"></a><h4>Options</h4>
+<ul><b>Application settings: see <span class="wiki-link"><a href="StructureGraphs.html">StructureGraphs</a></span></b><br />
+<i>Remarks:</i><br />
+&bull; Options that are left empty use the "GraphViz" default settings.<br />
+&bull; Colors are specified using standard 6 digit HTML color values.<hr size="1" />
+</ul>
+&bull; <b>Node font name</b><br />
+&bull; <b>Node font size</b><br />
+The name and size of the font to use for the node label<br />
+<br />
+&bull; <b>Node border color</b><br />
+The color of the small border line surrounding each node<br />
+<br />
+&bull; <b>Node background color</b><br />
+The color of the node background.<br />
+<i>Remark:</i> If the wiki page described by a node has a "[color: <i>color name</i>]" attribute then that color attribute overrules this option setting.<br />
+<br />
+&bull; <b>Edge color</b><br />
+The color of the edges connecting the nodes.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+previous: <a href="javascript:history.go(-1)">Back</a><br />
+parents:&nbsp; <span class="wiki-link"><a href="GlobalAttributesStructureGraphs.html">GlobalAttributesStructureGraphs</a></span>, <span class="wiki-link"><a href="ThisWiki.html">ThisWiki</a></span>, <span class="wiki-link"><a href="WikidPadSpecials.html">WikidPadSpecials</a></span>, <span class="wiki-link"><a href="WpInsertions.html">WpInsertions</a></span>, <span class="wiki-link"><a href="WpOptionsStructureGraphs.html">WpOptionsStructureGraphs</a></span><br />
+<span class="property">[help.status: done]</span>    </body>
+</html>

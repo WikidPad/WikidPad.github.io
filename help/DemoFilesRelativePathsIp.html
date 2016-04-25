@@ -1,0 +1,24 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <title>DemoFilesRelativePathsIp</title>
+        <link type="text/css" rel="stylesheet" href="appbase.css">
+    </head>
+    <body>
+<span class="parent-nodes">parent nodes: <span class="parent-node"><a href="DemoLinksFiles.html">DemoLinksFiles</a></span> | <span class="parent-node"><a href="DemoLinksUrl.html">DemoLinksUrl</a></span> | <span class="parent-node"><a href="DemoTextImages.html">DemoTextImages</a></span></span><br /><br />
+In Wikidpad relative paths can't be used, the way they can in regular html. The way to do it in Wikidpad, is to use the "rel" scheme. This scheme has the format: "rel://" (without the backslash!) and is during preview replaced with the path to the folder of the active wiki. Html export turns it into a correct relative path reference. The rel scheme can be used both for file references and image references.<br />
+<br />
+The rel reference follows the rules for the html relative path specification; this means that:<br />
+<ul><table border="2">
+<tr><td>rel://filename.ext </td><td>refers to a file in the folder of the current wiki</td></tr>
+<tr><td>rel://files/filename.ext </td><td>refers to a file in the "files" subfolder of the current wiki folder.</td></tr>
+<tr><td>rel://../filename.ext </td><td>refers to a file in the folder above the current wiki folder in the file hiërarchie</td></tr>
+</table>
+<br />
+</ul>
+In a wiki that has been exported to html, the "home" or "root" folder is not the current wiki folder, but the export folder. As of version 19beta 17 wikidpad copies all files with relatives path's over to the export folder, with the correct folder structure.<br />
+<br />
+<b>Remarks</b><ul><li />A relative URL can easily be created, by draging it from Windows Explorer onto the editor, while holding down the shift key. This does however not work for files ending with ".wiki"; the created links for these files use the wiki scheme, that does not allow relative paths.<li />For those who are not realy into html and relative path declarations, a more comprehensive example can be <span class="wiki-link"><a href="DemoFilesRelativePathsExamples.html">found here</a></span>.<li />For more information on URL links see <span class="wiki-link"><a href="DemoLinksUrl.html#Top">Url links</a></span></ul>
+    </body>
+</html>

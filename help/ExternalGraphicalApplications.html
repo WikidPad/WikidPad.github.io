@@ -1,0 +1,194 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <title>ExternalGraphicalApplications</title>
+        <link type="text/css" rel="stylesheet" href="appbase.css">
+    </head>
+    <body>
+<span class="parent-nodes">parent nodes: <span class="parent-node"><a href="Intro9Advanced.html">Intro9Advanced</a></span> | <span class="parent-node"><a href="StructureGraphs.html">StructureGraphs</a></span> | <span class="parent-node"><a href="WikidPadSpecials.html">WikidPadSpecials</a></span> | <span class="parent-node"><a href="WpInsertions.html">WpInsertions</a></span></span><br /><br />
+<a name=".h0"></a><h2>External Graphical Applications</h2>
+Contents: <div class="page-toc">
+<div class="page-toc-level2"><a href="#.h0">External Graphical Applications</a></div>
+<div class="page-toc-level3"><a href="#.h70">General</a></div>
+<div class="page-toc-level4"><a href="#.h509">Download and installation</a></div>
+<div class="page-toc-level4"><a href="#.h1908">Usage as insertion</a></div>
+<div class="page-toc-level4"><a href="#.h2666">Remarks</a></div>
+<div class="page-toc-level3"><a href="#.h3311">MimeTex</a></div>
+<div class="page-toc-level4"><a href="#.h3323">General</a></div>
+<div class="page-toc-level4"><a href="#.h3450">Example</a></div>
+<div class="page-toc-level3"><a href="#.h3922">GraphViz</a></div>
+<div class="page-toc-level4"><a href="#.h3935">General</a></div>
+<div class="page-toc-level4"><a href="#.h4257">Example</a></div>
+<div class="page-toc-level3"><a href="#.h4451">Ploticus</a></div>
+<div class="page-toc-level4"><a href="#.h4464">General</a></div>
+<div class="page-toc-level4"><a href="#.h4611">Example</a></div>
+<div class="page-toc-level3"><a href="#.h5113">Gnuplot</a></div>
+<div class="page-toc-level4"><a href="#.h5125">General</a></div>
+<div class="page-toc-level4"><a href="#.h5202">Special details</a></div>
+<div class="page-toc-level4"><a href="#.h5893">Example</a></div>
+<div class="page-toc-level3"><a href="#.h6119">For programmers</a></div>
+<div class="page-toc-level3"><a href="#.h6597">Settings</a></div>
+<div class="page-toc-level4"><a href="#.h6610">Options</a></div>
+</div>
+<br />
+<a href="javascript:history.go(-1)">Back</a><hr size="1" />
+<a name=".h70"></a><h3>General</h3>
+WikidPad allows access to some graphical applications that take some sort of script to generate images. You can include the script in a wiki and let the applications generate the appropriate image to show it in HTML preview and export.<br />
+<br />
+The supported applications are:<ul><li />MimeTeX: mathematical formulas<li />GraphViz: directed and nondirected graphs<li />Ploticus: plots and charts<li />Gnuplot: mathematical plots</ul>
+<ul><hr size="1" />
+</ul>
+<a name=".h509"></a><h4>Download and installation</h4>
+The mentioned applications are not part of the WikidPad release itself, you must download it separately. The URLs are:<br />
+<br />
+<table border="2">
+<tr><td>    Appl.</td><td> Download</td><td> Documentation</td></tr>
+<tr><td>    MimeTeX</td><td> <span class="url-link"><a href="http://www.forkosh.com/mimetex.html">http://www.forkosh.com/mimetex.html</a></span> </td><td> <span class="url-link"><a href="http://www.forkosh.com/mimetex.html">http://www.forkosh.com/mimetex.html</a></span></td></tr>
+<tr><td>    GraphViz</td><td> <span class="url-link"><a href="http://graphviz.org/Download.php">http://graphviz.org/Download.php</a></span> </td><td> <span class="url-link"><a href="http://graphviz.org/Documentation.php">http://graphviz.org/Documentation.php</a></span></td></tr>
+<tr><td>    Ploticus</td><td> <span class="url-link"><a href="http://ploticus.sourceforge.net/doc/download.html">http://ploticus.sourceforge.net/doc/download.html</a></span> </td><td> <span class="url-link"><a href="http://prdownloads.sourceforge.net/ploticus/pl233site.tar.gz?download">http://prdownloads.sourceforge.net/ploticus/pl233site.tar.gz?download</a></span></td></tr>
+<tr><td>    Gnuplot</td><td> <span class="url-link"><a href="http://www.gnuplot.info/download.html">http://www.gnuplot.info/download.html</a></span> </td><td> <span class="url-link"><a href="http://www.gnuplot.info/documentation.html">http://www.gnuplot.info/documentation.html</a></span></td></tr>
+</table>
+<br />
+<ol><li />Download the application of your choice.<li />Put the binaries in an arbitrary folder on your computer. If you do not plan to use them outside of WikidPad you can create a folder in the <span class="wiki-link"><a href="ProgramFiles.html">program directory</a></span> and put them there.<li />Start WikidPad and open the "Options" dialog. Below the "Plugin options" entry in the list on the left you see four entries, one for each of the programs. Click the appropriate options, to go to it's option page.<li />For MimeTeX, Ploticus and Gnuplot enter the full path to the executable including the executables name. For GraphViz only enter the path to the directory containing the executables in the first text field of the page. You can change the names of the executables in their respective fields if they deviate from the default names.<hr size="1" />
+</ol>
+<a name=".h1908"></a><h4>Usage as insertion</h4>
+The programs are "called" by using <span class="wiki-link"><a href="WpInsertions.html">insertions</a></span>. During preview or html export the insertion is replaced by the resulting graph of the graphical application. The format for the insertions is:<br />
+<ul><li />MimeTeX: [:eqn: " <i>script</i> "]<li />GraphViz: [:dot: " <i>script</i> "], [:neato: " <i>script</i> "], [:twopi: " <i>script</i> "], [:circo: " <i>script</i> "], [:fdp: " <i>script</i> "]<li />Ploticus: [:ploticus: " <i>script</i> "]<li />Gnuplot: [:gnuplot: " <i>script</i> "]<br />
+</ul>
+The "scripts" must follow the syntax for the respective program, please see the documentation of those applications for details. They should be enclosed in <span class="wiki-link"><a href="QuotationCharacters.html">quotation characters</a></span> to allow them to contain reserved characters or new lines.<ul><hr size="1" />
+</ul>
+<a name=".h2666"></a><h4>Remarks</h4>
+&bull; <b>Export to html</b><br />
+When exporting to html, the rendered image files are put in a subdirectory called "volatile" in the target directory for the html files. If such a "volatile" directory already exists, <b>all of its contents (including subfolders) are deleted</b>, this to avoid cluttering it up with old versions of the files!<br />
+<br />
+&bull; <b>Errors and warnings</b><br />
+If the GraphViz or Ploticus applications return errors or warnings, then the insertion is not replaced with the resulting image, but with the error/warning text. To suppress warnings/errors use the appendix "noerror" after the main value of the insertion.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h3311"></a><h3>MimeTex</h3>
+<a name=".h3323"></a><h4>General</h4>
+MimeTeX is an application with which mathematical formulas can be generated within the text of a wiki page.<ul><hr size="1" />
+</ul>
+<a name=".h3450"></a><h4>Example</h4>
+You should know that [:eqn:"a^2 + b^2 = c^2"] is important! results in:<ul><li />You should know that <img src="files/MimeTexExample1.gif" alt="" border="0" /> is important!<li /><span class="url-link"><a href="http://en.wikipedia.org/wiki/Pythagoras">Pythagoras</a></span> (of Samos) already knew that!<br />
+</ul>
+Whereas this [:eqn:"$frac{-bpmsqrt{b^2-4ac}}{2a}$"] resulting in:<ul><li /><img src="files/MimeTexExample2.gif" alt="" border="0" /> is known as the <span class="url-link"><a href="http://en.wikipedia.org/wiki/Quadratic_equation#Quadratic_formula">"Quadratic formula"</a></span>.<br />
+</ul>
+<a href="#">Top</a><hr size="1" />
+<a name=".h3922"></a><h3>GraphViz</h3>
+<a name=".h3935"></a><h4>General</h4>
+GraphViz is a set of applications to generate directed and nondirected graphs. A helpful tutorial for creating directed graphs with GraphViz's dot utility is: <span class="url-link"><a href="http://kabru.eecs.umich.edu/bin/view/TWiki/HowtoDirectedGraphs">Howto directed graphs</a></span>. You can download all or only some of them as you like.<ul><hr size="1" />
+</ul>
+<a name=".h4257"></a><h4>Example</h4>
+This "dot" insertion (with "noerror" appendix)<pre>[:dot:"
+digraph {
+a -&gt; b
+b -&gt; c
+b -&gt; d
+d -&gt; a
+}
+"; noerror]</pre>
+Results in:<ul><img src="files/GraphVizExample1.png" alt="" border="0" /><br />
+</ul>
+<a href="#">Top</a><hr size="1" />
+<a name=".h4451"></a><h3>Ploticus</h3>
+<a name=".h4464"></a><h4>General</h4>
+Ploticus is an application to generate plots and charts like those that you may have seen in your favorite spreadsheet program.<ul><hr size="1" />
+</ul>
+<a name=".h4611"></a><h4>Example</h4>
+This "ploticus" insertion<pre>[:ploticus:"
+#proc areadef
+  title: Annual Revenues, in thousands
+  rectangle: 1 1 5 2
+  xrange: 0 4
+  yrange: -5000 15000
+  yaxis.stubs: incremental 5000
+  yaxis.grid: color=pink
+  xaxis.stubs: text
+ABC Corp
+NetStuff
+MicroMason
+
+#proc getdata
+  data: 6430 -780 13470
+  
+#proc processdata
+  action: rotate
+
+#proc bars
+  lenfield: 1
+  color: dullyellow
+  labelword: $ @@N
+  crossover: 0
+"]</pre>
+Results in:<ul><img src="files/PloticusExample1.gif" alt="" border="0" /><br />
+</ul>
+<a href="#">Top</a><hr size="1" />
+<a name=".h5113"></a><h3>Gnuplot</h3>
+<a name=".h5125"></a><h4>General</h4>
+Gnuplot is an application to generate mathematical plots.<ul><hr size="1" />
+</ul>
+<a name=".h5202"></a><h4>Special details</h4>
+Unfortunately Gnuplot always issues a warning about a missing console (?) so you have to use the appendix "noerror" in each case. Windows users can use the windows binary and set the gnuplot option to the "wgnuplot.exe" executable; this also does not issue this warning. In both cases however you will be unable to retrieve error messages from Gnuplot if the script isn't correct.<br />
+<br />
+At the beginning of each Gnuplot script the following lines are automatically inserted to set output to a PNG-file that is then shown in the wiki page:<pre>    set terminal png
+    set output 'filename.png'</pre>
+where filename.png is replaced by the generated temporary file name.<ul><hr size="1" />
+</ul>
+<a name=".h5893"></a><h4>Example</h4>
+This "gnuplot" insertion<pre>[:gnuplot:"
+set key right nobox
+set samples 100
+plot [-pi/2:pi] cos(x),-(sin(x) &gt; sin(x+1) ? sin(x) : sin(x+1))
+"]</pre>
+Results in:<ul><img src="files/GnuPlotExample1.png" alt="" border="0" /><br />
+</ul>
+<a href="#">Top</a><hr size="1" />
+<a name=".h6119"></a><h3>For programmers</h3>
+If you want to create your own <span class="wiki-link"><a href="Plugins.html">plugin</a></span> to handle insertions, look in the "<span class="wiki-link"><a href="ProgramFiles.html">extensions</a></span>" directory. The plugins "MimeTexCGIBridge.py", "GraphvizClBridge.py", "GnuplotClBridge.py" and "PloticusClBridge.py" control the external applications. The plugin "ExampleInsertion.py" handles the insertion key "testexample" and is another example how to handle insertions by a plugin.<br />
+<br />
+Value: this 0. appendix: is 1. appendix: a simple 2. appendix: test<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h6597"></a><h3>Settings</h3>
+<a name=".h6610"></a><h4>Options</h4>
+<ul><b>Application settings: Plugins, Gnuplot</b><hr size="1" />
+</ul>
+&bull; <b>Path to Gnuplot</b><br />
+The path to the Gnuplot executable.<br />
+<ul><b>Application settings: Plugins, GraphViz</b><hr size="1" />
+</ul>
+&bull; <b>Path to GraphViz</b><br />
+The path to the GraphViz directory of executables.<br />
+<br />
+&bull; <b>Name of dot executable</b><br />
+The name of the dot executable; default = dot.exe.<br />
+<br />
+&bull; <b>Name of neato executable</b><br />
+The name of the neato executable; default = neato.exe.<br />
+<br />
+&bull; <b>Name of twopi executable</b><br />
+The name of the twopi executable; default = twopi.exe.<br />
+<br />
+&bull; <b>Name of circo executable</b><br />
+The name of the circo executable; default = circo.exe.<br />
+<br />
+&bull; <b>Name of fdp executable</b><br />
+The name of the fdp executable; default = fdp.exe.<br />
+<ul><b>Application settings: Plugins, MimeTex</b><hr size="1" />
+</ul>
+&bull; <b>Path to MimeTex</b><br />
+The path to the MimeTex executable.<br />
+<ul><b>Application settings: Plugins, Ploticus</b><hr size="1" />
+</ul>
+&bull; <b>Path to Ploticus</b><br />
+The path to the Ploticus executable.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+previous: <a href="javascript:history.go(-1)">Back</a><br />
+parents:&nbsp; <span class="wiki-link"><a href="Intro9Advanced.html">Intro9Advanced</a></span>, <span class="wiki-link"><a href="StructureGraphs.html">StructureGraphs</a></span>, <span class="wiki-link"><a href="WikidPadSpecials.html">WikidPadSpecials</a></span>, <span class="wiki-link"><a href="WpInsertions.html">WpInsertions</a></span><br />
+<span class="property">[alias: Ploticus]</span><span class="property">[alias: MimeTeX]</span><span class="property">[alias: GraphViz]</span><span class="property">[alias: Gnuplot]</span><br />
+<span class="property">[camelCaseWordsEnabled: false]</span><br />
+<span class="property">[help.status: done]</span>    </body>
+</html>

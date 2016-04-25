@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <title>ChangeFileSuffix</title>
+        <link type="text/css" rel="stylesheet" href="wikistyle.css">
+    </head>
+    <body>
+<span class="parent-nodes">parent nodes: <span class="parent-node"><a href="WikidPadAdvanced.html">WikidPadAdvanced</a></span></span><br /><br />
+<a name=".h0"></a><h2>Change File Suffix</h2>
+Contents:   <div class="page-toc">
+<div class="page-toc-level2"><a href="#.h0">Change File Suffix</a></div>
+<div class="page-toc-level3"><a href="#.h59">General</a></div>
+</div>
+<br />
+<a href="javascript:history.go(-1)">Back</a><hr size="1" />
+<a name=".h59"></a><h3>General</h3>
+<b>USE THIS AT YOUR OWN RISK!!!</b>  <b>USE THIS AT YOUR OWN RISK!!!</b><br />
+<br />
+Normally the page files in the "data" directory of a "Original Gadfly" or "Original Sqlite" wiki have the suffix ".wiki". You can change this if you really need to.<br />
+<br />
+Currently there is no support for automatic renaming of existing page files. If necessary, a script will be published to do that.<br />
+<br />
+<br />
+Ensure that you have <b>not</b> opened with WikidPad the wiki you want to modify now.<br />
+<br />
+To change the suffix open the file with suffix .wiki in the wiki directory (<b>above</b> the "data" directory) with a text editor. This is the configuration file of the wiki (its suffix can't be changed). In this file you will find a line:<br />
+<br />
+[main]<br />
+<br />
+Somewhere below this line, there could be a line starting with<br />
+<br />
+db_pagefile_suffix=<br />
+<br />
+If it isn't there, add it.<br />
+<br />
+After the equal sign there should be the suffix of the page files including the separating dot, so the default line would be:<br />
+<br />
+db_pagefile_suffix=.wiki<br />
+<br />
+<br />
+<ul><li />If you e.g. want .txt files instead, use:<br />
+<br />
+db_pagefile_suffix=.txt<br />
+<li />If you want no ending at all (not even the dot), write:<br />
+<br />
+db_pagefile_suffix=<br />
+<br />
+without anything after '='<br />
+<li />To go back to the default ".wiki" files, you can also delete the line completely<br />
+<br />
+</ul>
+Now you can save and close the configuration file. After that you should somehow rename the existing page files.<br />
+Then you should be able to open the wiki in WikidPad.<br />
+<br />
+<br />
+Once again:<br />
+<br />
+<b>USE THIS AT YOUR OWN RISK!!!</b>  <b>USE THIS AT YOUR OWN RISK!!!</b><br />
+<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+previous: <a href="javascript:history.go(-1)">Back</a><br />
+parents:&nbsp; <span class="wiki-link"><a href="WikidPadAdvanced.html">WikidPadAdvanced</a></span><br />
+attributes: <span class="property">[tree_position: 1]</span>, <span class="property">[camelCaseWordsEnabled: false]</span><br />
+<span class="property">[help.status: busy]</span>    </body>
+</html>

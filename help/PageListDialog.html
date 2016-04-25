@@ -1,0 +1,152 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <title>PageListDialog</title>
+        <link type="text/css" rel="stylesheet" href="appbase.css">
+    </head>
+    <body>
+<span class="parent-nodes">parent nodes: <span class="parent-node"><a href="FullSearch.html">FullSearch</a></span> | <span class="parent-node"><a href="Intro7Searching.html">Intro7Searching</a></span> | <span class="parent-node"><a href="ItemPrinting.html">ItemPrinting</a></span> | <span class="parent-node"><a href="ItemPublishing.html">ItemPublishing</a></span> | <span class="parent-node"><a href="Wiki export.html">Wiki export</a></span> | <span class="parent-node"><a href="WpOptionsGeneralSort.html">WpOptionsGeneralSort</a></span></span><br /><br />
+<a name=".h0"></a><h2>Page List Dialog</h2>
+Contents:   <div class="page-toc">
+<div class="page-toc-level2"><a href="#.h0">Page List Dialog</a></div>
+<div class="page-toc-level3"><a href="#.h57">General</a></div>
+<div class="page-toc-level3"><a href="#.h508">The dialog</a></div>
+<div class="page-toc-level4"><a href="#.h917">The definition area</a></div>
+<div class="page-toc-level5"><a href="#.h1121">Selection</a></div>
+<div class="page-toc-level5"><a href="#.h2560">Manual list</a></div>
+<div class="page-toc-level5"><a href="#.h4995">Order</a></div>
+<div class="page-toc-level4"><a href="#.h5755">The result area</a></div>
+<div class="page-toc-level3"><a href="#.h6389">Creating a pagelist</a></div>
+<div class="page-toc-level4"><a href="#.h6413">Using regex</a></div>
+<div class="page-toc-level4"><a href="#.h6888">Using the manual list</a></div>
+<div class="page-toc-level4"><a href="#.h9063">Using full search as an initial step</a></div>
+<div class="page-toc-level3"><a href="#.h10324">Settings</a></div>
+<div class="page-toc-level4"><a href="#.h10337">Options</a></div>
+</div>
+<br />
+<a href="javascript:history.go(-1)">Back</a><hr size="1" />
+<a name=".h57"></a><h3>General</h3>
+The page list dialog is available for the WikidPad functions:<ul><li /><span class="wiki-link"><a href="FullSearch.html">Full search</a></span><li /><span class="wiki-link"><a href="ItemPublishing.html">Html publishing (export)</a></span><li /><span class="wiki-link"><a href="Wiki%20export.html">Data exchange (export)</a></span><li /><span class="wiki-link"><a href="ItemPrinting.html">Print</a></span></ul>
+It's goal is to limit the scope of those functions to a subset of a wiki's pages. The pagelist is described in two main parts; first the dialog will be described, followed by a description of how to use it.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h508"></a><h3>The dialog</h3>
+The dialog window has two areas; in the left area you define and minipulate your pagelist definition; the right area will show the resulting pagelist. The pagelist is not updated automatically, you have to click the "preview" button to get that done. Actually the window has two page lists; one in the definition area, the "manual list" and the one in the result area, the "result list".<ul><hr size="1" />
+</ul>
+<a name=".h917"></a><h4>The definition area</h4>
+The definition area has three parts to it: the selection part, the manual list part and the order part. The last one is not available for full search; only for print and export.<br />
+<br />
+<a name=".h1121"></a><h5>Selection</h5>
+The selection part allows you to define what type of selection you want to use for the page list. The possible choices are:<ul><li />All pages (i.e. no selection).<li />Pages with names matching a regular expression.<li />The pages from a manually assembled list in the manual list section.</ul>
+These choices are mutually exclusive.<br />
+<br />
+&bull; <b>All Pages</b><br />
+Specifies that all the pages are to be in the page list. This might not seem too obvious for a pagelist, but it might come in handy when you're dealing with a saved search that you want to reset from a subset of pages to all pages.<br />
+<br />
+&bull; <b>Page names matching regular expression:</b><br />
+This option combines with the regex input field beneath it. It specifies that all the pages whose names match the <span class="wiki-link"><a href="RegEx.html">regular expression</a></span> in the input field are to be in the list.<br />
+<br />
+<i>Remark:</i> This regex search is <i>case sensitive</i> and in <i>character mode</i>; this can't be changed. It only searches page names, nót page content.<br />
+<br />
+&bull; <b>Pages in list</b><br />
+Specifies that all the pages in the manual list below it are to be in the page list. Optionally you can specify if one ore more levels of their children should also be in the resulting page list. Possible inputs are:<ul><li />Zero "0": No children are added to the result list.<li />Positive number: <i>number</i> levels of children are added to the result list.<li />Empty or "-1": <i>áll</i> levels of children are added to the result list (level = indefinite).<hr size="1" />
+</ul>
+<a name=".h2560"></a><h5>Manual list</h5>
+The manual list allows you to manually assemble a page list. You can type page names - i.e. the names of their links - and/or copy them from the clipboard. The section has a number of functions to facilitate working with the list, like those to order the list for a better view.<br />
+<br />
+This type of pagelist is a static entity; it doesn't get updated for changes in the wiki (database) automatically; it's a job that has to be done manually. This specifically is something to keep in mind, when the pagelist is part of a saved (full) search.<br />
+<br />
+<i>Remark:</i> The order of the manual list does nót influence the order of the result list. For that you need to set the order in the order section.<br />
+<br />
+&bull; <b>Up</b> and <b>Down</b><br />
+Allow to move the currently selected item in the list up or down in the list order.<br />
+<br />
+&bull; <b>Sort</b><br />
+Sorts the list alphabetically (the sorting algorithm depends on option settings, see below).<br />
+<br />
+&bull; <b>Add</b><br />
+This option combines with the inputfield to the left of it. The inputfield allows to type a page name or paste one from the clipboard. To then add the name to the manual list press Enter or click Add.<br />
+<br />
+<i>Warning:</i> WikidPad does not seem to check whether the name you enter actually exists, so be carefull with what you type. When in doubt, copy and paste it from a wiki page.<br />
+<br />
+&bull; <b>Clear list</b><br />
+Removes all the entries from the manual list.<br />
+<br />
+&bull; <b>Del</b><br />
+Deletes the currently selected entry from the manual list.<br />
+<br />
+&bull; <b>Copy</b><br />
+Allows to copy the manual list tó the cliboard.<br />
+<br />
+<i>Remark:</i> The entries are copied as text, one page name per line, each in brackets. This way you can use them to insert a list of page links into any wiki page.<br />
+<br />
+<b>paste entries from clipboard</b><br />
+This subsection of the manual list allows to copy one or more page names straight fróm the clipboard into the list. It does not have to be a list of page names only, it can also be part of a page text, that contains page links. This function will extract the page names from the text and then add them to the list in order of appearance. There are three options to control the behaviour of this "paste".<br />
+<br />
+&bull; <b>Add</b><br />
+Add the entries from the clipboard, that are not yet in the list, to the end of it.<br />
+<br />
+&bull; <b>Overwrite</b><br />
+Replace the current entries in the list with those from the clipboard.<br />
+<br />
+&bull; <b>Intersect</b><br />
+Replace the current entries in the list with those that are both in the current list ánd in the clipboard "list".<ul><hr size="1" />
+</ul>
+<a name=".h4995"></a><h5>Order</h5>
+This subsection contains one option; it controls the order of the pages in the result list. This will then also influence the order of the pages in the print or export. For full search this option is not available.<br />
+<br />
+&bull; <b>Order pages:</b><br />
+Possible choices:<ol><li />"Unordered" uses the internal order of the database.<li />"Alphabetically".<li />"Natural" tries to order in the way the user would expect the pages to be ordered (well, more or less). If you have created a manual list, "natural" keeps them as they are ordered in the list. <li />"As Tree" tries to sort the pages as their nodes would appear in the page tree.</ol>
+The options are listed in order of processing speed: "Unordered" is the fastest ordering; "As tree" the slowest.<ul><hr size="1" />
+</ul>
+<a name=".h5755"></a><h4>The result area</h4>
+This area controls the display of the page list resulting from the specification in the definition area. The area contains only a few controls:<br />
+<br />
+&bull; <b>Result list</b><br />
+This list shows the page list, as it results from the selection in the specification area. It doesn't do that automatically, only when the "preview" button is clicked.<br />
+<br />
+&bull; <b>Preview</b><br />
+Clicking this button refreshes the result list with the page names that currently match the criteria in the definition area.<br />
+<br />
+&bull; <b>Copy</b><br />
+Copies the result list to the clipboard, the same way as the "copy" button in the definition area does.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h6389"></a><h3>Creating a pagelist</h3>
+<a name=".h6413"></a><h4>Using regex</h4>
+The easiest way to create a page list, is to select the regex option and define a <span class="wiki-link"><a href="RegEx.html">regular expression</a></span> that matches the pages you want to have in your list. To check the result of the regex, click the preview button, to show the resulting page names in the result list. If the regex is not correct, simply adjust it and click preview again. When you're satisfied, click OK and continue with the print, export or search, that the pagelist is part of.<br />
+<br />
+<a name=".h6888"></a><h4>Using the manual list</h4>
+Using regex it is not always possible, to get at the list you want; either because it's impossible ór it takes too much time to figure it out. You are then left with the alternative of creating a page list manually. Type or paste page names in the "add" input field and add them to the list. When you're satisfied. click OK and continue.<br />
+<br />
+You can give yourself a headstart, using a trick. First select regex and specify an expression that results into something close to what you need. When you're satisfied, click the "preview" button to refresh the result list, if you hadn't done so already, and then click the result list's "copy" button, to copy it to the clipboard.<br />
+You can now use the clipboard to fill the manual list, using the "add", "overwrite" or "intersect" button, depending on the current state of the list and on what you want to achieve. Then use the "del" button to remove unwanted pages from the list and the "add" button to add page names that might still be missing.<br />
+<br />
+If you can't create óne regex to obtain the desired page list, but if you cóuld, using two or more different ones, you can use the same trick. Specify regex, define the first expression and copy the resulting list into the manual list, using "add" or "overwrite". "Pages in list" will now automatically become the active selection. You can simply set it back to regex; this wil nót clear the manual list and you can go on typing the second expression. Preview it's result, copy that and add it to the manual list using "add" or "intersect", depending on what you need done. You can do this as many times as you want.<br />
+<br />
+When you also want one or more levels of the (manual) page's children in the result list, specify the number of levels you need in "pages in list" and click "preview" to check the result. This level criterion is not discriminative, so this might result in pages (re)appearing in the result list that you don't really want there. You can again use the same trick, to get rid of them. Copy the result list to the clipboard, paste it into the manual list, using the "overwrite" button and use the "del" button to remove any unwanted children.<br />
+<br />
+<a name=".h9063"></a><h4>Using full search as an initial step</h4>
+The regex facility in the dialog is fine, but it has the disadvantage, that it only searches page names. When you need to create a page list based on page cóntent instead of page námes, the regex facility is of no use. There is however a way around this, since <span class="wiki-link"><a href="FullSearch.html">"full search"</a></span> dóes support regex content searches and it also features a function, that copies the resulting page names to the clipboard.<br />
+<br />
+So, to get this done, first do a full search until you are satisfied with it's result and then copy that to the clipboard, using the "Copy to clipboard: [Page Names]" button. Then, after you have chosen: Print or Export and selected "custom", to show the page list dialog, you can paste the result of the full search into the manual list and further refine it using all the techniques available for it.<br />
+You can do the same thing for full search itself, but you don't have to leave the full search dialog for it. You can do the search, copy the result, click "Set page list" to call up the page list dialog, define your manual list and click OK to return to the full search dialog. There you change the regex to the one you want based on the pagelist and click "Find" to start te search.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h10324"></a><h3>Settings</h3>
+<a name=".h10337"></a><h4>Options</h4>
+<ul><b>Application settings: General, sort order</b><hr size="1" />
+</ul>
+&bull; <b>Sort order</b><br />
+Sets the alphabetical sort algorithm for the nodes in the <span class="wiki-link"><a href="TheTreeView.html">Main tree</a></span> and for the <span class="wiki-link"><a href="PageListDialog.html">PageListDialog</a></span>.<br />
+The possible choices are:<ul><li />Default: sorts according to default sort order determined by the operating system.<br />
+<ul><li />Upper case first: sorts ABCabc instead of AaBbCc.<br />
+</ul>
+<li />C: The original WikidPad sort order: uppercase first, non-English characters in illogical order at the end</ul>
+<br />
+<a href="#">Top</a><hr size="1" />
+previous: <a href="javascript:history.go(-1)">Back</a><br />
+parents:&nbsp; <span class="wiki-link"><a href="FullSearch.html">FullSearch</a></span>, <span class="wiki-link"><a href="Intro7Searching.html">Intro7Searching</a></span>, <span class="wiki-link"><a href="ItemPrinting.html">ItemPrinting</a></span>, <span class="wiki-link"><a href="ItemPublishing.html">ItemPublishing</a></span>, <span class="wiki-link"><a href="Wiki%20export.html">Wiki export</a></span>, <span class="wiki-link"><a href="WpOptionsGeneralSort.html">WpOptionsGeneralSort</a></span><br />
+<span class="property">[help.status: done]</span>    </body>
+</html>

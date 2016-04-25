@@ -1,0 +1,85 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <title>Using WikiWords</title>
+        <link type="text/css" rel="stylesheet" href="appbase.css">
+    </head>
+    <body>
+<span class="parent-nodes">parent nodes: <span class="parent-node"><a href="FindingUndefinedItems.html">FindingUndefinedItems</a></span> | <span class="parent-node"><a href="GlobalAttributesWikiWords.html">GlobalAttributesWikiWords</a></span> | <span class="parent-node"><a href="Intro1StartingAWiki.html">Intro1StartingAWiki</a></span> | <span class="parent-node"><a href="PageLinking.html">PageLinking</a></span> | <span class="parent-node"><a href="UserFiles.html">UserFiles</a></span> | <span class="parent-node"><a href="WikiControl.html">WikiControl</a></span> | <span class="parent-node"><a href="WikiFiles.html">WikiFiles</a></span></span><br /><br />
+<a name=".h0"></a><h2>Using Wiki Words</h2>
+Contents:   <div class="page-toc">
+<div class="page-toc-level2"><a href="#.h0">Using Wiki Words</a></div>
+<div class="page-toc-level3"><a href="#.h57">General</a></div>
+<div class="page-toc-level3"><a href="#.h847">Syntax</a></div>
+<div class="page-toc-level4"><a href="#.h858">Naming rules</a></div>
+<div class="page-toc-level4"><a href="#.h1019">Case sensitivity</a></div>
+<div class="page-toc-level3"><a href="#.h1179">Preventing link generation</a></div>
+<div class="page-toc-level4"><a href="#.h1210">Incidentally</a></div>
+<div class="page-toc-level4"><a href="#.h1400">For a whole page</a></div>
+<div class="page-toc-level4"><a href="#.h1564">Permanently</a></div>
+<div class="page-toc-level3"><a href="#.h2671">Settings</a></div>
+<div class="page-toc-level4"><a href="#.h2684">Global attributes</a></div>
+<div class="page-toc-level4"><a href="#.h2758">Func.pages</a></div>
+</div>
+<br />
+<a href="javascript:history.go(-1)">Back</a><hr size="1" />
+<a name=".h57"></a><h3>General</h3>
+Wikiwords are (at least by default) all words that start with an uppercase letter and where at least one uppercase letter follows a lowercase letter in the word (this is called "camelcase", like in  <span class="wiki-link"><a href="WikiWords.html">WikiWord</a></span>). Or where a lowercase letter follows multiple uppercase letters (like in <span class="wiki-link"><a href="ABcd.html">ABcd</a></span>).<br />
+<br />
+As you type wikiwords into the editor they are automatically turned into a link and become underlined. Words that already have content, like <span class="wiki-link"><a href="WikiWords.html">WikiWord</a></span> turn blue, words that do not, like UndefinedPage, stay black but are underlined <a href="#.f1">[1]</a><a href="#.f2">[2]</a>. For eacht new Wikiword, a new (empty) page is automatically created. To go there and add your text, type Ctrl+L when the cursor is at the start, in the middle or at the end of the wikiword or double click on the word with the mouse.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h847"></a><h3>Syntax</h3>
+<a name=".h858"></a><h4>Naming rules</h4>
+The only characters allowed in a wikiword are A-Z and a-z. All other characters exclude a word from being interpreted as a wikiword <a href="#.f3">[3]</a>.<ul><hr size="1" />
+</ul>
+<a name=".h1019"></a><h4>Case sensitivity</h4>
+Wikiwords are case sensitive; <span class="wiki-link"><a href="WikiWords.html">WikiWord</a></span> is a different wikiword from WikiworD and therefore links to a different item.<a href="#.f6">[6]</a><br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h1179"></a><h3>Preventing link generation</h3>
+<a name=".h1210"></a><h4>Incidentally</h4>
+To prevent a camelcased word occasionally from being used as a link, you can precede it with the escape character backslash ("\"), like in: WikiWord and ABcd <a href="#.f4">[4]</a>.<ul><hr size="1" />
+</ul>
+<a name=".h1400"></a><h4>For a whole page</h4>
+To prevent all camelcased words on a page from being used as a link, add the attribute:<ul><li />[camelCaseWordsEnabled: false]</ul>
+to the page.<ul><hr size="1" />
+</ul>
+<a name=".h1564"></a><h4>Permanently</h4>
+To prevent a camelcased word permanently from being used as a link, add it to the camelcase blacklist in the Func. pages <a href="#.f5">[5]</a>. Open the "Views" node in the main tree, find and open the "Func. pages" node and click on "Wiki cc. blacklist" or on "Global cc. blacklist". Then enter the word on a line of its own in the list. An example is WikidPad, that is in the Wiki blacklist.<br />
+<ul><li />Wiki cc. blacklist<br />
+Words in this list only apply to the current WikidPad Document.<li />Global cc. blacklist<br />
+Words in this list apply to all your WikidPad documents.<br />
+</ul>
+<a href="#">Top</a><hr size="1" />
+<a name=".f1"></a>[1] <i>A list of all empty items can found in the "Views" node as "undefined-nodes".</i><br />
+<a name=".f2"></a>[2] <i>Outside the editor, links to empty items are shown as regular text.</i><br />
+<a name=".f3"></a>[3] <i>Some special characters can be used in a link by</i> <span class="wiki-link"><a href="Using%20brackets.html">Using brackets</a></span>.<br />
+<a name=".f4"></a>[4] <i>The backslash is the general</i> <span class="wiki-link"><a href="SyntaxEscape.html#EscapeCharacter">escape character</a></span> <i>in WikidPad.</i><br />
+<a name=".f5"></a>[5] <i>Words that are in the blacklist can still be used as a link by</i> <span class="wiki-link"><a href="Using%20brackets.html">Using brackets</a></span>.<br />
+<a name=".f6"></a>[6] <i>In Windows this only works with wiki's using the SQLlight database</i>.<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h2671"></a><h3>Settings</h3>
+<a name=".h2684"></a><h4>Global attributes</h4>
+<ul><b>Wikiwords: see <span class="wiki-link"><a href="Using%20WikiWords.html">Using WikiWords</a></span></b><hr size="1" />
+</ul>
+&bull; <b>[global.camelCaseWordsEnabled:</b> <i>true / false</i><b>]</b><br />
+Sets the default camelcase mode to true or false; default = true.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h2758"></a><h4>Func.pages</h4>
+<ul><hr size="1" />
+</ul>
+&bull; <b>Wiki cc. blacklist</b><br />
+See above.<br />
+<br />
+&bull; <b>Global cc. blacklist</b><br />
+See above.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+previous: <a href="javascript:history.go(-1)">Back</a><br />
+parents:&nbsp; <span class="wiki-link"><a href="FindingUndefinedItems.html">FindingUndefinedItems</a></span>, <span class="wiki-link"><a href="GlobalAttributesWikiWords.html">GlobalAttributesWikiWords</a></span>, <span class="wiki-link"><a href="Intro1StartingAWiki.html">Intro1StartingAWiki</a></span>, <span class="wiki-link"><a href="PageLinking.html">PageLinking</a></span>, <span class="wiki-link"><a href="UserFiles.html">UserFiles</a></span>, <span class="wiki-link"><a href="WikiControl.html">WikiControl</a></span>, <span class="wiki-link"><a href="WikiFiles.html">WikiFiles</a></span><br />
+attributes: <span class="property">[tree_position: 1]</span><br />
+<span class="property">[help.status: done]</span>    </body>
+</html>

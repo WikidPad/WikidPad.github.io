@@ -1,0 +1,170 @@
+/* CSS definitions for fonts */
+
+/* {font-style font-variant font-weight font-size/line-height font-family;} */
+
+BODY { margin: 0% 0%; background: #ffffff; font: 8pt 'Lucida Grande', Geneva, Verdana, Arial, Helvetica, sans-serif; }
+TABLE, TD { font: 8pt 'Lucida Grande', Geneva, Verdana, Arial, Helvetica, sans-serif; }
+
+H1 { font-size: 16px; }
+
+div#tabs 	{ display: none; } 
+div#footer	{ display: none; }
+BR, P		{ page-break-after: always; }
+
+.V9 			{ font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; font-size: 8pt; }
+.V10 			{ font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; font-size: 8pt; }
+.V11 			{ font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; font-size: 9pt; }
+
+.G9 			{ font-family: 'Lucida Grande', Geneva, Verdana, Arial, Helvetica, sans-serif; font-size: 8pt; }
+.G9G 			{ font-family: 'Lucida Grande', Geneva, Verdana, Arial, Helvetica, sans-serif; font-size: 8pt; color: #76797C; }
+.G10 			{ font-family: 'Lucida Grande', Geneva, Verdana, Arial, Helvetica, sans-serif; font-size: 8pt; }
+.G10G 			{ font-family: 'Lucida Grande', Geneva, Verdana, Arial, Helvetica, sans-serif; font-size: 8pt; color: #76797C; }
+.G10W 			{ font-family: 'Lucida Grande', Geneva, Verdana, Arial, Helvetica, sans-serif; font-size: 8pt; color: #FFFFFF; }
+
+.L10 			{ font-family: 'Lucida Grande', Geneva, Verdana, Arial, Helvetica, sans-serif; font-size: 8pt; }
+.L10G 			{ font-family: 'Lucida Grande', Geneva, Verdana, Arial, Helvetica, sans-serif; font-size: 8pt; color: #76797C; }
+.L10W 			{ font-family: 'Lucida Grande', Geneva, Verdana, Arial, Helvetica, sans-serif; font-size: 8pt; color: #FFFFFF; }
+.L11 			{ font-family: 'Lucida Grande', Geneva, Verdana, Arial, Helvetica, sans-serif; font-size: 10pt; }
+.L12 			{ font-family: 'Lucida Grande', Geneva, Verdana, Arial, Helvetica, sans-serif; font-size: 10pt; }
+.L12G			{ font-family: 'Lucida Grande', Geneva, Verdana, Arial, Helvetica, sans-serif; font-size: 10pt; color: #76797C; }
+.L12W			{ font-family: 'Lucida Grande', Geneva, Verdana, Arial, Helvetica, sans-serif; font-size: 10pt; color: #FFFFFF; }
+.L14 			{ font-family: 'Lucida Grande', Geneva, Verdana, Arial, Helvetica, sans-serif; font-size: 12pt; }
+.L14G 			{ font-family: 'Lucida Grande', Geneva, Verdana, Arial, Helvetica, sans-serif; font-size: 12pt; color: #76797C; }
+.L14W 			{ font-family: 'Lucida Grande', Geneva, Verdana, Arial, Helvetica, sans-serif; font-size: 12pt; color: #FFFFFF; }
+.L16 			{ font-family: 'Lucida Grande', Geneva, Verdana, Arial, Helvetica, sans-serif; font-size: 14pt; }
+.L16G 			{ font-family: 'Lucida Grande', Geneva, Verdana, Arial, Helvetica, sans-serif; font-size: 14pt; color: #76797C; }
+.L16W 			{ font-family: 'Lucida Grande', Geneva, Verdana, Arial, Helvetica, sans-serif; font-size: 14pt; color: #FFFFFF; }
+.L18 			{ font-family: 'Lucida Grande', Geneva, Verdana, Arial, Helvetica, sans-serif; font-size: 16pt; }
+.L18G			{ font-family: 'Lucida Grande', Geneva, Verdana, Arial, Helvetica, sans-serif; font-size: 16pt; color: #76797C; }
+.L18W			{ font-family: 'Lucida Grande', Geneva, Verdana, Arial, Helvetica, sans-serif; font-size: 16pt; color: #FFFFFF; }
+.L24 			{ font-family: 'Lucida Grande', Geneva, Verdana, Arial, Helvetica, sans-serif; font-size: 20pt; }
+.L24G 			{ font-family: 'Lucida Grande', Geneva, Verdana, Arial, Helvetica, sans-serif; font-size: 20pt; color: #76797C; }
+.L24W 			{ font-family: 'Lucida Grande', Geneva, Verdana, Arial, Helvetica, sans-serif; font-size: 20pt; color: #FFFFFF; }
+
+.T13 			{ font-family: Times, serif; font-size: 11pt; line-height: 115%; }
+.TITLE 			{ font-family: Helvetica, Arial, sans-serif; font-size: 20pt; font-weight: 900;}
+.INTRO 			{ font-family: Times, serif; font-size: 13pt; }
+.form_style 	{ font-size : 10pt; font-family : geneva, arial, sans-serif; width: 215px; }
+.form_style_med { font-size : 10pt; font-family : geneva, arial, sans-serif; width: 200px; }
+.tableborder 	{ background-color: #FFFFFF; border: 1pt #A1A5A9 solid; }
+
+
+a.black			{ 
+					color: #000000;
+					text-decoration: none;
+				}
+				
+a.black:hover	{
+					color: #000000;
+					text-decoration: underline;
+				}
+				
+a.white			{ 
+					color: #FFFFFF;
+					text-decoration: none;
+				}
+				
+a.white:hover	{
+					color: #FFFFFF;
+					text-decoration: underline;
+				}		
+
+/* List definitions */
+ul.none			{
+					list-style: none;
+					margin-top: 0px;
+					margin-bottom: 5px;
+					margin-left: 14px;
+					padding: 0px;
+					padding-left: 1px;
+					line-height: 150%;
+				}
+
+ul.arrowtext	{
+					list-style-image: url(http://a772.g.akamai.net/7/772/51/64c11bdf28b789/www.apple.com/main/elements/arrowa1a5a9.gif);
+					margin-top: 0px;
+					margin-bottom: 5px;
+					margin-left: 14px;
+					padding: 0px;
+					padding-left: 1px;
+					line-height: 150%;
+					list-style-position: outside;
+				}
+
+ul.arrowlinks	{
+					list-style-image: url(http://a772.g.akamai.net/7/772/51/64c11bdf28b789/www.apple.com/main/elements/arrowa1a5a9.gif);
+					margin-top: 0px;
+					margin-bottom: 5px;
+					margin-left: 14px;
+					padding: 0px;
+					padding-left: 1px;
+					line-height: 150%;
+					list-style-position: outside;
+				}
+
+ul.arrowpro		{
+					list-style-image: url(http://a1104.g.akamai.net/7/1104/51/ccb08b49170498/www.apple.com/finalcutpro/images/arrowpro2.gif);
+					margin-top: 0px;
+					margin-bottom: 5px;
+					margin-left: 14px;
+					padding: 0px;
+					padding-left: 1px;
+					line-height: 150%;
+					list-style-position: outside;
+				}
+
+ul.bullet		{
+					list-style-image: url(http://a772.g.akamai.net/7/772/51/b99e8d28e6899e/www.apple.com/main/elements/dot2.gif);
+					margin-top: 0px;
+					margin-bottom: 0px;
+					margin-left: 14px;
+					padding: 0px;
+					padding-left: 1px;
+					line-height: 150%;
+					list-style-position: outside;
+				}
+
+ul.square		{
+					list-style: square;
+					margin-bottom: 0px;
+					margin-left: 22px;
+					padding: 0px;
+					line-height: 120%;
+				}
+
+ul.circle		{
+					list-style: circle;
+					margin-bottom: 0px;
+					margin-left: 22px;
+					padding: 0px;
+					line-height: 120%;
+				}
+
+ul.decimal		{
+					list-style: decimal;
+					margin-bottom: 0px;
+					margin-left: 22px;
+					padding: 0px;
+					line-height: 120%;
+				}
+
+ul.dash		{
+					list-style: -;
+					margin-bottom: 0px;
+					margin-left: 22px;
+					padding: 0px;
+					line-height: 120%;
+				}
+
+
+/* Misc for server */
+.bdrleft		{
+					border-left: 1px solid #A1A5A9;
+				}
+
+.bdrtop			{
+					border-top: 1px solid #A1A5A9;
+					padding-top: 5px;
+					padding-bottom: 5px;
+				}
+				

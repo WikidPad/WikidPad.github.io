@@ -1,0 +1,170 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <title>WpAttributes</title>
+        <link type="text/css" rel="stylesheet" href="appbase.css">
+    </head>
+    <body>
+<span class="parent-nodes">parent nodes: <span class="parent-node"><a href="SignalPageNodes.html">SignalPageNodes</a></span> | <span class="parent-node"><a href="SignalUserTags.html">SignalUserTags</a></span> | <span class="parent-node"><a href="WikidPadReferences.html">WikidPadReferences</a></span> | <span class="parent-node"><a href="WpInsertions.html">WpInsertions</a></span></span><br /><br />
+<a name=".h0"></a><h2>Wp Attributes</h2>
+Contents:   <div class="page-toc">
+<div class="page-toc-level2"><a href="#.h0">Wp Attributes</a></div>
+<div class="page-toc-level3"><a href="#.h54">General</a></div>
+<div class="page-toc-level4"><a href="#.h397">Syntax</a></div>
+<div class="page-toc-level4"><a href="#.h1315">User defined attributes</a></div>
+<div class="page-toc-level4"><a href="#.h1572">Global attribute properties</a></div>
+<div class="page-toc-level4"><a href="#.h2221">Autocompletion</a></div>
+<div class="page-toc-level3"><a href="#.h2854">Global attributes</a></div>
+<div class="page-toc-level4"><a href="#.h3003">Editor</a></div>
+<div class="page-toc-level4"><a href="#.h3063">Page linking</a></div>
+<div class="page-toc-level4"><a href="#.h3172">Page formatting</a></div>
+<div class="page-toc-level4"><a href="#.h3312">Page Signalling</a></div>
+<div class="page-toc-level4"><a href="#.h3384">Spell checking</a></div>
+<div class="page-toc-level4"><a href="#.h3459">Scripting</a></div>
+<div class="page-toc-level4"><a href="#.h3525">Plugins</a></div>
+</div>
+<br />
+<a href="javascript:history.go(-1)">Back</a><hr size="1" />
+<a name=".h54"></a><h3>General</h3>
+Wiki pages support "attributes" <a href="#.f1">[1]</a>. Attributes are used for two purposes:<ul><li />to add an extra index for a page in the <span class="wiki-link"><a href="TheTreeView.html">views tree</a></span>.<li />to specify certain special wiki formatting commands.<br />
+</ul>
+<a href="#">Top</a><br />
+<a href="#.f1">[1]</a> <i>The page has partly been assembled using page inserts; it's complete contents can only be seen in preview.</i><hr size="1" />
+<a name=".h397"></a><h4>Syntax</h4>
+The general format for an attribute is:<ul><li />[attribute key: <i>attribute value</i>], like: [color: Dark Slate Blue]<br />
+</ul>
+Multiple attributes for one page with the same key, but with different values can be combined into one multivalue attribute, separating the different values with semicolons; like:<ul><li />[alias: WikidPadAttributes; WikiAttributes; WikiDocumentAttributes]<br />
+</ul>
+Attribute values can be enclosed in <span class="wiki-link"><a href="QuotationCharacters.html">quotation characters</a></span> to allow them to contain reserved characters, e.g.<ul><li />[shop: "audio&amp;video"]<br />
+</ul>
+Attribute keys can be composed keys with a hierarchical structure; i.e they can exist of multiple words, separated by a period&nbsp;"."; like:<ul><li />[html.bgcolor: #FFFFCC]<br />
+</ul>
+Certain system attributes have global representations, that set default values for the entire wiki that they are in. Their key is then prefixed with "global."; like:<ul><li />[global.html.bgcolor: #FFFFCC]<hr size="1" />
+</ul>
+<a name=".h1315"></a><h4>User defined attributes</h4>
+Users can define their own attributes - key: value pairs - in order to create their own additional indexes for their pages in the views tree. For description and examples see: <span class="wiki-link"><a href="SignalUserTags.html">Page signalling: user tags</a></span>.<ul><hr size="1" />
+</ul>
+<a name=".h1572"></a><h4>Global attribute properties</h4>
+Attributes support global properties, that influence the representation of pages in the page tree. To set the properties, a variant on the attribute specification is used, like:<ul><li />[global.contact.personal.icon: people]<li />[global.contact.personal.color: Coral]<li />[global.contact.personal.bold: true]</ul>
+Would set the node in the main tree of every page that has the attribute:<ul><li />[contact: personal]</ul>
+assigned, to use the icon "people", font style bold and font color "coral".<br />
+For more comprehensive description and examples see: Page signalling: <span class="wiki-link"><a href="SignalUserTags.html">user tags</a></span> and <span class="wiki-link"><a href="SignalTodoTags.html">todo tags</a></span>.<ul><hr size="1" />
+</ul>
+<a name=".h2221"></a><h4>Autocompletion</h4>
+The editor supports autocompletion for attributes. Type part of the attribute, press Ctrl-Space and a list with existing attribute specifications will come up. Autocompletion for attributes works exactly like <span class="wiki-link"><a href="Using%20autocompletion.html">autocompletion for links</a></span>; see there for details and examples. In fact, depending on how much of the attribute text is typed, a list of both attributes ánd links will come up <a href="#.f1">[1]</a>.<br />
+<br />
+<a href="#">Top</a><br />
+<a name=".f1"></a>[1] <i>Currently there is a bug in WikidPad, that prevents autocompletion for attributes with a period "." in the typed part of the key. This will be solved in an upcomming version op.</i><hr size="1" />
+<a name=".h2854"></a><h3>Global attributes</h3>
+This section lists the system attributes, that have global representations. They set wiki wide defaults for those attributes.<br />
+<br />
+<a name=".h3003"></a><h4>Editor</h4>
+<ul><b>Editor: see <span class="wiki-link"><a href="PageEditAttributes.html">PageEditAttributes</a></span></b><hr size="1" />
+</ul>
+&bull; <b>[global.font:</b> <i>font name</i><b>]</b><br />
+Sets the default editor font face for a wiki; default = <i>none</i> ???.<br />
+<br />
+&bull; <b>[global.wrap:</b> <i>wrap value</i><b>]</b><br />
+Sets the default wrap value for a wiki; default = <i>none</i> but mostly a default of 70 is set in the <span class="wiki-link"><a href="WikiSettings.html">WikiSettings</a></span> page at creation of a wiki.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h3063"></a><h4>Page linking</h4>
+<ul><b>Wikiwords: see <span class="wiki-link"><a href="Using%20WikiWords.html">Using WikiWords</a></span></b><hr size="1" />
+</ul>
+&bull; <b>[global.camelCaseWordsEnabled:</b> <i>true / false</i><b>]</b><br />
+Sets the default camelcase mode to true or false; default = true.<br />
+<ul><b>Bracketed links: see <span class="wiki-link"><a href="Using%20brackets.html">Using brackets</a></span></b><hr size="1" />
+</ul>
+&bull; <b>[global.auto_link:</b> <i>off / relax</i><b>]</b><br />
+Sets the default recognition mode of non-camelcase wiki words in normal text; default = <i>Off</i>.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h3172"></a><h4>Page formatting</h4>
+<ul><b>Templates: see <span class="wiki-link"><a href="PagePageTemplates.html">PagePageTemplates</a></span></b><hr size="1" />
+</ul>
+&bull; <b>[global.template:</b> <i>page name</i><b>]</b><br />
+Sets a default template for every new page in wiki; can be overruled by a local template attribute; default = <i>none</i>. <br />
+<br />
+&bull; <b>[global.template_head:</b> <i>auto / manual</i><b>]</b><br />
+Sets the default title generation for templated pages to auto of manual; default = auto.<br />
+<ul><b>Html format: see <span class="wiki-link"><a href="PageViewAttributes.html">PageViewAttributes</a></span></b><hr size="1" />
+</ul>
+&bull; <b>[global.html.bgcolor:</b> <i>hex color number</i><b>]</b><br/><br />
+Sets the default background color for pages in preview and export; default = <i>none</i>.<br />
+<br />
+&bull; <b>[global.html.textcolor:</b> <i>hex color number</i><b>]</b><br/><br />
+Sets the default foreground (text) color for pages in preview and export; default = <i>none</i>.<br />
+<br />
+&bull; <b>[global.html.linkcolor:</b> <i>hex color number</i><b>]</b><br/><br />
+Sets the default link color for pages in preview and export; default = <i>none</i>.<br />
+<br />
+&bull; <b>[global.html.alinkcolor:</b> <i>hex color number</i><b>]</b><br/><br />
+Sets the default active link color for pages in preview and export; default = <i>none</i>.<br />
+<br />
+&bull; <b>[global.html.vlinkcolor:</b> <i>hex color number</i><b>]</b><br/><br />
+Sets the default visited link color for pages in preview and export; default = <i>none</i>.<br />
+<br />
+&bull; <b>[global.html.bgimage:</b> <i>image url</i><b>]</b><br/><br />
+Sets the default background image for pages in preview and export; default = <i>none</i>.<br />
+<br />
+&bull; <b>[global.paragraph_mode:</b> <i>true / false</i><b>]</b><br/><br />
+Sets the default paragraph mode to on or off; default = off.<br />
+<ul><b>Miscellaneous: see <span class="wiki-link"><a href="PageMiscellaneous.html">PageMiscellaneous</a></span></b><hr size="1" />
+</ul>
+&bull; <b>[global.view_pane:</b> <i>off / editor / preview</i><b>]</b><br />
+Sets the default for mode in whitch a page should be opened; default = <i>Off</i>.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h3312"></a><h4>Page Signalling</h4>
+<ul><b>Page nodes: see <span class="wiki-link"><a href="SignalPageNodes.html">SignalPageNodes</a></span></b><hr size="1" />
+</ul>
+&bull; <b>[global.child_sort_order:</b> <i>sort type</i><b>]</b><br />
+Sets the default child sort order for the page tree; default = ascending.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h3384"></a><h4>Spell checking</h4>
+<ul><b>Spell checking: see <span class="wiki-link"><a href="SpellChecking.html">SpellChecking</a></span></b><hr size="1" />
+</ul>
+&bull; <b>[global.language:</b> <i>language code</i><b>]</b><br />
+Sets the default language code for spell checking; default = <i>none</i><br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h3459"></a><h4>Scripting</h4>
+<ul><b>Scripting: see <span class="wiki-link"><a href="Scripts.html">Scripts</a></span></b><hr size="1" />
+</ul>
+&bull; <b>[global.import_scripts:</b> <i>page name</i><b>]</b><br />
+Sets a default page to be used as the script library for the whole wiki; can be overruled by the local "import_scripts" attribute. The scripts in the specified page will automatically be available on every page of the wiki.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h3525"></a><h4>Plugins</h4>
+<ul><b>Structure graphs: see <span class="wiki-link"><a href="StructureGraphs.html">StructureGraphs</a></span></b><hr size="1" />
+</ul>
+&bull; <b>[global.graph.relation.exclude:</b> <i>attribute keys to exclude</i><b>]</b><br />
+Sets the default for attribute keys that should be excluded from relation graphs; default = <i>None</i>.<br />
+<i>Example:</i> [global.graph.relation.exclude: alias; template] excludes "alias" and "template" from the graph.<br />
+<br />
+&bull; <b>[global.graph.relation.include:</b> <i>attribute keys to include</i><b>]</b><br />
+Sets the default for attribute keys that should be included in relation graphs; default = <i>All</i>.<br />
+If global.graph.relation.exclude is also set, then global.graph.relation.include is ignored.<br />
+<i>Example:</i> [global.graph.relation.include: intro; help] includes only "intro" and "help" in the graph.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+previous: <a href="javascript:history.go(-1)">Back</a><br />
+parents:&nbsp; <span class="wiki-link"><a href="SignalPageNodes.html">SignalPageNodes</a></span>, <span class="wiki-link"><a href="SignalUserTags.html">SignalUserTags</a></span>, <span class="wiki-link"><a href="WikidPadReferences.html">WikidPadReferences</a></span>, <span class="wiki-link"><a href="WpInsertions.html">WpInsertions</a></span><br />
+attributes: <span class="property">[tree_position: 4]</span><br />
+<span class="property">[help.status: done]</span><br />
+<br />
+<br />
+<b>inserts</b><br />
+<span class="wiki-link"><a href="GlobalAttributesEditor.html">GlobalAttributesEditor</a></span><br />
+<span class="wiki-link"><a href="GlobalAttributesWikiWords.html">GlobalAttributesWikiWords</a></span><br />
+<span class="wiki-link"><a href="GlobalAttributesBracketedLinks.html">GlobalAttributesBracketedLinks</a></span><br />
+<span class="wiki-link"><a href="GlobalAttributesTemplates.html">GlobalAttributesTemplates</a></span><br />
+<span class="wiki-link"><a href="GlobalAttributesPageView.html">GlobalAttributesPageView</a></span><br />
+<span class="wiki-link"><a href="GlobalAttributesPageMisc.html">GlobalAttributesPageMisc</a></span><br />
+<span class="wiki-link"><a href="GlobalAttributesPageNodes.html">GlobalAttributesPageNodes</a></span><br />
+<span class="wiki-link"><a href="GlobalAttributesSpellChecking.html">GlobalAttributesSpellChecking</a></span><br />
+<span class="wiki-link"><a href="GlobalAttributesScripting.html">GlobalAttributesScripting</a></span><br />
+<span class="wiki-link"><a href="GlobalAttributesStructureGraphs.html">GlobalAttributesStructureGraphs</a></span>    </body>
+</html>

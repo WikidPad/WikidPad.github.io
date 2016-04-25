@@ -1,0 +1,48 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <title>Intro5Indexing</title>
+        <link type="text/css" rel="stylesheet" href="appbase.css">
+    </head>
+    <body>
+<span class="parent-nodes">parent nodes: <span class="parent-node"><a href="Intro4LinkFunctions.html">Intro4LinkFunctions</a></span> | <span class="parent-node"><a href="Intro6Signalling.html">Intro6Signalling</a></span> | <span class="parent-node"><a href="IntroIndex.html">IntroIndex</a></span></span><br /><br />
+<a name=".h0"></a><h2>Intro 5: Indexing</h2>
+Contents:	<div class="page-toc">
+<div class="page-toc-level2"><a href="#.h0">Intro 5: Indexing</a></div>
+<div class="page-toc-level3"><a href="#.h56">General</a></div>
+<div class="page-toc-level3"><a href="#.h722">User tags</a></div>
+<div class="page-toc-level3"><a href="#.h1469">Examples</a></div>
+</div>
+<br />
+<a href="javascript:history.go(-1)">Back</a><hr size="1" />
+<a name=".h56"></a><h3>General</h3>
+Wiki pages can be fitted with "user tags" that create alternative indexes for the pages in the <span class="wiki-link"><a href="TheTreeView.html">views tree</a></span>. Depending on whether it is a simple tag or a structured tag, pages can be indexed on one key/value pair or on a hierarchical group/value combination. For more detailed information on creating and using "user tags" see: <span class="wiki-link"><a href="SignalUserTags.html">Page signalling: user tags</a></span>.<br />
+<br />
+A more specific and restricted use of indexing can be done with "todo tags". These are somewhat different from user tags but all in all they have the same function. Details on todo tags are available in: <span class="wiki-link"><a href="SignalTodoTags.html">Page signalling: todo tags</a></span><br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h722"></a><h3>User tags</h3>
+The user tag is in effect a page attribute and has the format [<i>key</i>: <i>value</i>]. Value is free to choose and key is free to choose too in as far as it isn't equal to any of the WikidPad attribute keys. So "museum" is valid, but "icon", "color", "bold" and some more are off limits. Also hierarchical keys with structured grouping can be used, like: [<i>key</i>.<i>subkey1</i>.<i>subkey2</i>.<i>etc</i>: <i>value</i>].<br />
+<br />
+Adding tags like [contact:private] and [contact:business] to pages with contact details would create a node "contact" in the views tree and the subnotes "business" and "private" and eacht subnote would list the pages that contain the relevant tag, like in the screenshot below.<br />
+<ul><img src="files/intro/IndexingExample1.png" alt="" border="0" /><br />
+</ul>
+<a href="#">Top</a><hr size="1" />
+<a name=".h1469"></a><h3>Examples</h3>
+Suppose within the scope of a research on <span class="wiki-link"><a href="Intro%20Rembrandt%20van%20Rijn.html">Rembrandt van Rijn</a></span> you created a number of pages with details on works that he crafted; one work per page, like the one that was started on the <span class="wiki-link"><a href="Intro%20Nachtwacht.html" title="The Nachtwacht by Rembrandt van Rijn">"Nachtwacht"</a></span>. Now for a good reason you decide that you need to be able to group - i.e. index - the works on type: painting, etching and drawing, so you ad the tags:<ul><li />[type: painting]<li />[type: drawing]<li />[type: etching]</ul>
+to the relevant pages. With this you have added the extra node "type" to the views tree, that groups the "works" pages on type, like in the screenshot below.<br />
+<ul><img src="files/intro/IndexingExample2.png" alt="" border="0" /><br />
+</ul>
+But besides this you also need to group the works on location; both museum and city, so you add the tags: [museum: <i>museum name</i>] and [location: <i>city name</i>] to the pages, resulting in two extra index nodes in the views tree, like below:<br />
+<ul><img src="files/intro/IndexingExample3.png" alt="" border="0" /> <img src="files/intro/IndexingExample4.png" alt="" border="0" /><br />
+</ul>
+You could however also combine museum and location into one structured index - or group index - using óne tag like: [location.<i>cityname</i>: <i>museum name</i>], resulting in something as in the example below.<br />
+<ul><img src="files/intro/IndexingExample5.png" alt="" border="0" /><br />
+</ul>
+<p align=center><span class="wiki-link"><a href="Intro4LinkFunctions.html">&laquo; Previous page</a></span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="wiki-link"><a href="Intro6Signalling.html">Next page &raquo;</a></span></p><hr size="1" />
+previous: <a href="javascript:history.go(-1)">Back</a><br />
+parents:&nbsp; <span class="wiki-link"><a href="Intro4LinkFunctions.html">Intro4LinkFunctions</a></span>, <span class="wiki-link"><a href="Intro6Signalling.html">Intro6Signalling</a></span>, <span class="wiki-link"><a href="IntroIndex.html">IntroIndex</a></span><br />
+attributes: <span class="property">[tree_position: -1]</span><br />
+<span class="property">[intro.status: done]</span>    </body>
+</html>

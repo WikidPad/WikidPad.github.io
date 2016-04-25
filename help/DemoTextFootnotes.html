@@ -1,0 +1,68 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <title>DemoTextFootnotes</title>
+        <link type="text/css" rel="stylesheet" href="appbase.css">
+    </head>
+    <body>
+<span class="parent-nodes">parent nodes: <span class="parent-node"><a href="DemoTextFormatting.html">DemoTextFormatting</a></span></span><br /><br />
+<a name=".h0"></a><h2>Demo Text Footnotes</h2>
+Contents:   <div class="page-toc">
+<div class="page-toc-level2"><a href="#.h0">Demo Text Footnotes</a></div>
+<div class="page-toc-level3"><a href="#.h60">General</a></div>
+<div class="page-toc-level4"><a href="#.h1020">Natural look</a></div>
+<div class="page-toc-level3"><a href="#.h2252">Options: Wiki settings</a></div>
+<div class="page-toc-level4"><a href="#.h2358">"Footnotes as wiki words"</a></div>
+<div class="page-toc-level3"><a href="#.h2732">Remarks</a></div>
+<div class="page-toc-level3"><a href="#.h2783">Todo's</a></div>
+<div class="page-toc-level3"><a href="#.h2922">Results</a></div>
+</div>
+<br />
+<a href="javascript:history.go(-1)">Back</a><hr size="1" />
+<a name=".h60"></a><h3>General</h3>
+Wikidpad supports footnotes; a footnote in this case is an achor that designates the footnote text itself and one or more links on the same page that refer to that anchor. The anchor name and therefore also the referring links are numeric and not alphabetic like the page links are. An example:<ul><hr size="1" />
+This is text.<br />
+This is text with a reference to footnote-1 <a href="#.f1">[1]</a>.<br />
+This is some more text.<br />
+......................<br />
+......................<br />
+<a name=".f1"></a>[1] <i>This  is the text of the footnote 1.</i><hr size="1" />
+</ul>
+The footnote "number" can be any number; it does not have to start - per page - with "1", nor do the numbers of various footnotes have to be sequential. There can be any amount of references to any one specific footnote on a page, but the footnote itself always has to be the last "reference" with that number on the page. Wikidpad will automatically translate the last occurrence of a reference to an anchor an the preceding ones to a link.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h1020"></a><h4>Natural look</h4>
+Footnote references are normally printed as superscript numbers and the footnote texts are printed in italics and a smaller font size. In Wikidpad nothing is superscript and everything appears in the same font (and) size as the rest of the text. The footnote text could be made italics, using the wikidpad italics tags, but that has a practical problem: Wikidpad does not allow for links or any other formatting inside italics text. And precisely links are things one would want to use in footnotes.<br />
+<br />
+When using external preview, things cán be done to make footnotes look more "natural" by using html tags. And even when using internal preview, it would still look better in html export. Internal preview will not mind, since it will simply ignore the tags as unknown. To see how it works, check out the example below in the editor. See also <span class="wiki-link"><a href="DemoTextHtmlElements.html">Textformatting: Html element</a></span> on the usage of html tags.<ul><hr size="1" />
+This is text.<br />
+This is text with a reference to footnote-2 <small><sup><a href="#.f2">[2]</a></sup></small>.<br />
+This is some more text.<br />
+......................<br />
+......................<br />
+<small><i><a name=".f2"></a>[2]See:<span class="url-link"><a href="http://www.w3schools.com/html/default.asp">http://www.w3schools.com/html/default.asp</a></span> for an explanation of html.</i></small><hr size="1" />
+<br />
+</ul>
+<a href="#">Top</a><hr size="1" />
+<a name=".h2252"></a><h3>Options: Wiki settings</h3>
+Wiki settings options can be found in: menu / Wiki / Options / "Current wiki".<br />
+<a name=".h2358"></a><h4>"Footnotes as wiki words"</h4>
+There are applications possible where there is a need for numeric page links. Under normal circumstances this can't be done, since numeric links are reserved for footnotes. The option "Footnotes as wiki words" allows to use numbers as page links. Setting that to true, dóes however mean, that footnotes can't be used anymore.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h2732"></a><h3>Remarks</h3>
+<ul><li />Template remark<br />
+</ul>
+<a href="#">Top</a><hr size="1" />
+<a name=".h2783"></a><h3>Todo's</h3>
+<span class="todo">done.demo.projectdemo.demo2: check out all posibilities</span><br />
+action.demo.textformatting.footnotes: template action<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h2922"></a><h3>Results</h3>
+<span class="property">[demo.status: done]</span><br />
+<a href="#">Top</a><hr size="1" />
+previous: <a href="javascript:history.go(-1)">Back</a><br />
+parents:&nbsp; <span class="wiki-link"><a href="DemoTextFormatting.html">DemoTextFormatting</a></span>    </body>
+</html>

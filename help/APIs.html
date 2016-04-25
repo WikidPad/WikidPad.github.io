@@ -1,0 +1,230 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <title>APIs</title>
+        <link type="text/css" rel="stylesheet" href="appbase.css">
+    </head>
+    <body>
+<span class="parent-nodes">parent nodes: <span class="parent-node"><a href="Plugins.html">Plugins</a></span></span><br /><br />
+<a name=".h0"></a><h2>AP Is</h2>
+Contents: 	<div class="page-toc">
+<div class="page-toc-level2"><a href="#.h0">AP Is</a></div>
+<div class="page-toc-level3"><a href="#.h45">General</a></div>
+<div class="page-toc-level3"><a href="#.h447">Selected functions of PersonalWikiFrame instance</a></div>
+<div class="page-toc-level3"><a href="#.h2654">The following documentation is outdated!*</a></div>
+<div class="page-toc-level4"><a href="#.h2818">wikidPad functions</a></div>
+<div class="page-toc-level4"><a href="#.h3401">wikidPad.variables*</a></div>
+<div class="page-toc-level4"><a href="#.h4157">wikiData - The wiki database interface* </a></div>
+<div class="page-toc-level4"><a href="#.h5791">wikiPage object*</a></div>
+<div class="page-toc-level4"><a href="#.h6216">tree control*</a></div>
+<div class="page-toc-level4"><a href="#.h6361">text control*</a></div>
+</div>
+<br />
+<a href="javascript:history.go(-1)">Back</a><hr size="1" />
+<a name=".h45"></a><h3>General</h3>
+The first argument to each hook function is the instance of the<br />
+PersonalWikiFrame object which is the main window of the application.<br />
+In scripts, this instance is automatically assigned to the variable<br />
+"pwiki".<br />
+<br />
+If you are reading the source code of WikidPad, this instance is often<br />
+stored in member variable "pWiki", for some newer objects it has the<br />
+name "mainControl".<br />
+<br />
+<a href="javascript:history.go(-1)">Back</a><hr size="1" />
+<a name=".h447"></a><h3>Selected functions of PersonalWikiFrame instance</h3>
+&bull; newWiki(wikiName, wikiDir)<ul>Create a new wiki<br />
+</ul>
+&bull; openWiki(wikiConfigFilename, wikiWordToOpen=None, ignoreWdhName=False)<ul>Open a wiki, and optionally a page in that wiki. if ignoreWdhName<br />
+is True, the program asks for the database type (same as<br />
+"Open as Type" in menu)<br />
+</ul>
+&bull; saveCurrentWikiState()<ul>Write any changes to the wiki to disk.<br />
+</ul>
+&bull; openWikiPage(wikiWord)<ul>Open a specific wiki word.<br />
+</ul>
+&bull; findCurrentWordInTree()<ul>Select the currently open page in the tree control.<br />
+</ul>
+&bull; viewParents(word)<ul>Pop up the dialog that shows the parents of the node passed in.<br />
+</ul>
+&bull; viewChildren()<ul>Pop up the dialog that shows the children of the node passed in.<br />
+</ul>
+&bull; viewParentLess()<ul>Pop up the dialog that shows the parentless nodes.<br />
+</ul>
+&bull; viewBookmarks()<ul>Pop up the dialog that shows the bookmarked nodes.<br />
+</ul>
+&bull; viewHistory()<ul>Pop up the dialog that shows the history of visited pages.<br />
+</ul>
+&bull; saveCurrentWikiPage()<ul>Save the current wiki page to disk.<br />
+</ul>
+&bull; stdDialog(dlgtype, title, message, additional=None)<ul>Show one of the standard dialogs. dlgtype is a string giving the type<br />
+of the desired dialog. title and message are strings to show in the<br />
+dialog, the meaning of additional and the return value depends on<br />
+the dialog type.<br />
+<br />
+Possible types:<br />
+<br />
+"text": input text to dialog, additional is the default text.<br />
+<ul>The function returns the entered text on OK or an empty string on Cancel<br />
+</ul>
+"o": Shows only OK button<br />
+"oc": Shows OK and Cancel buttons, returns either "ok" or "cancel"<br />
+"yn": Yes and No buttons, returns either "yes" or "no"<br />
+"ync": like "yn" but with additional cancel button, can also return<br />
+<ul>"cancel"<br />
+<br />
+</ul>
+</ul>
+&bull; displayErrorMessage(errorStr, exception)<ul>Popup an exception dialog.<br />
+</ul>
+&bull; getWikiData()<ul>Get currently active WikiData object.<br />
+</ul>
+&bull; getActiveEditor()<ul>Returns currently active editor control (currently there only can be one).<br />
+</ul>
+&bull; getCurrentWikiWord()<ul>The currently open wiki word.<br />
+</ul>
+&bull; getCurrentDocPage()<ul>Get the current DocPage object. (TODO)<br />
+</ul>
+<a href="javascript:history.go(-1)">Back</a><hr size="1" />
+<a name=".h2654"></a><h3>The following documentation is outdated!*</h3>
+The first argument to each hook function is wikidPad itself.  Here are<br />
+the available methods on the wikidPad object.<br />
+<br />
+<a name=".h2818"></a><h4>wikidPad functions</h4>
+addToHistory(word)<ul>Add the word passed in to the history.<br />
+</ul>
+goInHistory(positionDelta)<ul>Go back or forward in history by the amount passed in.<br />
+</ul>
+goBackInHistory()<ul>Go back in history one position.<br />
+</ul>
+goForwardInHistory()<ul>Go forward in history one position.<br />
+<br />
+</ul>
+showWikiWordOpenDialog()<br />
+showWikiWordRenameDialog()<br />
+showWikiWordRenameConfirmDialog()<br />
+showSearchDialog()<br />
+showSavedSearchesDialog()<br />
+showWikiWordDeleteDialog()<br />
+showFindReplaceDialog()<br />
+<br />
+displayMessage(title, msg)<ul>Popup a dialog with the message passed in.<br />
+<br />
+</ul>
+<a name=".h3401"></a><h4>wikidPad.variables*</h4>
+globalConfigDir<ul>The directory of the wikidPad.config file.<br />
+</ul>
+globalConfigLoc<ul>The wikidpad.config file.<br />
+</ul>
+globalConfig<ul>The parsed wikidpad.config file.<br />
+</ul>
+wikiAppDir<ul>The installation directory of wikidPad.<br />
+</ul>
+wikiPadHelp<ul>The location of the help wiki.<br />
+</ul>
+config<ul>The parsed configuration of the opened wiki.<br />
+</ul>
+wikiName<ul>The name of the currently opened wiki.<br />
+</ul>
+dataDir<ul>The data directory of the currently opened wiki.<br />
+</ul>
+wikiData<ul>The database object for the currently open wiki. More on this below.<br />
+</ul>
+tree<ul>The tree control on the left. The is a wxTreeCtrl. More on this below.<br />
+<br />
+</ul>
+editor<ul>The text editor for wikidPad. This is a wxStyledTextCtrl. More on this below.<br />
+<br />
+</ul>
+<a name=".h4157"></a><h4>wikiData - The wiki database interface* </h4>
+getPage(wikiWord, itemsToLoad) <ul>Get the data for a wiki word. Pass in an array of strings for the items to load.<br />
+Valid items are: info, parents, children, props, todos.<br />
+For performance you specify which items should be loaded from the db. If you only<br />
+need info and children call:<br />
+<br />
+getPage(word, ["info", "children"])<br />
+<br />
+More on the return value of this function below.<br />
+</ul>
+getChildRelationships(wikiWord)<ul>Returns array of the words that are children of the word passed in.<br />
+</ul>
+getParentRelationships(wikiWord)<ul>Returns array of the words that are parents of the word passed in.<br />
+</ul>
+getAllWords()<ul>Get all of the wiki words in the wiki.<br />
+</ul>
+getAllAliases()<ul>Get all of the aliases in the wiki.<br />
+</ul>
+getAllRelations()<ul>Get all of the relationships in the wiki. Returns array of tuples, (word, relatedTo).<br />
+</ul>
+getWikiWordsStartingWith(string)<br />
+getWikiWordsWith(string)<br />
+getWikiWordsModifiedWithin(days)<br />
+getParentLessWords()<br />
+<br />
+renameWord(word, toWord)<ul>Rename a wiki word.<br />
+</ul>
+deleteWord(word)<ul>Delete a wiki word.<br />
+</ul>
+getWordsWithPropertyValue(key, value)<ul>Get all of the wiki words with a certain property value. For example<br />
+getWordsWithPropertyValue("icon", "pin") would get all of the wiki<br />
+words with "icon" set to "pin".<br />
+</ul>
+findBestPathFromWordToWord(word, toWord)<ul>Returns the shortest path in the wiki from "word" to "toWord". Returned<br />
+as an array of wiki words.<br />
+</ul>
+search(forPattern)<ul>Search the entire wiki using a regex.<br />
+</ul>
+getTodos()<ul>Get all of the todos in the wiki. Returned as an array of tuples.<br />
+</ul>
+<a name=".h5791"></a><h4>wikiPage object*</h4>
+wikiWord<ul>The word.<br />
+</ul>
+wikiFile<ul>The file that contains the data for this page.<br />
+</ul>
+parentRelations<ul>Array of the parents words for this node.<br />
+</ul>
+childRelations<ul>Array of the child words for this node.<br />
+</ul>
+todos<ul>Array of todos<br />
+</ul>
+props<ul>Hashtable of properties for the node.<br />
+</ul>
+getContent()<ul>Get the string content for the node.<br />
+</ul>
+save()<ul>Save the changes to this page to disk.<br />
+<br />
+</ul>
+<a name=".h6216"></a><h4>tree control*</h4>
+collapse()<ul>collapse the tree.<br />
+</ul>
+buildTreeForWord(wikiword)<ul>Open the tree control to the wiki word passed in.<br />
+</ul>
+<a name=".h6361"></a><h4>text control*</h4>
+setWrap(onOrOffBoolean)<ul>Set the wrap mode to on/off.<br />
+</ul>
+SetText()<ul>Set the text of the control.<br />
+</ul>
+snip()<ul>Copy the currently selected text to the ScratchPad.<br />
+</ul>
+startIncrementalSearch(searchStr)<ul>Set the search mode to incremental.<br />
+</ul>
+endIncrementalSearch()<ul>Stop incremental search.<br />
+</ul>
+executeSearch(searchStr, searchStartPos=-1)<ul>Execute a search of the text in the control.<br />
+</ul>
+getWikiWordText(position)<ul>If position is in a wiki word return that word.<br />
+</ul>
+getWikiWordBeginEnd(position)<ul>If position is in a wiki word return the start/end positions of the word.<br />
+</ul>
+isPositionInWikiWord(position)<ul>Is the position in a wiki word?<br />
+</ul>
+isPositionInLink(position)<ul>Is the position in a URL link?<br />
+</ul>
+See the wxWindows/wxPython documentation for info about the wxTreeCtrl and wxStyledTextCtrl.<br />
+<hr size="1" />
+previous: <a href="javascript:history.go(-1)">Back</a><br />
+parents:&nbsp; <span class="wiki-link"><a href="Plugins.html">Plugins</a></span><br />
+<span class="property">[alias: ApiDocs]</span>, <span class="property">[camelCaseWordsEnabled: false]</span><br />
+<span class="property">[help.status: done]</span>    </body>
+</html>

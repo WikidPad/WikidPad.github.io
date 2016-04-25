@@ -1,0 +1,81 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <title>PageEditAttributes</title>
+        <link type="text/css" rel="stylesheet" href="appbase.css">
+    </head>
+    <body>
+<span class="parent-nodes">parent nodes: <span class="parent-node"><a href="GlobalAttributesEditor.html">GlobalAttributesEditor</a></span> | <span class="parent-node"><a href="PageFormatting.html">PageFormatting</a></span></span><br /><br />
+<a name=".h0"></a><h2>Page Edit Attributes</h2>
+Contents:   <div class="page-toc">
+<div class="page-toc-level2"><a href="#.h0">Page Edit Attributes</a></div>
+<div class="page-toc-level3"><a href="#.h61">General</a></div>
+<div class="page-toc-level3"><a href="#.h208">Font face</a></div>
+<div class="page-toc-level4"><a href="#.h326">Example</a></div>
+<div class="page-toc-level4"><a href="#.h465">Global</a></div>
+<div class="page-toc-level3"><a href="#.h817">Word wrap</a></div>
+<div class="page-toc-level4"><a href="#.h3089">Global</a></div>
+<div class="page-toc-level3"><a href="#.h3428">Settings</a></div>
+<div class="page-toc-level4"><a href="#.h3441">Menu</a></div>
+<div class="page-toc-level4"><a href="#.h3503">Global attributes</a></div>
+</div>
+<br />
+<a href="javascript:history.go(-1)">Back</a><hr size="1" />
+<a name=".h61"></a><h3>General</h3>
+In Wikidpad a number of attributes is available, with which the formatting of a page in the editor can be influenced.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h208"></a><h3>Font face</h3>
+The appearance of a page in the editor can be changed, by setting a different font face for it. <br />
+<ul><hr size="1" />
+</ul>
+<a name=".h326"></a><h4>Example</h4>
+The font of this page is "Times" in the editor, because of the font attribute on the next line.<ul><li /><span class="property">[font: Times]</span></ul>
+<br />
+<ul><hr size="1" />
+</ul>
+<a name=".h465"></a><h4>Global</h4>
+This attribute has a global representation [global.font: font name] with which the default editor font for the whole wiki can be set. The font for individual pages can then still be set using the local font attribute. The global attribute:<ul><li />[global.font: Times]</ul>
+would set the editor font for the whole wiki to "Times".<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h817"></a><h3>Word wrap</h3>
+The editor supports auto-wrapping of typed text; it however only does this based on the width of the editor window and there is no way to influence this further. There are no facilities for setting page margins, auto-wrap margins or the like. Auto-wrap also only applies to the text in the editor window; it has no influence on the presentation of the lines of texts in the html view modes, when<span class="wiki-link"><a href="PageViewAttributes.html"> paragraph mode</a></span> has been set to true for the page.<br />
+<br />
+Wikidpad offers "Word wrap" as a means to adjust the lenght of lines on a page áfter they have been typed. It wrappes the lines in a block of text between two empty lines, in which the start and the end of the page also count as an empty line. Word wrap is a three step process:<ol><li />Set the maximum lenght the lines should have by adding the [wrap:value] attribute to the page<li />Set the cursor in the block of text lines, that needs to be wrapped.<li />Press Crtl+W and the editor will rewrap the block to the maximum line width specified.</ol>
+It is advised to be véry carefull when using word wrap. The reasons for this are:<ol><li />It will wrap áll of the lines in the block; there is no way to limit it to a specific (selected) number of lines.<li />It is very indiscriminative as to whát it wraps; it will wrap éverything: text, headers, lists, horizontal lines, escape blocks, table declarations, the lot.<li />It is just as indiscriminative in what it produces; it can effectively ruine the layout and specification of a page. Luckily it can be undone with the "Undo" function ("Ctrl+Z").<br />
+</ol>
+The reason for this behaviour lies in the fact, that wordwrap is not a parser driven function of WikidPad, but a default function of the Scintilla editor component, that drives the WikidPad editor window. This Scintilla editor is mainly designed for editing program source code. Currently however, there is no viable alternative and when used with care it might in certain situations still be usefull.<br />
+<br />
+<b>Remarks</b><ul><li />Auto-wrapping can be switched of with the option: menu / Editor / Settings / "Wrap Mode".<li />Word wrap has no use, when paragraph mode for the page is set to true.<li />When the cursor is in the last block on the page, word wrap also wraps the first block on the page.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+</ul>
+<a name=".h3089"></a><h4>Global</h4>
+This attribute has a global representation [global.wrap: value] with which the wrap value for the whole wiki can be set. The wrap value for individual pages can then still be set using the local font attribute. The global attribute:<ul><li />[global.wrap: value]</ul>
+would set the wrap value for the whole wiki to 70.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h3428"></a><h3>Settings</h3>
+<a name=".h3441"></a><h4>Menu</h4>
+<ul><b>Editor: settings, wrap</b><hr size="1" />
+</ul>
+&bull; <b>Wrap mode</b><br />
+Switches wrap mode on or off.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h3503"></a><h4>Global attributes</h4>
+<ul><b>Editor: see <span class="wiki-link"><a href="PageEditAttributes.html">PageEditAttributes</a></span></b><hr size="1" />
+</ul>
+&bull; <b>[global.font:</b> <i>font name</i><b>]</b><br />
+Sets the default editor font face for a wiki; default = <i>none</i> ???.<br />
+<br />
+&bull; <b>[global.wrap:</b> <i>wrap value</i><b>]</b><br />
+Sets the default wrap value for a wiki; default = <i>none</i> but mostly a default of 70 is set in the <span class="wiki-link"><a href="WikiSettings.html">WikiSettings</a></span> page at creation of a wiki.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+previous: <a href="javascript:history.go(-1)">Back</a><br />
+parents:&nbsp; <span class="wiki-link"><a href="GlobalAttributesEditor.html">GlobalAttributesEditor</a></span>, <span class="wiki-link"><a href="PageFormatting.html">PageFormatting</a></span><br />
+<span class="property">[help.status: done]</span>    </body>
+</html>

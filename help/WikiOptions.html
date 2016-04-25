@@ -1,0 +1,122 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <title>WikiOptions</title>
+        <link type="text/css" rel="stylesheet" href="appbase.css">
+    </head>
+    <body>
+<span class="parent-nodes">parent nodes: <span class="parent-node"><a href="WikidPadReferences.html">WikidPadReferences</a></span></span><br /><br />
+<a name=".h0"></a><h2>Wiki Options</h2>
+Contents:   <div class="page-toc">
+<div class="page-toc-level2"><a href="#.h0">Wiki Options</a></div>
+<div class="page-toc-level3"><a href="#.h53">Options: Current Wiki settings</a></div>
+<div class="page-toc-level4"><a href="#.h334">Wiki control</a></div>
+<div class="page-toc-level4"><a href="#.h400">Tree</a></div>
+<div class="page-toc-level4"><a href="#.h451">Footnotes</a></div>
+<div class="page-toc-level4"><a href="#.h512">Export</a></div>
+<div class="page-toc-level4"><a href="#.h567">Log window</a></div>
+<div class="page-toc-level4"><a href="#.h629">Page titles</a></div>
+<div class="page-toc-level4"><a href="#.h693">File store</a></div>
+</div>
+<br />
+<a href="javascript:history.go(-1)">Back</a><hr size="1" />
+<a name=".h53"></a><h3>Options: Current Wiki settings</h3>
+This page lists all the possible (current) wiki settings; they can be found in the main menu as: Wiki / Options / Current wiki <a href="#.f1">[1]</a>.<br />
+<br />
+<a href="#">Top</a><br />
+<a name=".f1"></a>[1] <i>The page has been assembled using page inserts; it's contents can only be seen in preview.</i><hr size="1" />
+<a name=".h334"></a><h4>Wiki control</h4>
+<ul><b>Wiki settings: General, wiki control</b><hr size="1" />
+</ul>
+&bull; <b>First word at startup</b><br />
+Wiki word which should be shown as first one each time the wiki is opened. If the field is empty, the last words when the wiki was closed is shown on opening.<br />
+<br />
+&bull; <b>Read only wiki</b><br />
+This option controls if a wiki can be changed or only can be opened as "read only".<br />
+<br />
+&bull; <b>Wiki icon</b><br />
+Set here the name of icon to use in the system tray instead of the default icon. If the field is empty the default icon is used. The icon of the main window is not influenced by this setting (because it does not work).<br />
+<br />
+&bull; <b>Wiki-bound hotkey</b><br />
+Wiki-bound hotkey to show/hide wiki. See OptionsDialog#<b>App-bound# hotkey</b><br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h400"></a><h4>Tree</h4>
+<ul><b>Wiki settings: General, tree</b><hr size="1" />
+</ul>
+&bull; <b>Force ScratchPad visibility in tree</b><br />
+Shows the special page <span class="wiki-link"><a href="ScratchPad.html">ScratchPad</a></span> always as child of the tree root, even if it is not really a child.<br />
+<br />
+&bull; <b>Remember expanded tree nodes</b><br />
+Control if expanded tree nodes should be remembered by WikidPad. This means if you collapse a tree node which contains expanded child nodes yet and expand the node later, the child nodes are expanded again. The following modes are supported:<ul><li />Not at all: Doesn't remember expanded nodes (like before version 1.9beta15)<li />While wiki open: Forgets the node states when wiki is closed<li />Always: Stores the node states in wiki configuration file and restores them on reopening<br />
+</ul>
+It may happen that the mechanism stores expanded nodes which don't exist any longer, e.g. if the link from parent page to a child page is deleted and the child page was represented by an expanded node this is not always recognized by WikidPad, so some "garbage" may be stored.<br />
+<br />
+By setting the option to "Not at all" then closing the options dialog, then setting the option back to what you had before, all node state information is cleared. The info of the main tree (not the "Views" tree) is also cleared when setting a new root.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h451"></a><h4>Footnotes</h4>
+<ul><b>Wiki settings: General, footnotes</b><hr size="1" />
+</ul>
+&bull; <b>Footnotes as wiki words</b><br />
+There are applications possible where there is a need for numeric page links. Under normal circumstances this can't be done, since numeric links are reserved for footnotes. The option "Footnotes as wiki words" allows to use numbers as page links. Setting that to true, dóes however mean, that footnotes can't be used anymore.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h512"></a><h4>Export</h4>
+<ul><b>Wiki settings: General, export</b><hr size="1" />
+</ul>
+&bull; <b>Default export dir.</b><br />
+Set the default export directory into which exports should go.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h567"></a><h4>Log window</h4>
+<ul><b>Wiki settings: General, log window</b><hr size="1" />
+</ul>
+&bull; <b>Auto-show log window</b><br />
+Automatically show log window if new error messages arrive. If the check-box is gray, the application level setting "Auto-show log window" is used, otherwise this wiki level setting overrules it.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h629"></a><h4>Page titles</h4>
+<ul><b>Wiki settings: General, page titles</b><hr size="1" />
+</ul>
+&bull; <b>Title prefix</b><br />
+Control the heading level of the initial main title of new pages. See <span class="wiki-link"><a href="PagePageTitles.html">PagePageTitles</a></span><br />
+<br />
+&bull; <b>Wikiword to title</b><br />
+How should the main title of new pages be generated from the wikiword. See <span class="wiki-link"><a href="PagePageTitles.html">PagePageTitles</a></span><br />
+<br />
+&bull; <b>Use link title if present</b><br />
+Specifies if the link title will be used as title of the page. See <span class="wiki-link"><a href="PagePageTitles.html">PagePageTitles</a></span><br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h693"></a><h4>File store</h4>
+<ul><b>Wiki settings: File storage</b><hr size="1" />
+</ul>
+&bull; <b>Modif. date must match</b><br />
+Only files with the exact same modification date are accepted for the shortlist. See above.<br />
+<br />
+&bull; <b>File name must match</b><br />
+Only files with the exact same name are accepted for the shortlist. See above.<br />
+<br />
+&bull; <b>Modif. date is enough</b><br />
+If modification timestamp corresponds, file is not checked on contents anymore.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+previous: <a href="javascript:history.go(-1)">Back</a><br />
+parents:&nbsp; <span class="wiki-link"><a href="WikidPadReferences.html">WikidPadReferences</a></span><br />
+attributes: <span class="property">[tree_position: 3]</span><br />
+<span class="property">[help.status: done]</span><br />
+<br />
+<b>Inserts</b><br />
+<span class="wiki-link"><a href="WikiOptionsTree.html">WikiOptionsTree</a></span><br />
+<span class="wiki-link"><a href="WikiOptionsWikiControl.html">WikiOptionsWikiControl</a></span><br />
+<span class="wiki-link"><a href="WikiOptionsFootnotes.html">WikiOptionsFootnotes</a></span><br />
+<span class="wiki-link"><a href="WikiOptionsExport.html">WikiOptionsExport</a></span><br />
+<span class="wiki-link"><a href="WikiOptionsLogWindow.html">WikiOptionsLogWindow</a></span><br />
+<span class="wiki-link"><a href="WikiOptionsPageTitles.html">WikiOptionsPageTitles</a></span><br />
+<span class="wiki-link"><a href="WikiOptionsFileStore.html">WikiOptionsFileStore</a></span><br />
+<br />
+<br />
+    </body>
+</html>

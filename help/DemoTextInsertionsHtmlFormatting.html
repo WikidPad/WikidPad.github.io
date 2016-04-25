@@ -1,0 +1,97 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <title>DemoTextInsertionsHtmlFormatting</title>
+        <link type="text/css" rel="stylesheet" href="appbase.css">
+    </head>
+    <body>
+<span class="parent-nodes">parent nodes: <span class="parent-node"><a href="DemoTextInsertions.html">DemoTextInsertions</a></span></span><br /><br />
+<a name=".h0"></a><h2>Demo Text Insertions Html Formatting</h2>
+Contents:   <div class="page-toc">
+<div class="page-toc-level2"><a href="#.h0">Demo Text Insertions Html Formatting</a></div>
+<div class="page-toc-level3"><a href="#.h150">General</a></div>
+<div class="page-toc-level3"><a href="#.h1436">Span element</a></div>
+<div class="page-toc-level3"><a href="#.h1599">Div element</a></div>
+<div class="page-toc-level3"><a href="#.h1969">Pre element</a></div>
+<div class="page-toc-level3"><a href="#.h2181">Textarea element</a></div>
+<div class="page-toc-level3"><a href="#.h2370">Textarea and pre element</a></div>
+<div class="page-toc-level3"><a href="#.h2712">Remarks</a></div>
+<div class="page-toc-level3"><a href="#.h2793">Todo's</a></div>
+<div class="page-toc-level3"><a href="#.h3072">Results</a></div>
+</div>
+<br />
+<a href="javascript:history.go(-1)">Back</a><br /><br />
+<b>Attention:</b> These examples realy do not work in internal preview!<hr size="1" />
+<a name=".h150"></a><h3>General</h3>
+You can use text insertions in a number of html block elements.<br />
+<br />
+<br />
+<b>Attention!</b><ul><li /><b>None</b> of this works with the internal preview renderer; only with the external renderers and in html export!<li />Special care needs to be taken, when constructing html elements, since wikidpad inserts linbreaks (&lt;br /&gt;) in all sorts of places, where you don't want them for html elements; i.e. at the end of every line.<li />The insertion of linebreaks by wikidpad can be partly stopped, by adding a paragraph_mode attribute to the page and setting that to "true". This however means, that everywhere on the page, that you dó want a linebreak, you have to insert a &lt;br /&gt; yourself.<li />The examples on this page do not use "paragraph_mode = true"; they consist of óne long line of text, to prevent the insertion of linebreaks in unwanted places. The alternative way to do it, but not realy easy-referenceable.<li />Another (partial) way out of this, is to put the actual text on a different page and insert that into the element.<li />If you use indentation, then wikidpad tries to trick it's way out of that, by converting the indented lines into an unordered list (with no bullets). The inserted ul tags can get quite in the way of your html block elements.<br />
+</ul>
+<a href="#">Top</a><hr size="1" />
+<a name=".h1436"></a><h3>Span element</h3>
+An inserted note in a span element.<ul><span style='color: Navy; background-color: #ffd'>This is a note, that needs to stand out.<br />
+It's contents consists of an inserted text page.</span><br />
+</ul>
+<a href="#">Top</a><hr size="1" />
+<a name=".h1599"></a><h3>Div element</h3>
+<div style="float: right; background-color: #ffd; width: 40%; border: 1px #8CACBB solid"><p style="color: Navy; text-align:center; margin: 1"><b><i>Note title</i></b></p><hr style="height: 1px; background-color: #8CACBB; color: #8CACBB" />This is a note, that needs to stand out.<br />
+It's contents consists of an inserted text page.</div>An inserted note in a<br />floating:right div element.<br /><br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h1969"></a><h3>Pre element</h3>
+An inserted snippet in a pre element.<ul><pre style="background-color: #F7F9FA; border: 1px #8CACBB dashed; padding: 4px; margin: 0,8">Var
+    text    string
+    count   longInt
+    list    dynArray[]string
+endVar</pre><br />
+</ul>
+<a href="#">Top</a><hr size="1" />
+<a name=".h2181"></a><h3>Textarea element</h3>
+An inserted note in a textArea.<br />
+<textarea style="background-color: #F7F9FA; margin: 0,8" rows="3" cols="20">This is a note, that needs to stand out.<br />
+It's contents consists of an inserted text page.</textarea><br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h2370"></a><h3>Textarea and pre element</h3>
+An inserted snippet in a textArea element within a pre element<br />
+<pre style="margin: 0,8"><textarea style="background-color: #F7F9FA; border: 1px #8CACBB dashed; padding: 4px" rows="6" cols=90%>Method CarCount()
+
+Var
+    count   longInt
+    cars    tCursor
+endVar
+
+count = longInt(0)
+cars.open("cars.db")
+scan cars
+    :   count = count +longInt(1)
+endScan
+msgInfo("Carcount", "There are " +string(count) +" cars in the table")
+cars.close()
+
+return</textarea></pre><b>Remark:</b> You can't use HTML or links in a textArea<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h2712"></a><h3>Remarks</h3>
+<ul><li />See also <b>Attention!</b> in the General section.<br />
+</ul>
+<a href="#">Top</a><hr size="1" />
+<a name=".h2793"></a><h3>Todo's</h3>
+<span class="todo">done.demo.projectdemo.demo2: Check out all posibilities</span><br />
+<span class="todo">action.demo.development: solve line breaks inserted within the begin- and end tags of a html elements and the use of unordered lists for indentation.</span><br />
+See also issue below and attention upstairs.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h3072"></a><h3>Results</h3>
+<span class="todo">issue.demo.done: There has to be a more structured way, to use html block elements.</span><br />
+The need exists for some sort of &lt;&lt;html .... &gt;&gt; block, in which the insertion of line breaks, the conversion of indents into unordered lists and possible other harmfull actions - don't think there are any? - are omitted. Except for the line breaks, etc., it should be roughly equivalent to the &lt;&lt;| ....&gt;&gt; table block.<br />
+<b>Development:</b> Is added to todo list of development for (a) next version.<br />
+<br />
+<span class="property">[demo.status: done]</span><br />
+<a href="#">Top</a><hr size="1" />
+previous: <a href="javascript:history.go(-1)">Back</a><br />
+parents:&nbsp; <span class="wiki-link"><a href="DemoTextInsertions.html">DemoTextInsertions</a></span><br />
+inserts:&nbsp;&nbsp; <span class="wiki-link"><a href="DemoTextInsertionShortCodeIp.html">DemoTextInsertionShortCodeIp</a></span>, <span class="wiki-link"><a href="DemoTextInsertionLongCodeIp.html">DemoTextInsertionLongCodeIp</a></span>, <span class="wiki-link"><a href="DemoTextInsertionNoteIp.html">DemoTextInsertionNoteIp</a></span>    </body>
+</html>

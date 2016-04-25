@@ -1,0 +1,60 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <title>IncrementalSearch</title>
+        <link type="text/css" rel="stylesheet" href="appbase.css">
+    </head>
+    <body>
+<span class="parent-nodes">parent nodes: <span class="parent-node"><a href="Intro7Searching.html">Intro7Searching</a></span> | <span class="parent-node"><a href="ItemSearching.html">ItemSearching</a></span></span><br /><br />
+<a name=".h0"></a><h2>IncrementalSearch</h2>
+Contents:   <div class="page-toc">
+<div class="page-toc-level2"><a href="#.h0">IncrementalSearch</a></div>
+<div class="page-toc-level3"><a href="#.h58">General</a></div>
+<div class="page-toc-level3"><a href="#.h679">Search status</a></div>
+<div class="page-toc-level3"><a href="#.h1188">Search start</a></div>
+<div class="page-toc-level3"><a href="#.h1621">Search control</a></div>
+<div class="page-toc-level3"><a href="#.h1878">Search end</a></div>
+<div class="page-toc-level3"><a href="#.h2311">Settings</a></div>
+<div class="page-toc-level4"><a href="#.h2324">Options</a></div>
+</div>
+<br />
+<a href="javascript:history.go(-1)">Back</a><hr size="1" />
+<a name=".h58"></a><h3>General</h3>
+The editor supports an incremental search facility for the current page. To start it:<ul><li />press Ctrl-F in the editor<li />press F3 in the editor</ul>
+The editor is then in incremental search mode and anything that is typed becomes a search string. As you type you are brought to the first match in the current text. Incremental Search supports <span class="wiki-link"><a href="RegEx.html">regex</a></span>. For example: To find the word "incremental" ór the word "search" in a page, type:<ul><li />incremental|search</ul>
+Incremental search is case insensitive. The search starts at the cursor position (1.8beta5 and prior always started at page beginning).<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h679"></a><h3>Search status</h3>
+What at any point in time the current search string is, can be seen in the search status on the left hand side of the WikidPad status bar. The color of the status field depicts the result of the search:<ul><li />Green: search pattern is found<li />Yellow: search pattern is nót found<li />No change: invalid regex</ul>
+The search string can be edited inside the status field using the cursor keys and Backspace and Delete. When done, select search next or search previous to find a match.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h1188"></a><h3>Search start</h3>
+How the editor starts incremental search depends on the key pressed and whether there ís or isn't any text selected.<ul><li />F3: starts the search with the last search value entered.<li />Ctrl-F with text selected: starts the search with the selected text in the seach field; maximum 30 characters or up to the first "newline".<li />Ctrl-F with no text selected: starts the search with an empty seach field.<br />
+</ul>
+<a href="#">Top</a><hr size="1" />
+<a name=".h1621"></a><h3>Search control</h3>
+To find the next match (search next) either:<ul><li />press Ctrl-F<li />press F3<li />press cursor Down<li />press page Down<br />
+</ul>
+To find the previous match (search previous) either:<ul><li />press Shift-F3<li />press cursor Up<li />press page Up<br />
+</ul>
+<a href="#">Top</a><hr size="1" />
+<a name=".h1878"></a><h3>Search end</h3>
+To end incremental search manually either:<ul><li />Click anywhere outside of the search field.<li />Press Esc; this terminates the search and returns to where the search began.<li />Press Enter; this terminates the search and keeps the last found text selected (if any).</ul>
+Incremental search will end automitically after a certain period of inactivity (of the keyboard). This period can be adapted in "Options".<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h2311"></a><h3>Settings</h3>
+<a name=".h2324"></a><h4>Options</h4>
+<ul><b>Application settings: Searching, incremental search</b><hr size="1" />
+</ul>
+&bull; <b>Delay before auto-close</b><br />
+Controls how many seconds of inactivity before the incremental search is closed automatically. 0 means "wait forever".<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+previous: <a href="javascript:history.go(-1)">Back</a><br />
+parents:&nbsp; <span class="wiki-link"><a href="Intro7Searching.html">Intro7Searching</a></span>, <span class="wiki-link"><a href="ItemSearching.html">ItemSearching</a></span><br />
+<span class="property">[help.status: done]</span>    </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <title>DemoTextInsertionLongCodeIp</title>
+        <link type="text/css" rel="stylesheet" href="appbase.css">
+    </head>
+    <body>
+<span class="parent-nodes">parent nodes: <span class="parent-node"><a href="DemoTextInsertionsHtmlFormatting.html">DemoTextInsertionsHtmlFormatting</a></span></span><br /><br />
+Method CarCount()<br />
+<br />
+Var<ul>count   longInt<br />
+cars    tCursor</ul>
+endVar<br />
+<br />
+count = longInt(0)<br />
+cars.open("cars.db")<br />
+scan cars<ul>:   count = count +longInt(1)</ul>
+endScan<br />
+msgInfo("Carcount", "There are " +string(count) +" cars in the table")<br />
+cars.close()<br />
+<br />
+return    </body>
+</html>

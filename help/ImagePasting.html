@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <title>ImagePasting</title>
+        <link type="text/css" rel="stylesheet" href="appbase.css">
+    </head>
+    <body>
+<span class="parent-nodes">parent nodes: <span class="parent-node"><a href="TheEditor.html">TheEditor</a></span></span><br /><br />
+<a name=".h0"></a><h2>Image Pasting</h2>
+Contents:   <div class="page-toc">
+<div class="page-toc-level2"><a href="#.h0">Image Pasting</a></div>
+<div class="page-toc-level3"><a href="#.h54">General</a></div>
+<div class="page-toc-level3"><a href="#.h591">File store (insert)</a></div>
+<div class="page-toc-level3"><a href="#.h661">Settings</a></div>
+<div class="page-toc-level4"><a href="#.h674">Options</a></div>
+</div>
+<br />
+<a href="javascript:history.go(-1)">Back</a><hr size="1" />
+<a name=".h54"></a><h3>General</h3>
+Wikidpad does not store images in it's database; it retrieves them from disk in preview on a page by page basis, based on their url file link. This however does not mean that images - copied from a website for instance - can't be pasted into a page. Wikidpad dóes support this, but instead of storing it in it's own database, it will store in the <span class="wiki-link"><a href="FilesWikiFileStore.html">file store</a></span> and create a relative link on the page, pointing to the file store. A number of options is available, to control this function.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h591"></a><h3>File store (insert)</h3>
+Each wiki can have a "file store", where you can collect all the images, documents and other files, that are related to the wiki in one place. The wiki file store is formed by the "files" folder in the <span class="wiki-link"><a href="WikiFiles.html">wiki's directory</a></span>. Wikidpad offers some special facilities, to help maintain the file store, with respect to relative links and export to html.<br />
+<br />
+Files can of course be copied into the file store by hand; if the "files" folder does not yet exist, you have to create it first. Files can however also be copied, by dragging one or more of them from Windows Explorer onto the editor, while holding down the control key. The files are then copied to the file store and relative links to them are created in the editor. If a file with the same identity already exists in the store, only the link is created and no copying is performed. If a file with the same name, but a different identity already exists, a random sequence of 10 digits is appended to the file name, in order to make it unique. If the "files" folder does not yet exist, Wikidpad will create it.<br />
+<br />
+For more information on how Wikidpad compares files and how you that can be influenced, see <span class="wiki-link"><a href="FilesWikiFileStore.html#CopyControl">Wiki File Store: Copy control</a></span><br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h661"></a><h3>Settings</h3>
+<a name=".h674"></a><h4>Options</h4>
+<ul><b>Application settings: Editor, image pasting</b><hr size="1" />
+</ul>
+&bull; <b>Filename prefix</b><br />
+A prefix to use for the filename. If this filename plus suffix exists already in "files" dir, an underscore and a sequence of 20 random letters or numbers is appended to create a unique filename. E.g. you want to store a PNG-file with prefix "foo" then WikidPad checks if "foo.png" is already in the "files" directory (if prefix is empty, this is not tried). If "foo.png" exists it tries something like "foo_2NIUXQ0OGVRDT1O3JNUN.png". If this exists already it tries again (up to 20 times) before giving up.<br />
+<br />
+&bull; <b>File type</b><ul><li />None: Don't store images at all<li />PNG: Store in PNG format (losless compression)<li />JPEG: Store in JPEG format (lossy compression)<br />
+</ul>
+&bull; <b>Quality</b><br />
+Number to define quality of JPEG compression (0:worst, 75:default, 100:best)<br />
+<br />
+&bull; <b>Ask settings on each paste</b><br />
+If checked, each time you paste an image, a dialog box asks for the above settings to set them individually.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+previous: <a href="javascript:history.go(-1)">Back</a><br />
+parents:&nbsp; <span class="wiki-link"><a href="TheEditor.html">TheEditor</a></span><br />
+<span class="property">[help.status: done]</span>    </body>
+</html>

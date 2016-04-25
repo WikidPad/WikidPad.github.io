@@ -1,0 +1,171 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <title>DemoTextLists</title>
+        <link type="text/css" rel="stylesheet" href="appbase.css">
+    </head>
+    <body>
+<span class="parent-nodes">parent nodes: <span class="parent-node"><a href="DemoTextFormatting.html">DemoTextFormatting</a></span></span><br /><br />
+<a name=".h0"></a><h2>Demo Text Lists</h2>
+Contents:   <div class="page-toc">
+<div class="page-toc-level2"><a href="#.h0">Demo Text Lists</a></div>
+<div class="page-toc-level3"><a href="#.h56">General</a></div>
+<div class="page-toc-level3"><a href="#.h368">Unordered lists</a></div>
+<div class="page-toc-level4"><a href="#.h388">General</a></div>
+<div class="page-toc-level4"><a href="#.h912">Auto list</a></div>
+<div class="page-toc-level4"><a href="#.h1703">Indentation adjustment</a></div>
+<div class="page-toc-level4"><a href="#.h2266">Caution!!</a></div>
+<div class="page-toc-level3"><a href="#.h2817">Ordered lists</a></div>
+<div class="page-toc-level4"><a href="#.h2835">General</a></div>
+<div class="page-toc-level4"><a href="#.h4349">Auto list </a></div>
+<div class="page-toc-level4"><a href="#.h5379">Indentation adjustment</a></div>
+<div class="page-toc-level3"><a href="#.h5822">Mixed lists</a></div>
+<div class="page-toc-level3"><a href="#.h6689">Remarks</a></div>
+<div class="page-toc-level3"><a href="#.h7358">Todo's</a></div>
+<div class="page-toc-level3"><a href="#.h7789">Results</a></div>
+</div>
+<br />
+<a href="javascript:history.go(-1)">Back</a><hr size="1" />
+<a name=".h56"></a><h3>General</h3>
+Wikidpad allows the use of single- and multilevel lists; in principle these are:<ul><li />the unordered or bulleted list<li />the ordered or numbered list</ul>
+There is also a third (hidden) list, that is used in Wikidpad to support indentation; see <span class="wiki-link"><a href="DemoTextBasics.html">Textformatting: Basics</a></span><br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h368"></a><h3>Unordered lists</h3>
+<a name=".h388"></a><h4>General</h4>
+An unordered list is a bulleted list. To create items for such a list, start with an empty line and type: a tab, an asterisk and a space and then type the text of the list item; so "    * item text" will result in:<ul><li />Item text</ul>
+Compare the results in both editor and preview.<br />
+<br />
+A multilevel list can be created, using indentation; like this:<ul><li />item 1<br />
+<ul><li />item 2<li />item 3<br />
+</ul>
+<li />item 4</ul>
+The level of a list item is defined by it's indentation; i.e. the number of tabs in front of it.<ul><hr size="1" />
+</ul>
+<a name=".h912"></a><h4>Auto list</h4>
+To add a second item to a list, put the cursor at the end of a list item (if it isn't already there) and press Enter; so "    * item text" followed by an Enter will result in:<ul><li />Item text<li /></ul>
+A new list item will be created on the next line and all that has to be done, is to type the item text. This mechanism also supports multi level lists and will indent a new item in accordance with that of the preceding item. To end the auto listing, do the same, but press Enter twice.<br />
+<br />
+This automatic creation of list items is called auto-bulleting. It can be switched on and of using the option: menu / Editor / Settings / Auto-bullets.<br />
+The automatic ending of a list can also be switched on and of with the option: menu / Wiki / Options / Editor /Auto-unbullets.<br />
+<ul><hr size="1" />
+</ul>
+<a name=".h1703"></a><h4>Indentation adjustment</h4>
+The indentation of two or more consecutive list items, and with it their list level, can be increased by selecting them and pressing Tab. To reduce indentation, press Shift+Tab instead. So selecting items 2 and 3 in the list below<ul><li />item 1<li />item 2<li />item 3<li />item 4</ul>
+and pressing tab, wil result in:<ul><li />item 1<br />
+<ul><li />item 2<li />item 3<br />
+</ul>
+<li />item 4</ul>
+See in preview how this not only influences the indentation, but also the type of bullets used. Tabs can of course also be added or removed manually.<ul><hr size="1" />
+</ul>
+<a name=".h2266"></a><h4>Caution!!</h4>
+Due to some misconduct of the Wikidpad parsing and conversion mechanism, it also interpretes lines starting with an asterisk followed by a space, but with nó tab in front of it, as a bulleted list. In this case however it will indent any and all lines on the rest of the page and there is no way, to end that. To see the result, remove the backslashes in front of the "list items" below and swicth (back) to preview.<br />
+<br />
+* Part<br />
+* of list<br />
+<br />
+So be sure to indent any bulleted lists, to prevent this problem from occurring.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h2817"></a><h3>Ordered lists</h3>
+<a name=".h2835"></a><h4>General</h4>
+An ordered list is a numbered list. To create such a list, start with an empty line and type: a tab, any digit or number, a period and a space and then type the text of the list item; so "    1. item text" will result in:<ol><li />Item text</ol>
+The numbers of the list items can be any number, they don't have to be consecutive and the list may countain doubles. For html preview and export this makes no difference; the list is transformed into an html "ordered list" element ("&lt;ol&gt;"), that will number the list consecutive, starting with one, no matter whát it's definition is in the editor. Compare the list below in both editor and preview:<ol><li />item 100<li />item 25<li />item 36<li />item 25<li />item 2<br />
+</ol>
+Wikidpad supports hierarchical ordered lists, like these:<ol><li />item 1<br />
+<ol><li />item 1.1<br />
+<ol><li />item 1.1.1<br />
+</ol>
+</ol>
+<ol><li />item 1.2<br />
+</ol>
+<li />item 2<br />
+</ol>
+Use indentation to control the levels of the items. Next to single numbers in combination with indentation, also hierarchical numbers of the type 15.4.3. can be used to define a leveled list; see the following list as an example:<ol><li />item 1<br />
+<ol><li />item 1.1<br />
+<ol><li />item 1.1.1<br />
+</ol>
+<li />item 1.2<br />
+</ol>
+<li />item 2</ol>
+Wikidpad shóuld control the levels correctly, but evidently it doesn't. If there is no level indentation (tabs) used in the list definition or if it is not done correctly, the list will not turn out as it should. It shóuld turn out exactly like the general example for the hierarchical ordered list.<ul><hr size="1" />
+</ul>
+<a name=".h4349"></a><h4>Auto list </h4>
+The editor supports auto-bulleting for ordered lists, the same way it does for unordered lists and it is controled by the same options. As an extra the editor will also auto-number any next item, that is added to the list; so "    1. item text", followed by an Enter, will result in:<ol><li />Item text<li /></ol>
+This will only number a newly added or inserted item relative to the preceding item in the list; it will nót renumber the entire list, when an item is inserted somewhere in the middel of the list. This works both for single level lists ánd for multi level hierarchical lists; pressing Enter at the end of item 1.1.1 will result in:<ol><li />item 1<br />
+<ol><li />item 1.1<br />
+<ol><li />item 1.1.1<br />
+</ol>
+<ol><li /><br />
+</ol>
+</ol>
+<ol><li />item 1.2<br />
+</ol>
+<li />item 2</ol>
+The editor also supports auto-numbering of hierarchical numbers: so "    15.4.3. item text", followed by an Enter will result in:<ol><ol><ol><li />Item text 15.4.3<li /><br />
+<br />
+</ol>
+</ol>
+</ol>
+with the correct level of indentation; compare it with the leveled list above.<ul><hr size="1" />
+</ul>
+<a name=".h5379"></a><h4>Indentation adjustment</h4>
+The indentation and therefore the numbering level can be changed the same way as for unordered lists. So selecting items 2 and 3 in the list below<ol><li />item 1<li />item 2<li />item 3<li />item 4</ol>
+and pressing tab, wil result in:<ol><li />item 1<br />
+<ol><li />item 2<br />
+</ol>
+<ol><li />item 3<br />
+</ol>
+<li />item 4</ol>
+See in preview how this not only influences the indentation, but also the numbering of the items.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h5822"></a><h3>Mixed lists</h3>
+The ordered and unordered list types can be be mixed freely into one list; example:<ol><li />Project 1<br />
+<ol><li />Assess feasibility request <br />
+<ul><li />Analyse request<li />Research html requirements<br />
+<ol><li />Check xhtml possibilities and restrictions<br />
+</ol>
+<ol><li />Check css possibilities and restrictions<br />
+</ol>
+<ol><li />Check restrictions of internal previewer<br />
+</ol>
+<li />Assess syntax requirements<br />
+</ul>
+</ol>
+<ol><li />Todo: research possibilities Wikidpad<br />
+<ul><li />Research editor<li />Research parser<li />Research converter<br />
+<ul><li />Preview converter<li />Export converter<br />
+</ul>
+</ul>
+</ol>
+<ol><li />Implement request<br />
+<ul><li />Design solution<li />Program solution<li />Test solution<li />Implement solution<br />
+</ul>
+</ol>
+<li />Project 2<li />Project n<br />
+<br />
+<br />
+</ol>
+<a href="#">Top</a><hr size="1" />
+<a name=".h6689"></a><h3>Remarks</h3>
+<ul><li />When Enter is pressed on a line with a lonely bullet, in order to end the list, the bulleting is stopped, but the indentation isn't.<li />Indentation and number level of hierarchical numbers are not being reset to their correct level; going from 2.1 to 2<li />Wikidpad does not recognise an empty line at the end of a list for what it is. It continues indentation and/or bulleting or numbering, depending on what's on the line following the empty line. This not only influences page/text layout negatively, but also does not allow for having two separate numbered lists, with an empty line inbetween. This is nót correct behaviour!<br />
+</ul>
+<a href="#">Top</a><hr size="1" />
+<a name=".h7358"></a><h3>Todo's</h3>
+<span class="todo">todo.demo.projectdemo.demo2: check out all posibilities</span><br />
+<br />
+<span class="todo">action.demo.development: Check out indentation not being stopped when ending a list (lonely bullet + Enter)</span><br />
+<span class="todo">action.demo.development: Check out indentation of hierarchical numbers not being reset to their correct level; going from 2.1 to 2</span><br />
+<span class="todo">action.demo.development: Check out empty line not being seen as "end of list" indicators, which it shóuld!</span><br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h7789"></a><h3>Results</h3>
+<span class="todo">issue.demo.new: Wikidpad does not adjust item and indentation level correctly, when using hierarchical numbers.</span><br />
+<br />
+<span class="property">[demo.status.waiting: issues]</span><br />
+<a href="#">Top</a><hr size="1" />
+previous: <a href="javascript:history.go(-1)">Back</a><br />
+parents:&nbsp; <span class="wiki-link"><a href="DemoTextFormatting.html">DemoTextFormatting</a></span>    </body>
+</html>

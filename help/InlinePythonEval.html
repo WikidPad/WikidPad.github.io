@@ -1,0 +1,117 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <title>InlinePythonEval</title>
+        <link type="text/css" rel="stylesheet" href="wikistyle.css">
+    </head>
+    <body>
+<span class="parent-nodes">parent nodes: <span class="parent-node"><a href="Scripts.html">Scripts</a></span> | <span class="parent-node"><a href="WpInsertions.html">WpInsertions</a></span> | <span class="parent-node"><a href="WpOptionsSecurity.html">WpOptionsSecurity</a></span></span><br /><br />
+<a name=".h0"></a><h2>Inline Python Eval</h2>
+Contents:	<div class="page-toc">
+<div class="page-toc-level2"><a href="#.h0">Inline Python Eval</a></div>
+<div class="page-toc-level3"><a href="#.h57">Security concerns</a></div>
+<div class="page-toc-level3"><a href="#.h938">Evaluating expressions</a></div>
+<div class="page-toc-level3"><a href="#.h1161">Executing scripts on the same page</a></div>
+<div class="page-toc-level3"><a href="#.h2466">Script Imports</a></div>
+<div class="page-toc-level3"><a href="#.h2842">Eval insertions</a></div>
+<div class="page-toc-level3"><a href="#.h3176">Editor Control Functions</a></div>
+<div class="page-toc-level3"><a href="#.h3331">Another Example</a></div>
+</div>
+<br />
+<a href="javascript:history.go(-1)">Back</a><hr size="1" />
+<a name=".h57"></a><h3>Security concerns</h3>
+WikidPad allows to evaluate and execute arbitrary Python scripts.<br />
+Because this is a potential security risk, script execution is<br />
+disabled by default.<br />
+<br />
+To enable it, open the "Options" dialog, chapter "Other", item<br />
+"Script security". In the drop-down field you can enter the level<br />
+of security you want:<br />
+<ul><li />No scripts: Script execution is completely disabled. This is<br />
+the default.<li />No import_scripts: Scripts on the currently open page can be<br />
+executed and expressions evaluated. Importing scripts from<br />
+other pages with the import_scripts property doesn't work (see<br />
+below how to do this).<li />No global.import_scripts: Property "import_scripts" works,<br />
+but "global.import_scripts" does not<li />Allow everything<br />
+</ul>
+The following examples work therefore only with an appropriately relaxed security setting.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h938"></a><h3>Evaluating expressions</h3>
+You can evaluate Python expressions directly in the editor by<br />
+highlighting the expression and pressing CTRL-E. Example:<br />
+<br />
+Highlight the calculation below, and type CTRL-E.<br />
+<br />
+1+2+3<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h1161"></a><h3>Executing scripts on the same page</h3>
+You can also execute blocks of code within a document.  Blocks of code<br />
+are defined within  blocks. For example:<br />
+<br />
+<br />
+<br />
+To execute the code above, type Ctrl-E. Ctrl-E actually will execute all<br />
+of the scripts on a page, including script imports.<br />
+<br />
+You can assign up to 6 functions on a page to a Ctrl-# key. For example:<br />
+<br />
+function 1: <br />
+function 2: <br />
+<br />
+Type Ctrl-1 to execute function 1. Enter Ctrl-2 to execute function 2.<br />
+This will execute at most one script. If a script with this number is<br />
+found on the page, it is executed, if not, the local script imports<br />
+with import_scripts are searched. If no appropriate script is found<br />
+there either, the page mentioned in global.import_scripts is searched.<br />
+As already said, this happens only with the right security settings.<br />
+<br />
+You can define your own functions for evaluation by copying<br />
+evalLibrary.py into a directory in the wikidPad install directory<br />
+called "user_extensions". This file will not be touched when upgrading<br />
+wikidPad.<br />
+<br />
+<span class="url-link"><a href="file:///C|/WikidPad/program%20Files/WikidPad/extensions/EvalLibrary.py">file:///C|/WikidPad/program%20Files/WikidPad/extensions/EvalLibrary.py</a></span><br />
+<span class="url-link"><a href="file:///C|/WikidPad/program%20Files/WikidPad/user_extensions/EvalLibrary.py">file:///C|/WikidPad/program%20Files/WikidPad/user_extensions/EvalLibrary.py</a></span><br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h2466"></a><h3>Script Imports</h3>
+You can import scripts from another page using the following attribute.<br />
+<br />
+<span class="property">[import_scripts: GlobalScriptLibrary]</span><br />
+<br />
+Type "Ctrl-4" to see the output from script 4 on the page<br />
+<span class="wiki-link"><a href="GlobalScriptLibrary.html">GlobalScriptLibrary</a></span>.<br />
+<br />
+You can also use [global.import_scripts: ...] property to define a single page which will be seen as if it was imported by every page of the wiki.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h2842"></a><h3>Eval insertions</h3>
+&bull; <b>eval</b> <br />
+Evaluate the given Python expression and handle its result as if it replaces the insertion. You must switch on the appropriate option "Process insertion scripts" on the "Security" options page to make it work. See also <span class="wiki-link"><a href="TextInsertions.html">TextInsertions</a></span>.<br />
+<br />
+<b>Examples</b><br />
+<b>[:eval:"5+6"]</b> = 11<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h3176"></a><h3>Editor Control Functions</h3>
+See <span class="url-link"><a href="http://www.yellowbrain.com/stc/index.html">http://www.yellowbrain.com/stc/index.html</a></span> for a list of the functions<br />
+available to the "editor" control.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h3331"></a><h3>Another Example</h3>
+Highlight the line below and press CTRL-3<br />
+<br />
+c:this pathwill be encoded.txt<br />
+<br />
+<br />
+<br />
+hello 19-9-2008 12:27 19-9-2008file:<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+previous: <a href="javascript:history.go(-1)">Back</a><br />
+parents:&nbsp; <span class="wiki-link"><a href="Scripts.html">Scripts</a></span>, <span class="wiki-link"><a href="WpInsertions.html">WpInsertions</a></span>, <span class="wiki-link"><a href="WpOptionsSecurity.html">WpOptionsSecurity</a></span><br />
+<span class="property">[help.status: done]</span>    </body>
+</html>

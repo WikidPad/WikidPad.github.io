@@ -1,0 +1,127 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <title>SignalPageNodes</title>
+        <link type="text/css" rel="stylesheet" href="appbase.css">
+    </head>
+    <body>
+<span class="parent-nodes">parent nodes: <span class="parent-node"><a href="GlobalAttributesPageNodes.html">GlobalAttributesPageNodes</a></span> | <span class="parent-node"><a href="Intro6Signalling.html">Intro6Signalling</a></span> | <span class="parent-node"><a href="PageSignalling.html">PageSignalling</a></span> | <span class="parent-node"><a href="SignalTodoTags.html">SignalTodoTags</a></span> | <span class="parent-node"><a href="TheEditor.html">TheEditor</a></span></span><br /><br />
+<a name=".h0"></a><h2>Signal Page Nodes</h2>
+Contents:   <div class="page-toc">
+<div class="page-toc-level2"><a href="#.h0">Signal Page Nodes</a></div>
+<div class="page-toc-level3"><a href="#.h58">General</a></div>
+<div class="page-toc-level3"><a href="#.h426">Node appearance</a></div>
+<div class="page-toc-level4"><a href="#.h1089">Icon</a></div>
+<div class="page-toc-level5"><a href="#.h1626">User icons</a></div>
+<div class="page-toc-level4"><a href="#.h2037">Color</a></div>
+<div class="page-toc-level4"><a href="#.h3405">Bold</a></div>
+<div class="page-toc-level3"><a href="#.h3972">Node priority</a></div>
+<div class="page-toc-level4"><a href="#.h4376">"Views / priority" node.</a></div>
+<div class="page-toc-level4"><a href="#.h4774">Global</a></div>
+<div class="page-toc-level3"><a href="#.h6032">Node position</a></div>
+<div class="page-toc-level3"><a href="#.h7436">Child node sort order</a></div>
+<div class="page-toc-level4"><a href="#.h8237">Global</a></div>
+<div class="page-toc-level3"><a href="#.h8570">Settings</a></div>
+<div class="page-toc-level4"><a href="#.h8583">Global attributes</a></div>
+</div>
+<br />
+<a href="javascript:history.go(-1)">Back</a><hr size="1" />
+<a name=".h58"></a><h3>General</h3>
+A number of page <span class="wiki-link"><a href="WpAttributes.html">attributes</a></span> is available, that control the appearance of the page's node in the main tree. Most have to do with the appearance of the node, but there are also attributes to control position and sort order. In principle the attributes described below are about the visibility of page nodes in the main tree.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h426"></a><h3>Node appearance</h3>
+These attributes control the appearance of the page node; there are three of them: icon, color and bold. Their goal is to make a page node stand out in the tree so that it catches the eye and/or can be found quickly. They can be used to simply brighten up the tree or to flag or otherwise indicate pages as having a particular status, meaning or content.<br />
+<br />
+There are other functions, that can influence the appearance of a page node in the tree, like <span class="wiki-link"><a href="SignalUserTags.html">User tags</a></span> and <span class="wiki-link"><a href="SignalTodoTags.html">Todo tags</a></span>, but those settings are always overridden by the page node attributes.<br />
+<br />
+The page node attributes have no global representation. <ul><hr size="1" />
+</ul>
+<a name=".h1089"></a><h4>Icon</h4>
+The [icon: <i>icon name</i>] attribute allows to change the icon for the page node from the default "page" icon to a specific one. This attribute:<ul><li /><span class="property">[icon: folder]</span></ul>
+changes the icon for this page into a folder.<ul><img src="files/SignalPageNodeExample1.png" alt="" border="0" /><br />
+</ul>
+Wikidpad has a large number of icons available for the page nodes in the tree. A complete list of them can be found in the help pages. An easy way to add an icon attribute to a page is to select it from the list, using the option:<ul><li />"menu / Editor / Add icon attribute".<br />
+<hr size="1" />
+</ul>
+<a name=".h1626"></a><h5>User icons</h5>
+The icons can be found in <span class="wiki-link"><a href="ProgramFiles.html">WikidPad / icons</a></span>. Additional icons for use in the treeview can be added to this folder. They have to be 16x16 GIF images; other formats and sizes are not supported. Added icons are not visible until Wikidpad has been <span class="wiki-link"><a href="WorkSpaceGeneral.html#RestartWikidPad">restarted</a></span>. After restart they will appear in the "menu / Editor / Add icon attribute" list.<br />
+<ul><hr size="1" />
+</ul>
+<a name=".h2037"></a><h4>Color</h4>
+The [color: <i>color name</i>] attribute allows to set the color of the page's node name from the default "black" to a specific one. This attribute:<ul><li /><span class="property">[color: gold]</span></ul>
+changes the color of the node name for this page into gold.<ul><img src="files/SignalPageNodeExample2.png" alt="" border="0" /><br />
+</ul>
+Wikidpad has a large number of default color names available to choose from. An easy way to add a color attribute to a page is to select it from the list, using the option:<ul><li />"menu / Editor / Add color attribute".<br />
+</ul>
+<b>Remarks</b><ul><li />A complete list of the supported color names is available in the help pages.<li />The available color names are a subset of the html cross browser color names; the remaining html color names are not supported <small><sup><a href="#.f1">[1]</a></sup></small>.<li />WikidPad uses the Python specifications for the cross browser names. For some .... reason those deviate from the official W3 html specification and sometimes quite a lot. Html "gold" for instance is specified as #FFD700 whereas WikidPad/Python uses #CC7F32.<li />The 6 digit and 3 digit html hex color numbers are not supported for color attributes.<li />In html, multiword color names are written as camelcase words, like: "ForestGreen"; in Wikidpad attributes they have to be written as seperate words, like "forest green", in order to not confuse them with page links.<li />Wikidpad color names are not case sensitive.<br />
+<hr size="1" />
+</ul>
+<a name=".h3405"></a><h4>Bold</h4>
+The [bold: <i>value</i>] attribute controls the font style "bold" for the node name. The possible values are "true" and "false"; false is the default. This attribute:<ul><li /><span class="property">[bold: true]</span></ul>
+sets the font style for the node title of this page to bold.<ul><img src="files/SignalPageNodeExample3.png" alt="" border="0" /><br />
+</ul>
+The [bold: false] variant can be used, to prevent other functions from setting the font style for the node title to bold.<br />
+<br />
+<a href="#">Top</a><br />
+<small><i><a name=".f1"></a>[1] For more information on html colors see: <span class="url-link"><a href="http://www.w3schools.com/Html/html_colors.asp">W3 Schools: Colors</a></span>.</i></small><hr size="1" />
+<a name=".h3972"></a><h3>Node priority</h3>
+The [priority: <i>value</i>] attribute allows to add (append) the node name with a priority indication; the possible values are 1 trough to 5. This attribute:<ul><li /><span class="property">[priority: 2]</span></ul>
+will append a priority setting "(2)" to the node name of this page, making it look like <small><b><span style="color:#CC7F32">"SignalPageNodes (2)"</span></b></small><ul><img src="files/SignalPageNodeExample4.png" alt="" border="0" /><hr size="1" />
+</ul>
+<a name=".h4376"></a><h4>"Views / priority" node.</h4>
+The priority setting acts like a page tag <small><sup><a href="#.f4">[4]</a></sup></small>; pages that have a priority setting will also appear in the "prority" node of the "views" section in the treeview, subdivided according to priority level. This way pages with - a certain - priority setting can be identified and navigated to quickly.<ul><img src="files/SignalPageNodeExample5.png" alt="" border="0" /><hr size="1" />
+</ul>
+<a name=".h4774"></a><h4>Global</h4>
+Since the priority attribute acts like a tag, it is possible to add global settings to it, that will signal any page that has a priority attached to it, by giving it's node a certain appearance in the treeview  <small><sup><a href="#.f4">[4]</a></sup></small>. These settings are similar to the node appearance atributes described above and have a sortlike result. They are:<ul><li />[global.priority.(level).icon: <i>icon name</i>]<li />[global.priority.(level).color: <i>color name</i>]<li />[global.priority.(level).bold: <i>true/false</i>]</ul>
+As an example: the global attributes:<ul><li />[global.priority.2.color: coral]<li />[global.priority.2.bold: true]</ul>
+would set the node name of any page in the wiki, that has priority 2 defined for it, to bold and orange (coral). This will be the case for both the page nodes in the treeview ánd the page nodes within the "views / priority" node. For thís page however, the global node formatting is overruled by the node appearance attributes earlier on this page.<ul><img src="files/SignalPageNodeExample6.png" alt="" border="0" /><br />
+</ul>
+The level number is optional and can be left out, the attribute then applies to any page, that has a priority, dispite it's level.<br />
+<br />
+<a href="#">Top</a><br />
+<small><i><a name=".f4"></a>[4] See also: <span class="wiki-link"><a href="SignalUserTags.html">User tags</a></span> and <span class="wiki-link"><a href="SignalTodoTags.html">Todo tags</a></span>.</i></small><hr size="1" />
+<a name=".h6032"></a><h3>Node position</h3>
+In the page tree any node is always a child of some other node, with the exeption of the root node and the child nodes are always sorted according to some key; by default alphabetically on node name and ascending.<br />
+<br />
+The [tree_position: <i>value</i>] attribute allows to assign an absolute position to a page node, independant of the sort order. Value can be any whole positive number. The first child node has position "1". This attribute:<ul><li /><span class="property">[tree_position: 2]</span></ul>
+should make this page's node the second node in the list of children.<br />
+<br />
+Node positions are absolute with respect to the parent node; not with repect to the page tree itself. If a page has multiple parents, then tree_position will influence the child list of each and any of those parents. Setting tree-position can be of good use for children of higher level pages with menu's or indexes on them; not so much for lower level pages that can have many parents and therefore can appear in many different child lists.<br />
+<br />
+Node positions do not have to be consecutive; any number can be used, as long as it results in what is expected. This wiki uses position numbers of 1000 and higher, to make sure that schratchpad, settings, templates and other service pages are always at the end of the child list. The negative position "-1" can be used, to make sure that certain children álways are the first children in the list.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h7436"></a><h3>Child node sort order</h3>
+The sort order for the children of a specific page can be controled by means of the [child_sort_order: <i>sort type</i>] attribute. Possible values for "sort type" are:<br />
+<ul><table border="2">
+<tr><td>ascending				</td><td> Sort by node name; alphabetically, ascending</td></tr>
+<tr><td>descending 			</td><td> Sort by node name; alphabetically, descending</td></tr>
+<tr><td>mod_oldest			</td><td> Sort by modification date; oldest first</td></tr>
+<tr><td>mod_newest&nbsp;&nbsp; 	</td><td> Sort by modification date; newest first</td></tr>
+<tr><td>unsorted 				</td><td> Make no attempt to sort (fastest)</td></tr>
+<tr><td>natural 				</td><td> Sort in order of appearance of the words on the page (may not always work correctly)</td></tr>
+</table>
+<br />
+</ul>
+This attribute only influences the sort order for the children of the page that the attribute is on. For all other parent nodes the children remain sorted according to the default setting for the wiki.<br />
+<ul><hr size="1" />
+</ul>
+<a name=".h8237"></a><h4>Global</h4>
+Child_sort_order has a global representation [global.child_sort_order: <i>sort type</i>]. With this attribute the default sort order for the whole wiki can be set. The default is "acsending". This attribute:<ul><li />[global.child_sort_order: usorted]</ul>
+would set the default sort order for the wiki to "unsorted".<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h8570"></a><h3>Settings</h3>
+<a name=".h8583"></a><h4>Global attributes</h4>
+<ul><b>Page nodes: see <span class="wiki-link"><a href="SignalPageNodes.html">SignalPageNodes</a></span></b><hr size="1" />
+</ul>
+&bull; <b>[global.child_sort_order:</b> <i>sort type</i><b>]</b><br />
+Sets the default child sort order for the page tree; default = ascending.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+previous: <a href="javascript:history.go(-1)">Back</a><br />
+parents:&nbsp; <span class="wiki-link"><a href="GlobalAttributesPageNodes.html">GlobalAttributesPageNodes</a></span>, <span class="wiki-link"><a href="Intro6Signalling.html">Intro6Signalling</a></span>, <span class="wiki-link"><a href="PageSignalling.html">PageSignalling</a></span>, <span class="wiki-link"><a href="SignalTodoTags.html">SignalTodoTags</a></span>, <span class="wiki-link"><a href="TheEditor.html">TheEditor</a></span><br />
+<span class="property">[help.status: done]</span>    </body>
+</html>

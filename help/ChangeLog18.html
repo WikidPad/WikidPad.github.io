@@ -1,0 +1,158 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <title>ChangeLog18</title>
+        <link type="text/css" rel="stylesheet" href="appbase.css">
+    </head>
+    <body>
+<span class="parent-nodes">parent nodes: <span class="parent-node"><a href="Releases.html">Releases</a></span></span><br /><br />
+<a name=".h0"></a><h2>Change Log18</h2>
+Contents:   <div class="page-toc">
+<div class="page-toc-level2"><a href="#.h0">Change Log18</a></div>
+<div class="page-toc-level3"><a href="#.h53">1.8 beta 6</a></div>
+<div class="page-toc-level3"><a href="#.h1025">1.8 beta 5</a></div>
+<div class="page-toc-level3"><a href="#.h2217">1.8 beta 4</a></div>
+<div class="page-toc-level3"><a href="#.h2754">1.8 beta 3</a></div>
+<div class="page-toc-level3"><a href="#.h4039">1.8 beta 2</a></div>
+<div class="page-toc-level3"><a href="#.h4823">1.8 beta 1</a></div>
+</div>
+<br />
+<a href="javascript:history.go(-1)">Back</a><hr size="1" />
+<a name=".h53"></a><h3>1.8 beta 6</h3>
+Dec. 27, 2006 (1.8beta6, repository revision in "mbutscher" branch: 100)<br />
+<pre>    * "toc" insertion for a page-wide table of contents (with
+      appropriate settings in the CSS-file(s)). See [Insertions].
+    * "noerror" appendix for insertions for external graphical apps
+      (except MimeTeX) to ignore warning/error messages.
+      See ExternalGraphicalApplications.
+    * For Windows: Option to use Internet Explorer or
+      (with restrictions) Mozilla to render HTML preview
+      (including a new style sheet to control preview).
+      See [Options HTML preview_export]#*Preview# renderer*
+    * Option to set doctype for HTML preview/export.
+    * Option to set background color of selected text.
+    * Internal: Slightly better handling of databases without
+      write access.
+    * Further small changes in incremental search.
+    * Bug fixed: External graphical apps didn't work if path
+      to them contained space(s).</pre>
+<a href="#">Top</a><hr size="1" />
+<a name=".h1025"></a><h3>1.8 beta 5</h3>
+Nov. 24, 2006 (1.8beta5, repository revision in "mbutscher" branch: 99)<br />
+<pre>    * Changed insertion syntax where value or appendices can
+      be quoted to include arbitrary characters. See [Insertions].
+    * Plugins for accessing MimeTeX, Ploticus and GraphViz
+      applications via Insertions.
+      See [ExternalGraphicalApplications].
+    
+    * Tags to mark text as suppressed (&lt;&lt; &gt;&gt;) are no longer shown
+      in HTML preview/export
+    * "Wiki Info" dialog to show some basic information about the
+      current wiki. Rather empty at the moment.
+    * New behavior and look of incremental search. May change again
+      if users don't like it.
+    * Renaming links to a page when renaming the page now only
+      renames whole words.
+
+    * Windows binary installer: .wiki file of WikidPadHelp are now
+      always overwritten on updating.
+
+    * Internal: Plugin type "InsertionByKey" created which registers
+      special insertion keys to be handled by a plugin
+    * Internal: Plugin type "Options" created which allows to
+      register additional options (to be saved in config files) and
+      to add related pages in the options dialog.</pre>
+<a href="#">Top</a><hr size="1" />
+<a name=".h2217"></a><h3>1.8 beta 4</h3>
+Oct. 30, 2006 (1.8beta4, repository revision in "mbutscher" branch: 96)<br />
+<pre>    * Menu items and toolbar icons for zoom in/out also work for
+      preview now.
+    * Better page search. Search starts at cursor position or
+      optional at beginning. Before wrapping search from page end
+      to beginning, user is asked.
+    * Bug fixed: Showing (more precisely searching) of words in
+      subcategories of todos in tree did not work.
+    * Bug fixed: Zooming preview didn't show up dynamically.</pre>
+<a href="#">Top</a><hr size="1" />
+<a name=".h2754"></a><h3>1.8 beta 3</h3>
+Oct. 26, 2006 (1.8beta3, repository revision in "mbutscher" branch: 95)<br />
+<pre>    * List undefined pages (dead wiki links), also appropriate
+      insertion added. See WikiMaintenance!finding_undefined_links,
+      [Insertions]
+    * Better alphabetical sort order for wiki words, todos,
+      attributes in tree. See OptionsDialog#*Sort# order*
+    * The order how wiki pages are ordered when printing or
+      exporting the whole wiki or a subtree to a single HTML page
+      is (hopefully) more logical. It is the same as the new
+      "As Tree" order used in PageListDialog#"As# Tree" .
+    * Option to generate a table of contents in tree or list form
+      for HTML exports, see WikiExport#*Additional# options* ,
+      [Options HTML preview_export]#*Table# of# contents*
+    
+    * Bug fixed: Detection of Linux OS failed due to a typo
+    * Bug fixed: Pages were shown as parentless even if an alias
+      of the page had a parent
+    * Bug fixed: Opening a particular page on startup by mentioning
+      the .wiki file on commandline did not work
+    * Bug fixed: Special URLs containing $ couldn't be activated
+      (further fixes may be necessary)
+    * Bug fixed: Bad HTML code if first cell of a table row is empty
+      and indented.</pre>
+<a href="#">Top</a><hr size="1" />
+<a name=".h4039"></a><h3>1.8 beta 2</h3>
+Sep. 30, 2006 (1.8beta2, repository revision in "mbutscher" branch: 92)<br />
+<pre>    * Support for insertion of pages, relations (parents, children,
+      ...) and saved searches. See [Insertions].
+    * Support for placing and jumping to anchors in wiki pages.
+      See [Anchors].
+    
+    * Setting of a few more shortcut keys possible in
+      KeyBindings.py (continue search, auto complete, ...)
+    
+    * Fixed bug: Some problems with non-ascii pathes.
+    * Fixed bug: No selection replacement on Win ME.
+    * Fixed bug: Renaming of wiki word failed if link modification
+      was wanted by the user or if page was not yet saved the
+      first time.
+    * Fixed bug: Opening a wiki page file instead of
+      wiki configuration file failed.</pre>
+<a href="#">Top</a><hr size="1" />
+<a name=".h4823"></a><h3>1.8 beta 1</h3>
+Aug. 30, 2006 (1.8beta1, repository revision in "mbutscher" branch: 89)<br />
+<pre>Changes:
+    * New database format! After updating a wiki it won't be
+      readable anymore for older versions of WikidPad.
+    * Updating of wiki databases to new versions is now done only
+      after asking user.
+    * New position for configuration files on Windows inside
+      "Application Data\WikidPad" directory. You might have to move
+      "WikidPad.config" file and ".WikidPadGlobals" directory from
+      "Application Data" to the new location if updating from
+      a previous version. Name of "Application Data" directory
+      depends on OS language.
+    
+    * Cursor and scroll position are now saved between sessions.
+    * Possibility to set size and alignment for image URLs.
+      See UrlLinking#++# URL# Appendix
+    * Functional pages for "camelcase blacklist". Words on this
+      list are not shown as wiki links. See WordLinking
+    * Option to automatically remove bullets and numbers which
+      stand "lonely" on a line by pressing enter.
+      See BulletedLists
+    
+    * Menu functions "Show Tree Control", "Show Toolbar" and
+      "Stay on Top" moved to "View" menu
+    * Preview now shows indented paragraphs correctly (or,
+      at least, better)
+    
+    * Bug fixed: Wiki word aliases not shown as links on
+      HTML export.
+    * Bug fixed: Wrong URL creation mode when releasing/pressing
+      SHIFT or CTRL during drag&amp;drop operation.
+    * Better handling of non Western-European languages on
+      Win 98/ME</pre>
+<a href="#">Top</a><hr size="1" />
+previous: <a href="javascript:history.go(-1)">Back</a><br />
+parents:&nbsp; <span class="wiki-link"><a href="Releases.html">Releases</a></span>    </body>
+</html>

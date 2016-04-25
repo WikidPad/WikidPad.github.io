@@ -1,0 +1,34 @@
+<html><head><title>WikidPad Ressources Meta Search</title></head><body>
+<script type='text/javascript'>
+function myOpen(url) {
+	window.open(url); //,'Search','scrollbars=yes,menubar=yes,location=yes,status=yes,resizable=yes'
+	}
+
+function wipSearch(n){
+	myOpen('http://groups.google.com/group/wikidpad-devel/search?group=wiki\dpad-devel&qt_g=Search+this+group&q='+n);
+	myOpen('http://tech.groups.yahoo.com/group/wikidPad/msearch?date=any&DM\=------------&DD=----&DY=----&DM2=------------&DD2=----&DY2=----&AM=contains&AT=\&SM=contains&MM=contains&MT=&charset=UTF-8&ST='+n);
+	myOpen('http://tech.groups.yahoo.com/group/wikidPad/msearch?submit=Search&charset=UTF-8&query='+n);
+	myOpen('http://www.google.com/cse?cx=001844206722568292967%3Avn-7lycuk6k&ie=UTF-8&sa=Search&q='+n);
+
+	return true;
+}
+</script>
+<h2>WikidPad Ressources Meta Search</h2>
+
+This will open multiple popup-windows with the search results from various WikidPad-sources. Maybe you need to disable your popup blocker.  In my <a href="http://getfirefox.com">Firefox 3.03</a> und Google Chrome this works without doing that, in IE 7 it doesn't work at all. Feedback very welcome: HelgeJoao at googlemail dot com
+<br>
+The most important ressource about WikidPad is <b>MISSING</b> in this search, which is <b> WikidPad's help menu</b> ! (I am working on putting it in here, too.)
+<br>
+<br>
+
+<form>
+
+<input type='text' id='target'/>
+&nbsp;
+<input type='submit' 
+	onclick="wipSearch(document.getElementById('target').value)"
+	value='Search' />
+</form>
+
+</body></html>
+

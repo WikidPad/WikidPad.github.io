@@ -1,0 +1,125 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <title>PageViewAttributes</title>
+        <link type="text/css" rel="stylesheet" href="appbase.css">
+    </head>
+    <body link="#8B008B" alink="#FF4500" vlink="#008000" text="#3300CC" bgcolor="#FFFFCC"  >
+<span class="parent-nodes">parent nodes: <span class="parent-node"><a href="GlobalAttributesPageView.html">GlobalAttributesPageView</a></span> | <span class="parent-node"><a href="HtmlCss.html">HtmlCss</a></span> | <span class="parent-node"><a href="HtmlGeneral.html">HtmlGeneral</a></span> | <span class="parent-node"><a href="Intro3Formatting.html">Intro3Formatting</a></span> | <span class="parent-node"><a href="PageEditAttributes.html">PageEditAttributes</a></span> | <span class="parent-node"><a href="PageFormatting.html">PageFormatting</a></span> | <span class="parent-node"><a href="PageViewAttributes.html">PageViewAttributes</a></span> | <span class="parent-node"><a href="TextBlocks.html">TextBlocks</a></span> | <span class="parent-node"><a href="WpOptionsHtmlHeader.html">WpOptionsHtmlHeader</a></span></span><br /><br />
+<a name=".h0"></a><h2>Page View Attributes</h2>
+<a name="Top"></a>Contents:   <div class="page-toc">
+<div class="page-toc-level2"><a href="#.h0">Page View Attributes</a></div>
+<div class="page-toc-level3"><a href="#.h72">General</a></div>
+<div class="page-toc-level3"><a href="#.h398">Html attributes</a></div>
+<div class="page-toc-level4"><a href="#.h2635">Example</a></div>
+<div class="page-toc-level4"><a href="#.h3162">Global</a></div>
+<div class="page-toc-level3"><a href="#.h3605">Paragraph mode</a></div>
+<div class="page-toc-level4"><a href="#.h4444">Example</a></div>
+<div class="page-toc-level4"><a href="#.h4994">Global</a></div>
+<div class="page-toc-level3"><a href="#.h5241">Settings</a></div>
+<div class="page-toc-level4"><a href="#.h5254">Global attributes</a></div>
+<div class="page-toc-level4"><a href="#.h5327">Options</a></div>
+</div>
+ <a href="javascript:history.go(-1)">Back</a> <hr size="1" />
+ <a name=".h72"></a><h3>General</h3>
+A number of attributes is available, that control the format of a page in the view modes: html preview and html export. These are the html- and other attributes. Changes in these attributes don't take effect (are not visible), until the page is saved; either by the auto-save process or manually. <br />
+<br />
+<a href="#">Top</a> <hr size="1" />
+ <a name=".h398"></a><h3>Html attributes</h3>
+Html attributes are used to set the foreground- (font), background- and link colors of a page in Preview and exported Html and have the format: [html.element: value]. The existing elements are: <br />
+<br />
+<table border="2">
+<tr><td><b>Element</b> </td><td>  <b>Function</b> </td><td>  </td><td> <b>Preview</b> </td><td>  </td><td> <b>Browser</b></td></tr>
+<tr><td>&nbsp;</td><td>&nbsp;</td><td> <b>Internal</b> </td><td> <b>IE</b> </td><td> <b>Mozilla</b> </td><td>&nbsp;</td></tr>
+<tr><td>html.textcolor </td><td> Color of all non-link text </td><td> Yes </td><td> Yes </td><td> ??  </td><td> Yes</td></tr>
+<tr><td>html.bgcolor </td><td> Color of the page background </td><td>  Yes </td><td> Yes </td><td> ??  </td><td> Yes</td></tr>
+<tr><td>html.linkcolor </td><td> Color of a (non-visited) link </td><td>  Yes </td><td> Yes </td><td> ??  </td><td> Yes</td></tr>
+<tr><td>html.alinkcolor </td><td> Color of a link while "under" the mouse (hovering or pressed) </td><td> No </td><td> Yes* </td><td> ?? </td><td> Some</td></tr>
+<tr><td>html.vlinkcolor </td><td> Color of a visited link </td><td> No </td><td> Yes* </td><td> ?? </td><td> Yes</td></tr>
+<tr><td>html.bgimage </td><td> Link to a background image </td><td> No </td><td> Yes* </td><td> ?? </td><td> No?</td></tr>
+</table>
+ <br />
+<br />
+<b>Remarks</b> <ul><li />Colors have to be specified with their full 6 digit #hex html color number, like: #000000 for Black and #483D8B for DarkSlateBlue. <li />Cross-browser color names like: DarkSlateBlue are not accepted. <li />The 3 digit alternatives for certain colors, like #FFD as a synonym for #FFFFDD, are also not accepted. <li />For a complete list of html color numbers see: <span class="url-link"><a href="http://www.w3schools.com/Html/html_colors.asp">W3 Schools: Colors</a></span> and <span class="url-link"><a href="http://www.w3schools.com/Html/html_colorsfull.asp">W3 Schools: Color values</a></span> <li />Alinkcolor works in IE, but only for external web links, not for internal wikidpad page links and only for mouse pressed, not for mouse hovering. <li />Vlinkcolor works in IE, but only for external web links, and wikidpad anchors on the same page. <li />Bgimage works in IE, but it's use is rather limited, since: <ul><li />The path (url) to the image may not contain any %20 or sortlike "characters". This also applies to relative paths (rel://) since for preview these are converted by Wikidpad into absolute paths. <li />There are no (sub)attributes available to specify placement, positioning, repeating, etc. The image is repeated (tiled) over the entire page. </ul>
+<li />The attributes are called html attributes, since they only work in the html representations of a page and to distinct them from the options with which the colors for text, links, font, etc. in the editor window can be set. See options: menu / Wiki / Options / "Editor colors". <br />
+<br />
+<hr size="1" />
+ </ul>
+<a name=".h2635"></a><h4>Example</h4>
+See the results of the attributes below on the appearance of this page in preview. <ul><li /><span class="property">[html.bgcolor: #FFFFCC]</span> yellowish <li /><span class="property">[html.textcolor: #3300CC]</span> blueish <li /><span class="property">[html.linkcolor: #8B008B]</span> DarkMagenta <li /><span class="property">[html.alinkcolor: #FF4500]</span> OrangeRed <li /><span class="property">[html.vlinkcolor: #008000]</span> Green <li />[html.bgimage:rel:///notepad.png] (deactivated) <br />
+<br />
+</ul>
+Check their influence on the display of these links; follow them and return to see their color. <ul><li /><span class="wiki-link"><a href="PageFormatting.html">PageFormatting</a></span> <li /><span class="wiki-link"><a href="#Top">Top</a></span> <li /><span class="url-link"><a href="http://www.google.com/">http://www.google.com/</a></span> <br />
+<br />
+<hr size="1" />
+ </ul>
+<a name=".h3162"></a><h4>Global</h4>
+All html attributes have global representations, with which the colors for áll of the pages in the wiki can be set: <br />
+<br />
+<ul><li />[global.html.bgcolor: color number] <li />[global.html.textcolor: color number] <li />[global.html.linkcolor: color number] <li />[global.html.alinkcolor color number] <li />[global.html.vlinkcolor: color number] <li />[global.html.bgimage: url] <br />
+<br />
+</ul>
+Page specific html attributes overrule the global ones. <br />
+<br />
+<a href="#">Top</a> <hr size="1" />
+ <a name=".h3605"></a><h3>Paragraph mode</h3>
+A page by default is in line mode. In this mode, every "new line" in the editor text is replaced by a htlm "new line" tag in preview and with this turning every line in a "paragraph" of it's own. This might in certain cases not be what the user wants or needs. Also this behaviour is different from html, that principally is based on a form of "paragraph mode". <br />
+<br />
+Wikidpad supports it's own form of paragraph mode; in this mode "new lines" are ignored and only empty lines start a new paragraph. Paragraph mode can be switched on using the attribute: [paragraph_mode:&nbsp;true] on the page. "New lines" can be forced in paragraph mode, by inserting the html "new line" tag: "&lt;br /&gt;" where needed. Don't forget the space between "&lt;br" and "/&gt;"; "&lt;br/&gt;" without a space is not understood by internal preview. <ul><hr size="1" />
+ </ul>
+<a name=".h4444"></a><h4>Example</h4>
+The attribute on the next line switches this page to paragraph mode; see it's effect on the example text below. <ul><li /><span class="property">[paragraph_mode: true]</span> <br />
+<br />
+</ul>
+<b>Example text</b><br /> In the editor this paragraph is shown, devided over five (5) lines. In preview and html export however, this paragraph is shown as one contiguous (wrapping) line. <br />
+<br />
+In line mode, the text above would have been shown in view mode as the original five separate lines.<br /> And this line would have been a paragraph on it's own, not the second line of the second paragraph. <ul><hr size="1" />
+ </ul>
+<a name=".h4994"></a><h4>Global</h4>
+Paragraph mode can be switched on for all the pages in the wiki using the global attribute: <ul><li />[global.paragraph_mode: true] </ul>
+In that case it can be switched off for individual pages using: <ul><li />[paragraph_mode: false] <br />
+<br />
+</ul>
+<a href="#">Top</a> <hr size="1" />
+ <a name=".h5241"></a><h3>Settings</h3>
+<a name=".h5254"></a><h4>Global attributes</h4>
+<ul><b>Html format: see <span class="wiki-link"><a href="PageViewAttributes.html">PageViewAttributes</a></span></b> <hr size="1" />
+ </ul>
+&bull; <b>[global.html.bgcolor:</b> <i>hex color number</i><b>]</b><br/> Sets the default background color for pages in preview and export; default = <i>none</i>. <br />
+<br />
+&bull; <b>[global.html.textcolor:</b> <i>hex color number</i><b>]</b><br/> Sets the default foreground (text) color for pages in preview and export; default = <i>none</i>. <br />
+<br />
+&bull; <b>[global.html.linkcolor:</b> <i>hex color number</i><b>]</b><br/> Sets the default link color for pages in preview and export; default = <i>none</i>. <br />
+<br />
+&bull; <b>[global.html.alinkcolor:</b> <i>hex color number</i><b>]</b><br/> Sets the default active link color for pages in preview and export; default = <i>none</i>. <br />
+<br />
+&bull; <b>[global.html.vlinkcolor:</b> <i>hex color number</i><b>]</b><br/> Sets the default visited link color for pages in preview and export; default = <i>none</i>. <br />
+<br />
+&bull; <b>[global.html.bgimage:</b> <i>image url</i><b>]</b><br/> Sets the default background image for pages in preview and export; default = <i>none</i>. <br />
+<br />
+&bull; <b>[global.paragraph_mode:</b> <i>true / false</i><b>]</b><br/> Sets the default paragraph mode to on or off; default = off. <br />
+<br />
+<a href="#">Top</a> <hr size="1" />
+ <a name=".h5327"></a><h4>Options</h4>
+<ul><b>Application settings: HTML header</b> <br />
+<br />
+These options have the same meaning and values as the global and local <span class="wiki-link"><a href="PageViewAttributes.html">html attributes</a></span>; see there for details. The options set the application defaults and are overridden by the global and local attributes. These settings will be inserted in the html pages as attributes of "&lt;body&gt;"-tag. <hr size="1" />
+ </ul>
+&bull; <b>Link color</b> <br />
+<br />
+&bull; <b>Active link color</b> <br />
+<br />
+&bull; <b>Visited link color</b> <br />
+<br />
+&bull; <b>Text color</b> <br />
+<br />
+&bull; <b>Background color</b> <br />
+<br />
+&bull; <b>Background image</b> <br />
+<br />
+&bull; <b>Doctype</b> Sets the DOCTYPE to use in the header of an HTML file. You should only modify it if you understand what it is doing. <br />
+<br />
+<a href="#">Top</a><br /> <hr size="1" />
+ previous: <a href="javascript:history.go(-1)">Back</a><br /> parents:&nbsp; <span class="wiki-link"><a href="GlobalAttributesPageView.html">GlobalAttributesPageView</a></span>, <span class="wiki-link"><a href="HtmlCss.html">HtmlCss</a></span>, <span class="wiki-link"><a href="HtmlGeneral.html">HtmlGeneral</a></span>, <span class="wiki-link"><a href="Intro3Formatting.html">Intro3Formatting</a></span>, <span class="wiki-link"><a href="PageEditAttributes.html">PageEditAttributes</a></span>, <span class="wiki-link"><a href="PageFormatting.html">PageFormatting</a></span>, <span class="wiki-link"><a href="PageViewAttributes.html">PageViewAttributes</a></span>, <span class="wiki-link"><a href="TextBlocks.html">TextBlocks</a></span>, <span class="wiki-link"><a href="WpOptionsHtmlHeader.html">WpOptionsHtmlHeader</a></span><br /> <span class="property">[help.status: done]</span>    </body>
+</html>

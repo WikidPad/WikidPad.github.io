@@ -1,0 +1,58 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <title>WhereIsTheDataStored</title>
+        <link type="text/css" rel="stylesheet" href="wikistyle.css">
+    </head>
+    <body>
+<span class="parent-nodes">parent nodes: <span class="parent-node"><a href="WikiDatabase.html">WikiDatabase</a></span></span><br /><br />
+<a name=".h0"></a><h2>Where Is The Data Stored</h2>
+Contents:	<div class="page-toc">
+<div class="page-toc-level2"><a href="#.h0">Where Is The Data Stored</a></div>
+<div class="page-toc-level3"><a href="#.h105">Original Gadfly</a></div>
+<div class="page-toc-level3"><a href="#.h491">Compact Sqlite (aka WikidPadCompact)</a></div>
+<div class="page-toc-level3"><a href="#.h1050">Original Sqlite</a></div>
+</div>
+<br />
+<a href="javascript:history.go(-1)">Back</a><hr size="1" />
+<br />
+This depends on the used database type:<br />
+<br />
+<a name=".h105"></a><h3>Original Gadfly</h3>
+The data for your wiki is stored in plain text under the data<br />
+directory of the directory your Wiki config is stored in. There is<br />
+one file per wiki word. The .grl and .gdf files are the database<br />
+files used to index your wiki words efficiently.<br />
+<br />
+This type is slow but portable across different platforms because it<br />
+doesn't need any external binaries.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h491"></a><h3>Compact Sqlite (aka WikidPadCompact)</h3>
+The data is stored in a single file named "wiki.sli" under the data<br />
+directory of the directory your Wiki config is stored in. This<br />
+database file is created by the Sqlite database engine and contains<br />
+the content of all wiki pages as well as the cache information for<br />
+fast handling of your wiki.<br />
+<br />
+Advantages of this type are its speed and efficient usage of hard disk<br />
+space. On the other hand single pages can't be edited with a text<br />
+editor or searched by a desktop search engine (like Google Desktop).<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h1050"></a><h3>Original Sqlite</h3>
+The data for your wiki is stored in plain text under the data<br />
+directory of the directory your Wiki config is stored in. There is one<br />
+file per wiki word. The database to index the wiki is stored in the<br />
+file "wikiovw.sli".<br />
+<br />
+This type provides one file per page (as "Original Gadfly") which can<br />
+be edited or searched by external programs and is nearly as fast as<br />
+"Compact Sqlite".<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+previous: <a href="javascript:history.go(-1)">Back</a><br />
+parents:&nbsp; <span class="wiki-link"><a href="WikiDatabase.html">WikiDatabase</a></span><br />
+<span class="property">[help.status: done]</span>    </body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <title>DemoTextBasics</title>
+        <link type="text/css" rel="stylesheet" href="appbase.css">
+    </head>
+    <body>
+<span class="parent-nodes">parent nodes: <span class="parent-node"><a href="DemoTextEscape.html">DemoTextEscape</a></span> | <span class="parent-node"><a href="DemoTextFormatting.html">DemoTextFormatting</a></span> | <span class="parent-node"><a href="DemoTextLists.html">DemoTextLists</a></span></span><br /><br />
+<a name=".h0"></a><h2>Demo Text Basics</h2>
+Contents:   <div class="page-toc">
+<div class="page-toc-level2"><a href="#.h0">Demo Text Basics</a></div>
+<div class="page-toc-level3"><a href="#.h57">General</a></div>
+<div class="page-toc-level3"><a href="#.h159">Subjects</a></div>
+<div class="page-toc-level4"><a href="#.h172">Character formatting</a></div>
+<div class="page-toc-level4"><a href="#.h1225">Headings</a></div>
+<div class="page-toc-level4"><a href="#.h2251">Indentation</a></div>
+<div class="page-toc-level4"><a href="#.h2898">Horizontal lines</a></div>
+<div class="page-toc-level3"><a href="#.h3813">Remarks</a></div>
+<div class="page-toc-level3"><a href="#.h4857">Todo's</a></div>
+<div class="page-toc-level3"><a href="#.h5221">Results</a></div>
+</div>
+<br />
+<a href="javascript:history.go(-1)">Back</a><hr size="1" />
+<a name=".h57"></a><h3>General</h3>
+This page investigates the basic text formatting facilities of Wikidpad.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h159"></a><h3>Subjects</h3>
+<a name=".h172"></a><h4>Character formatting</h4>
+Wikidpad's support for character formatting is limited to the font styles bold and italic <a href="#.f1">[1]</a><a href="#.f2">[2]</a>.<br />
+<br />
+To make text bold, enclose it in asterisks, like *bold* giving <b>bold</b>.<br />
+To make it italic, enclose it in underscores, like _italic_ giving <i>italic</i>.<br />
+<br />
+These two font styles are mutually exclusive in Wikidpad; text can not be defined to be both bold ánd italic <a href="#.f3">[3]</a>. When tried, it either results in: <b>_bold &amp; italic_</b> or in: <i>*bold &amp; italic*</i>. If bold+italic text or other additional character formatting is realy needed, then the use of html elements could be considered; see <span class="wiki-link"><a href="DemoTextHtmlElements.html">Textformatting: Html elements</a></span>.<br />
+<br />
+<a href="#">Top</a><br />
+<a name=".f1"></a>[1] <i>Font style tags act as a special kind of escape character; nothing inbetween is recognised as a link, attribute or other wikidpad element anymore.</i><br />
+<a name=".f2"></a>[2] <i>Wikidpad has no support for underlined text; underlined text has been deprecated by the W3 Committee, so it is not considered a valid part of html anymore.</i><br />
+<a name=".f3"></a>[3] <i>Version 2.0 or later possibly wíll have support for this.</i><hr size="1" />
+<a name=".h1225"></a><h4>Headings</h4>
+The plus sign can be used to define headings for (sub)sections on the page, like this: "+Heading 1" <a href="#.f5">[5]</a>. The level of the heading and it formatting can be specified with the number of plus signs in front of it. For examples on how to use them, see the headings on this and other pages of the demo wiki <a href="#.f6">[6]</a>.<br />
+<br />
+Wikidpad implements headings as - encloses them in - named html anchors. In combination with the<span class="wiki-link"><a href="DemoLinksInsertions.html">  [:toc:] attribute</a></span> this allows to insert a table of contents anywhere on a page and from there to jump straight to a particular section. See the Toc on top of this page and try it <a href="#.f7">[7]</a>.<br />
+<br />
+<a href="#">Top</a><br />
+<a name=".f5"></a>[5] <i>Like the font style tags, the heading tag acts as a special kind of escape character; nothing after the plus sign is recognised as a link, attribute or other wikidpad element anymore.</i><br />
+<a name=".f6"></a>[6] <i>The Wikidpad editor - as from version 1.9 - supports folding of sections based on their headings</i><br />
+<a name=".f7"></a>[7] <i>Wikidpad - as from version 1.9 - supports toc formatting up to heading level 13.</i><hr size="1" />
+<a name=".h2251"></a><h4>Indentation</h4>
+Wikidpad supports line indentation; to indent a line, start it with one or more tab characters <a href="#.f9">[9]</a>. The next line will automatically also be indented; this behaviour can be switched on or of with the option: "Menu / Editor / Settings / Auto-indent".<br />
+<br />
+The indentation of two or more (already indented!) consecutive lines can be increased by selecting them and pressing Tab. To reduce indentation, press Shift+Tab instead.<br />
+<br />
+<a href="#">Top</a><br />
+<a name=".f9"></a>[9] <i>Wikidpad implements indented lines as a html "list" element, enclosing them in &lt;ul&gt; tags. This should be taken into account, when using indentation in html block elements in Wikidpad.</i><hr size="1" />
+<a name=".h2898"></a><h4>Horizontal lines</h4>
+Four (4) consecutive hyphens (-) will create a horizontal line, like can be seen on this page <a href="#.f12">[12]</a>. Oddly enough this does not only happen when the hyphens are the only characters in the line, but also when they are in the middle of a text. That text will then effectively be broken into two part, like this "aa ---- bb" becomming:<br />
+<ul>aa <hr size="1" />
+ bb<br />
+</ul>
+In order to prevent this from happening, the escape character can be used: "aaa \---- bb" <a href="#.f13">[13]</a>. A line can be indented, like is the case above with "  aa \---- bb". Wikidpad then encloses it  in &lt;ul&gt; tags.<br />
+<br />
+<a href="#">Top</a><br />
+<a name=".f12"></a>[12] <i>Effectively móre the 4 hyphens produce the same result; a horizontal line is created and any excess hyphens are ignored.</i><br />
+<a name=".f13"></a>[13] <i>Be aware that the backslash only escapes óne hyphen a time; if there are five or more consecutive hyphens, then óne preceding backslash will stil result in a horizontal line!</i><hr size="1" />
+<a name=".h3813"></a><h3>Remarks</h3>
+<ul><li />Wikidpad's support for character formatting - font, size, color, etc. - is very meagre; some enhancement in this area should be considered.<li />There is a possibility to change the font face, but that can only be done for Wikidpad globally using the option: menu / Wiki / Options / "Html preview/export" / "Font name for html preview".<li />Wikidpad supports some form of wordwrap, but that effectively has to be seen as page formatting, not text- or lineformatting; see <span class="wiki-link"><a href="DemoPageEditAttributes.html">Page formatting: Edit attributes</a></span>.<li />Any amounts of successive asterisks results in an unexpected behaviour; like this:  <b>*</b><b>*</b><b>* aaaaa </b><b>*</b><b>*</b>* . &lt;= If the last asterisk is not followed by a space, the group is not seen as an end-bold tag and also removes the bullet from the following list item.<li />Any amount of underscores results in an unexpected behaviour; like this:  <i>______formatting is_____</i> as against this:   <i>_____</i> formatting is______. The difference is the space in front of "formatting".<br />
+</ul>
+<a href="#">Top</a><hr size="1" />
+<a name=".h4857"></a><h3>Todo's</h3>
+<span class="todo">done.demo.projectdemo.demo2: check out all posibilities</span><br />
+<br />
+<span class="todo">action.demo.development: check out the behaviour of consecutive asterisks.</span><br />
+<span class="todo">action.demo.development: check out the behaviour of consecutive asterisks underscores.</span><br />
+<span class="todo">action.demo.development: check out the difference in behaviour of consecutive asterisks and consecutive underscores.</span><br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h5221"></a><h3>Results</h3>
+<span class="property">[demo.status.waiting: actions]</span><br />
+<a href="#">Top</a><hr size="1" />
+previous: <a href="javascript:history.go(-1)">Back</a><br />
+parents:&nbsp; <span class="wiki-link"><a href="DemoTextEscape.html">DemoTextEscape</a></span>, <span class="wiki-link"><a href="DemoTextFormatting.html">DemoTextFormatting</a></span>, <span class="wiki-link"><a href="DemoTextLists.html">DemoTextLists</a></span>    </body>
+</html>

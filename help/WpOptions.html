@@ -1,0 +1,527 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <title>WpOptions</title>
+        <link type="text/css" rel="stylesheet" href="appbase.css">
+    </head>
+    <body>
+<span class="parent-nodes">parent nodes: <span class="parent-node"><a href="WikidPadReferences.html">WikidPadReferences</a></span></span><br /><br />
+<a name=".h0"></a><h2>Wp Options</h2>
+Contents:   <div class="page-toc">
+<div class="page-toc-level2"><a href="#.h0">Wp Options</a></div>
+<div class="page-toc-level3"><a href="#.h51">Options: Application settings</a></div>
+<div class="page-toc-level4"><a href="#.h314">General</a></div>
+<div class="page-toc-level4"><a href="#.h468">User Interface</a></div>
+<div class="page-toc-level4"><a href="#.h664">File Launcher</a></div>
+<div class="page-toc-level4"><a href="#.h730">Security</a></div>
+<div class="page-toc-level4"><a href="#.h787">Main tree</a></div>
+<div class="page-toc-level4"><a href="#.h841">Html preview</a></div>
+<div class="page-toc-level4"><a href="#.h905">Html export</a></div>
+<div class="page-toc-level4"><a href="#.h967">Html header</a></div>
+<div class="page-toc-level4"><a href="#.h1029">Auto save</a></div>
+<div class="page-toc-level4"><a href="#.h1087">Editor</a></div>
+<div class="page-toc-level4"><a href="#.h1280">Editor colors</a></div>
+<div class="page-toc-level4"><a href="#.h1346">Editor clipboard catcher</a></div>
+<div class="page-toc-level4"><a href="#.h1433">Mouse</a></div>
+<div class="page-toc-level4"><a href="#.h1517">Time view</a></div>
+<div class="page-toc-level4"><a href="#.h1575">Searching</a></div>
+<div class="page-toc-level4"><a href="#.h1677">Structure graphs</a></div>
+<div class="page-toc-level4"><a href="#.h1749">Advanced</a></div>
+<div class="page-toc-level4"><a href="#.h1806">Plugins</a></div>
+</div>
+<br />
+<a href="javascript:history.go(-1)">Back</a><hr size="1" />
+<a name=".h51"></a><h3>Options: Application settings</h3>
+This page lists all the possible application settings; they can be found in the main menu as: Wiki / Options. <a href="#.f1">[1]</a>.<br />
+<br />
+<a href="#">Top</a><br />
+<a name=".f1"></a>[1] <i>The page has been assembled using page inserts; it's contents can only be seen in preview.</i><hr size="1" />
+<a name=".h314"></a><h4>General</h4>
+<ul><b>Application settings: General</b><hr size="1" />
+</ul>
+&bull; <b>Low resource usage</b><br />
+Try to reduce usage of Windows resources. Only interesting for Windows 9x/ME.<br />
+<br />
+&bull; <b>Single process per user</b><br />
+If you open a new WikidPad instance while another is already running, the new window is handled by the same process as the first one. This option has only an effect after restarting WikidPad. It is off by default.<br />
+<br />
+Advantages:<br />
+<ul><li />You can safely open the same wiki in multiple windows (on the<br />
+same computer and by the same user only!)<li />Less resources (esp. memory) are needed to run multiple windows<br />
+</ul>
+Disadvantages:<br />
+<ul><li />If one window is busy due to a search or database rebuild, all windows do not react.<li />If one window crashes (in fact the process driving it) all windows crash.<li />An IP-socket connection is needed for communication between<br />
+processes. The connection is invisible for other computers on<br />
+a network or the internet, but a personal firewall software<br />
+may alarm you nevertheless. Also, if multiple user use<br />
+WikidPad on the same computer at the same time, all must use<br />
+their own home directory as configuration directory (this is<br />
+the default).<br />
+</ul>
+&bull; <b>App-bound hotkey</b><br />
+Here you can define a hotkey to show or hide WikidPad (they may only work on Windows). Hotkeys work system-wide, not only if WikidPad is active.<br />
+<br />
+In the text field you can enter a hotkey in the same way as the menu shortcuts are. Unlike menu shortcuts, you can also use "win" as modifier (like "alt" or "ctrl"), but the hotkey must have at least one of "ctrl" or "alt" modifiers to work.<br />
+<br />
+The checkbox before the text field allows to temporarily deactivate the hotkey without deleting the field content.<br />
+<br />
+There is also an option to set a second hotkey which is bound to the current wiki instead of the app. See OptionsDialog#<b>Wiki-bound# hotkey</b> below in "Current wiki" options.<br />
+<ul><b>Application settings: General, sort order</b><hr size="1" />
+</ul>
+&bull; <b>Sort order</b><br />
+Sets the alphabetical sort algorithm for the nodes in the <span class="wiki-link"><a href="TheTreeView.html">Main tree</a></span> and for the <span class="wiki-link"><a href="PageListDialog.html">PageListDialog</a></span>.<br />
+The possible choices are:<ul><li />Default: sorts according to default sort order determined by the operating system.<br />
+<ul><li />Upper case first: sorts ABCabc instead of AaBbCc.<br />
+</ul>
+<li />C: The original WikidPad sort order: uppercase first, non-English characters in illogical order at the end</ul>
+<br />
+<ul><b>Application settings: General, rename link</b><hr size="1" />
+</ul>
+&bull; <b>Rename links when renaming wiki word</b><br />
+This option controls whether Wikidpad will or will not rename all references to a renamed page. The possible setting are:<ul><li />yes: rename by default<li />no: never rename<li />ask: ask if it should be done (this is the default setting)</ul>
+<br />
+<ul><b>Application settings: General, wiki control</b><hr size="1" />
+</ul>
+&bull; <b>New window on wiki URL</b><br />
+When double clicking on a wiki: URL, a new instance of the application is started, otherwise, the current instance loads the new wiki.<br />
+<br />
+&bull; <b>Store relative pathes to wikis</b><br />
+Pathes to the recently opened wikis are stored as relative pathes if this is checked. Useful e.g. if you have WikidPad and your wikis on an USB-stick.<br />
+<br />
+&bull; <b>Default open/new dir.</b><br />
+Directory to start when using "Wiki"-&gt;"New" or "Wiki"-&gt;"Open" in the menu. If empty, WikidPad chooses a default.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h468"></a><h4>User Interface</h4>
+<ul><b>Application settings: User interface</b><hr size="1" />
+</ul>
+&bull; <b>Minimize to Tray</b><br />
+Minimized to system tray instead of the normal taskbar.<br />
+<br />
+&bull; <b>Minimize on close button</b><br />
+Pressing the close button on the main frame (the little "X") does not close but minimize WikidPad. In conjunction with "Minimize to Tray" it minmizes to the try area.<br />
+<br />
+If you really want to close, use menu "Wiki"-&gt;"Exit" then or the context menu when right-clicking on the tray icon (if "Minimize to Tray" is active).<br />
+<br />
+&bull; <b>Statusbar time format</b><br />
+Set the time format the statusbar should use to show modification and creation date of the current wiki page. The format can also be set by clicking on the small "..." button which starts the same dialog as used for setting the date format for the editor.<br />
+<br />
+&bull; <b>UI language</b><br />
+Choose the preferred language of the user interface.<br />
+This setting only takes effect after restarting WikidPad.<br />
+<ul><b>Application settings: User interface, wiki control</b><hr size="1" />
+</ul>
+&bull; <b>Recent wikis list length</b><br />
+Set the number of wikis to show in menu "Wiki"-&gt;"Recent"<br />
+<ul><b>Application settings: User interface, log window</b><hr size="1" />
+</ul>
+&bull; <b>Auto-show log window</b><br />
+Automatically show log window if new error messages arrive. Can be overruled by the wiki level option "Auto-show log window"<br />
+<br />
+&bull; <b>Auto-hide log window</b><br />
+Automatically hide log window if no more error messages are present.<br />
+<ul><b>Application settings: User interface, structure window</b><hr size="1" />
+</ul>
+&bull; <b>Structure window pos.</b><br />
+Where (relative to main window) should the window be positioned? "Hidden" deactivates it.<br />
+<b>KNOWN BUG</b>: After changing the position of the window, restarting WikidPad is necessary. See <span class="wiki-link"><a href="WorkSpaceGeneral.html#RestartWikidPad">WorkSpaceGeneral</a></span> for details.<br />
+<br />
+&bull; <b>Structure window depth</b><br />
+Up to (and including) which heading level should headings be displayed? "1" Means only top-level heading (one plus sign), "15" means all headings.<br />
+<br />
+&bull; <b>Auto-hide structure window</b><br />
+After double-clicking an entry in the window it is collapsed (hidden) automatically if this setting is checked.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h664"></a><h4>File Launcher</h4>
+<ul><b>Application settings: File Launcher</b><br />
+This option page is only visible on non-Windows systems.<hr size="1" />
+</ul>
+&bull; <b>Path to file launcher</b><br />
+The path to the script or program that takes the path or URL of a file and runs the application associated with this file. For Linux this would be the "xdg-open" script; it might in some cases have to be installed first.<br />
+<br />
+On Windows and Linux, data files with a particular suffix can be associated with a particular application, so that the data file (e.g. "index.html") can be "executed" by starting the application with the file as parameter. On Windows this is a functionality of the OS itself while on Linux it is a functionality of the graphical environment like KDE or Gnome. To use this function there, a helper (normally the "xdg-open" script) must be called which detects the appropriate application and starts it.<br />
+<br />
+When (double)clicking a URL in WikidPad on Linux, the script is called with a file path (for "file:"/"rel:" URLs) or the URL itself as parameter.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h730"></a><h4>Security</h4>
+<ul><b>Application settings: Security</b><hr size="1" />
+</ul>
+&bull; <b>Process auto-generated areas</b><br />
+Experimental feature, use not recommended!<br />
+<br />
+&bull; <b>Process insertion scripts</b><br />
+Control if insertions with key "eval" are allowed be evaluated as Python expressions or not, see also <span class="wiki-link"><a href="Scripts.html">Scripts</a></span>.<br />
+<br />
+&bull; <b>Script security</b><br />
+Set the security level for script execution, see also <span class="wiki-link"><a href="Scripts.html">Scripts</a></span>. The possible options are:<ul><li />No scripts: Script execution is completely disabled. This is the default.<li />No import_scripts: Scripts on the currently open page can be executed and expressions evaluated. Importing scripts from other pages with the import_scripts property doesn't work (see below how to do this).<li />No global.import_scripts: Property "import_scripts" works, but "global.import_scripts" does not<li />Allow everything</ul>
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h787"></a><h4>Main tree</h4>
+<ul><b>Application settings: Main tree</b><hr size="1" />
+</ul>
+&bull; <b>Tree auto-follow</b><br />
+The tree tries to always select the wiki word currently shown in the editor or HTML-view.<br />
+<br />
+&bull; <b>Tree update after save</b><br />
+After each (automatic or manual) save, the tree icons and shown children are updated. This may need some time and may create some flicker going from top to bottom through the tree.<br />
+<br />
+&bull; <b>Hide Undefined WikiWords in Tree</b><br />
+If a page contains wiki word links to non-existing pages, these are not shown as children in the tree.<br />
+<br />
+&bull; <b>No cycles in tree</b><br />
+If two or more pages reference each other (e.g. NodeA -&gt; NodeB -&gt; NodeA) these cycles are not shown. Precisely: if a child of a word is already an ancestor (parent, grandparent, ...) of this word, it is not shown.<br />
+<br />
+&bull; <b>Tree auto-hide</b><br />
+After selecting an item in tree, the tree is hidden automatically. It can be brought back, by pressing Ctrl-T<br />
+<br />
+&bull; <b>Background color</b><br />
+Specify background color of tree.<br />
+<br />
+&bull; <b>Position main tree</b><br />
+Controls where to place the main tree (to the left, right, top or bottom)<br />
+<br />
+&bull; <b>Position view tree</b><br />
+You can also have a second tree which has the "Views" node as root. You can place it relative to the main tree (above, below, left or right) or choose "hidden" if you don't want it. <br />
+<ul><b>KNOWN BUG</b>: After changing the position of main or view tree, the trees do not react on clicks properly any longer. Restart WikidPad. See <span class="wiki-link"><a href="WorkSpaceGeneral.html#RestartWikidPad">WorkSpaceGeneral</a></span> for details.</ul>
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h841"></a><h4>Html preview</h4>
+<ul><b>Application settings: Html preview</b><hr size="1" />
+</ul>
+&bull; <b>Font name for html preview</b><br />
+Enter the desired font name for the HTML preview. Clicking on the "..." button shows a list of available fonts.<br />
+<br />
+&bull; <b>Show pics as links in preview</b><br />
+If this option is checked, links to image URLs (those ending with .png, .gif or .jpg) are shown like other links in the preview. If it is unchecked, the images (if available) are shown.<br />
+<br />
+&bull; <b>Props. to yes/no include in preview</b><br />
+A regular expression for the properties to be shown in HTML preview or not. See <span class="wiki-link"><a href="ThePreview.html">ThePreview</a></span>.<br />
+<br />
+&bull; <b>Preview renderer</b><br />
+Under Windows you can choose the renderer for the HTML preview. See <span class="wiki-link"><a href="ThePreview.html">ThePreview</a></span> and <span class="wiki-link"><a href="HtmlFormatting.html">HtmlFormatting</a></span>.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h905"></a><h4>Html export</h4>
+<ul><b>Application settings: Html export</b><hr size="1" />
+</ul>
+&bull; <b>Start browser after export</b><br />
+Starts the current web browser after exporting to XML.<br />
+<br />
+&bull; <b>Shows pics as links in export</b><br />
+If this option is checked, links to image URLs (those ending with .png, .gif or .jpg) are shown like other links in the export. If it is unchecked, the images (if available) are shown.<br />
+<br />
+&bull; <b>Table of contents</b><br />
+Choose if you want a table of contents in tree form, list form or not at all.<br />
+For a single HTML page, the TOC is at the beginning of the page, for a set of HTML pages, it is a separate "index.html" file. Using "As tree" is recommended when exporting the whole or nearly the whole wiki, "As list" is better for small subsets of a wiki as the tree option gives unexpected results here.<br />
+<br />
+&bull; <b>Title of toc</b><br />
+Set the title of the table of contents according to your language. The default is "Table of Contents". For German it could be e.g. "Inhaltsverzeichnis".<br />
+<br />
+&bull; <b>Single page separator lines</b><br />
+Set the number of separator lines to separate wiki pages in a single HTML page on export.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h967"></a><h4>Html header</h4>
+<ul><b>Application settings: HTML header</b><br />
+<br />
+These options have the same meaning and values as the global and local <span class="wiki-link"><a href="PageViewAttributes.html">html attributes</a></span>; see there for details.<br />
+The options set the application defaults and are overridden by the global and local attributes.<br />
+These settings will be inserted in the html pages as attributes of "&lt;body&gt;"-tag.<hr size="1" />
+</ul>
+&bull; <b>Link color</b><br />
+<br />
+&bull; <b>Active link color</b><br />
+<br />
+&bull; <b>Visited link color</b><br />
+<br />
+&bull; <b>Text color</b><br />
+<br />
+&bull; <b>Background color</b><br />
+<br />
+&bull; <b>Background image</b><br />
+<br />
+&bull; <b>Doctype</b><br />
+Sets the DOCTYPE to use in the header of an HTML file. You should only modify it if you understand what it is doing.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h1029"></a><h4>Auto save</h4>
+<ul><b>Application settings: Autosave</b><hr size="1" />
+</ul>
+&bull; <b>Autosave active</b><br />
+Save current page content to disk (if modified) after a few seconds of inactivity.<br />
+<br />
+There are two delays which <b>both</b> must be exceeded before a save operation is triggered (if Autosave is active).<br />
+<br />
+&bull; <b>Delay after key pressed</b><br />
+How long to wait after the last keypress in the editor (default: 3 seconds). Recommended value: 1 to 5 seconds.<br />
+<br />
+&bull; <b>Delay after page dirty</b><br />
+How long to wait after the page was initially modified (dirty) after last save (default: 15 seconds). Recommended value: 15 to 180 seconds.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h1087"></a><h4>Editor</h4>
+<ul><b>Application settings: Editor, general</b><hr size="1" />
+</ul>
+&bull; <b>Sync. highlighting limit</b><br />
+Limit of page size in bytes when to switch from synchronous highlighting (calculated after each keypress) to asynchronous highlighting (calculated in the background and shown when ready). Recommended value: 3000 to 5000 bytes<br />
+<br />
+&bull; <b>Highlight start delay</b><br />
+For async. highlighting how long to wait after key press (in seconds) before starting the highlighting work in background. Recommended value: 0.2 to 0.5 seconds<br />
+<br />
+&bull; <b>Synchronize editor by preview selection</b><br />
+This option provides a workaround to synchronize the scroll position in HTML preview with that in the editor.<br />
+If this option is checked, you can select some text in the preview and when switching back to the editor, the selected text will be searched by the editor and it's first occurrence highlited as selected.<br />
+<ul><b>Application settings: Editor, short hint</b>    <hr size="1" />
+</ul>
+&bull; <b>Short hint delay</b><br />
+Set the number of milliseconds that have to pass before showing the short hint tooltip in the editor. A value of zero "0" deactivates the tooltip.<br />
+<ul><b>Application settings: Editor, bullets</b><hr size="1" />
+</ul>
+&bull; <b>Auto-unbullets</b><br />
+When this option is active and enter is pressed on a line which contains only a bullet or a numbering without text, the bullet is removed.<br />
+<ul><b>Application settings: Editor, auto complete</b>    <hr size="1" />
+</ul>
+&bull; <b>Append closing bracket on auto-complete</b><br />
+When suggesting the completion for a bracketed wiki word, e.g. "[Not Came" you can decide if a closing bracket is suggested ("[Not Camel Case]") or not ("[Not Camel Case").<br />
+<ul><b>Application settings: Editor, image pasting</b><hr size="1" />
+</ul>
+&bull; <b>Filename prefix</b><br />
+A prefix to use for the filename. If this filename plus suffix exists already in "files" dir, an underscore and a sequence of 20 random letters or numbers is appended to create a unique filename. E.g. you want to store a PNG-file with prefix "foo" then WikidPad checks if "foo.png" is already in the "files" directory (if prefix is empty, this is not tried). If "foo.png" exists it tries something like "foo_2NIUXQ0OGVRDT1O3JNUN.png". If this exists already it tries again (up to 20 times) before giving up.<br />
+<br />
+&bull; <b>File type</b><ul><li />None: Don't store images at all<li />PNG: Store in PNG format (losless compression)<li />JPEG: Store in JPEG format (lossy compression)<br />
+</ul>
+&bull; <b>Quality</b><br />
+Number to define quality of JPEG compression (0:worst, 75:default, 100:best)<br />
+<br />
+&bull; <b>Ask settings on each paste</b><br />
+If checked, each time you paste an image, a dialog box asks for the above settings to set them individually.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h1280"></a><h4>Editor colors</h4>
+<ul><b>Application settings: Editor, colors</b><hr size="1" />
+</ul>
+&bull; <b>Plain text color</b><br />
+Specify the color of plain text (like this one) in the editor by pressing the little "..." button to start the color dialog or by entering a numeric HTML color (e.g. "#000000" for black) in the text field. Leaving the field empty chooses the default color.<br />
+<br />
+&bull; <b>Link color</b><br />
+Set the color of links (URLs and existing wiki words, e.g. <span class="url-link"><a href="http://nowhere">http://nowhere</a></span>) in the editor. See "Plain text color" above for details.<br />
+<br />
+&bull; <b>Attribute/script color</b><br />
+Set the color of attributes and scripts (e.g. ) in the editor. See "Plain text color" above for details.<br />
+<br />
+&bull; <b>Background color</b><br />
+(Works only partially). Specify the background color of the editor. See "Plain text color" above for details.<br />
+<br />
+&bull; <b>Selection fg. color</b><br />
+Specify the foreground color of selected text. See "Plain text color" above for details.<br />
+<br />
+&bull; <b>Selection bg. color</b><br />
+Specify the background color of selected text. See "Plain text color" above for details.<br />
+<br />
+&bull; <b>Margin color</b><br />
+Specify the color of the editor margin on the left (normally gray) which can also contain line numbers.<br />
+<br />
+&bull; <b>Text cursor color</b><br />
+Set the color of the text cursor (the small blinking vertical bar).<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h1346"></a><h4>Editor clipboard catcher</h4>
+<ul><b>Application settings: Editor, clipboard catcher</b>    <br />
+This page is only visible on Windows.<hr size="1" />
+</ul>
+&bull; <b>Prepend before clipboard snippet</b><br />
+Control what the Clipboard Catcher should prepend before each caught snippet. This option supports time formats (as these shown in "Set Date Format" dialog in "Editor" menu)<br />
+<br />
+&bull; <b>Append after clipboard snippet</b><br />
+Control what the Clipboard Catcher should append after each caught snippet. This option supports time formats (as these shown in "Set Date Format" dialog in "Editor" menu). The same escapes can be used as in the replace field of the "Find and Replace" dialog in regular expression mode.<br />
+<br />
+&bull; <b>Avoid doubled snippets</b><br />
+If the same text is pasted multiple times consecutively to the clipboard, it is pasted only the first time. Some applications execute a single paste command as multiple pastes to the clipboard which would lead to multiple inserts without this option.<br />
+<br />
+&bull; <b>User notification</b><br />
+Choose if you want to hear a sound when a clipboard snippet is inserted.<br />
+<br />
+&bull; <b>Sound file</b><br />
+Choose the sound file to play (if you have chosen to be notified by sound above). If the field is empty, a default sound is played.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h1433"></a><h4>Mouse</h4>
+<ul><b>Application settings: Mouse</b><hr size="1" />
+</ul>
+&bull; <b>Middle button without CTRL</b><br />
+Set the reaction of a middle button click on a wiki word in editor, internal preview, tree or wiki-wide search results if CTRL is not pressed while clicking. You can choose between opening the word in a new tab in foreground, in background or in the same (active) tab.<br />
+<br />
+&bull; <b>Middle button with CTRL</b><br />
+Same as before, but set reaction if CTRL is pressed while clicking the middle button.<br />
+<br />
+&bull; <b>Left double click in preview</b><br />
+When double clicking into preview (not on a link), this can either do nothing, switch the tab to editor or open a new tab with same page, but in editor mode.<br />
+<br />
+&bull; <b>Middle click on tab</b><br />
+This can either do nothing or close the tab.<br />
+<ul><b>Application settings: Mouse, drag &amp; drop files</b><hr size="1" />
+</ul>
+&bull; <b>Dropping files</b><br />
+&bull; <b>Dropping files with SHIFT</b><br />
+&bull; <b>Dropping files with CTRL</b><br />
+Control what should happen if you drag and drop files from explorer into the editor with no key pressed, with SHIFT pressed or with CTRL pressed.<br />
+<br />
+Possible choices are:<ul><li />Nothing<li />Absolute URL: Insert absolute URL(s) to the file(s)<li />Relative URL: URL(s) starting with "rel:"<li />Relative into storage: Copy file(s) into file storage and create relative URL(s) to it</ul>
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h1517"></a><h4>Time view</h4>
+<ul><b>Application settings: Time view</b><hr size="1" />
+</ul>
+&bull; <b>Time view pos.</b><br />
+Where (relative to main window) should the window be positioned? "Hidden" deactivates it.<br />
+<b>KNOWN BUG</b>: After changing the position of the window, restarting WikidPad is necessary. See <span class="wiki-link"><a href="WorkSpaceGeneral.html#RestartWikidPad">WorkSpaceGeneral</a></span> for details.<br />
+<br />
+&bull; <b>Date format</b><br />
+Set the time format the timeline should use to show the dates. The format is also used when interpreting a date entered by the user in the time view.<br />
+The format can also be set by clicking on the small "..." button which starts the same dialog as used for setting the date format for the editor.<br />
+<br />
+&bull; <b>Time view auto-hide</b><br />
+After selecting an item in time view, time view is hidden automatically.<br />
+<br />
+&bull; <b>Show word list on hovering</b><br />
+Should the list of related wiki words be shown when hovering over a date with mouse.<br />
+<br />
+&bull; <b>Show word list on select</b><br />
+Should the list of related wiki words be shown when selecting (clicking on) a date.<br />
+<br />
+&bull; <b>Show empty days</b><br />
+Should "empty" dates without relatzed wiki words be shown in the timeline.<br />
+This option can also be set in the context menu of the timeline.<br />
+<br />
+&bull; <b>Show dates ascending</b><br />
+Control if the dates in timeline should be sorted ascending or descending.<br />
+This option can also be set in the context menu of the timeline.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h1575"></a><h4>Searching</h4>
+<ul><b>Application settings: Searching, full search</b><hr size="1" />
+</ul>
+&bull; <b>Context characters:</b> <b>before</b> and <b>after</b><br />
+Chooses the number of characters to show before and after a found match as context in wiki-wide search. For an "anded" regex, the beginning of the page is shown with so many characters as the sum of the "before" and "after" values. Using context may slow down the searching a bit.<br />
+<br />
+&bull; <b>Count Occurrences</b><br />
+Counts how many matches a page contains and shows this number in parentheses after each page name in wiki-wide search results. This option slows down searching.<br />
+<ul><b>Application settings: Searching, incremental search</b><hr size="1" />
+</ul>
+&bull; <b>Delay before auto-close</b><br />
+Controls how many seconds of inactivity before the incremental search is closed automatically. 0 means "wait forever".<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h1677"></a><h4>Structure graphs</h4>
+<ul><b>Application settings: see <span class="wiki-link"><a href="StructureGraphs.html">StructureGraphs</a></span></b><br />
+<i>Remarks:</i><br />
+&bull; Options that are left empty use the "GraphViz" default settings.<br />
+&bull; Colors are specified using standard 6 digit HTML color values.<hr size="1" />
+</ul>
+&bull; <b>Node font name</b><br />
+&bull; <b>Node font size</b><br />
+The name and size of the font to use for the node label<br />
+<br />
+&bull; <b>Node border color</b><br />
+The color of the small border line surrounding each node<br />
+<br />
+&bull; <b>Node background color</b><br />
+The color of the node background.<br />
+<i>Remark:</i> If the wiki page described by a node has a "[color: <i>color name</i>]" attribute then that color attribute overrules this option setting.<br />
+<br />
+&bull; <b>Edge color</b><br />
+The color of the edges connecting the nodes.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h1749"></a><h4>Advanced</h4>
+<ul><b>Application settings: Advanced</b><br />
+<b>Warning:</b> These settings should only be changed when it is absolutely necessary!<hr size="1" />
+</ul>
+&bull; <b>Ignore wiki lock file</b><br />
+(Default: off) When checked, a wiki is opened without warning even if a lock file is already present.<br />
+<br />
+&bull; <b>Create wiki lock file</b><br />
+(Default: on) When not checked, no lock file is created when opening a wiki (and it isn't deleted when closing it). This setting does not affect the behavior of the wikis already opened.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h1806"></a><h4>Plugins</h4>
+<ul><b>Application settings: Plugins, Gnuplot</b><hr size="1" />
+</ul>
+&bull; <b>Path to Gnuplot</b><br />
+The path to the Gnuplot executable.<br />
+<ul><b>Application settings: Plugins, GraphViz</b><hr size="1" />
+</ul>
+&bull; <b>Path to GraphViz</b><br />
+The path to the GraphViz directory of executables.<br />
+<br />
+&bull; <b>Name of dot executable</b><br />
+The name of the dot executable; default = dot.exe.<br />
+<br />
+&bull; <b>Name of neato executable</b><br />
+The name of the neato executable; default = neato.exe.<br />
+<br />
+&bull; <b>Name of twopi executable</b><br />
+The name of the twopi executable; default = twopi.exe.<br />
+<br />
+&bull; <b>Name of circo executable</b><br />
+The name of the circo executable; default = circo.exe.<br />
+<br />
+&bull; <b>Name of fdp executable</b><br />
+The name of the fdp executable; default = fdp.exe.<br />
+<ul><b>Application settings: Plugins, MimeTex</b><hr size="1" />
+</ul>
+&bull; <b>Path to MimeTex</b><br />
+The path to the MimeTex executable.<br />
+<ul><b>Application settings: Plugins, Ploticus</b><hr size="1" />
+</ul>
+&bull; <b>Path to Ploticus</b><br />
+The path to the Ploticus executable.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+previous: <a href="javascript:history.go(-1)">Back</a><br />
+parents:&nbsp; <span class="wiki-link"><a href="WikidPadReferences.html">WikidPadReferences</a></span><br />
+attributes: <span class="property">[tree_position: 2]</span><br />
+<span class="property">[help.status: done]</span><br />
+<br />
+<b>Inserts</b><br />
+<span class="wiki-link"><a href="WpOptionsGeneral.html">WpOptionsGeneral</a></span><br />
+<span class="wiki-link"><a href="WpOptionsGeneralSort.html">WpOptionsGeneralSort</a></span><br />
+<span class="wiki-link"><a href="WpOptionsGeneralRename.html">WpOptionsGeneralRename</a></span><br />
+<span class="wiki-link"><a href="WpOptionsGeneralWikiControl.html">WpOptionsGeneralWikiControl</a></span><br />
+<span class="wiki-link"><a href="WpOptionsUserInterface.html">WpOptionsUserInterface</a></span><br />
+<span class="wiki-link"><a href="WpOptionsUserInterfaceWikiControl.html">WpOptionsUserInterfaceWikiControl</a></span><br />
+<span class="wiki-link"><a href="WpOptionsUserInterfaceLogWindow.html">WpOptionsUserInterfaceLogWindow</a></span><br />
+<span class="wiki-link"><a href="WpOptionsUserInterfaceStructWindow.html">WpOptionsUserInterfaceStructWindow</a></span><br />
+<span class="wiki-link"><a href="WpOptionsFileLauncher.html">WpOptionsFileLauncher</a></span><br />
+<span class="wiki-link"><a href="WpOptionsSecurity.html">WpOptionsSecurity</a></span><br />
+<span class="wiki-link"><a href="WpOptionsTree.html">WpOptionsTree</a></span><br />
+<span class="wiki-link"><a href="WpOptionsHtmlPreview.html">WpOptionsHtmlPreview</a></span><br />
+<span class="wiki-link"><a href="WpOptionsHtmlExport.html">WpOptionsHtmlExport</a></span><br />
+<span class="wiki-link"><a href="WpOptionsHtmlHeader.html">WpOptionsHtmlHeader</a></span><br />
+<span class="wiki-link"><a href="WpOptionsAutoSave.html">WpOptionsAutoSave</a></span><br />
+<span class="wiki-link"><a href="WpOptionsEditor.html">WpOptionsEditor</a></span><br />
+<span class="wiki-link"><a href="WpOptionsEditorShortHint.html">WpOptionsEditorShortHint</a></span><br />
+<span class="wiki-link"><a href="WpOptionsEditorBullets.html">WpOptionsEditorBullets</a></span><br />
+<span class="wiki-link"><a href="WpOptionsEditorAutoComplete.html">WpOptionsEditorAutoComplete</a></span><br />
+<span class="wiki-link"><a href="WpOptionsEditorImagePasting.html">WpOptionsEditorImagePasting</a></span><br />
+<span class="wiki-link"><a href="WpOptionsEditorColors.html">WpOptionsEditorColors</a></span><br />
+<span class="wiki-link"><a href="WpOptionsEditorClipboardCatcher.html">WpOptionsEditorClipboardCatcher</a></span><br />
+<span class="wiki-link"><a href="WpOptionsMouse.html">WpOptionsMouse</a></span><br />
+<span class="wiki-link"><a href="WpOptionsMouseDropFiles.html">WpOptionsMouseDropFiles</a></span><br />
+<span class="wiki-link"><a href="WpOptionsTimeView.html">WpOptionsTimeView</a></span><br />
+<span class="wiki-link"><a href="WpOptionsSearchingFull.html">WpOptionsSearchingFull</a></span><br />
+<span class="wiki-link"><a href="WpOptionsSearchingIncremental.html">WpOptionsSearchingIncremental</a></span><br />
+<span class="wiki-link"><a href="WpOptionsStructureGraphs.html">WpOptionsStructureGraphs</a></span><br />
+<span class="wiki-link"><a href="WpOptionsAdvanced.html">WpOptionsAdvanced</a></span><br />
+<span class="wiki-link"><a href="WpOptionsPluginsGnuplot.html">WpOptionsPluginsGnuplot</a></span><br />
+<span class="wiki-link"><a href="WpOptionsPluginsGraphViz.html">WpOptionsPluginsGraphViz</a></span><br />
+<span class="wiki-link"><a href="WpOptionsPluginsMimeTex.html">WpOptionsPluginsMimeTex</a></span><br />
+<span class="wiki-link"><a href="WpOptionsPluginsPloticus.html">WpOptionsPluginsPloticus</a></span><br />
+<br />
+<br />
+<br />
+    </body>
+</html>

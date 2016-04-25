@@ -1,0 +1,111 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <title>DemoPagePageTemplates</title>
+        <link type="text/css" rel="stylesheet" href="appbase.css">
+    </head>
+    <body>
+<span class="parent-nodes">parent nodes: <span class="parent-node"><a href="DemoPageFormatting.html">DemoPageFormatting</a></span> | <span class="parent-node"><a href="DemoPageFormTemplates.html">DemoPageFormTemplates</a></span></span><br /><br />
+<a name=".h0"></a><h2>Demo Page Page Templates</h2>
+Contents:   <div class="page-toc">
+<div class="page-toc-level2"><a href="#.h0">Demo Page Page Templates</a></div>
+<div class="page-toc-level3"><a href="#.h65">General</a></div>
+<div class="page-toc-level3"><a href="#.h1734">Example</a></div>
+<div class="page-toc-level3"><a href="#.h3055">Global templates</a></div>
+<div class="page-toc-level3"><a href="#.h3750">Heading generation</a></div>
+<div class="page-toc-level3"><a href="#.h4526">Remarks</a></div>
+<div class="page-toc-level3"><a href="#.h4566">Todo's</a></div>
+<div class="page-toc-level3"><a href="#.h4709">Results</a></div>
+</div>
+<br />
+<a href="javascript:history.go(-1)">Back</a><hr size="1" />
+<a name=".h65"></a><h3>General</h3>
+Often a series of pages has to be made, that have the same starting content. Contact pages are a good example; they always have (roughly) the same items: name, street, city, zip, country, etc. on them in the same layout and following order. To prevent from having to type all these items again and again for every new contact page that is created, Wikidpad supports templates. Using templates one can predefine the initial content for the child pages of a parent page.<br />
+<br />
+A template is just any other Wikidpad page and it's content can be just about anything, including links, attributes, etc. It can be defined as a template, by specifying it as such on the parent page, using the [template: pagename] attribute. An example tells more, then a thousand words; so see the example below.<br />
+<br />
+<b>Remarks</b><ul><li />Templates are meant to be used in the Editor; they have no function in Preview.<li />Templates only work for blank (non-existing) new pages:<br />
+<ul><li />Existing child pages can not be "templated", by adding a template to the parent.<li />Changes in an existing template, will not be reflected in the existing child pages; even though they were created off the template.<br />
+</ul>
+<li />A to-be-templated child can only have one (1) parent with a template attribute.<li />Like the default pages also template children will only be created effectively after it is modified in some way:<br />
+<ul><li />Template children that have not been modified (yet) are condsidered to be non-existent.<li />They will therefore appear as "undefined-nodes" in the "views" node of the treeview.<br />
+</ul>
+<li />In the treeview, the views / templates node shows which templates are in use for which parent(s).<br />
+</ul>
+<a href="#">Top</a><hr size="1" />
+<a name=".h1734"></a><h3>Example</h3>
+This page has a childpage "<span class="wiki-link"><a href="DemoPageContactTemplate.html">DemoPageContactTemplate</a></span>", that lookes like this:<ul><i>DemoPageContactTemplate</i><hr size="1" />
+----<br />
+Name:	<br />
+Adress:	<br />
+Phone:	<br />
+Mobile:	<br />
+eMail:	<br />
+<br />
+Remarks:<br />
+----<br />
+[:rel:parents]<hr size="1" />
+<br />
+</ul>
+It also has a childpage "<span class="wiki-link"><a href="DemoPageContactParent.html">DemoPageContactParent</a></span>", that contains a list of contacts and has a template attribute attached to it.:<ul><i>DemoPageContactParent</i><hr size="1" />
+++ Personal contacts<br />
+----<br />
+* [DemoContact AlbertWiki]<br />
+* [DemoContact NielsPage]<br />
+* [DemoContact MarieTree]<br />
+----<br />
+[:rel:parents]<br />
+<b>[template: DemoPageContactTemplate]</b><hr size="1" />
+</ul>
+If now a new contact "DemoContact JasonHorman" is added to the list and it's link is followed to it's new page, that page will look like this:<ul><i>DemoContact JasonHorman</i><hr size="1" />
+<b>++ Demo Contact Jason Horman</b><br />
+----<br />
+Name:	<br />
+Adress:	<br />
+Phone:	<br />
+Mobile:	<br />
+eMail:	<br />
+<br />
+Remarks:<br />
+----<br />
+[:rel:parents]<hr size="1" />
+<br />
+</ul>
+The page can now be finalised, by simply typing Jason Horman's specifics into it.<br />
+<br />
+<b>Remarks</b><ul><li />The "demo" example uses templates all over the place; check the views / templates node in the treeview to se which they are and on which parent(s) they are used.<li />Contacts and sortlike items lend themselves particularly for a "fill in the blanks" approach. Wikidpad supports this with the <span class="wiki-link"><a href="DemoPageFormTemplates.html">"Form pages"</a></span>.<br />
+</ul>
+<a href="#">Top</a><hr size="1" />
+<a name=".h3055"></a><h3>Global templates</h3>
+Next to a page (parent) specific template, also a template for the whole wiki can be defined, using the [global.template:&nbsp;pagename] attribute. This wiki uses the BaseTemplate as a global template.<ul><i>BaseTemplate</i><hr size="1" />
+----<br />
+<br />
+----<br />
+[:rel:parents]<hr size="1" />
+</ul>
+<b>Remarks</b><ul><li />There can only be one (1) global template; if several global templates are defined, then the last one encountered is the one used.<li />The global template is allways overruled by page (parent) specific templates.<li />It is advised and good practice, to keep all the global attributes together on one or more specific pages, that are easy recognisable as such, like <span class="wiki-link"><a href="WikiSettings.html">WikiSettings</a></span>.<br />
+</ul>
+<a href="#">Top</a><hr size="1" />
+<a name=".h3750"></a><h3>Heading generation</h3>
+Wikidpad by default generates a new title for a child based on a template; the same way it does for non-template pages. If not set differently in options (see <span class="wiki-link"><a href="DemoPagePageTitles.html">Page formatting: Page titles</a></span>), it will take the linkname for the page and generate a title from that.<br />
+<br />
+This behavior can be prevented, by adding the [template_head: manual] attribute to a template. Wikidpad will then refrain from generating a title for any page that is generated based on that template.<br />
+This attribute has a global variant [global.template_head: manual] with which title generation for template-children can be switched off for the entire wiki. The [template_head: auto] can then be used, to switch it back on for individual templates.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h4526"></a><h3>Remarks</h3>
+<ul><li />None<br />
+</ul>
+<a href="#">Top</a><hr size="1" />
+<a name=".h4566"></a><h3>Todo's</h3>
+<span class="todo">done.demo.projectdemo.demo2: check out all posibilities</span><br />
+action.demo.pageformatting.pagetemplates: template action<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h4709"></a><h3>Results</h3>
+<span class="property">[demo.status: done]</span><br />
+<a href="#">Top</a><hr size="1" />
+previous: <a href="javascript:history.go(-1)">Back</a><br />
+parents:&nbsp; <span class="wiki-link"><a href="DemoPageFormatting.html">DemoPageFormatting</a></span>, <span class="wiki-link"><a href="DemoPageFormTemplates.html">DemoPageFormTemplates</a></span>    </body>
+</html>

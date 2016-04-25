@@ -1,0 +1,80 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <title>DemoSignalTodoTags</title>
+        <link type="text/css" rel="stylesheet" href="appbase.css">
+    </head>
+    <body>
+<span class="parent-nodes">parent nodes: <span class="parent-node"><a href="DemoPageSignalling.html">DemoPageSignalling</a></span> | <span class="parent-node"><a href="DemoSignalPageNodes.html">DemoSignalPageNodes</a></span></span><br /><br />
+<a name=".h0"></a><h2>Demo Signal Todo Tags</h2>
+Contents:   <div class="page-toc">
+<div class="page-toc-level2"><a href="#.h0">Demo Signal Todo Tags</a></div>
+<div class="page-toc-level3"><a href="#.h62">General</a></div>
+<div class="page-toc-level3"><a href="#.h571">Format</a></div>
+<div class="page-toc-level3"><a href="#.h1854">Structured tags</a></div>
+<div class="page-toc-level3"><a href="#.h2331">Todo node signalling</a></div>
+<div class="page-toc-level3"><a href="#.h2823">Page signalling</a></div>
+<div class="page-toc-level3"><a href="#.h3134">Remarks</a></div>
+<div class="page-toc-level3"><a href="#.h3322">Todo's</a></div>
+<div class="page-toc-level3"><a href="#.h3588">Results</a></div>
+</div>
+<br />
+<a href="javascript:history.go(-1)">Back</a><hr size="1" />
+<a name=".h62"></a><h3>General</h3>
+Todo tags are a type of <span class="wiki-link"><a href="DemoSignalUserTags.html">user tags</a></span> and have roughly the same goal and possibilities. The main difference is, that they don't need square brackets and consist of a limited number of predevined key words. Furthermore they are aimed at adding a descriptive text to the tag. Todo tags do not support global attributes.<br />
+<br />
+As with user tags, todo tags show up as nodes in the views section. A page can have multiple todo tags and a todo tag can be on multiple pages.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h571"></a><h3>Format</h3>
+The general format is: "keyword: free text". The keywords are restricted to the following list:<br />
+<br />
+<table border="2">
+<tr><td>todo </td><td> something that has to be done.</td></tr>
+<tr><td>done </td><td> something that has been done.</td></tr>
+<tr><td>action </td><td> something that needs action.</td></tr>
+<tr><td>track </td><td> something that needs to be tracked.</td></tr>
+<tr><td>issue </td><td> an issue that needs to be solved.</td></tr>
+<tr><td>question&nbsp;&nbsp;&nbsp; </td><td> a question that needs to be answered&amp;nbsp.;&nbsp;&nbsp;</td></tr>
+<tr><td>project </td><td> something that is part of a project.</td></tr>
+</table>
+<br /><br />
+Todo tags can be anywhere on a page and anywhere within a line; they can be on a line of there own or in the middle of a line of text. The tags are case sensitive and have to be written as in the list; Todo: will not result in a tag. The todo text - the text following the tag - ends either with a newline or with a vertical bar "|". The escape character can be used to escape either the tag or the bar.<br />
+<br />
+<b>Examples</b><ul><li /><span class="todo">todo: Demo: write a page on todo tags.</span><li /><span class="todo">done: Demo: written a page on user tags</span><li />Wikidpad is Vista compatible <span class="todo">todo: Demo: check if vista compatible is true </span> and also runs on Linux and Mac.<li /><span class="todo">question: Demo: how is todo exported? </span> possibly already answered in wikidpadhelp.wiki<li />The song is on track: 5 of the Beatles collection cd.<br />
+<br />
+<img src="files/demo/SignalTodoTagsExample1.png" alt="" border="0" /></ul>
+<a href="#">Top</a><hr size="1" />
+<a name=".h1854"></a><h3>Structured tags</h3>
+Like user tags, todo tags support nested subcategories in the form of structured todo keywords. Example:<ul><li /><span class="todo">todo.demo.demo.system.bugs.urgent: Bug in wikidpad "rename link".</span><li /><span class="todo">todo.demo.demo.system.software.update: Update wikidpad to new beta release.</span><br />
+</ul>
+The double ".demo.demo" had to be added, to keep the example away from the demo's actual todo tags in this wiki, that dó have a real meaning.<ul><img src="files/demo/SignalTodoTagsExample2.png" alt="" border="0" /></ul>
+<a href="#">Top</a><hr size="1" />
+<a name=".h2331"></a><h3>Todo node signalling</h3>
+The appearance of a single todo item in the views section can be controled by using the formatting attributes: icon, color and bold in the tag's text. Example:<ul><li /><span class="todo">todo.demo.demo.format.icon: Show the exclamation icon.</span><li /><span class="todo">todo.demo.demo.format.color: Show the text in bold orange.</span></ul>
+For the format of the attributes see: <span class="wiki-link"><a href="DemoSignalPageNodes.html">Signalling page nodes</a></span>.<ul><img src="files/demo/SignalTodoTagsExample3.png" alt="" border="0" /></ul>
+<a href="#">Top</a><hr size="1" />
+<a name=".h2823"></a><h3>Page signalling</h3>
+Todo tags did at one point have global attributes, that allowed to have nodes of pages, that have certain tags or belong to certain tag groups, to stand out and/or be signalled in some way. This facility has been deactivated quite some time ago and will not be reactivated.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h3134"></a><h3>Remarks</h3>
+<ul><li />Formatted todo nodes in views show the formatting attributes in the text; is this meant to be?<li />Global page signalling of todo items does not work!<br />
+</ul>
+<a href="#">Top</a><hr size="1" />
+<a name=".h3322"></a><h3>Todo's</h3>
+<span class="todo">done.demo.projectdemo.demo3: check out all posibilities</span><br />
+<span class="todo">done.demo.projectdemo.demo3: check with development about global page signalling</span><br />
+<span class="todo">question.demo.development: is it correct that formatting attributes are shown in views / todo nodes?</span><br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h3588"></a><h3>Results</h3>
+<span class="todo">issue.demo.solved:  Global page signalling of todo items does not work!</span><br />
+This is correct; it has been deactivated long time ago, but not removed from the help.wiki<br />
+<br />
+<span class="property">[demo.status.waiting: question]</span><br />
+<a href="#">Top</a><hr size="1" />
+previous: <a href="javascript:history.go(-1)">Back</a><br />
+parents:&nbsp; <span class="wiki-link"><a href="DemoPageSignalling.html">DemoPageSignalling</a></span>, <span class="wiki-link"><a href="DemoSignalPageNodes.html">DemoSignalPageNodes</a></span>    </body>
+</html>

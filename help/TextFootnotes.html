@@ -1,0 +1,56 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <title>TextFootnotes</title>
+        <link type="text/css" rel="stylesheet" href="appbase.css">
+    </head>
+    <body>
+<span class="parent-nodes">parent nodes: <span class="parent-node"><a href="Intro4LinkFunctions.html">Intro4LinkFunctions</a></span> | <span class="parent-node"><a href="TextFormatting.html">TextFormatting</a></span></span><br /><br />
+<a name=".h0"></a><h2>Text Footnotes</h2>
+<div class="page-toc">
+<div class="page-toc-level2"><a href="#.h0">Text Footnotes</a></div>
+<div class="page-toc-level3"><a href="#.h43">General</a></div>
+<div class="page-toc-level4"><a href="#.h1003">Natural look</a></div>
+<div class="page-toc-level3"><a href="#.h2241">Settings</a></div>
+<div class="page-toc-level4"><a href="#.h2254">Options</a></div>
+</div>
+<br />
+<a href="javascript:history.go(-1)">Back</a><hr size="1" />
+<a name=".h43"></a><h3>General</h3>
+Wikidpad supports footnotes; a footnote in this case is an achor that designates the footnote text itself and one or more links on the same page that refer to that anchor. The anchor name and therefore also the referring links are numeric and not alphabetic like the page links are. An example:<ul><hr size="1" />
+This is text.<br />
+This is text with a reference to footnote-1 <a href="#.f1">[1]</a>.<br />
+This is some more text.<br />
+......................<br />
+......................<br />
+<a name=".f1"></a>[1] <i>This  is the text of the footnote 1.</i><hr size="1" />
+</ul>
+The footnote "number" can be any number; it does not have to start - per page - with "1", nor do the numbers of various footnotes have to be sequential. There can be any amount of references to any one specific footnote on a page, but the footnote itself always has to be the last "reference" with that number on the page. Wikidpad will automatically translate the last occurrence of a reference to an anchor an the preceding ones to a link.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h1003"></a><h4>Natural look</h4>
+Footnote references are normally printed as superscript numbers and the footnote texts are printed in italics and a smaller font size. With Wikidpad footnotes nothing is superscript and everything appears in the same font (and) size as the rest of the text. The footnote text could be made italics, using the wikidpad italics tags, but that has a practical problem: Wikidpad does not allow for links or any other formatting inside italics text. And precisely links are things one would want to use in footnotes.<br />
+<br />
+When using external preview, things cán be done to make footnotes look more "natural" by using html tags. And even when using internal preview, it would still look better in html export. Internal preview will not mind, since it will simply ignore the tags as unknown. To see how it works, check out the example below in the editor. See also <span class="wiki-link"><a href="HtmlFormatting.html">Textformatting: Html element</a></span> on the usage of html tags.<ul><hr size="1" />
+This is text.<br />
+This is text with a reference to footnote-2 <small><sup><a href="#.f2">[2]</a></sup></small>.<br />
+This is some more text.<br />
+......................<br />
+......................<br />
+<small><i><a name=".f2"></a>[2]See:<span class="url-link"><a href="http://www.w3schools.com/html/default.asp">http://www.w3schools.com/html/default.asp</a></span> for an explanation of html.</i></small><hr size="1" />
+<br />
+</ul>
+<a href="#">Top</a><hr size="1" />
+<a name=".h2241"></a><h3>Settings</h3>
+<a name=".h2254"></a><h4>Options</h4>
+<ul><b>Wiki settings</b><hr size="1" />
+</ul>
+&bull; <b>Footnotes as wiki words</b><br />
+There are applications possible where there is a need for numeric page links. Under normal circumstances this can't be done, since numeric links are reserved for footnotes. The option "Footnotes as wiki words" allows to use numbers as page links. Setting that to true, dóes however mean, that footnotes can't be used anymore.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+previous: <a href="javascript:history.go(-1)">Back</a><br />
+parents:&nbsp; <span class="wiki-link"><a href="Intro4LinkFunctions.html">Intro4LinkFunctions</a></span>, <span class="wiki-link"><a href="TextFormatting.html">TextFormatting</a></span><br />
+<span class="property">[help.status: done]</span>    </body>
+</html>

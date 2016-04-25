@@ -1,0 +1,70 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <title>SignalTodoTags</title>
+        <link type="text/css" rel="stylesheet" href="appbase.css">
+    </head>
+    <body>
+<span class="parent-nodes">parent nodes: <span class="parent-node"><a href="Intro5Indexing.html">Intro5Indexing</a></span> | <span class="parent-node"><a href="PageSignalling.html">PageSignalling</a></span> | <span class="parent-node"><a href="SignalPageNodes.html">SignalPageNodes</a></span> | <span class="parent-node"><a href="WpAttributes.html">WpAttributes</a></span></span><br /><br />
+<a name=".h0"></a><h2>Signal Todo Tags</h2>
+Contents:   <div class="page-toc">
+<div class="page-toc-level2"><a href="#.h0">Signal Todo Tags</a></div>
+<div class="page-toc-level3"><a href="#.h57">General</a></div>
+<div class="page-toc-level3"><a href="#.h562">Format</a></div>
+<div class="page-toc-level3"><a href="#.h2255">Structured tags</a></div>
+<div class="page-toc-level3"><a href="#.h2575">Todo node signalling</a></div>
+<div class="page-toc-level3"><a href="#.h3299">Page signalling</a></div>
+</div>
+<br />
+<a href="javascript:history.go(-1)">Back</a><hr size="1" />
+<a name=".h57"></a><h3>General</h3>
+Todo tags are a type of <span class="wiki-link"><a href="SignalUserTags.html">user tags</a></span> and have roughly the same goal and possibilities. The main difference is, that they don't need square brackets and consist of a limited number of predevined key words. Furthermore they are aimed at adding a descriptive text to the tag. Todo tags do not support global attributes.<br />
+<br />
+As with user tags, todo tags show up as nodes in the views section. A page can have multiple todo tags and a todo tag can be on multiple pages.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h562"></a><h3>Format</h3>
+The general format is: "keyword: <i>free text</i>". The keywords are restricted to the following list:<br />
+<ul><table border="2">
+<tr><td>todo </td><td> something that has to be done.</td></tr>
+<tr><td>done </td><td> something that has been done.</td></tr>
+<tr><td>action </td><td> something that needs action.</td></tr>
+<tr><td>track </td><td> something that needs to be tracked.</td></tr>
+<tr><td>issue </td><td> an issue that needs to be solved.</td></tr>
+<tr><td>question&nbsp;&nbsp;&nbsp; </td><td> a question that needs to be answered&amp;nbsp.;&nbsp;&nbsp;</td></tr>
+<tr><td>project </td><td> something that is part of a project.</td></tr>
+</table>
+</ul>
+<br />
+Todo tags can be anywhere on a page and anywhere within a line; they can be on a line of there own or in the middle of a line of text. The tags are case sensitive and have to be written as in the list; Todo: will not result in a tag. The todo text - the text following the tag - ends either with a newline or with a vertical bar "|". The escape character can be used to escape either the tag or the bar.<br />
+<br />
+<b>Examples</b><br />
+Todo tags like this:<pre>	* todo: Help: write a page on todo tags.
+	* done: Help: written a page on user tags
+	* Wikidpad is Vista compatible todo: Help: check if vista compatible is true | and also runs on Linux and Mac.
+	* question: Help: how is todo exported? | possibly already answered in wikidpadhelp.wiki
+	* The song is on \track: 5 of the Beatles collection cd.</pre>
+result in:<ul><li /><span class="todo">todo: Help: write a page on todo tags.</span><li /><span class="todo">done: Help: written a page on user tags</span><li />Wikidpad is Vista compatible <span class="todo">todo: Help: check if vista compatible is true </span> and also runs on Linux and Mac.<li /><span class="todo">question: Help: how is todo exported? </span> possibly already answered in wikidpadhelp.wiki<li />The song is on track: 5 of the Beatles collection cd.<br />
+</ul>
+and in the views tree in:<ul><img src="files/SignalTodoTagsExample1.png" alt="" border="0" /></ul>
+<a href="#">Top</a><hr size="1" />
+<a name=".h2255"></a><h3>Structured tags</h3>
+Like user tags, todo tags support nested subcategories in the form of structured todo keywords. Example:<ul><li /><span class="todo">todo.help.system.bugs.urgent: Bug in wikidpad "rename link".</span><li /><span class="todo">todo.help.system.software.update: Update wikidpad to new beta release.</span><br />
+<br />
+<img src="files/SignalTodoTagsExample2.png" alt="" border="0" /></ul>
+<a href="#">Top</a><hr size="1" />
+<a name=".h2575"></a><h3>Todo node signalling</h3>
+The appearance of a single todo item in the views section can be controled by using the formatting attributes: icon, color and bold in the tag's text. Example:<ul><li /><span class="todo">todo.help.format.icon: Show the exclamation icon. [icon:exclamation]</span><li /><span class="todo">todo.help.format.color: Show the text in bold orange. [bold:true][color: coral]</span></ul>
+For the format of the attributes see: <span class="wiki-link"><a href="SignalPageNodes.html">Signalling page nodes</a></span>.<ul><img src="files/SignalTodoTagsExample3.png" alt="" border="0" /></ul>
+As can be seen in the example, the format attributes do not get removed from the text; this behaviour is deliberate. In practice it is therefore best, to put the attributes at the end of the todo text.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h3299"></a><h3>Page signalling</h3>
+Todo tags did at one point have global attributes, that allowed to have nodes of pages, that have certain tags or belong to certain tag groups, to stand out and/or be signalled in some way. This facility has been deactivated quite some time ago and will not be reactivated.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+previous: <a href="javascript:history.go(-1)">Back</a><br />
+parents:&nbsp; <span class="wiki-link"><a href="Intro5Indexing.html">Intro5Indexing</a></span>, <span class="wiki-link"><a href="PageSignalling.html">PageSignalling</a></span>, <span class="wiki-link"><a href="SignalPageNodes.html">SignalPageNodes</a></span>, <span class="wiki-link"><a href="WpAttributes.html">WpAttributes</a></span><br />
+<span class="property">[help.status: done]</span>    </body>
+</html>

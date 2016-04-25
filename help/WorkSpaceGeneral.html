@@ -1,0 +1,124 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <title>WorkSpaceGeneral</title>
+        <link type="text/css" rel="stylesheet" href="appbase.css">
+    </head>
+    <body>
+<span class="parent-nodes">parent nodes: <span class="parent-node"><a href="Intro1StartingAWiki.html">Intro1StartingAWiki</a></span> | <span class="parent-node"><a href="KeyBindings.html">KeyBindings</a></span> | <span class="parent-node"><a href="Plugins.html">Plugins</a></span> | <span class="parent-node"><a href="Scripts.html">Scripts</a></span> | <span class="parent-node"><a href="SignalPageNodes.html">SignalPageNodes</a></span> | <span class="parent-node"><a href="WorkSpace.html">WorkSpace</a></span> | <span class="parent-node"><a href="WpOptionsTimeView.html">WpOptionsTimeView</a></span> | <span class="parent-node"><a href="WpOptionsTree.html">WpOptionsTree</a></span> | <span class="parent-node"><a href="WpOptionsUserInterfaceStructWindow.html">WpOptionsUserInterfaceStructWindow</a></span></span><br /><br />
+<a name=".h0"></a><h2>Work Space General</h2>
+Contents:   <div class="page-toc">
+<div class="page-toc-level2"><a href="#.h0">Work Space General</a></div>
+<div class="page-toc-level3"><a href="#.h59">General</a></div>
+<div class="page-toc-level3"><a href="#.h1078">Additional windows</a></div>
+<div class="page-toc-level3"><a href="#.h1407">Restart WikidPad</a></div>
+<div class="page-toc-level3"><a href="#.h2040">Settings</a></div>
+<div class="page-toc-level4"><a href="#.h2053">Menu</a></div>
+<div class="page-toc-level4"><a href="#.h2106">Options</a></div>
+</div>
+<br />
+<a href="javascript:history.go(-1)">Back</a><hr size="1" />
+<a name=".h59"></a><h3>General</h3>
+Below is a screenshot of Wikidpad's default workspace. To the right is the page view, with a number of wiki pages opened in different tabbed pages and to the left is the <span class="wiki-link"><a href="TheTreeView.html">tree view</a></span> or "main tree". Furthermore there are of course the menu bar and the toolbar and at the bottom the status bar, that gives information on the current page in the current tab.<br />
+<ul><img src="files/WorkspaceExample1.png" alt="" border="0" /><br />
+</ul>
+The page view is shared by both the <span class="wiki-link"><a href="TheEditor.html">editor</a></span> and <span class="wiki-link"><a href="ThePreview.html">html preview</a></span>. The page view is the area where all the real work is done, where pages are created and formatted and the result is judged in html preview. The screenshot above shows the page in the editor, the screenshot below shows it in preview. Multiple pages can be worked on at the same time, since Wikidpad supports tabbed pages.<br />
+The main tree forms an active index into the pages; it can be split in two, showing the page tree and the views tree in different sections.<br />
+<ul><img src="files/WorkspaceExample2.png" alt="" border="0" /><br />
+</ul>
+<a href="#">Top</a><hr size="1" />
+<a name=".h1078"></a><h3>Additional windows</h3>
+Wikidpad supports three additional view windows, that each support working with a wiki in their own different way. These windows are:<br />
+<ul><li /><span class="wiki-link"><a href="TheLogWindow.html">The log window</a></span><li /><span class="wiki-link"><a href="TheTimeView.html">The time view window</a></span><li /><span class="wiki-link"><a href="TheStructureView.html">The document structure view window</a></span><br />
+</ul>
+<a href="#">Top</a><hr size="1" />
+<a name="RestartWikidPad"></a><a name=".h1407"></a><h3>Restart WikidPad</h3>
+Especially after changing options that change the layout of the workspace it may be necessary to restart WikidPad. Which options these are, is normally mentioned in the relevant settings sections, but one of them is changing the preview renderer.<br />
+<br />
+It is important to know that this means to close <b>all</b> open WikidPad windows and then starting WikidPad again.<br />
+<br />
+Before doing layout changes you should also close all WikidPad windows except the one in which you do the layout settings. Otherwise the changes in the configuration file might be overwritten again when closing the other open windows.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h2040"></a><h3>Settings</h3>
+<a name=".h2053"></a><h4>Menu</h4>
+<ul><b>View: workspace</b><hr size="1" />
+</ul>
+&bull; <b>Show toolbar: Ctrl-Shift-T</b><br />
+Switches the display of the toolbar on or of.<br />
+<br />
+&bull; <b>Stay on top</b><br />
+Set Wikidpad to be always on top of the other windows, or undo that setting.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h2106"></a><h4>Options</h4>
+<ul><b>Application settings: General</b><hr size="1" />
+</ul>
+&bull; <b>Low resource usage</b><br />
+Try to reduce usage of Windows resources. Only interesting for Windows 9x/ME.<br />
+<br />
+&bull; <b>Single process per user</b><br />
+If you open a new WikidPad instance while another is already running, the new window is handled by the same process as the first one. This option has only an effect after restarting WikidPad. It is off by default.<br />
+<br />
+Advantages:<br />
+<ul><li />You can safely open the same wiki in multiple windows (on the<br />
+same computer and by the same user only!)<li />Less resources (esp. memory) are needed to run multiple windows<br />
+</ul>
+Disadvantages:<br />
+<ul><li />If one window is busy due to a search or database rebuild, all windows do not react.<li />If one window crashes (in fact the process driving it) all windows crash.<li />An IP-socket connection is needed for communication between<br />
+processes. The connection is invisible for other computers on<br />
+a network or the internet, but a personal firewall software<br />
+may alarm you nevertheless. Also, if multiple user use<br />
+WikidPad on the same computer at the same time, all must use<br />
+their own home directory as configuration directory (this is<br />
+the default).<br />
+</ul>
+&bull; <b>App-bound hotkey</b><br />
+Here you can define a hotkey to show or hide WikidPad (they may only work on Windows). Hotkeys work system-wide, not only if WikidPad is active.<br />
+<br />
+In the text field you can enter a hotkey in the same way as the menu shortcuts are. Unlike menu shortcuts, you can also use "win" as modifier (like "alt" or "ctrl"), but the hotkey must have at least one of "ctrl" or "alt" modifiers to work.<br />
+<br />
+The checkbox before the text field allows to temporarily deactivate the hotkey without deleting the field content.<br />
+<br />
+There is also an option to set a second hotkey which is bound to the current wiki instead of the app. See OptionsDialog#<b>Wiki-bound# hotkey</b> below in "Current wiki" options.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<ul><b>Application settings: User interface</b><hr size="1" />
+</ul>
+&bull; <b>Minimize to Tray</b><br />
+Minimized to system tray instead of the normal taskbar.<br />
+<br />
+&bull; <b>Minimize on close button</b><br />
+Pressing the close button on the main frame (the little "X") does not close but minimize WikidPad. In conjunction with "Minimize to Tray" it minmizes to the try area.<br />
+<br />
+If you really want to close, use menu "Wiki"-&gt;"Exit" then or the context menu when right-clicking on the tray icon (if "Minimize to Tray" is active).<br />
+<br />
+&bull; <b>Statusbar time format</b><br />
+Set the time format the statusbar should use to show modification and creation date of the current wiki page. The format can also be set by clicking on the small "..." button which starts the same dialog as used for setting the date format for the editor.<br />
+<br />
+&bull; <b>UI language</b><br />
+Choose the preferred language of the user interface.<br />
+This setting only takes effect after restarting WikidPad.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<ul><b>Application settings: Mouse</b><hr size="1" />
+</ul>
+&bull; <b>Middle button without CTRL</b><br />
+Set the reaction of a middle button click on a wiki word in editor, internal preview, tree or wiki-wide search results if CTRL is not pressed while clicking. You can choose between opening the word in a new tab in foreground, in background or in the same (active) tab.<br />
+<br />
+&bull; <b>Middle button with CTRL</b><br />
+Same as before, but set reaction if CTRL is pressed while clicking the middle button.<br />
+<br />
+&bull; <b>Left double click in preview</b><br />
+When double clicking into preview (not on a link), this can either do nothing, switch the tab to editor or open a new tab with same page, but in editor mode.<br />
+<br />
+&bull; <b>Middle click on tab</b><br />
+This can either do nothing or close the tab.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+previous: <a href="javascript:history.go(-1)">Back</a><br />
+parents:&nbsp; <span class="wiki-link"><a href="Intro1StartingAWiki.html">Intro1StartingAWiki</a></span>, <span class="wiki-link"><a href="KeyBindings.html">KeyBindings</a></span>, <span class="wiki-link"><a href="Plugins.html">Plugins</a></span>, <span class="wiki-link"><a href="Scripts.html">Scripts</a></span>, <span class="wiki-link"><a href="SignalPageNodes.html">SignalPageNodes</a></span>, <span class="wiki-link"><a href="WorkSpace.html">WorkSpace</a></span>, <span class="wiki-link"><a href="WpOptionsTimeView.html">WpOptionsTimeView</a></span>, <span class="wiki-link"><a href="WpOptionsTree.html">WpOptionsTree</a></span>, <span class="wiki-link"><a href="WpOptionsUserInterfaceStructWindow.html">WpOptionsUserInterfaceStructWindow</a></span><br />
+attributes: <span class="property">[tree_position: 1]</span><br />
+<span class="property">[help.status: done]</span>    </body>
+</html>

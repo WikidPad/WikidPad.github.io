@@ -1,0 +1,40 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <title>Using anchors</title>
+        <link type="text/css" rel="stylesheet" href="appbase.css">
+    </head>
+    <body>
+<span class="parent-nodes">parent nodes: <span class="parent-node"><a href="AnchorExample.html">AnchorExample</a></span> | <span class="parent-node"><a href="Intro4LinkFunctions.html">Intro4LinkFunctions</a></span> | <span class="parent-node"><a href="PageLinking.html">PageLinking</a></span></span><br /><br />
+<a name=".h0"></a><h2>Using anchors</h2>
+Contents:   <div class="page-toc">
+<div class="page-toc-level2"><a href="#.h0">Using anchors</a></div>
+<div class="page-toc-level3"><a href="#.h54">General</a></div>
+<div class="page-toc-level3"><a href="#.h858">Anchors on the same page</a></div>
+<div class="page-toc-level3"><a href="#.h1263">Syntax</a></div>
+</div>
+<br />
+<a href="javascript:history.go(-1)">Back</a><hr size="1" />
+<a name=".h54"></a><h3>General</h3>
+Links can not only be created to refer to a specific page, but they can also be expanded, to refer to a specific position within the text of that page. Like this <span class="wiki-link"><a href="AnchorExample.html#item5">item5</a></span> link, that will jump to item 5 of an example text and <span class="wiki-link"><a href="AnchorExample.html#item2">item2</a></span>, that will jump to item&nbsp;2.<br />
+<br />
+The place in the item-text to jump to, is defined with an "anchor" attribute; this attribute has the format: "anchor:anchor-name". It has to be on it's own on an otherwise empty line, in front of the text to jump to.<br />
+<br />
+To have a link refer to an anchor, use the link for the page it is on, followed by an exclamation mark and the name of the anchor, like: wikiword!anchor-name, [link]!anchor-name or [link |title]!anchor-name.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name="samePage"></a>&raquo; <i>anchor:samePage</i><br />
+<a name=".h858"></a><h3>Anchors on the same page</h3>
+Links to anchors do not default to the current page. So "!samePage" will not create a link to the anchor at the beginning of this section. References to anchors only work in connection with a link; even if that is a link tot the current page itself. So in order to create a link to the anchor of this section, the format should be: [Using anchors]!samePage.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h1263"></a><h3>Syntax</h3>
+Anchors are case sensitive; "!Here" is a different anchor from "!here".<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+previous: <a href="javascript:history.go(-1)">Back</a><br />
+parents:&nbsp; <span class="wiki-link"><a href="AnchorExample.html">AnchorExample</a></span>, <span class="wiki-link"><a href="Intro4LinkFunctions.html">Intro4LinkFunctions</a></span>, <span class="wiki-link"><a href="PageLinking.html">PageLinking</a></span><br />
+attributes: <span class="property">[tree_position: 6]</span><br />
+<span class="property">[help.status: done]</span>    </body>
+</html>

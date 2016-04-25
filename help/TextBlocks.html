@@ -1,0 +1,173 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <title>TextBlocks</title>
+        <link type="text/css" rel="stylesheet" href="appbase.css">
+    </head>
+    <body>
+<span class="parent-nodes">parent nodes: <span class="parent-node"><a href="SpellChecking.html">SpellChecking</a></span> | <span class="parent-node"><a href="TheEditor.html">TheEditor</a></span> | <span class="parent-node"><a href="UserFiles.html">UserFiles</a></span> | <span class="parent-node"><a href="WikiFiles.html">WikiFiles</a></span></span><br /><br />
+<a name=".h0"></a><h2>Text Blocks</h2>
+Contents:	<div class="page-toc">
+<div class="page-toc-level2"><a href="#.h0">Text Blocks</a></div>
+<div class="page-toc-level3"><a href="#.h50">General</a></div>
+<div class="page-toc-level4"><a href="#.h434">The func pages</a></div>
+<div class="page-toc-level4"><a href="#.h909">The disk files</a></div>
+<div class="page-toc-level4"><a href="#.h1975">The menu</a></div>
+<div class="page-toc-level3"><a href="#.h2694">Text block format</a></div>
+<div class="page-toc-level4"><a href="#.h2716">General</a></div>
+<div class="page-toc-level4"><a href="#.h3247">Format</a></div>
+<div class="page-toc-level3"><a href="#.h4050">Examples</a></div>
+<div class="page-toc-level4"><a href="#.h4063">General</a></div>
+<div class="page-toc-level4"><a href="#.h4524">Single items</a></div>
+<div class="page-toc-level4"><a href="#.h5146">Submenu's</a></div>
+<div class="page-toc-level4"><a href="#.h5890">Nested submenu's</a></div>
+<div class="page-toc-level3"><a href="#.h6350">Usage</a></div>
+<div class="page-toc-level3"><a href="#.h9051">Settings</a></div>
+</div>
+<br />
+<a href="javascript:history.go(-1)">Back</a><hr size="1" />
+<a name=".h50"></a><h3>General</h3>
+The editor supports "text blocks"; a facility with which you can insert often used texts into a page with the click on a menu option. The menu option in question is "Editor / Text blocks" in the main menu. This menu item in principal is an empty one - but for an example text - but you can fill it with your own options, each representing an often used custom text.<ul><hr size="1" />
+</ul>
+<a name=".h434"></a><h4>The func pages</h4>
+The specifications for these text blocks are located in the "func. pages" of the <span class="wiki-link"><a href="TheTreeView.html">views tree</a></span>. As usual in WikidPad there are two pages:<ul><li />Global text blocks: for text blocks that are to be available in all of your wiki's.<li />Wiki text blocks: for text blocks that are specific to the wiki, they are specified in.</ul>
+When changes are made to one of these pages, the menu is updated after one of them is saved (manually or automatically).<ul><hr size="1" />
+</ul>
+<a name=".h909"></a><h4>The disk files</h4>
+Instead of using the WikidPad editor and changing your text blocks in the func. pages, you can also use an external editor and change the blocks in the disk files, they are kept in. <br />
+<ul><table border="2">
+<tr><td><i>Which</i> </td><td> <i>File name</i> </td><td> <i>Where</i> </td><td> <i>Remark</i></td></tr>
+<tr><td>Global text blocks&nbsp;&nbsp; </td><td> TextBlocks.wiki&nbsp;&nbsp; </td><td> <span class="wiki-link"><a href="UserFiles.html">.WikidPadGlobals</a></span> </td><td>&nbsp;</td></tr>
+<tr><td>Wiki text blocks </td><td> TextBlocks.wiki </td><td> <span class="wiki-link"><a href="WikiFiles.html"> wiki / data</a></span> </td><td> not for <span class="wiki-link"><a href="WikiDatabase.html">compact sqlite</a></span></td></tr>
+</table>
+<br />
+</ul>
+When the compact backend is used for a wiki, the "wiki text blocks" are stored in the database itself, so there is no separate file for te "wiki text blocks" that can be edited. For this type the editing has to be done in the func. pages.<br />
+<br />
+The layout and format for text blocks in the files is the same as that in the func. pages. After you have modified and saved one of the files, while WikidPad is executing, you can update the text blocks menu by selecting "Reread text blocks" at the bottom of the "Text blocks" (sub)menu. This reads the "TextBlocks.wiki" files again and rebuilds the menu.<ul><hr size="1" />
+</ul>
+<a name=".h1975"></a><h4>The menu</h4>
+The text blocks (sub)menu consists of three sections separated by a horizontal line; from top to bottom these are:<ol><li />Wiki text block items<li />Global text block items<li />Wikidpad menu items</ol>
+In order to prevent the menu from becomming too long to be of any practical use, text block items can be grouped into submenu's. These can be single level or multi level submenu's.<br />
+For each menu item you can decide whether it should show the text block itself ór a descriptive name, that you can give it. The menu items and submenu's are shown in the same order as they are specified in the files/func. pages.<br />
+<ul><img src="files/TextBlocksExample1.png" alt="" border="0" /><br />
+<small><i>Example text blocks menu</i></small><br />
+</ul>
+<a href="#">Top</a><hr size="1" />
+<a name=".h2694"></a><h3>Text block format</h3>
+<a name=".h2716"></a><h4>General</h4>
+Each line on the page represents one text block entry in the menu and their following order on the page specifies their order in the menu. Indentation of a line controls whether a text block is in the "Text blocks" menu itself or in a submenu; the level of indentation defines the level of a submenu. Each entry consists of a combination of title, flags and/or content. The title is shown in the menu, the content is inserted or appended when choosing the menu item, the flag controls further insertion details.<ul><hr size="1" />
+</ul>
+<a name=".h3247"></a><h4>Format</h4>
+The general format for a text block item is:<ul><i>name</i>;<i>flag</i>=<i>value</i></ul>
+Where the equals sign "=" is obligatory and:<ul><li /><i>name</i> = the name with which the item will be shown in the menu<br />
+<ul><li />optional<li />this can either be the name of a text block or the name of a submenu<li />if ommitted, the name is derived from the text block value<br />
+</ul>
+<li /><i>flag</i> = a parameter that controls the insertion of the text<br />
+<ul><li />optional; currently only the "a" flag is supported<li />a = text is appended to the end of the page<li />not-a = text is inserted at cursor position<br />
+</ul>
+<li /><i>value</i> = the text to be inserted<br />
+<ul><li />optional<li />if not specified, then the item is expected to be submenu name<li />value can contain <span class="wiki-link"><a href="RegEx.html">escape sequences</a></span> like:<br />
+<ul><li />\n to insert a "new line"<li />\t to insert a "tab"<br />
+<br />
+</ul>
+</ul>
+</ul>
+<a href="#">Top</a><hr size="1" />
+<a name=".h4050"></a><h3>Examples</h3>
+<a name=".h4063"></a><h4>General</h4>
+How to use the format to define text blocks is shown using some simple - but not so usefull - examples. For real examples see: "Wiki text blocks" in the <span class="wiki-link"><a href="TheTreeView.html">func. pages</a></span>. The "new wiki", "html" and "xhtml" submenu's in there are actually "global text blocks", but since those can't be destributed with this wiki, they have been added to the "wiki text blocks". You can cut them and paste them back into the global page if you want.<ul><hr size="1" />
+</ul>
+<a name=".h4524"></a><h4>Single items</h4>
+To add a single item to the menu; specify it as either:<pre>=This will be inserted
+This is a name=This will be inserted</pre>
+They both insert "This will be inserted" at the current cursor position in the text; the difference is how they appear in the menu: the first one with the text itself and the second one with "This is a name", like in the screenshot below.<br />
+<ul><img src="files/TextBlocksExample2.png" alt="" border="0" /><br />
+</ul>
+If you don't want the text to be inserted at cursor position, but appended to the end of the page, add the "a" flag; like:<pre>;a=This will be inserted
+This is a name;a=This will be inserted</pre>
+<ul><hr size="1" />
+</ul>
+<a name=".h5146"></a><h4>Submenu's</h4>
+To group a number of single items in a submenu, indent them and preferably prefix them with a submenu name. The format for a submenu name is "name=". Make sure there is no whitespace after the equal sign, otherwise it will be interpreted as a block text item! If a submenu name is not specified, a submenu will still be created and it will be given the identifier of the first indented single item.<br />
+To add a submenu with two items to the example above, specify it like this:<pre>=This will be inserted
+This is a name=This will be inserted
+Also menu=
+	=This will also be inserted
+	This is also a name=This will also be inserted</pre>
+Resulting in a menu as shown in the screenshot below.<br />
+<ul><img src="files/TextBlocksExample3.png" alt="" border="0" /><hr size="1" />
+</ul>
+<a name=".h5890"></a><h4>Nested submenu's</h4>
+To add a nested submenu, indent it one level further, like in this example:<pre>=This will be inserted
+This is a name=This will be inserted
+Also menu=
+	=This will also be inserted
+	This is also a name=This will also be inserted
+	Nested menu=
+		=This will be inserted to
+		This is yet another name=This will be inserted to</pre>
+That will result in a menu like in the screenshot below.<br />
+<ul><img src="files/TextBlocksExample4.png" alt="" border="0" /><br />
+</ul>
+<a href="#">Top</a><hr size="1" />
+<a name=".h6350"></a><h3>Usage</h3>
+Text blocks can be used for words or phrases that are used often, but they are even more usefull for inserting large chunks of page text, with a standard layout in those cases where <span class="wiki-link"><a href="PagePageTemplates.html">templates</a></span> are not really applicable. Like those in the "Text blocks" / "help", "intro" and "new wiki" submenu's.<br />
+<br />
+They are also quite usefull for creating and inserting "templates" for larger html constructs. Like the "Text blocks" / html / "table 2 coll." item, that would insert this:<br />
+<pre>&lt;table&gt;
+&lt;tr&gt;&lt;td&gt;cell1.1&lt;/td&gt;&lt;td&gt;cell1.2&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;cell2.1&lt;/td&gt;&lt;td&gt;cell2.2&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;cell3.1&lt;/td&gt;&lt;td&gt;cell3.2&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+[paragraph_mode: true]</pre>
+That you can then copy, paste and change until it is what you need the table for. And it would also remember you to not forget to set the paragraph mode for the page to "true". For an example of what such a table looks like in WikidPad, see the "Tables" example in: <span class="wiki-link"><a href="HtmlInternal.html">HtmlInternal</a></span>.<br />
+<br />
+An additional use is as an easy reminder for codes you often use, but that are not quite easy to remember, like html entity and color codes. You could create a list of them like in the example below:<pre>entities=
+	bullet=&amp;bull;
+	nb space=&amp;nbsp;
+	angle quot. left= &amp;laquo;
+	angle quot. right= &amp;raquo;
+	euro=&amp;euro;
+	copyright=&amp;copy;
+	square root=&amp;radic;
+
+html colors=
+	Cornsilk=#FFF8DC
+	Coral=#FF7F50
+	Dark Orchid=#9932CC
+	ForestGreen=#228B22
+	Gold=#FFD700
+	Orange=#FFA500
+	YellowGreen=#9ACD32
+
+Python colors=
+	Coral=#FF7F00
+	Dark Orchid=#9932CC
+	Forest Green=#238E23
+	Gold=#CC7F32
+	Orange=#CC3232
+	Yellow Green=#99CC32</pre>
+That would create Textblock submenu's like in the screenshot below.<br />
+<ul><img src="files/TextBlocksExample5.png" alt="" border="0" /><br />
+</ul>
+From then on all you have to do, is to select the item in the menu and the code will be inserted into your page text or <span class="wiki-link"><a href="PageViewAttributes.html">html attribute</a></span>.<br />
+<br />
+The example uses twó lists of color codes: the formal html codes and a list of Python codes. As can be seen from the lists, the python codes deviate from the standard <span class="url-link"><a href="http://www.w3schools.com/tags/ref_colornames.asp">html specifications</a></span> and sometimes quite a bit to. Look at the image below, where the left hand side shows the html color "Gold" and the right hand side its python counterpart.<ul><img src="files/ColorsExample1.png" alt="" border="0" /></ul>
+WikidPad uses a python library for screenhandling and sortlike stuff, so it's colorscheme is the deviant python one. Depending on what you need done where, you might need the one or the other color list. Ánd a good "screen color picker" to find out what the real hex color code is for the python colors WikidPad uses. The freeware program <span class="url-link"><a href="http://www.iconico.com/colorpic/">ColorPic</a></span> might be a good choice.<br />
+<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h9051"></a><h3>Settings</h3>
+<ul><b>Func.pages</b><hr size="1" />
+</ul>
+&bull; <b>Wiki text blocks</b><br />
+<br />
+&bull; <b>Global text blocks</b><br />
+<br />
+<a href="#">Top</a><hr size="1" />
+previous: <a href="javascript:history.go(-1)">Back</a><br />
+parents:&nbsp; <span class="wiki-link"><a href="SpellChecking.html">SpellChecking</a></span>, <span class="wiki-link"><a href="TheEditor.html">TheEditor</a></span>, <span class="wiki-link"><a href="UserFiles.html">UserFiles</a></span>, <span class="wiki-link"><a href="WikiFiles.html">WikiFiles</a></span><br />
+<span class="property">[help.status: done]</span>    </body>
+</html>

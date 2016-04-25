@@ -1,0 +1,46 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <title>ConfigurationFiles</title>
+        <link type="text/css" rel="stylesheet" href="appbase.css">
+    </head>
+    <body>
+<span class="parent-nodes">parent nodes: <span class="parent-node"><a href="CommandLineSupport.html">CommandLineSupport</a></span> | <span class="parent-node"><a href="HtmlCss.html">HtmlCss</a></span> | <span class="parent-node"><a href="ProgramFiles.html">ProgramFiles</a></span> | <span class="parent-node"><a href="UserFiles.html">UserFiles</a></span> | <span class="parent-node"><a href="WikidPadFiles.html">WikidPadFiles</a></span> | <span class="parent-node"><a href="WikidPadOnUSB.html">WikidPadOnUSB</a></span></span><br /><br />
+<a name=".h0"></a><h2>Configuration Files</h2>
+Contents:   <div class="page-toc">
+<div class="page-toc-level2"><a href="#.h0">Configuration Files</a></div>
+<div class="page-toc-level3"><a href="#.h60">General</a></div>
+<div class="page-toc-level3"><a href="#.h570">Startup</a></div>
+<div class="page-toc-level3"><a href="#.h1320">Where is it</a></div>
+</div>
+<br />
+<a href="javascript:history.go(-1)">Back</a><hr size="1" />
+<a name=".h60"></a><h3>General</h3>
+Presently there is only one application configuration file: it's name is "WikidPad.config" and it's default location is in the WikidPad directory in the user profile. On windows that would be someplace like:<ul><li />C:\Documents and Settings\ <i>user name</i> \Application Data\WikidPad<br />
+<br />
+<img src="files/UserConfigExample1.png" alt="" border="0" /> <img src="files/UserConfigExample2.png" alt="" border="0" /><br />
+</ul>
+It is however also possible, to move it to the WikidPad program directory; this to suport running WikidPad from a <span class="wiki-link"><a href="WikidPadOnUSB.html">USB device</a></span>.<br />
+<br />
+<a name=".h570"></a><h3>Startup</h3>
+On startup WikidPad searches for "WikidPad.config" in the following locations and in the order specified:<br />
+<ol><li />The WikidPad program directory<br />
+<ul><li />if found there, this becomes the configuration directory.<br />
+</ul>
+<li />The "environment variables" are searched for the variable "home"<br />
+<ul><li />if found, it's value is used for the configuration directory.<li />on Windows, open a console (= Dos-Box) and type the command "set" to list all environment variables.<br />
+</ul>
+<li />The operating system is asked for the "user profile" directory<br />
+<ul><li />if received, the subdirectory "WikidPad" in the profile becomes the configuration directory.<li />if it does not exist, a new directory is created and initialised.<li />this is mainly intended for windows operating systems.<br />
+<br />
+</ul>
+</ol>
+<a name=".h1320"></a><h3>Where is it</h3>
+You can find out where the configuration directory is, by starting WikidPad and selecting "Help / About" in the main menu. This will bring up the "About" dialog. In it, the configuration directory in use is specified at the bottom of the text, together with the <span class="wiki-link"><a href="WikiDatabase.html">database type</a></span> of the current wiki.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+previous: <a href="javascript:history.go(-1)">Back</a><br />
+parents:&nbsp; <span class="wiki-link"><a href="CommandLineSupport.html">CommandLineSupport</a></span>, <span class="wiki-link"><a href="HtmlCss.html">HtmlCss</a></span>, <span class="wiki-link"><a href="ProgramFiles.html">ProgramFiles</a></span>, <span class="wiki-link"><a href="UserFiles.html">UserFiles</a></span>, <span class="wiki-link"><a href="WikidPadFiles.html">WikidPadFiles</a></span>, <span class="wiki-link"><a href="WikidPadOnUSB.html">WikidPadOnUSB</a></span><br />
+<span class="property">[help.status: done]</span>    </body>
+</html>

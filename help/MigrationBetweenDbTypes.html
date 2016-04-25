@@ -1,0 +1,40 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <title>MigrationBetweenDbTypes</title>
+        <link type="text/css" rel="stylesheet" href="wikistyle.css">
+    </head>
+    <body>
+<span class="parent-nodes">parent nodes: <span class="parent-node"><a href="WikiDatabase.html">WikiDatabase</a></span></span><br /><br />
+<a name=".h0"></a><h2>Migration Between Db Types</h2>
+<a href="javascript:history.go(-1)">Back</a><hr size="1" />
+<br />
+The following procedure describes how to migrate a wiki from one database type to another.<br />
+<br />
+It is recommended to make a backup before applying it.<br />
+<br />
+<ol><li />Open dialog from menu "Wiki" -&gt; "Export" -&gt; "Other Export..."<li />Set in dialog:<br />
+<br />
+What to export: Whole wiki<br />
+Export to: Multipage text<br />
+Compatible filenames: (Doesn't matter)<br />
+Format version: 1<br />
+Write wiki func. page: Check<br />
+Write saved searches: Check<br />
+Destination file: (Choose a non existing filename in an existing directory)<br />
+<li />Hit OK<li />Create a new wiki with same name and the desired new database type<li />Delete "WikiSettings" page in the new wiki<li />Open dialog from menu "Wiki" -&gt; "Import..."<li />Set in dialog:<br />
+<br />
+Import format: Multipage text<br />
+Source file: (Same path you gave as destination file above)<br />
+<li />Hit OK<li />Use menu "Wiki" -&gt; "Rebuild Wiki"<br />
+<br />
+</ol>
+Now you can close the new wiki, delete or move away the old one and move the new one at its place.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+previous: <a href="javascript:history.go(-1)">Back</a><br />
+parents:&nbsp; <span class="wiki-link"><a href="WikiDatabase.html">WikiDatabase</a></span><br />
+attributes: <span class="property">[camelCaseWordsEnabled: false]</span><br />
+<span class="property">[help.status: done]</span>    </body>
+</html>

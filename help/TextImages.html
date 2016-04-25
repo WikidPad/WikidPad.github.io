@@ -1,0 +1,154 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <title>TextImages</title>
+        <link type="text/css" rel="stylesheet" href="appbase.css">
+    </head>
+    <body>
+<span class="parent-nodes">parent nodes: <span class="parent-node"><a href="LinksFiles.html">LinksFiles</a></span> | <span class="parent-node"><a href="LinksUrl.html">LinksUrl</a></span> | <span class="parent-node"><a href="LinksWebsites.html">LinksWebsites</a></span> | <span class="parent-node"><a href="LinksWikis.html">LinksWikis</a></span> | <span class="parent-node"><a href="TextFormatting.html">TextFormatting</a></span> | <span class="parent-node"><a href="UrlLinking.html">UrlLinking</a></span></span><br /><br />
+<a name=".h0"></a><h2>Text Images</h2>
+Contents:<div class="page-toc">
+<div class="page-toc-level2"><a href="#.h0">Text Images</a></div>
+<div class="page-toc-level3"><a href="#.h49">General</a></div>
+<div class="page-toc-level3"><a href="#.h491">Sizing</a></div>
+<div class="page-toc-level4"><a href="#.h676">Absolute size (in pixels)</a></div>
+<div class="page-toc-level4"><a href="#.h880">Relative to surrounding page area</a></div>
+<div class="page-toc-level4"><a href="#.h1046">Relative to image</a></div>
+<div class="page-toc-level3"><a href="#.h1250">Alignment</a></div>
+<div class="page-toc-level4"><a href="#.h1597">Default</a></div>
+<div class="page-toc-level4"><a href="#.h1734">Vertical</a></div>
+<div class="page-toc-level4"><a href="#.h1940">Horizontal</a></div>
+<div class="page-toc-level3"><a href="#.h2331">Combined alignment and size</a></div>
+<div class="page-toc-level4"><a href="#.h2363">Vertical</a></div>
+<div class="page-toc-level4"><a href="#.h2616">Horizontal</a></div>
+<div class="page-toc-level3"><a href="#.h3042">Titles</a></div>
+<div class="page-toc-level4"><a href="#.h3053">Text</a></div>
+<div class="page-toc-level4"><a href="#.h3189">Images    </a></div>
+<div class="page-toc-level3"><a href="#.h3751">Files</a></div>
+<div class="page-toc-level4"><a href="#.h3761">Relative paths</a></div>
+<div class="page-toc-level4"><a href="#.h3819">File store</a></div>
+<div class="page-toc-level3"><a href="#.h3881">Remarks</a></div>
+</div>
+<br />
+<a href="javascript:history.go(-1)">Back</a><hr size="1" />
+<a name=".h49"></a><h3>General</h3>
+You can add links to images to your pages and have them shown in preview. You do this with a URL of the type file-url. These files can be of type: ".jpg", ".gif", ".png" and ".bmp". To insert image files as línks, see <span class="wiki-link"><a href="LinksFiles.html">Files</a></span>.<br />
+<br />
+Example:<br />
+&bull; An image as an image rel://files/library64.png&gt;at Original size (64x64) results in:<ul>An image as an image <img src="files/library64.png" alt="" border="0" align="top" /> Original size (64x64)<br />
+</ul>
+<a href="#">Top</a><hr size="1" />
+<a name=".h491"></a><h3>Sizing</h3>
+Images can be resized but depending on the browser, the quality of the results can be questionable. It is better to resize the images beforehand in a good graphics program.<br />
+<br />
+<a name=".h676"></a><h4>Absolute size (in pixels)</h4>
+Half size (32x32) <img src="files/library64.png" alt="" border="0" width="32" height="32" /><br />
+<br />
+Streched size (64x32) <img src="files/library64.png" alt="" border="0" width="64" height="32" /><br />
+<br />
+Enlarged size (80x80) <img src="files/library64.png" alt="" border="0" width="80" height="80" /><br />
+<ul><hr size="1" />
+</ul>
+<a name=".h880"></a><h4>Relative to surrounding page area</h4>
+Tenth size (10%x10%) <img src="files/library64.png" alt="" border="0" /><br />
+<br />
+Streched size (20%x10%) <img src="files/library64.png" alt="" border="0" width="20%" height="10%" /><br />
+<ul><hr size="1" />
+</ul>
+<a name=".h1046"></a><h4>Relative to image</h4>
+Half size (50%) <img src="files/library64.png" alt="" border="0" width="32" height="32" /><br />
+<br />
+Tenth size (10%x10%) <img src="files/library64.png" alt="" border="0" width="6" height="6" /><br />
+<br />
+Streched size (20%x10%) <img src="files/library64.png" alt="" border="0" width="12" height="6" /><br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h1250"></a><h3>Alignment</h3>
+<b>Important:</b> Internal preview does nót respect allingment parameters; it ignores them! The results of allignment can only be seen in an external renderer and in exported html. Internal preview alligns "bottom" by default; this makes a page look different when shown in the internal renderer from when shown in an external renderer.<br />
+<br />
+<a name=".h1597"></a><h4>Default</h4>
+The alignment defaults to <img src="files/library48.png" alt="" border="0" /> inline, vertical Bottom (image has white space at the bottom)<br />
+<ul><hr size="1" />
+</ul>
+<a name=".h1734"></a><h4>Vertical</h4>
+This is aligned <img src="files/library48.png" alt="" border="0" align="top" /> vertical Top<br />
+<br />
+This is aligned <img src="files/library48.png" alt="" border="0" align="middle" /> vertical Middle<br />
+<br />
+This is aligned <img src="files/library48.png" alt="" border="0" align="bottom" /> vertical Bottom<br />
+<ul><hr size="1" />
+</ul>
+<a name=".h1940"></a><h4>Horizontal</h4>
+<img src="files/library48.png" alt="" border="0" align="right" /> This is aligned horizontal Right<br />
+If there is text to the left of the link, the image drops a line in html<br />
+Moving any following text below the image, takes empty lines or &lt;br /&gt; tags<br />
+<br />
+<img src="files/library48.png" alt="" border="0" align="left" /> This is aligned horizontal Left<br />
+If there is text to the left of the link, the image drops a line in html<br /><br /><br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h2331"></a><h3>Combined alignment and size</h3>
+<a name=".h2363"></a><h4>Vertical</h4>
+This is aligned <img src="files/library48.png" alt="" border="0" width="36" height="36" align="top" /> vertical Top; size 75%<br />
+<br />
+This is aligned <img src="files/library48.png" alt="" border="0" width="60" height="60" align="middle" /> vertical Middle; size 125%<br />
+<br />
+This is aligned <img src="files/library48.png" alt="" border="0" width="36" height="36" align="bottom" /> vertical Bottom; size 75%<br />
+<ul><hr size="1" />
+</ul>
+<a name=".h2616"></a><h4>Horizontal</h4>
+<img src="files/library48.png" alt="" border="0" width="72" height="72" align="right" /> This is aligned horizontal Right; size 150%<br />
+If there is text to the left of the link, the image drops a line in html<br />
+Moving any following text below the image, takes empty lines or &lt;br /&gt; tags<br />
+<br />
+<img src="files/library48.png" alt="" border="0" width="60" height="60" align="left" /> This is aligned horizontal Left; size 125%<br />
+If there is text to the left of the link, the image drops a line in html<br /><br /><br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h3042"></a><h3>Titles</h3>
+<a name=".h3053"></a><h4>Text</h4>
+Like with file and URL links, you can add a title to the image "link". Nothing is however done with this title. <a href="#.f1">[1]</a><br />
+<ul><hr size="1" />
+</ul>
+<a name=".h3189"></a><h4>Images    </h4>
+It is possible to add an image as a title to the image; meaning that wikidpad does not complain about it. Nothing is however done with that image; it is not shown in preview, neither is it exported to html.<br />
+<br />
+Images cán however with good reasons be used as "titles" for the other link types, like: <span class="wiki-link"><a href="LinksWebsites.html">Websites</a></span>, <span class="wiki-link"><a href="LinksFiles.html">Files</a></span> and <span class="wiki-link"><a href="LinksWikis.html">Wiki's</a></span>. See also: <span class="wiki-link"><a href="LinksUrl.html">Url links</a></span>, <br />
+<br />
+<a href="#">Top</a><br />
+<a name=".f1"></a>[1] <i>In an upcoming version of WikidPad the title text will be used as the image's "alt" text (&lt;img src="url" alt="title" /&gt;)</i><hr size="1" />
+<a name=".h3751"></a><h3>Files</h3>
+<a name=".h3761"></a><h4>Relative paths</h4>
+In Wikidpad relative paths can't be used, the way they can in regular html. The way to do it in Wikidpad, is to use the "rel" scheme. This scheme has the format: "rel://" (without the backslash!) and is during preview replaced with the path to the folder of the active wiki. Html export turns it into a correct relative path reference. The rel scheme can be used both for file references and image references.<br />
+<br />
+The rel reference follows the rules for the html relative path specification; this means that:<br />
+<ul><table border="2">
+<tr><td>rel://filename.ext </td><td>refers to a file in the folder of the current wiki</td></tr>
+<tr><td>rel://files/filename.ext </td><td>refers to a file in the "files" subfolder of the current wiki folder.</td></tr>
+<tr><td>rel://../filename.ext </td><td>refers to a file in the folder above the current wiki folder in the file hiërarchie</td></tr>
+</table>
+<br />
+</ul>
+In a wiki that has been exported to html, the "home" or "root" folder is not the current wiki folder, but the export folder. As of version 19beta 17 wikidpad copies all files with relatives path's over to the export folder, with the correct folder structure.<br />
+<br />
+<b>Remarks</b><ul><li />A relative URL can easily be created, by draging it from Windows Explorer onto the editor, while holding down the shift key. This does however not work for files ending with ".wiki"; the created links for these files use the wiki scheme, that does not allow relative paths.<li />For those who are not realy into html and relative path declarations, a more comprehensive example can be <span class="wiki-link"><a href="FilesRelativePathsExamples.html">found here</a></span>.<li />For more information on URL links see <span class="wiki-link"><a href="LinksUrl.html#Top">Url links</a></span></ul>
+<ul><hr size="1" />
+</ul>
+<a name=".h3819"></a><h4>File store</h4>
+Each wiki can have a "file store", where you can collect all the images, documents and other files, that are related to the wiki in one place. The wiki file store is formed by the "files" folder in the <span class="wiki-link"><a href="WikiFiles.html">wiki's directory</a></span>. Wikidpad offers some special facilities, to help maintain the file store, with respect to relative links and export to html.<br />
+<br />
+Files can of course be copied into the file store by hand; if the "files" folder does not yet exist, you have to create it first. Files can however also be copied, by dragging one or more of them from Windows Explorer onto the editor, while holding down the control key. The files are then copied to the file store and relative links to them are created in the editor. If a file with the same identity already exists in the store, only the link is created and no copying is performed. If a file with the same name, but a different identity already exists, a random sequence of 10 digits is appended to the file name, in order to make it unique. If the "files" folder does not yet exist, Wikidpad will create it.<br />
+<br />
+For more information on how Wikidpad compares files and how you that can be influenced, see <span class="wiki-link"><a href="FilesWikiFileStore.html#CopyControl">Wiki File Store: Copy control</a></span><br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h3881"></a><h3>Remarks</h3>
+<ul><li />Inserting images is restricted to the formats: ".jpg", ".gif", ".png" and ".bmp".<li />To insert an image, that does not have one of the default extentions, add the "i" attribute to the link.<br />
+Example: "rel://files/smile.smiley&gt;i" <img src="files/smile.smiley" alt="" border="0" /><li />To use more then 1 attribute for an image, seperate them by a semicolon (" &gt;i;at;r75% ").<li />Sizes are specified as Width x Hight.<li />There is no equivalent for align: horizontal Center for the simple reason, that it is not supported by html.<li />Horizontal and vertical allignment can not be combined; html does not support this either. For horizontal alignment the "float" atribute is used; this alligns "Top" by default.<li />The alignment settings are <b>not</b> respected by the <b>internal preview</b> renderer!<li />The internal preview renderer alligns <b>Bottom</b> by default.<li />The difference in alignment makes a page look quite different when shown in the internal renderer, then when shown in an external renderer or exported html.<br />
+</ul>
+<a href="#">Top</a><hr size="1" />
+previous: <a href="javascript:history.go(-1)">Back</a><br />
+parents:&nbsp; <span class="wiki-link"><a href="LinksFiles.html">LinksFiles</a></span>, <span class="wiki-link"><a href="LinksUrl.html">LinksUrl</a></span>, <span class="wiki-link"><a href="LinksWebsites.html">LinksWebsites</a></span>, <span class="wiki-link"><a href="LinksWikis.html">LinksWikis</a></span>, <span class="wiki-link"><a href="TextFormatting.html">TextFormatting</a></span>, <span class="wiki-link"><a href="UrlLinking.html">UrlLinking</a></span><br />
+inserts:&nbsp;&nbsp; <span class="wiki-link"><a href="FilesRelativePathsIp.html">FilesRelativePathsIp</a></span>; <span class="wiki-link"><a href="FilesWikiFileStoreIp.html">FilesWikiFileStoreIp</a></span><br />
+<span class="property">[help.status: done]</span>    </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <title>WikiSyntax</title>
+        <link type="text/css" rel="stylesheet" href="appbase.css">
+    </head>
+    <body>
+<span class="parent-nodes">parent nodes: <span class="parent-node"><a href="SpellChecking.html">SpellChecking</a></span> | <span class="parent-node"><a href="WikidPadAdvanced.html">WikidPadAdvanced</a></span></span><br /><br />
+<a name=".h0"></a><h2>Wiki Syntax</h2>
+<div class="page-toc">
+<div class="page-toc-level2"><a href="#.h0">Wiki Syntax</a></div>
+<div class="page-toc-level3"><a href="#.h40">General</a></div>
+<div class="page-toc-level3"><a href="#.h1026">Special rule!</a></div>
+</div>
+<br />
+<a href="javascript:history.go(-1)">Back</a><hr size="1" />
+<a name=".h40"></a><h3>General</h3>
+The WikidPad syntax is based on a set of <span class="wiki-link"><a href="RegEx.html">regular expressions</a></span>. The syntax can be completely or partly customized by creating a custom "wikisyntax.py" file. To do so, copy the existing file: <ul><li /><span class="wiki-link"><a href="ProgramFiles.html">wikidpad / extensions / WikiSyntax.py</a></span> to <li /><span class="wiki-link"><a href="ProgramFiles.html">wikidpad / user_extensions / WikiSyntax.py</a></span>.</ul>
+Create the directory if it doesn't exist. Then edit the new wikisyntax.py with a standard text editor to override the default syntax specification. This file will not be touched when upgrading wikidPad.<br />
+<br />
+In principle you should remove all the syntax entries from the new file, that should keep their default functionality and only maintain the entries that you want changed and possible new ones you create. On startup WikidPad will read both files in the order:<ol><li />extensions / wikisyntax.py<li />user_extensions / wikisyntax.py</ol>
+and override any entries in extensions/wikisyntax.py with those found in user_extensions/wikisyntax.py.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h1026"></a><h3>Special rule!</h3>
+For the creation of a custom "wikisyntax.py" a special rule exists: syntax definitions that use a definition that is overwritten in user_extensions/wikisyntax.py must be overwritten as well or at least be copied to that file as they are. The reason for this is, that otherwise the "using" definition will use the old definition in extensions/wikisyntax.py instead of the new one in user_extensions/wikisyntax.py.<br />
+<br />
+<b>Example:</b><br />
+If "UrlRE" is overwritten, then "TitledUrlRE" must be included in user_extensions/wikisyntax.py as well (changed or unchanged) because in its definition:<br />
+<pre>TitledUrlRE =  re.compile(BracketStartPAT +
+    ur"(?P&lt;titledurlUrl&gt;" + UrlRE.pattern + ur")"
+    ur"(?:(?P&lt;titledurlDelim&gt;[ \t]*" + TitleWikiWordDelimiterPAT + ur")"
+    ur"(?P&lt;titledurlTitle&gt;"+PlainCharacterPAT+ur"+?))?" + BracketEndPAT,
+    re.DOTALL | re.UNICODE | re.MULTILINE)</pre>
+"TitledUrlRE" uses "UrlRE" (as "UrlRE.pattern"). Otherwise "TitledUrlRE" would use the default definition of "UrlRE" in extensions/wikisyntax.py instead of the new one in user_extensions/wikisyntax.py.<br />
+<hr size="1" />
+previous: <a href="javascript:history.go(-1)">Back</a><br />
+parents:&nbsp; <span class="wiki-link"><a href="SpellChecking.html">SpellChecking</a></span>, <span class="wiki-link"><a href="WikidPadAdvanced.html">WikidPadAdvanced</a></span><br />
+attributes: <span class="property">[camelCaseWordsEnabled: false]</span><br />
+<span class="property">[help.status: done]</span>    </body>
+</html>

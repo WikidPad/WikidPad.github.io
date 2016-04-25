@@ -1,0 +1,119 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <title>TextInsertionsTextFormatting</title>
+        <link type="text/css" rel="stylesheet" href="appbase.css">
+    </head>
+    <body>
+<span class="parent-nodes">parent nodes: <span class="parent-node"><a href="TextInsertions.html">TextInsertions</a></span> | <span class="parent-node"><a href="TextTables.html">TextTables</a></span></span><br /><br />
+<a name=".h0"></a><h2>Text Insertions Text Formatting</h2>
+Contents:   <div class="page-toc">
+<div class="page-toc-level2"><a href="#.h0">Text Insertions Text Formatting</a></div>
+<div class="page-toc-level3"><a href="#.h72">General</a></div>
+<div class="page-toc-level3"><a href="#.h466">Unordered lists</a></div>
+<div class="page-toc-level3"><a href="#.h896">Ordered lists</a></div>
+<div class="page-toc-level3"><a href="#.h1330">Footnotes</a></div>
+<div class="page-toc-level3"><a href="#.h1431">Tables</a></div>
+<div class="page-toc-level3"><a href="#.h1579">Remarks</a></div>
+</div>
+<br />
+<a href="javascript:history.go(-1)">Back</a><hr size="1" />
+<a name=".h72"></a><h3>General</h3>
+&bull; The plain insertion of a page with font style tags<ul>- This is an <i>inserted</i> piece of text<br />
+to see what the <b>influence</b> of text<br />
+formatting tags is on an inserted page<br />
+</ul>
+&bull; The plain insertion of a page with a bulleted list<ul><ul><li />- inserted ul bullet 1<br />
+<ul><li />- inserted ul bullet 1.a<br />
+</ul>
+<li />- inserted ul bullet 2<li />- inserted ul bullet 3</ul>
+<br />
+</ul>
+&bull; The plain insertion of a page with a numbered list<ul><ol><li />- inserted ol bullet 1<br />
+<ol><li />- inserted ol bullet 1.1<br />
+</ol>
+<li />- inserted ol bullet 2<li />- inserted ol bullet 3</ol>
+<br />
+</ul>
+&bull; The plain insertion of a page with a table<ul><table border="2">
+<tr><td>This</td><td> is a</td><td> table</td></tr>
+<tr><td>with two</td><td> rows and</td><td> three columns </td></tr>
+</table>
+<br />
+</ul>
+<a href="#">Top</a><hr size="1" />
+<a name=".h466"></a><h3>Unordered lists</h3>
+The list declaration:<ul>    * This<br />
+    * [:page:TextInsertionPlainTextIp]<br />
+    * is<br />
+    * [:page:TextInsertionListUnorderedIp]<br />
+    * an<br />
+    * [:page:TextInsertionListOrderedIp]<br />
+    * unordered list<hr size="1" />
+</ul>
+The result:<ul><li />This<li />- This is an <i>inserted</i> piece of text<br />
+to see what the <b>influence</b> of text<br />
+formatting tags is on an inserted page<li />is<li /><li />- inserted ul bullet 1<br />
+<ul><li />- inserted ul bullet 1.a<br />
+</ul>
+<li />- inserted ul bullet 2<li />- inserted ul bullet 3<li />an<li /></ul>
+<ol><li />- inserted ol bullet 1<br />
+<ol><li />- inserted ol bullet 1.1<br />
+</ol>
+<li />- inserted ol bullet 2<li />- inserted ol bullet 3</ol>
+<ul><li />unordered list<br />
+</ul>
+<a href="#">Top</a><hr size="1" />
+<a name=".h896"></a><h3>Ordered lists</h3>
+The list declaration:<ul>    1. This<br />
+    2. [:page:TextInsertionPlainTextIp]<br />
+    3.  is<br />
+    [:page:TextInsertionListOrderedIp]<br />
+    4. an<br />
+    5. [:page:TextInsertionListUnorderedIp]<br />
+    5. ordered list<hr size="1" />
+</ul>
+The result:<ol><li />This<li />- This is an <i>inserted</i> piece of text<br />
+to see what the <b>influence</b> of text<br />
+formatting tags is on an inserted page<li /> is<li />- inserted ol bullet 1<br />
+<ol><li />- inserted ol bullet 1.1<br />
+</ol>
+<li />- inserted ol bullet 2<li />- inserted ol bullet 3<li />an<li /></ol>
+<ul><li />- inserted ul bullet 1<br />
+<ul><li />- inserted ul bullet 1.a<br />
+</ul>
+<li />- inserted ul bullet 2<li />- inserted ul bullet 3</ul>
+<ol><li />ordered list<br />
+</ol>
+<a href="#">Top</a><hr size="1" />
+<a name=".h1330"></a><h3>Footnotes</h3>
+<ul>Inserted text with a footnote<br />
+This is a text, that refers to footnote<a href="#.f10">[10]</a><br />
+<hr size="1" />
+<a href="#.f10">[10]</a> <i>This is the footnote of the inserted text itself</i><br />
+</ul>
+<a href="#">Top</a><hr size="1" />
+<a name=".h1431"></a><h3>Tables</h3>
+Table with inserted text:<ul><table border="2">
+<tr><td>    This</td><td> is a</td><td> table</td></tr>
+<tr><td>    with two</td><td> rows and</td><td> - This is an <i>inserted</i> piece of text<br />
+to see what the <b>influence</b> of text<br />
+formatting tags is on an inserted page</td></tr>
+</table>
+<br />
+</ul>
+<a href="#">Top</a><hr size="1" />
+<a name=".h1579"></a><h3>Remarks</h3>
+<ul><li />Within font style tags an insertion is not recognised as such, so you cannot turn a to be inserted text to bold, italic or otherwise from within the inserting page.<li />Lists allow the insertion of a page; whatever is inserted however, counts as an addition to the line the insertion is on. The whole page counts at them most as 1 bullet.<li />If the page contains a bulleted list, that list becomes part of the bulleted list of the inserting page <a href="#.f2">[2]</a>, but only if the lists are of the same type. If not, the inserting list is broken.<li />If the inserted page contains a reference to a footnote, that reference will in preview refer to a footnote of the inserting page, with the same number. If the inserted page has it's own footnote, then that footnote will become a reference to the inserting page's footnote. <a href="#.f3">[3]</a><li />If the inserting page does not have a footnote with the same number, then neither the inserted page's footnote reference, not it's footnote will be recognised as such anymore. <a href="#.f3">[3]</a><li />A table can contain insertions.<br />
+</ul>
+<a href="#">Top</a><br />
+<a name=".f1"></a>[1] <i>According to the specifications, a preformatted block is an escape block, that shows it's content in a monospaces font style.</i><br />
+<a name=".f2"></a>[2] <i>This is not handled correctly and causes lines with empty bullets to appear in the list. This will be corrected in an upcomming version of WikidPad.</i><br />
+<a name=".f3"></a>[3] <i>The incorrect handling of insertions with footnotes will be corrected in an upcomming version of WikidPad.</i><br />
+<a name=".f10"></a>[10] <i>This footnote is to test the insertion with the footnote</i><hr size="1" />
+previous: <a href="javascript:history.go(-1)">Back</a><br />
+parents:&nbsp; <span class="wiki-link"><a href="TextInsertions.html">TextInsertions</a></span>, <span class="wiki-link"><a href="TextTables.html">TextTables</a></span><br />
+inserts:&nbsp;&nbsp; <span class="wiki-link"><a href="TextInsertionPlainTextIp.html">TextInsertionPlainTextIp</a></span>; <span class="wiki-link"><a href="TextInsertionListUnorderedIp.html">TextInsertionListUnorderedIp</a></span>; <span class="wiki-link"><a href="TextInsertionListOrderedIp.html">TextInsertionListOrderedIp</a></span>; <span class="wiki-link"><a href="TextInsertionFootnoteIp.html">TextInsertionFootnoteIp</a></span>; <span class="wiki-link"><a href="TextInsertionTableIp.html">TextInsertionTableIp</a></span><br />
+<span class="property">[help.status: done]</span>    </body>
+</html>

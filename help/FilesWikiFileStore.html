@@ -1,0 +1,97 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <title>FilesWikiFileStore</title>
+        <link type="text/css" rel="stylesheet" href="appbase.css">
+    </head>
+    <body>
+<span class="parent-nodes">parent nodes: <span class="parent-node"><a href="FilesWikiFileStoreIp.html">FilesWikiFileStoreIp</a></span> | <span class="parent-node"><a href="ImagePasting.html">ImagePasting</a></span> | <span class="parent-node"><a href="ItemPublishing.html">ItemPublishing</a></span> | <span class="parent-node"><a href="UrlLinking.html">UrlLinking</a></span> | <span class="parent-node"><a href="WikiFiles.html">WikiFiles</a></span></span><br /><br />
+<a name=".h0"></a><h2>Files Wiki File Store</h2>
+<div class="page-toc">
+<div class="page-toc-level2"><a href="#.h0">Files Wiki File Store</a></div>
+<div class="page-toc-level3"><a href="#.h50">General</a></div>
+<div class="page-toc-level3"><a href="#.h127">Copy control</a></div>
+<div class="page-toc-level3"><a href="#.h3036">Manual control</a></div>
+<div class="page-toc-level3"><a href="#.h3984">HTML export</a></div>
+<div class="page-toc-level3"><a href="#.h5071">Settings</a></div>
+<div class="page-toc-level4"><a href="#.h5084">Options</a></div>
+</div>
+<br />
+<a href="javascript:history.go(-1)">Back</a><hr size="1" />
+<a name=".h50"></a><h3>General</h3>
+Each wiki can have a "file store", where you can collect all the images, documents and other files, that are related to the wiki in one place. The wiki file store is formed by the "files" folder in the <span class="wiki-link"><a href="WikiFiles.html">wiki's directory</a></span>. Wikidpad offers some special facilities, to help maintain the file store, with respect to relative links and export to html.<br />
+<br />
+Files can of course be copied into the file store by hand; if the "files" folder does not yet exist, you have to create it first. Files can however also be copied, by dragging one or more of them from Windows Explorer onto the editor, while holding down the control key. The files are then copied to the file store and relative links to them are created in the editor. If a file with the same identity already exists in the store, only the link is created and no copying is performed. If a file with the same name, but a different identity already exists, a random sequence of 10 digits is appended to the file name, in order to make it unique. If the "files" folder does not yet exist, Wikidpad will create it.<br />
+<br />
+For more information on how Wikidpad compares files and how you that can be influenced, see <span class="wiki-link"><a href="#CopyControl">Wiki File Store: Copy control</a></span><br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name="CopyControl"></a><a name=".h127"></a><h3>Copy control</h3>
+When copying a file to the file store, Wikidpad checks the store for one or more files with the same identity. These do not specifically have to be files with the same name! Files with different names, can still be (copies of) exactly the same image or document. For files to be seen as identical, they must have:<br />
+<ol><li />The same size<li />The same suffix (or extention = the part of the filename from the last dot to the end of the name)<br />
+</ol>
+During identity control, all the files that fullfill these conditions, are put on the shortlist of possibly identical files. The size of the shortlist can be influenced, using the following two options: <a href="#.f1">[1]</a><br />
+<ol><li />Modified date must match <a href="#.f2">[2]</a><br />
+- Only files with the exact same modification timestamp (date ánd time) are accepted for the shortlist. This option speeds up the identity check, but may lead to unnecessary copies of the same file in the store.<li />File name must match<br />
+- Only files with the exact same name are accepted for the shortlist. This option is not extremely useful, but can have it's use.<br />
+</ol>
+Furthermore, the comparison process can be influenced with the option: <a href="#.f1">[1]</a><ol><li />Modified date is enough<br />
+</ol>
+After the shortlist is completed, it is compared against the file to be copied in the following sequence:<br />
+<ol><li />If the list contains a file with the exact same name, this file is condsidered to be the same file.<li />If modified date is enough = true<br />
+<ol><li />If the list contains one (1) file with the exact same modification timestamp, this file is considered to be the same file.<br />
+</ol>
+<ol><li />If the list contains more of those files, then the (first) file with the same content is considered to be the same file&nbsp;<a href="#.f3">[3]</a>.<br />
+</ol>
+<ol><li />If there is no such file or no file has the same content, then the process continues with bullet 4.<br />
+</ol>
+<li />Modified date is enough = false<br />
+<ol><li />If there are files in the list, that have the same modification date, then the (first) file with the same content is considered to be the same file.<br />
+</ol>
+<ol><li />If there is no such file or no file has the same content, then the process continues with bullet 4.<br />
+</ol>
+<li />The (first) file with the same content,  is considered to be the same file.<li />If there is no such file, then there is no file in the store, that is the same.<br />
+</ol>
+<b>Important!</b><ul><li />In (a) certain stage(s) of the decision proces, file are compaired byte by byte with the file-to-be-copied. This may be a lengthy process, depending the options set, the number of files in the shortlist and/or in the store and on their size.<li />During copy control Wikidpad does not respond to any key presses or mouse clicks.<br />
+</ul>
+<a href="#">Top</a><br />
+<a name=".f1"></a>[1] <i>These options are not mutually exclusive!</i><br />
+<a name=".f2"></a>[2] <i>Modification date actually is a timestamp: modification date ánd time.</i><br />
+<a name=".f3"></a>[3] <i>This in fact means that a random file with the same timestamp is accepted as the same file.</i><hr size="1" />
+<a name=".h3036"></a><h3>Manual control</h3>
+Other directories than "files" and "data" can be created in a wiki's directory and files in them can be referenced using relative links, but only the "files" directory is managed by the file store mechanism.<br />
+<br />
+The file store has no special status, as far as the operating system is concerned. Files and folders can be copied, moved and deleted to and from the folder manually, as usual. This should however be avoided at moments, when Wikidpad is performing copy control activities on the file store.<br />
+<br />
+The file store "copy" can't copy or create subdirectories into the file store; you can do that manually. Copy control however will not search these subdirectories for identical files.<br />
+<br />
+Wikidpad never deletes a file in the store; not even when there is no reference to it anymore in any of the pages of the wiki. As far as this type of "housekeeping" is necessary for the file store, it has to be done manually.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h3984"></a><h3>HTML export</h3>
+When exporting pages to html, all the files in the file store, that are referenced in those pages and use a rel scheme for the link (i.e. relative link of relative path) are copied into a "files" subfolder of the export target folder. Doing this, Wikidpad will respect any folderstructure, that might have been created in the "files" folder and that contain files, that are referenced by the exported pages. So a referenced file:<ul><li />rel://files/images/w3schools.png</ul>
+will be copied to:<ul><li />.../htmltarget/files/images/w3schools.png<br />
+</ul>
+Files that are in the file store, but are referenced using absolute links, will not be copied to the target folder's file store. Files that are referenced with relative links, but are in a wiki subfolder different from the file store, are also nót copied to the export target. And of course files that are in folders outside the wiki folder, are not copied either. As far as any of these files is referenced using a relative liks, it's the user's responsibility, to copy these files to their correct target folders.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h5071"></a><h3>Settings</h3>
+<a name=".h5084"></a><h4>Options</h4>
+<ul><b>Wiki settings: File storage</b><hr size="1" />
+</ul>
+&bull; <b>Modif. date must match</b><br />
+Only files with the exact same modification date are accepted for the shortlist. See above.<br />
+<br />
+&bull; <b>File name must match</b><br />
+Only files with the exact same name are accepted for the shortlist. See above.<br />
+<br />
+&bull; <b>Modif. date is enough</b><br />
+If modification timestamp corresponds, file is not checked on contents anymore.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+previous: <a href="javascript:history.go(-1)">Back</a><br />
+parents:&nbsp; <span class="wiki-link"><a href="FilesWikiFileStoreIp.html">FilesWikiFileStoreIp</a></span>, <span class="wiki-link"><a href="ImagePasting.html">ImagePasting</a></span>, <span class="wiki-link"><a href="ItemPublishing.html">ItemPublishing</a></span>, <span class="wiki-link"><a href="UrlLinking.html">UrlLinking</a></span>, <span class="wiki-link"><a href="WikiFiles.html">WikiFiles</a></span><br />
+<span class="property">[help.status: done]</span><br />
+    </body>
+</html>

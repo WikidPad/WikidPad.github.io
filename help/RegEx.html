@@ -1,0 +1,159 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <title>RegEx</title>
+        <link type="text/css" rel="stylesheet" href="appbase.css">
+    </head>
+    <body>
+<span class="parent-nodes">parent nodes: <span class="parent-node"><a href="FastSearch.html">FastSearch</a></span> | <span class="parent-node"><a href="FindReplace.html">FindReplace</a></span> | <span class="parent-node"><a href="FullSearch.html">FullSearch</a></span> | <span class="parent-node"><a href="IncrementalSearch.html">IncrementalSearch</a></span> | <span class="parent-node"><a href="Intro7Searching.html">Intro7Searching</a></span> | <span class="parent-node"><a href="PageListDialog.html">PageListDialog</a></span> | <span class="parent-node"><a href="TextBlocks.html">TextBlocks</a></span> | <span class="parent-node"><a href="WikiSyntax.html">WikiSyntax</a></span></span><br /><br />
+<a name=".h0"></a><h2>Reg Ex</h2>
+Contents:	<div class="page-toc">
+<div class="page-toc-level2"><a href="#.h0">Reg Ex</a></div>
+<div class="page-toc-level3"><a href="#.h45">General</a></div>
+<div class="page-toc-level3"><a href="#.h1044">Simple search</a></div>
+<div class="page-toc-level3"><a href="#.h1658">Metacharacters</a></div>
+<div class="page-toc-level4"><a href="#.h2194">Examples</a></div>
+<div class="page-toc-level4"><a href="#.h5284">Greedy qualifiers</a></div>
+<div class="page-toc-level3"><a href="#.h5876">Extended notation</a></div>
+<div class="page-toc-level3"><a href="#.h6899">Special sequences</a></div>
+<div class="page-toc-level3"><a href="#.h8216">Escape sequences</a></div>
+<div class="page-toc-level4"><a href="#.h8756">Examples</a></div>
+<div class="page-toc-level4"><a href="#.h9257">Find &amp; replace</a></div>
+</div>
+<br />
+<a href="javascript:history.go(-1)">Back</a><hr size="1" />
+<a name=".h45"></a><h3>General</h3>
+<img src="files/python-powered-w-70x28.gif" alt="" border="0" /> WikidPad supports the use of <b>RegEx</b> or <b>RE</b> (=Regular Expressions) as a way to specify search criteria for wiki wide or page specific searches. Different dialects of RE exist; the one that WikidPad uses, is that of the built-in Python regular expressions. For a description of it's syntax see: <span class="url-link"><a href="http://docs.python.org/lib/re-syntax.html">Python: RE syntax</a></span>. For a gentler introduction see: <span class="url-link"><a href="http://docs.python.org/dev/howto/regex.html">Python: RE HowTo</a></span>. It gives good examples on how to use RE, but you will have to read past a few programming instructions.<br />
+A more elaborate description of RE can be found on Wikipedia:  <span class="url-link"><a href="http://en.wikipedia.org/wiki/Regular_expression">"Regular Expression"</a></span>.<br />
+<br />
+<b>Remarks</b><ul><li />In some of the descriptions below, extra backslashes have had to be added, to prevent certain characters/phrases from being interpreted as Wikidpad elements. The text is only completely correct, as it is seen in preview.<br />
+</ul>
+<a href="#">Top</a><hr size="1" />
+<a name=".h1044"></a><h3>Simple search</h3>
+The basic principle is simple; to find the word "circumflex", just type it and hit the "search" button. Regex however defaults to a character search (partial word), not a whole word search. Searching for "wiki" would result in all the words with the characters "wiki" in them, so also wikiwords, wikipedia, linkswikis, etc. Some of Wikidpad's search dialogs however have a checkbox "Whole word" with which the search can be switched from character mode to word mode. <br />
+Regex also defaults to case insensitive search. Check the "case sensitive" checkbox if it has to be otherwise.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h1658"></a><h3>Metacharacters</h3>
+Some characters are "metacharacters" and have a special meaning in RE. For instance specifying "regex*" as the text to search for, would not result in what you might think it would. The metacharacters are:<pre>. ^ $ * + ? { } [ ] \ | ( )</pre>
+To use them as a regular character in a search criterion, prefix them with a backslash "\". So in order to find "regex*", it should be specified as: "regex\*". Metacharacters can be combined in every thinkable way, in order to specify a "meta search".<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h2194"></a><h4>Examples</h4>
+The vertical bar "|" is the "or" operator; to find:<ul><li />"characters/" ór "/phrases", specify: "characters/|/phrases"<hr size="1" />
+</ul>
+The "\b" combination is the "at word boundary" specifier. To find all words that:<ul><li />start with "meta", specify: "\bmeta".<li />end with "flex", specify: "flex\b".<li />are "RE" and nothing else, specify "\bRE\b".</ul>
+The "\B" is it's opposite: "nót at word boundary".<ul><hr size="1" />
+</ul>
+The circumflex accent "^" specifies: "at start of line". To find all lines that:<ul><li />start with "start with", specify: "^start with".<hr size="1" />
+</ul>
+The dollar sign "$" specifies: "at end of line". To find all lines that:<ul><li />end with "lines that:" or with "words that:", specify: "lines that:$|words that:$".<hr size="1" />
+</ul>
+The asterisk "*", plus sign "+" and question mark "?" are repeat specifiers for the preceding character, where:<ul><li />* matches zero or more occurrences: "ca*t" will match "ct", "cat", "caat", "caaat", etc.<li />+ matches one or more occurrences: "ca+t" will match "cat", "caat", "caaat", etc., but not "ct".<li />? matches zero or one  occurrence: "built-?in" will match "builtin" and "built-in", but not "built--in" (or "built in").</ul>
+Examples:<ul><li />"^\+* *Find" will find any line starting with "find", whether it is a heading or not.<li />"^\++ Find" will find any heading starting with "find", independant of the heading level.<li />"page ?link" will find "pagelink" and "page link".<hr size="1" />
+</ul>
+The period "." is the "match any character" specifier. To find:<ul><li />"built in" ánd "built-in", specify: "built.in".<li />"builtin","built in" ánd "built-in", specify: "built.?in".<hr size="1" />
+</ul>
+A pair of curly brackets "{ }" also forms a repeat qualifier; it's fomat is: "{m,n}" where m and n are decimal integers. This qualifier means there must be at least m repetitions, and at most n. To find:<ul><li />headings only of level 4 and 5, specify: "\+{4,5}"</ul>
+The pair can also be used with one integer specified, like: "{3}"; it then specifies the "m" parameter.<ul><hr size="1" />
+</ul>
+A pair of parenthesis "( )" forms a "group" specifier, with which a gróup of characters can be qualified with a metacharacter instead of only one character at a time.<ul><li />text(html)?elements will find "TextElements" and "TextHtmlElements".</ul>
+Groups can be nested; i.e. you can use groups within groups.<ul><hr size="1" />
+</ul>
+A pair of square brackets "[ ]" forms a "character class"; a "choice of characters". Specifying "[1234]" would mean that any one of the digits 1,2,3 or 4 would cause a match. To find: <ul><li />"Ctrl-T" ánd "Ctrl+T", specify "Ctrl[-+]T".</ul>
+Ranges of characters can also be specified using a hyphen "-"; so "[1234]" can also be written as "[1-4]".<br />
+<br />
+Metacharacters lose their special nature inside classes; a asterisk inside a class e.g. "[*_] represents an asterisk and not a repeat specifier. To find:<ul><li />any bold or italics formatted "Remarks", specify: "[*_]Remarks"<br />
+</ul>
+The circumflex accent "^" has a special meaning as the first character of a class, it then <i>complements</i> the classes character set; turning it into an "anything bút" specification. To find:<ul><li />any nót formatted "Remarks", specify:  "[^*_]Remarks".<hr size="1" />
+</ul>
+<a name=".h5284"></a><h4>Greedy qualifiers</h4>
+*?, +?, ??, {m,n}?<br />
+The "*", "+", "?" and "{m,n}" qualifiers are all greedy; they match as much text as possible. This means that matching "(++)*" against "++++" would result in three (3) matches: "<b>++</b>++", "+<b>++</b>+" and "++<b>++</b>"! When this behaviour is not desired, it can be prevented, by adding a question mark "?" áfter the qualifier. This will make it perform the match in a non-greedy or minimal fashion; as few characters as possible will be matched. So using "(++)*?" in the match against "++++" would result only in the match: "<b>++</b>++".<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h5876"></a><h3>Extended notation</h3>
+(?...)<br />
+Is an extension notation and not a group specifier. The first character after the "?" determines what the meaning and further syntax of the construct is. Following are some currently supported extensions. <br />
+<br />
+(?=...)<br />
+Matches if ... matches next. This is called a lookahead assertion. For example:<ul><li />"Page (?=link)" will match "Page " only if it's followed by "link". <br />
+</ul>
+(?!...)<br />
+Matches if ... doesn't match next. This is a negative lookahead assertion. For example:<ul><li />"Page (?!link)" will match "Page " only if it's not followed by "link". <br />
+</ul>
+(?&lt;=...)<br />
+Matches if the current position in the string is preceded by a match for ... that ends at the current position. For example:<ul><li />"Link(?&lt;=Url )" will match "Link" only if it's preceded by "Url ".<li />"(?&lt;=-)w+" looks for a word following a hyphen.<br />
+</ul>
+(?&lt;!...)<br />
+Matches if the current position in the string is not preceded by a match for ... For example:<ul><li />"link(?&lt;!Page )" will match "link" only if it's nót preceded by "Page ".<br />
+</ul>
+<a href="#">Top</a><hr size="1" />
+<a name=".h6899"></a><h3>Special sequences</h3>
+Regex supports a number of special sequences that start with a backslash "\" like "\b" and "\B" mentioned above. The list below gives the default description; there might be differences in behaviour between ascii and unicode and between lokales. For detailed specifications see: <span class="url-link"><a href="http://docs.python.org/lib/re-syntax.html">Python: RE syntax</a></span><br />
+<br />
+\A<br />
+Matches only at the start of the string.<br />
+<br />
+\b<br />
+Matches the empty string, but only at the beginning or end of a word. A word is defined as a sequence of alphanumeric or underscore characters, so the end of a word is indicated by whitespace or a non-alphanumeric, non-underscore character.<br />
+<br />
+\B<br />
+Matches the empty string, but only when it is nót at the beginning or end of a word.<br />
+<br />
+\d<br />
+Matches any decimal digit; this is equivalent to the set [0-9].<br />
+<br />
+\D<br />
+Matches any non-digit character; this is equivalent to the set [^0-9]<br />
+<br />
+\s<br />
+Matches any whitespace character; this is equivalent to the set [ \t\n\r\f\v].<br />
+<br />
+\S<br />
+Matches any non-whitespace character; this is equivalent to the set [^ \t\n\r\f\v]<br />
+<br />
+\w<br />
+Matches any alphanumeric character and the underscore; this is equivalent to the set [a-zA-Z0-9_].<br />
+<br />
+\W<br />
+Matches any non-alphanumeric character; this is equivalent to the set [^a-zA-Z0-9_].<br />
+<br />
+\Z<br />
+Matches only at the end of the string. <br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h8216"></a><h3>Escape sequences</h3>
+Python regex supports the use of escape sequences, to specify special characters in the search pattern, that can't be typed with the keyboard; these sequences are:<pre>\a	ASCII Bell (BEL)	
+\b	ASCII Backspace (BS)	
+\f	ASCII Formfeed (FF)	
+\n	ASCII Linefeed (LF)	
+\r	ASCII Carriage Return (CR)	
+\t	ASCII Horizontal Tab (TAB)	
+\v	ASCII Vertical Tab (VT)
+\xhh	Character with hex value hh
+\\	Backslash (\)</pre>
+Sequences like bel, bs and vt won't be of too much use in Wikidpad, but the others might in certain cases.<ul><hr size="1" />
+</ul>
+<a name=".h8756"></a><h4>Examples</h4>
+&bull; To find a string with a tab like in the next line:<ul>* Find this</ul>
+you could use the pattern: "\t* Find". This will however only work if the whitespace in front of the asterisk really ís a tab and that is only the case, when the setting "tabs to spaces" in the Editor menu was set to "false", when the page text was created.<br />
+<br />
+&bull; To find a string split over two lines, like "line 1 this" in:<br />
+<br />
+this is line 1<br />
+this is line 2<br />
+<br />
+you could use the pattern: "line 1\nthis" <a href="#.f1">[1]</a>.<ul><hr size="1" />
+</ul>
+<a name=".h9257"></a><h4>Find &amp; replace</h4>
+The sequences have special use in <span class="wiki-link"><a href="FindReplace.html">Find &amp; Replace</a></span> when it is used in regex mode. They can then be used as (part of) the replace value. For example: "this is line 2" in the previous example could be changed into "that is line 2", using the replace value: "line 1\nthat" <a href="#.f1">[1]</a>.<br />
+A special use of the sequences can be found in the <span class="wiki-link"><a href="ItemPrinting.html">print dialog</a></span>, where they can be used as part of the "page separator" string.<br />
+<br />
+<a href="#">Top</a><br />
+<a name=".f1"></a>[1] <i>WikidPad does not use the CR/LF pair as a new line indicator, but the single LF character.</i><hr size="1" />
+previous: <a href="javascript:history.go(-1)">Back</a><br />
+parents:&nbsp; <span class="wiki-link"><a href="FastSearch.html">FastSearch</a></span>, <span class="wiki-link"><a href="FindReplace.html">FindReplace</a></span>, <span class="wiki-link"><a href="FullSearch.html">FullSearch</a></span>, <span class="wiki-link"><a href="IncrementalSearch.html">IncrementalSearch</a></span>, <span class="wiki-link"><a href="Intro7Searching.html">Intro7Searching</a></span>, <span class="wiki-link"><a href="PageListDialog.html">PageListDialog</a></span>, <span class="wiki-link"><a href="TextBlocks.html">TextBlocks</a></span>, <span class="wiki-link"><a href="WikiSyntax.html">WikiSyntax</a></span><br />
+<span class="property">[help.status: done]</span>    </body>
+</html>

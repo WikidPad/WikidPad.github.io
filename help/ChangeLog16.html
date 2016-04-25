@@ -1,0 +1,129 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <title>ChangeLog16</title>
+        <link type="text/css" rel="stylesheet" href="appbase.css">
+    </head>
+    <body>
+<span class="parent-nodes">parent nodes: <span class="parent-node"><a href="Releases.html">Releases</a></span></span><br /><br />
+<a name=".h0"></a><h2>Change Log16</h2>
+Contents:   <div class="page-toc">
+<div class="page-toc-level2"><a href="#.h0">Change Log16</a></div>
+<div class="page-toc-level3"><a href="#.h53">1.6 beta 4</a></div>
+<div class="page-toc-level3"><a href="#.h1392">1.6 beta 3</a></div>
+<div class="page-toc-level3"><a href="#.h2928">1.6 beta 2</a></div>
+<div class="page-toc-level3"><a href="#.h3689">1.6 beta 1</a></div>
+</div>
+<br />
+<a href="javascript:history.go(-1)">Back</a><hr size="1" />
+<a name=".h53"></a><h3>1.6 beta 4</h3>
+Feb. 24, 2006 (1.6beta4, repository revision in "mbutscher" branch: 60)<br />
+<pre>Changes:
+    * Commandline support for exporting (parts of) a wiki and
+      deletion of personal configuration (see [CommandLineSupport])
+    * Windows binary installer: Support for deleting config.
+      files on uninstall
+    * Support HTML tags in WikidPad
+
+    * Support for wiki specific text blocks (see [TextBlocks])
+    * Editing of text blocks files from within WikidPad as
+      "functional pages", located under Views in tree
+    * Editor font now changes instantly after saving page
+    * Now at most one script is executed when pressing
+      Ctrl-Number (search order: local page, imported scripts,
+      global imported scripts page)
+
+    * Better handling of property "camelCaseWordsEnabled" during
+      database update/rebuild.
+    * Gadfly database backend: Rebuild does no more loose
+      creation and modification date of a page.
+
+
+Fixed bugs:
+    * Crash on non-ascii characters in path to wiki database
+    * Refresh of text blocks menu didn't work
+    * When word in tree node had no children but got one after
+      update, no '+' icon appeared after refresh.
+    * Problems with wiki-wide search and page search
+    * Jumping to wiki word didn't work if cursor and word were
+      at end of page.</pre>
+<a href="#">Top</a><hr size="1" />
+<a name=".h1392"></a><h3>1.6 beta 3</h3>
+Feb. 09, 2006 (1.6beta3, repository revision in "mbutscher" branch: 57)<br />
+<pre>Changes:
+    * 'global.import_scripts' property introduced (see
+      [InlinePythonEval]) 
+    * Security option to control if scripts should be executed
+      and (global.)import_scripts property should be respected
+      (see [InlinePythonEval]) 
+
+    * 'template' property introduced to use content of one page
+      as template for children of another page. (see
+      [WikiDocumentAttributes]).
+
+    * Hierarchical global presentation deduction: e.g. a property
+      'global.work.color' will be applied to pages containing
+      'work', "work.somewhere", "work.somewhere.else" ...
+      properties, except there is e.g. a
+      'global.work.somewhere.else.color' property. This works for
+      'color', 'icon' and 'bold' properties which control the
+      presentation of the tree nodes (see [WikiDocumentAttributes]).
+
+    * Differential user_extensions: A file in "user_extensions"
+      now only needs to contain the  definitions which are
+      different compared to the file in "extensions"
+
+    * In configuration directory, a directory ".WikidPadGlobals"
+      will be created if not existing
+    * In ".WikidPadGlobals" a file "[TextBlocks].wiki" will be
+      created if not existing. This file describes content of
+      the "Editor"-&gt;"Text blocks" submenu and can be customized
+      (see [TextBlocks]).
+    
+    * Bug in autoNew.py script fixed
+    * Bug with renaming in "compact_sqlite" database fixed</pre>
+<a href="#">Top</a><hr size="1" />
+<a name=".h2928"></a><h3>1.6 beta 2</h3>
+Jan. 25, 2006 (1.6beta2, repository revision in "mbutscher" branch: 55)<br />
+<pre>*Warning*: This version has a new database format. It is converted
+automatically when opening a wiki the first time. Making a backup
+beforehand is therefore recommended!
+
+Changes:
+    * No more brackets around wiki words in the "Open Wiki Word"
+      and all other dialogs
+    * Characters can be escaped with backslash and are then
+      interpreted as normal text (see [TextFormatting])
+    * New dialog to choose which pages to search for, to export
+      or to print (see [PageListDialog], [Printing], [WikiExport],
+      [SearchingTheWiki])
+    * New options to control the auto save timing
+      (see [OptionsDialog])
+
+    * Some bugs fixed</pre>
+<a href="#">Top</a><hr size="1" />
+<a name=".h3689"></a><h3>1.6 beta 1</h3>
+Jan. 13, 2006 (1.6beta1, repository revision in "mbutscher" branch: 53)<br />
+<pre>Changes:
+    * WikidPad and WikidPadCompact merged into one application
+      (therefore the new version number) (see [DatabaseTypes])
+    * In wiki-wide search cycling through found matching occurrences
+      on a page with F3 or clicking on the little blue bar
+    * Basic printing support (see [Printing])
+    * Support for titled wiki words and URLs (e.g
+      [http://www.somewhere.com/aaa/bbb |Somewhere]
+      [ScratchPad |This text is shown in preview and HTML export] )
+      The title of the link is not stored in the XML export!
+
+    * Options to control timing behavior of syntax highlighter (see
+      [OptionsDialog])
+    * Option to set background color of text editor (works only
+      partially)
+
+    * Bug fixed: non camel-case words starting with camel-case word
+      (e.g. [WikiWord with something]) incorrectly recognized in tree</pre>
+<a href="#">Top</a><hr size="1" />
+previous: <a href="javascript:history.go(-1)">Back</a><br />
+parents:&nbsp; <span class="wiki-link"><a href="Releases.html">Releases</a></span>    </body>
+</html>

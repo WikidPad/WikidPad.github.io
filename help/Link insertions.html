@@ -1,0 +1,118 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <title>Link insertions</title>
+        <link type="text/css" rel="stylesheet" href="appbase.css">
+    </head>
+    <body>
+<span class="parent-nodes">parent nodes: <span class="parent-node"><a href="HtmlCss.html">HtmlCss</a></span> | <span class="parent-node"><a href="HtmlInternal.html">HtmlInternal</a></span> | <span class="parent-node"><a href="Intro4LinkFunctions.html">Intro4LinkFunctions</a></span> | <span class="parent-node"><a href="PageLinking.html">PageLinking</a></span> | <span class="parent-node"><a href="TextBasics.html">TextBasics</a></span> | <span class="parent-node"><a href="WpInsertions.html">WpInsertions</a></span></span><br /><br />
+<a name=".h0"></a><h2>Link insertions</h2>
+Contents:   <div class="page-toc">
+<div class="page-toc-level2"><a href="#.h0">Link insertions</a></div>
+<div class="page-toc-level3"><a href="#.h56">General</a></div>
+<div class="page-toc-level3"><a href="#.h678">Format</a></div>
+<div class="page-toc-level3"><a href="#.h1368">rel</a></div>
+<div class="page-toc-level4"><a href="#.h1514">back</a></div>
+<div class="page-toc-level4"><a href="#.h1842">top</a></div>
+<div class="page-toc-level4"><a href="#.h2062">parents</a></div>
+<div class="page-toc-level4"><a href="#.h2448">children</a></div>
+<div class="page-toc-level4"><a href="#.h2995">parentless</a></div>
+<div class="page-toc-level4"><a href="#.h3149">undefined</a></div>
+<div class="page-toc-level3"><a href="#.h3311">saved search</a></div>
+<div class="page-toc-level3"><a href="#.h4077">table of contents</a></div>
+</div>
+<br />
+<a href="javascript:history.go(-1)">Back</a><hr size="1" />
+<a name=".h56"></a><h3>General</h3>
+Wikidpad supports a number of functions, that dynamically add page links to a page in preview and html export. These link functions are generally referred to in Wikidpad as "link insertions" (see also: <span class="wiki-link"><a href="WpInsertions.html">insertions</a></span>). The available functions are:<ul><li /><b>rel</b>: list page links related to a page<br />
+<ul><li />back<li />top<li />parents<li />children<li />parentless <a href="#.f1">[1]</a><li />undefined <a href="#.f1">[1]</a><br />
+</ul>
+<li /><b>savedsearch</b>: lists page links in the result of a saved search specification<li /><b>toc</b>: creates table of contents for the page.<br />
+</ul>
+<a href="#">Top</a><br />
+<a name=".f1"></a>[1] <i>These don't really produce links related to a page, but show all of them</i><hr size="1" />
+<a name=".h678"></a><h3>Format</h3>
+The format of the function is in general that of a Wikidpad attribute; it's syntax is:<ul><li />[:<i>function group</i>: <i>function</i>; options]</ul>
+Wherein the options are optional and must be separated with a semicolon ";". The available options are:<ul><li />aslist<li />collumns <i>number</i><li />existingonly</ul>
+The options "aslist" and "collumn" are only applicable to those functions, that produce a list of multiple page links. They define how the list is to be generated:<ul><li />aslist: as a list of comma+space separated link names<li />columns: as <i>number</i> collumns accross the page</ul>
+If these options are ommitted, the default is: 1 collumn. Existingonly is only applicable to "rel:children"<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h1368"></a><h3>rel</h3>
+This function group originally creates links, that are somehow related to the page it is on; this is not all together true anymore.<ul><hr size="1" />
+</ul>
+<a name=".h1514"></a><h4>back</h4>
+The function [:rel: back] creates a link "Back", that when clicked, activates the Wikidpad "back" function (Alt-left) and moves one page back in history. I.e. it moves back to the page you just came from. Applicable options are: none.<br />
+<br />
+<b>Examples</b><br />
+&bull; See the "Back" links at the top and bottom of this page.<ul><hr size="1" />
+</ul>
+<a name=".h1842"></a><h4>top</h4>
+The function [:rel: top] creates a link "Top", that when clicked, moves the page display to the top of the page. Applicable options are: none.<br />
+<br />
+<b>Examples</b><br />
+&bull; See the various "Top" links on this page.<ul><hr size="1" />
+</ul>
+<a name=".h2062"></a><h4>parents</h4>
+The function [:rel: parents] creates a list of one or more page links of pages that refer to the current page. Applicable options are: aslist and collumns.<br />
+<br />
+<b>Remark</b><br />
+If the page has a link on it, that refers to an anchor within itself, then the name of the page itself also appears in the parents list.<br />
+<br />
+<b>Example</b><br />
+&bull; [:rel: parents] results in:<br />
+<td valign="top"><span class="wiki-link"><a href="HtmlCss.html">HtmlCss</a></span></td><br />
+<td valign="top"><span class="wiki-link"><a href="HtmlInternal.html">HtmlInternal</a></span></td><br />
+<td valign="top"><span class="wiki-link"><a href="Intro4LinkFunctions.html">Intro4LinkFunctions</a></span></td><br />
+<td valign="top"><span class="wiki-link"><a href="PageLinking.html">PageLinking</a></span></td><br />
+<td valign="top"><span class="wiki-link"><a href="TextBasics.html">TextBasics</a></span></td><br />
+<td valign="top"><span class="wiki-link"><a href="WpInsertions.html">WpInsertions</a></span></td><ul><hr size="1" />
+</ul>
+<a name=".h2448"></a><h4>children</h4>
+The function [:rel: children] creates a list of the pages that the current page refers to. Applicable options are: aslist, collumns and existingonly. When the option "existingonly" is used, the links to undefined pages are not shown.<br />
+<br />
+<b>Examples</b><br />
+&bull; Links used in the examples: (<span class="wiki-link"><a href="WikidPad.html">WikidPad</a></span> <span class="wiki-link"><a href="WikiWords.html">WikiWords</a></span>, <span class="wiki-link"><a href="Case%20link.html">Case link</a></span>, UndefinedPage, UndefinedPageToo)<br />
+<br />
+&bull; [:rel: children; aslist] results in:<br />
+<span class="wiki-link"><a href="Case%20link.html">Case link</a></span>, <span class="wiki-link"><a href="FullSearch.html">FullSearch</a></span>, UndefinedPage, UndefinedPageToo, <span class="wiki-link"><a href="WikidPad.html">WikidPad</a></span>, <span class="wiki-link"><a href="WikiWords.html">WikiWords</a></span>, <span class="wiki-link"><a href="WpInsertions.html">WpInsertions</a></span><br />
+<br />
+&bull; [:rel: children; existingonly; columns 2] results in:<br />
+<table>
+<tr><td valign="top"><span class="wiki-link"><a href="Case%20link.html">Case link</a></span></td><td valign="top"><span class="wiki-link"><a href="FullSearch.html">FullSearch</a></span></td></tr>
+<tr><td valign="top"><span class="wiki-link"><a href="WikidPad.html">WikidPad</a></span></td><td valign="top"><span class="wiki-link"><a href="WikiWords.html">WikiWords</a></span></td></tr>
+<tr><td valign="top"><span class="wiki-link"><a href="WpInsertions.html">WpInsertions</a></span></td><td></td></tr>
+</table><ul><hr size="1" />
+</ul>
+<a name=".h2995"></a><h4>parentless</h4>
+The function [:rel: parentless] creates a list of all the pages, that are parentless. Applicable options are: aslist and collumns.<ul><hr size="1" />
+</ul>
+<a name=".h3149"></a><h4>undefined</h4>
+The function [:rel: undefined] creates a list of all the pages, that are undefined. Applicable options are: aslist and collumns.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h3311"></a><h3>saved search</h3>
+The function [:savedsearch: <i>searchname</i>] creates a list of all the page links, that are the result of a saved search. Function in this case is the name of the saved search. Applicable options are: aslist and collumns.<br />
+<br />
+A "<span class="wiki-link"><a href="FullSearch.html#SavedSearch">saved search</a></span>" is in fact a "saved search specification". When WikidPad encounters a saved search insertion on a page, it wil retrieve the search's specification, execute it and replace the insertion with the resulting pagelist. This insertion therefore performs a "dynamic search" and results in an up-to-date searchresult.<br />
+<br />
+<b>Examples</b><br />
+&bull; [:savedsearch: Case link; columns 4] (all pages containing "Case link") produces:<br />
+<table>
+<tr><td valign="top"><span class="wiki-link"><a href="Case%20link.html">Case link</a></span></td><td valign="top"><span class="wiki-link"><a href="HelpDummies.html">HelpDummies</a></span></td><td valign="top"><span class="wiki-link"><a href="Link%20insertions.html">Link insertions</a></span></td><td valign="top"><span class="wiki-link"><a href="Using%20brackets.html">Using brackets</a></span></td></tr>
+</table><br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name="tocFunction"></a><a name=".h4077"></a><h3>table of contents</h3>
+The function [:toc:] creates a table of contents for the headings of the current page, like the one on top of this page. In HTML preview/export the toc entries can be clicked to move the display to the according heading. This function only has a function group, no function. Applicable options are: none.<br />
+<br />
+<b>Examples</b><br />
+&bull; See the toc on top of this page.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+previous: <a href="javascript:history.go(-1)">Back</a><br />
+parents:&nbsp; <span class="wiki-link"><a href="HtmlCss.html">HtmlCss</a></span>, <span class="wiki-link"><a href="HtmlInternal.html">HtmlInternal</a></span>, <span class="wiki-link"><a href="Intro4LinkFunctions.html">Intro4LinkFunctions</a></span>, <span class="wiki-link"><a href="PageLinking.html">PageLinking</a></span>, <span class="wiki-link"><a href="TextBasics.html">TextBasics</a></span>, <span class="wiki-link"><a href="WpInsertions.html">WpInsertions</a></span><br />
+attributes: <span class="property">[tree_position: 11]</span><br />
+<span class="property">[help.status: done]</span>    </body>
+</html>

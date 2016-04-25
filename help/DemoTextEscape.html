@@ -1,0 +1,109 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <title>DemoTextEscape</title>
+        <link type="text/css" rel="stylesheet" href="appbase.css">
+    </head>
+    <body>
+<span class="parent-nodes">parent nodes: <span class="parent-node"><a href="DemoTextFormatting.html">DemoTextFormatting</a></span> | <span class="parent-node"><a href="DemoTextTables.html">DemoTextTables</a></span> | <span class="parent-node"><a href="TextTables.html">TextTables</a></span></span><br /><br />
+<a name=".h0"></a><h2>Demo Text Escape</h2>
+Contents:   <div class="page-toc">
+<div class="page-toc-level2"><a href="#.h0">Demo Text Escape</a></div>
+<div class="page-toc-level3"><a href="#.h57">General</a></div>
+<div class="page-toc-level3"><a href="#.h796">Special characters</a></div>
+<div class="page-toc-level3"><a href="#.h1353">Escape character</a></div>
+<div class="page-toc-level3"><a href="#.h2329">Escape block</a></div>
+<div class="page-toc-level3"><a href="#.h3065">Preformatted block</a></div>
+<div class="page-toc-level3"><a href="#.h3767">Remarks</a></div>
+<div class="page-toc-level3"><a href="#.h3818">Todo's</a></div>
+<div class="page-toc-level3"><a href="#.h3963">Results</a></div>
+</div>
+<br />
+<a href="javascript:history.go(-1)">Back</a><hr size="1" />
+<a name=".h57"></a><h3>General</h3>
+There are a number of characters, that have a special meaning in Wikidpad. Single characters, like the asterisk ("*") that is used as the "bold text" tag, pairs of characters, like the pair of square brackets that is used for link specifications, and more.<br />
+<br />
+Some of these characters always have meaning, some only in a certain context, like the colon (":") and the period ("."), that have no meaning on their own and can be used freely in the text, but cán have a special meaning inside attribute specifications.<br />
+<br />
+Since Wikidpad is about writing text, it must also be possible, to use these characters as they are and therefore "escape" from their special meaning. Wikidpad has three different explicit "escape" facilities".<br />
+<br />
+<a name=".h796"></a><h3>Special characters</h3>
+<table border="2">
+<tr><td><b>explicite</b></td></tr>
+<tr><td>+ </td><td>headers</td></tr>
+<tr><td>* </td><td>bold text and lists</td></tr>
+<tr><td>n. </td><td>lists (n = any number)</td></tr>
+<tr><td>_ </td><td>italic text</td></tr>
+<tr><td>[  ] </td><td>links and attributes</td></tr>
+<tr><td>&lt;&lt; &gt;&gt; </td><td>block areas (table, escape and preformatted)</td></tr>
+<tr><td>---- </td><td>horizontal line</td></tr>
+<tr><td></td></tr>
+<tr><td><b>implicite</b></td><td> <b>have a meaning in html</b></td></tr>
+<tr><td>&lt; / &gt; </td><td>HTML tags</td></tr>
+<tr><td></td></tr>
+<tr><td><b>only in context</b></td><td><b>of</b></td></tr>
+<tr><td>! </td><td>links (anchor)</td></tr>
+<tr><td>| </td><td>links and tables</td></tr>
+<tr><td>&gt; </td><td>links</td></tr>
+<tr><td>; </td><td>links and attributes</td></tr>
+<tr><td>: </td><td>links, attributes, todo's</td></tr>
+<tr><td>. </td><td>attributes</td></tr>
+<tr><td></td></tr>
+<tr><td><b>todo and other implicite attributes</b></td></tr>
+<tr><td>todo: </td></tr>
+<tr><td>done: </td></tr>
+<tr><td>action: </td></tr>
+<tr><td>track: </td></tr>
+<tr><td>issue: </td></tr>
+<tr><td>question: </td></tr>
+<tr><td>project: </td></tr>
+</table>
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h1353"></a><h3>Escape character</h3>
+To escape single characters, prepend them with a backslash. These characters are then interpreted as normal text, the backslash is suppressed in HTML preview and export. If you want to really write a backslash, write two of them: \.<br />
+This way e.g. [brackets] or *asterisks* can be written, that are not interpreted as formatting commands by Wikidpad.<br />
+<br />
+The backslash only escapes óne character at a time and never a whole Wikidpad element like a link specification. If two or more consecutive characters have to be escaped, then as many backslashes must be used. And in the case of a link like this: [rel://files/demo/ballon.mp3 | rel://files/demo/music.png&gt;am], it is not enough to "deactivate" the link with a backslash in front of the opening bracket ("["), since Wikidpad wil then see it as a text with two unrelated links: rel://files/demo/ballon.mp3 | rel://files/demo/music.png&gt;am. Both links have to be escaped separately.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h2329"></a><h3>Escape block</h3>
+To escape a whole section (one or more lines) of text from Wikidpad parsing and formatting, wrap that section in an "escape block", with the begin- and end tags "&lt;&lt;" and "&gt;&gt;" respectively. Example:<br />
+<ul>    *This should be bold* ThisShouldBeALink<br />
+</ul>
+The begin- ("&lt;&lt;") and end tag ("&gt;&gt;") should both be on a line of their own and before and after the tags only whitespace is allowed.<br />
+<br />
+Wikidpad will pass everything that is within the block unchanged on to html preview (ánd export). It will however still insert list tags ("&lt;ul&gt;") and line breaks ("&lt;br /&gt;"), in order to support line indentation and new lines in the preview result; see also <span class="wiki-link"><a href="DemoTextBasics.html">Textformatting: basics</a></span>.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h3065"></a><h3>Preformatted block</h3>
+The preformatted block is in effect an escape block, with a special feature; the text in the block is in preview and exported html shown in a monospaced font. Also the textformatting is kept preserved, without Wikidpad inserting html list and line break elements.<br />
+The technical difference is, that a preformatted block is passed on to preview as an html "&lt;pre&gt;" element.<br />
+<br />
+Example:<pre>                      ^
+                     / \
+                    /   \
+                   /_____\
+                  (       )
+                  |       |
+                  |       |
+                  |       |
+                  |       |
+                  L_______j</pre>
+<a href="#">Top</a><hr size="1" />
+<a name=".h3767"></a><h3>Remarks</h3>
+<ul><li />Template remark<br />
+</ul>
+<a href="#">Top</a><hr size="1" />
+<a name=".h3818"></a><h3>Todo's</h3>
+<span class="todo">done.demo.projectdemo.demo2: check out all posibilities</span><br />
+action.demo.textformatting.escapecharacter: template action<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h3963"></a><h3>Results</h3>
+<span class="property">[demo.status: done]</span><br />
+<a href="#">Top</a><hr size="1" />
+previous: <a href="javascript:history.go(-1)">Back</a><br />
+parents:&nbsp; <span class="wiki-link"><a href="DemoTextFormatting.html">DemoTextFormatting</a></span>, <span class="wiki-link"><a href="DemoTextTables.html">DemoTextTables</a></span>, <span class="wiki-link"><a href="TextTables.html">TextTables</a></span>    </body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <title>Wiki export</title>
+        <link type="text/css" rel="stylesheet" href="appbase.css">
+    </head>
+    <body>
+<span class="parent-nodes">parent nodes: <span class="parent-node"><a href="CommandLineSupport.html">CommandLineSupport</a></span> | <span class="parent-node"><a href="DataExchange.html">DataExchange</a></span> | <span class="parent-node"><a href="Intro7Searching.html">Intro7Searching</a></span> | <span class="parent-node"><a href="Intro8Output.html">Intro8Output</a></span> | <span class="parent-node"><a href="PageListDialog.html">PageListDialog</a></span> | <span class="parent-node"><a href="WikiFiles.html">WikiFiles</a></span></span><br /><br />
+<a name=".h0"></a><h2>Wiki export</h2>
+Contents:   <div class="page-toc">
+<div class="page-toc-level2"><a href="#.h0">Wiki export</a></div>
+<div class="page-toc-level3"><a href="#.h52">General</a></div>
+<div class="page-toc-level3"><a href="#.h652">The dialog window</a></div>
+<div class="page-toc-level3"><a href="#.h1844">Type specifics</a></div>
+<div class="page-toc-level4"><a href="#.h1863">XML</a></div>
+<div class="page-toc-level4"><a href="#.h1913">Wiki files</a></div>
+<div class="page-toc-level4"><a href="#.h2155">Multipage text</a></div>
+<div class="page-toc-level3"><a href="#.h2645">Settings</a></div>
+<div class="page-toc-level4"><a href="#.h2658">Options</a></div>
+</div>
+<br />
+<a href="javascript:history.go(-1)">Back</a><hr size="1" />
+<a name=".h52"></a><h3>General</h3>
+WikidPad can export wiki pages to<ul><li />an XML file<li />a set of .wiki files <a href="#.f1">[1]</a><li />a multi page text file<br />
+</ul>
+To export a wiki to .wiki files you can select  the predefined option:<ul><li />"Wiki / Export / Export Wiki to .wiki files" in the main menu</ul>
+This function uses default WikidPad settings. To override these settings or choose a different type of export, select "Other export ..." from the menu. This will bring up the export dialog window.<br />
+<br />
+<a href="#">Top</a><br />
+<a name=".f1"></a>[1] <i>exporting to .wiki files is mainly interesting for the migration of Compact version wiki's to original version wiki's.</i><hr size="1" />
+<a name=".h652"></a><h3>The dialog window</h3>
+<span class="wiki-link"><a href="DataExchange.html">DataExchange</a></span> is at this moment combined with "Item Publishing" into one integral export function. Both functions use the same dialog window. The options relevant to data exchange are:<br />
+<br />
+&bull; <b>What to export</b><br />
+Specifies what you want to export; the possible choices are:<ul><li />All pages in the wiki.<li />All pages in the current subtree (the current page and it's children).<li />Current page only.<li />Custom subset of wiki pages.</ul>
+Choosing "Custom" will bring up the <span class="wiki-link"><a href="PageListDialog.html">page list dialog</a></span>, where the subset can be defined.<br />
+<br />
+&bull; <b>Export to</b><br />
+Controls to whát the pages should be exported; the possible choices are:<ul><li /><span class="wiki-link"><a href="XmlFormat.html">XML file</a></span><li />Set of .wiki files<li /><span class="wiki-link"><a href="MultipageTextFormat.html">Multipage text</a></span><br />
+</ul>
+&bull; <b>Compatible filenames</b><br />
+Controls whether to use ASCII-only filenames for the html files so that they can be transferred to other filesystems without compatibility issues.<br />
+<ul>On Windows XP and Server 2003 the AppLocale utility might also help on export problems (see <span class="url-link"><a href="http://www.microsoft.com/globaldev/tools/apploc.mspx">http://www.microsoft.com/globaldev/tools/apploc.mspx</a></span>).<br />
+</ul>
+&bull; <b>Destination file/directory</b><br />
+Specify the file or folder where the generated export files should be stored.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h1844"></a><h3>Type specifics</h3>
+<a name=".h1863"></a><h4>XML</h4>
+XML has no specific setting (yet)<br />
+<ul><hr size="1" />
+</ul>
+<a name=".h1913"></a><h4>Wiki files</h4>
+&bull; <b>Encoding</b><br />
+For the .wiki export you can choose if the files should have system encoding or UTF-8 with or without BOM (byte-order mark). The import function of Compact can't recognize UTF-8 without BOM correctly.<br />
+<ul><hr size="1" />
+</ul>
+<a name=".h2155"></a><h4>Multipage text</h4>
+&bull; <b>Version</b><br />
+Choose which version the file should have. If you use version 1 it can be read only by WikidPad 1.9beta6 and later. Version 0 can also be read by earlier versions but looses information.<br />
+<br />
+&bull; <b>Write wiki func. pages</b><br />
+Store also wiki-bound functional pages in the file. Only available for format version 1 and later.<br />
+<br />
+&bull; <b>Write saved searches</b><br />
+Store also saved searches in the file. Only available for format version 1 and later.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h2645"></a><h3>Settings</h3>
+<a name=".h2658"></a><h4>Options</h4>
+<ul><b>Wiki settings: General, export</b><hr size="1" />
+</ul>
+&bull; <b>Default export dir.</b><br />
+Set the default export directory into which exports should go.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<ul><b>Application settings: Html export</b><hr size="1" />
+</ul>
+&bull; <b>Start browser after export</b><br />
+Starts the current web browser after exporting to XML.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+previous: <a href="javascript:history.go(-1)">Back</a><br />
+parents:&nbsp; <span class="wiki-link"><a href="CommandLineSupport.html">CommandLineSupport</a></span>, <span class="wiki-link"><a href="DataExchange.html">DataExchange</a></span>, <span class="wiki-link"><a href="Intro7Searching.html">Intro7Searching</a></span>, <span class="wiki-link"><a href="Intro8Output.html">Intro8Output</a></span>, <span class="wiki-link"><a href="PageListDialog.html">PageListDialog</a></span>, <span class="wiki-link"><a href="WikiFiles.html">WikiFiles</a></span><br />
+<span class="property">[help.status: done]</span>    </body>
+</html>

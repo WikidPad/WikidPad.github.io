@@ -1,0 +1,39 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <title>WpOptionsGeneral</title>
+        <link type="text/css" rel="stylesheet" href="appbase.css">
+    </head>
+    <body>
+<span class="parent-nodes">parent nodes: <span class="parent-node"><a href="WpOptions.html">WpOptions</a></span></span><br /><br />
+<ul><b>Application settings: General</b><hr size="1" />
+</ul>
+&bull; <b>Low resource usage</b><br />
+Try to reduce usage of Windows resources. Only interesting for Windows 9x/ME.<br />
+<br />
+&bull; <b>Single process per user</b><br />
+If you open a new WikidPad instance while another is already running, the new window is handled by the same process as the first one. This option has only an effect after restarting WikidPad. It is off by default.<br />
+<br />
+Advantages:<br />
+<ul><li />You can safely open the same wiki in multiple windows (on the<br />
+same computer and by the same user only!)<li />Less resources (esp. memory) are needed to run multiple windows<br />
+</ul>
+Disadvantages:<br />
+<ul><li />If one window is busy due to a search or database rebuild, all windows do not react.<li />If one window crashes (in fact the process driving it) all windows crash.<li />An IP-socket connection is needed for communication between<br />
+processes. The connection is invisible for other computers on<br />
+a network or the internet, but a personal firewall software<br />
+may alarm you nevertheless. Also, if multiple user use<br />
+WikidPad on the same computer at the same time, all must use<br />
+their own home directory as configuration directory (this is<br />
+the default).<br />
+</ul>
+&bull; <b>App-bound hotkey</b><br />
+Here you can define a hotkey to show or hide WikidPad (they may only work on Windows). Hotkeys work system-wide, not only if WikidPad is active.<br />
+<br />
+In the text field you can enter a hotkey in the same way as the menu shortcuts are. Unlike menu shortcuts, you can also use "win" as modifier (like "alt" or "ctrl"), but the hotkey must have at least one of "ctrl" or "alt" modifiers to work.<br />
+<br />
+The checkbox before the text field allows to temporarily deactivate the hotkey without deleting the field content.<br />
+<br />
+There is also an option to set a second hotkey which is bound to the current wiki instead of the app. See OptionsDialog#<b>Wiki-bound# hotkey</b> below in "Current wiki" options.    </body>
+</html>

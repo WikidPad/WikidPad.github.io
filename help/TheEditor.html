@@ -1,0 +1,119 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <title>TheEditor</title>
+        <link type="text/css" rel="stylesheet" href="appbase.css">
+    </head>
+    <body>
+<span class="parent-nodes">parent nodes: <span class="parent-node"><a href="Intro2ViewingAndEditing.html">Intro2ViewingAndEditing</a></span> | <span class="parent-node"><a href="ThisWiki.html">ThisWiki</a></span> | <span class="parent-node"><a href="WorkSpace.html">WorkSpace</a></span> | <span class="parent-node"><a href="WorkSpaceGeneral.html">WorkSpaceGeneral</a></span></span><br /><br />
+<a name=".h0"></a><h2>The Editor</h2>
+Contents:   <div class="page-toc">
+<div class="page-toc-level2"><a href="#.h0">The Editor</a></div>
+<div class="page-toc-level3"><a href="#.h51">General</a></div>
+<div class="page-toc-level3"><a href="#.h1329">Auto save</a></div>
+<div class="page-toc-level3"><a href="#.h1960">Settings</a></div>
+<div class="page-toc-level4"><a href="#.h1973">Menu:</a></div>
+<div class="page-toc-level4"><a href="#.h2129">Options</a></div>
+</div>
+<br />
+<a href="javascript:history.go(-1)">Back</a><hr size="1" />
+<a name=".h51"></a><h3>General</h3>
+The text editor is in fact the place where all the work is done: text is typed, links are specified, attributes are added to a page. etc. It supports most of the default editing functions like:<ul><li />select: cut, copy and paste <a href="#.f1">[1]</a><li />select: drag and drop <a href="#.f2">[2]</a><li />multiple undo, redo<li /><span class="wiki-link"><a href="LineNumbers.html">line numbering</a></span><li /><span class="wiki-link"><a href="Folding.html">folding</a></span><li /><span class="wiki-link"><a href="SpellChecking.html">spell checking</a></span> <a href="#.f3">[3]</a></ul>
+Furthermore it suports a number of specialised functions, like:<ul><li /><span class="wiki-link"><a href="TextFormatting.html">(html) text formatting</a></span><li />dragging and dropping of <span class="wiki-link"><a href="Using%20the%20treeview.html">page links</a></span> and <span class="wiki-link"><a href="LinksUrl.html">url links</a></span><li />converting selected text into <span class="wiki-link"><a href="Using%20replace%20text%20by%20wikiword.html">wiki pages</a></span><li />selection and insertion of icon and color <span class="wiki-link"><a href="SignalPageNodes.html">page attributes</a></span><li /><span class="wiki-link"><a href="ImagePasting.html">pasting of images</a></span> from the clipboard.</ul>
+Also a number of functions are implemented to make life easier, like:<ul><li />insertion of standard texts with <span class="wiki-link"><a href="TextBlocks.html">Text blocks</a></span><li />moving texts around using <span class="wiki-link"><a href="ScratchPad.html">Scratch pad</a></span><li />copying and pasting from external sources using <span class="wiki-link"><a href="ClipboardCatcher.html">Clipboard catcher</a></span><br />
+</ul>
+The editor has many settings that control it's behaviour; the more general settings are listed below; the additional settings are listed on the pages of the subjects that they relate to.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h1329"></a><h3>Auto save</h3>
+WikidPad tries to save the document in the editor window for you often. This "auto save" occurs:<ol><li />after about 5-15 seconds of idle time.<li />on navigation to a new wiki page.<li />on shutdown.</ol>
+A page can be saved manually by pressing Ctrl-S.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".f1"></a>[1] <i>When copying from external sources like web pages, wikidpad will only paste the text, nót the formatting tags.</i><br />
+<a name=".f2"></a>[2] <i>The default drag and drop performs a "cut and paste" of the selected text; a "copy and paste" can be performed by holding the Ctrl key when dropping.</i><br />
+<a name=".f3"></a>[3] <i>Spell checking is optional and needs a plugin to be installed.</i><hr size="1" />
+<a name=".h1960"></a><h3>Settings</h3>
+<a name=".h1973"></a><h4>Menu:</h4>
+<ul><b>Editor</b><hr size="1" />
+</ul>
+&bull; <b>Set date format</b><br />
+Set the format for the "insert date" menu option. Shows a dialog window with a directive list and a preview section with whitch the date format can be set.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<ul><b>Editor: settings, tab key</b><hr size="1" />
+</ul>
+&bull; <b>Tabs to spaces</b><br />
+Controls whether tabs are inserted as tabs or as spaces.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<ul><b>View: editor</b><hr size="1" />
+</ul>
+&bull; <b>Show indentation guides</b><br />
+Switches the display of indentation guides in the editor on or of.<br />
+<br />
+&bull; <b>Show line numbers</b><br />
+Switches the display of line numbers in the editor on or of.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<a name=".h2129"></a><h4>Options</h4>
+<ul><b>Application settings: Editor, general</b><hr size="1" />
+</ul>
+&bull; <b>Sync. highlighting limit</b><br />
+Limit of page size in bytes when to switch from synchronous highlighting (calculated after each keypress) to asynchronous highlighting (calculated in the background and shown when ready). Recommended value: 3000 to 5000 bytes<br />
+<br />
+&bull; <b>Highlight start delay</b><br />
+For async. highlighting how long to wait after key press (in seconds) before starting the highlighting work in background. Recommended value: 0.2 to 0.5 seconds<br />
+<br />
+&bull; <b>Synchronize editor by preview selection</b><br />
+This option provides a workaround to synchronize the scroll position in HTML preview with that in the editor.<br />
+If this option is checked, you can select some text in the preview and when switching back to the editor, the selected text will be searched by the editor and it's first occurrence highlited as selected.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<ul><b>Application settings: Autosave</b><hr size="1" />
+</ul>
+&bull; <b>Autosave active</b><br />
+Save current page content to disk (if modified) after a few seconds of inactivity.<br />
+<br />
+There are two delays which <b>both</b> must be exceeded before a save operation is triggered (if Autosave is active).<br />
+<br />
+&bull; <b>Delay after key pressed</b><br />
+How long to wait after the last keypress in the editor (default: 3 seconds). Recommended value: 1 to 5 seconds.<br />
+<br />
+&bull; <b>Delay after page dirty</b><br />
+How long to wait after the page was initially modified (dirty) after last save (default: 15 seconds). Recommended value: 15 to 180 seconds.<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+<ul><b>Application settings: Editor, colors</b><hr size="1" />
+</ul>
+&bull; <b>Plain text color</b><br />
+Specify the color of plain text (like this one) in the editor by pressing the little "..." button to start the color dialog or by entering a numeric HTML color (e.g. "#000000" for black) in the text field. Leaving the field empty chooses the default color.<br />
+<br />
+&bull; <b>Link color</b><br />
+Set the color of links (URLs and existing wiki words, e.g. <span class="url-link"><a href="http://nowhere">http://nowhere</a></span>) in the editor. See "Plain text color" above for details.<br />
+<br />
+&bull; <b>Attribute/script color</b><br />
+Set the color of attributes and scripts (e.g. ) in the editor. See "Plain text color" above for details.<br />
+<br />
+&bull; <b>Background color</b><br />
+(Works only partially). Specify the background color of the editor. See "Plain text color" above for details.<br />
+<br />
+&bull; <b>Selection fg. color</b><br />
+Specify the foreground color of selected text. See "Plain text color" above for details.<br />
+<br />
+&bull; <b>Selection bg. color</b><br />
+Specify the background color of selected text. See "Plain text color" above for details.<br />
+<br />
+&bull; <b>Margin color</b><br />
+Specify the color of the editor margin on the left (normally gray) which can also contain line numbers.<br />
+<br />
+&bull; <b>Text cursor color</b><br />
+Set the color of the text cursor (the small blinking vertical bar).<br />
+<br />
+<a href="#">Top</a><hr size="1" />
+previous: <a href="javascript:history.go(-1)">Back</a><br />
+parents:&nbsp; <span class="wiki-link"><a href="Intro2ViewingAndEditing.html">Intro2ViewingAndEditing</a></span>, <span class="wiki-link"><a href="ThisWiki.html">ThisWiki</a></span>, <span class="wiki-link"><a href="WorkSpace.html">WorkSpace</a></span>, <span class="wiki-link"><a href="WorkSpaceGeneral.html">WorkSpaceGeneral</a></span><br />
+attributes: <span class="property">[tree_position: 4]</span>, <span class="property">[template: HelpSubjectTemplate]</span><br />
+<span class="property">[help.status: done]</span>    </body>
+</html>
